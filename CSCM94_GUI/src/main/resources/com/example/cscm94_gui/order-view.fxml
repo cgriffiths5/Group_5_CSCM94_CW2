@@ -25,6 +25,8 @@
     <Label fx:id="loginButtonLabel"/>
     <Button fx:id="loginButton" text="Order" onAction="#onLoginButtonClick" />
 
+    <Label fx:id="bookButtonLabel" />
+    <Button fx:id="bookButton" text="Book" onAction="#onBookButtonClick"/>
 
     <Label fx:id="homeButtonLabel"/>
     <Button fx:id="homeButton" text="Home" onAction="#onHomeButtonClick"/>

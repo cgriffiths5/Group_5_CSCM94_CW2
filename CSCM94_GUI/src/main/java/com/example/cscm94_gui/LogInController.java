@@ -17,7 +17,7 @@ public class LoginController {
     @FXML
     public void onEnterButtonClick(ActionEvent event) throws IOException {
         Stage stage = (Stage) EnterButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("customer-profile.fxml"));
+        Parent newRoot = FXMLLoader.load(getClass().getResource("order-view.fxml"));
         stage.setTitle("Customer Profile");
         stage.getScene().setRoot(newRoot);
     }

@@ -19,7 +19,7 @@ public class HelloController {
    public void onCustButtonClick(ActionEvent event) throws IOException {
 
        Stage stage = (Stage) custButton.getScene().getWindow();
-       Parent newRoot = FXMLLoader.load(getClass().getResource("order-view.fxml"));
+       Parent newRoot = FXMLLoader.load(getClass().getResource("log-in.fxml"));
        stage.setTitle("Customer");
        stage.getScene().setRoot(newRoot);
    }

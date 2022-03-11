@@ -25,12 +25,13 @@
     <Label fx:id="Title">Cafe 49</Label>
     <Label fx:id="Subtitle">Rat free since 2017</Label>
 
-    <Label fx:id="OrderFromtitle">Order</Label>
+    <Label fx:id="OrderFromtitle">Menu</Label>
 
    <children>
-       <RadioButton text="Burger" />
-       <RadioButton text="Pizza" />
-       <RadioButton text="Chips" />
+       <RadioButton text="Burger (£5)" />
+       <RadioButton text="Pizza (£5)" />
+       <RadioButton text="Chips (£2.50)" />
+       <RadioButton text="Mayo (50p)" />
    </children>
 
     <Label fx:id="ConfirmOrder" />
