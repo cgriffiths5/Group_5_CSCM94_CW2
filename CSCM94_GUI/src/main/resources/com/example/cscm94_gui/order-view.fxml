@@ -22,8 +22,8 @@
     <Label fx:id="Title">Cafe 49</Label>
     <Label fx:id="Subtitle">Rat free since 2017</Label>
 
-    <Label fx:id="bookingButton"/>
-    <Button text="Create Booking" />
+    <Label fx:id="loginButtonLabel"/>
+    <Button fx:id="loginButton" text="Login" onAction="#onLoginButtonClick" />
 
     <Label fx:id="orderButton" />
     <Button text="Order Online" />
