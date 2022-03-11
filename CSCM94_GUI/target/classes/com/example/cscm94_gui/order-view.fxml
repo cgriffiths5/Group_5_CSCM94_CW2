@@ -23,10 +23,8 @@
     <Label fx:id="Subtitle">Rat free since 2017</Label>
 
     <Label fx:id="loginButtonLabel"/>
-    <Button fx:id="loginButton" text="Login" onAction="#onLoginButtonClick" />
+    <Button fx:id="loginButton" text="Order and Book" onAction="#onLoginButtonClick" />
 
-    <Label fx:id="orderButton" />
-    <Button text="Order Online" />
 
     <Label fx:id="homeButtonLabel"/>
     <Button fx:id="homeButton" text="Home" onAction="#onHomeButtonClick"/>
