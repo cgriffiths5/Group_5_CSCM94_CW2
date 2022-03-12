@@ -22,5 +22,15 @@ public class LoginController {
         stage.getScene().setRoot(newRoot);
     }
 
+    @FXML
+    public Button RegisterButton;
+
+    @FXML
+    public void onRegisterButtonClick(ActionEvent event) throws IOException {
+        Stage stage = (Stage) RegisterButton.getScene().getWindow();
+        Parent newRoot = FXMLLoader.load(getClass().getResource("register-view.fxml"));
+        stage.setTitle("Register");
+        stage.getScene().setRoot(newRoot);
+    }
 
 }

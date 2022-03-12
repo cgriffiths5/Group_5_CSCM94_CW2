@@ -35,7 +35,6 @@
     <Label fx:id="loginLabel" />
     <Button fx:id="EnterButton" text="Enter" onAction="#onEnterButtonClick"/>
 
-    <Label fx:id="Register" >Or are you a new customer?</Label>
-    <Button fx:id="RegisterButton" text="Register" />
+    <Button fx:id="RegisterButton" text="Register" onAction="#onRegisterButtonClick" />
 
 </VBox>
