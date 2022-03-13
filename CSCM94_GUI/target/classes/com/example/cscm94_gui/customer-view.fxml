@@ -5,11 +5,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+
 <?import javafx.scene.control.Button?>
-
-
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.cscm94_gui.HelloController">
+      fx:controller="com.example.cscm94_gui.CustomerController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -23,12 +22,16 @@
     <Label fx:id="Title">Cafe 49</Label>
     <Label fx:id="Subtitle">Rat free since 2017</Label>
 
-    <Label fx:id="custButtonLabel"/>
-    <Button fx:id="custButton" text="Customer" onAction="#onCustButtonClick"/>
+    <Label fx:id="loginButtonLabel"/>
+    <Button fx:id="loginButton" text="Order" onAction="#onLoginButtonClick" />
 
-    <Label fx:id="staffButton" />
-    <Button text="Staff" />
+    <Label fx:id="bookButtonLabel" />
+    <Button fx:id="bookButton" text="Book" onAction="#onBookButtonClick"/>
+
+    <Label fx:id="homeButtonLabel"/>
+    <Button fx:id="homeButton" text="Home" onAction="#onHomeButtonClick"/>
 
     <Label fx:id="buttonText"/>
     <Button fx:id="quitButton" text="Quit" onAction="#onQuitButtonClick"/>
 </VBox>
+
