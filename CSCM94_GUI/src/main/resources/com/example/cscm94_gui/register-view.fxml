@@ -21,13 +21,13 @@
     </ImageView>
 
     <Label fx:id="EnterNameLabel">Enter Name</Label>
-    <TextField></TextField>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
 
     <Label fx:id="EnterUsername">Enter Username</Label>
-    <TextField></TextField>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
 
     <Label fx:id="EnterPassword">Enter Password</Label>
-    <TextField></TextField>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
 
     <Button fx:id="RegisterConfirmButton" text="Confirm Registration" />
 
