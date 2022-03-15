@@ -20,14 +20,14 @@
         </image>
     </ImageView>
 
-    <Label fx:id="Title">Cafe 49</Label>
+    <Label fx:id="Title" >Cafe 49</Label>
     <Label fx:id="Subtitle">Rat free since 2017</Label>
 
     <Label fx:id="custButtonLabel"/>
     <Button fx:id="custButton" text="Customer" onAction="#onCustButtonClick"/>
 
-    <Label fx:id="staffButton" />
-    <Button text="Staff" />
+    <Label fx:id="staffButtonLabel" />
+    <Button fx:id="staffButton" text="Staff" />
 
     <Label fx:id="buttonText"/>
     <Button fx:id="quitButton" text="Quit" onAction="#onQuitButtonClick"/>

@@ -20,13 +20,27 @@
         </image>
     </ImageView>
 
-    <Label fx:id="EnterNameLabel">Enter Name</Label>
+    <Label fx:id="EnterFirstNameLabel">Enter First Name</Label>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
+
+    <Label fx:id="EnterLastNameLabel">Enter Last Name</Label>
     <TextField minWidth="180.0" maxWidth="180.0"></TextField>
 
     <Label fx:id="EnterUsername">Enter Username</Label>
     <TextField minWidth="180.0" maxWidth="180.0"></TextField>
 
     <Label fx:id="EnterPassword">Enter Password</Label>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
+
+    <Label fx:id="AddressLabel">Address Details</Label>
+
+    <Label fx:id="EnterHouseNumber">Enter House Number</Label>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
+
+    <Label fx:id="EnterStreetNumber">Enter Street Name</Label>
+    <TextField minWidth="180.0" maxWidth="180.0"></TextField>
+
+    <Label fx:id="EnterCityName">Enter Town/City Name</Label>
     <TextField minWidth="180.0" maxWidth="180.0"></TextField>
 
     <Button fx:id="RegisterConfirmButton" text="Confirm Registration" />
