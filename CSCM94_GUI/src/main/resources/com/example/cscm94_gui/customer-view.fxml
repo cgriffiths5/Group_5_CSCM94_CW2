@@ -13,7 +13,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
 
-    <ImageView fitHeight="64" fitWidth="64">
+    <ImageView fx:id="webImage" fitHeight="64" fitWidth="64">
         <image>
             <Image url="https://image.shutterstock.com/image-vector/coffee-cup-character-design-cartoon-260nw-1888372606.jpg" />
         </image>
