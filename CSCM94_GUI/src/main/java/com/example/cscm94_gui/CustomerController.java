@@ -14,32 +14,44 @@ public class CustomerController {
     public Button loginButton;
 
     @FXML
-    public void onLoginButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) loginButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("order-view.fxml"));
-        stage.setTitle("Order");
-        stage.getScene().setRoot(newRoot);
+    public void onLoginButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) loginButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("order-view.fxml"));
+            stage.setTitle("Order");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML
     public Button bookButton;
 
     @FXML
-    public void onBookButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) bookButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("customer-book.fxml"));
-        stage.setTitle("Booking");
-        stage.getScene().setRoot(newRoot);
+    public void onBookButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) bookButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("customer-book.fxml"));
+            stage.setTitle("Booking");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML
     public Button homeButton;
 
     @FXML
-    public void onHomeButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) homeButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
-        stage.getScene().setRoot(newRoot);
+    public void onHomeButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) homeButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML

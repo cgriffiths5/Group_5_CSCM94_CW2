@@ -17,22 +17,30 @@ public class LoginController {
     public Button EnterButton;
 
     @FXML
-    public void onEnterButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) EnterButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("customer-view.fxml"));
-        stage.setTitle("Customer Profile");
-        stage.getScene().setRoot(newRoot);
+    public void onEnterButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) EnterButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("customer-view.fxml"));
+            stage.setTitle("Customer Profile");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML
     public Button RegisterButton;
 
     @FXML
-    public void onRegisterButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) RegisterButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("register-view.fxml"));
-        stage.setTitle("Register");
-        stage.getScene().setRoot(newRoot);
+    public void onRegisterButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) RegisterButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("register-view.fxml"));
+            stage.setTitle("Register");
+            stage.getScene().setRoot(newRoot);
+        } catch(IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
 }

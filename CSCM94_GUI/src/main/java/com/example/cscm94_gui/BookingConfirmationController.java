@@ -15,20 +15,28 @@ public class BookingConfirmationController {
     public Button ProfileButton;
 
     @FXML
-    public void onProfileButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) ProfileButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("customer-view.fxml"));
-        stage.getScene().setRoot(newRoot);
+    public void onProfileButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) ProfileButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("customer-view.fxml"));
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML
     public Button homeButton;
 
     @FXML
-    public void onHomeButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) homeButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
-        stage.getScene().setRoot(newRoot);
+    public void onHomeButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) homeButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error");
+        }
     }
 
     @FXML

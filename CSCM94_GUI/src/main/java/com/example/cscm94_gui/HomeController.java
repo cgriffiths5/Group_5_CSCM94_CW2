@@ -14,12 +14,15 @@ public class HomeController {
    public Button custButton;
 
    @FXML
-   public void onCustButtonClick(ActionEvent event) throws IOException {
-
-       Stage stage = (Stage) custButton.getScene().getWindow();
-       Parent newRoot = FXMLLoader.load(getClass().getResource("log-in.fxml"));
-       stage.setTitle("Customer");
-       stage.getScene().setRoot(newRoot);
+   public void onCustButtonClick(ActionEvent event)  {
+     try {
+         Stage stage = (Stage) custButton.getScene().getWindow();
+         Parent newRoot = FXMLLoader.load(getClass().getResource("log-in.fxml"));
+         stage.setTitle("Customer");
+         stage.getScene().setRoot(newRoot);
+     } catch (IOException e) {
+         System.out.println("Error loading page");
+     }
    }
 
     @FXML

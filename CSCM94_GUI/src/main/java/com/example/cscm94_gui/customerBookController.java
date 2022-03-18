@@ -15,11 +15,14 @@ public class customerBookController {
     public Button ConfirmBookingButton;
 
     @FXML
-    public void onConfirmBookingClick(ActionEvent event) throws IOException {
-
-        Stage stage = (Stage) ConfirmBookingButton.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("booking-confirmation.fxml"));
-        stage.setTitle("Customer");
-        stage.getScene().setRoot(newRoot);
+    public void onConfirmBookingClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) ConfirmBookingButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("booking-confirmation.fxml"));
+            stage.setTitle("Customer");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 }
