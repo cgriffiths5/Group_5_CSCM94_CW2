@@ -14,6 +14,7 @@ public class OrderController {
     @FXML
     public Button ConfirmOrderButton;
 
+    @FXML
     public void onConfirmOrderButtonClick(ActionEvent event) throws IOException {
 
         Stage stage = (Stage) ConfirmOrderButton.getScene().getWindow();

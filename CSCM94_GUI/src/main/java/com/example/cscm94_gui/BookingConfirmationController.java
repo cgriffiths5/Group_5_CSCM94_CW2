@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class OrderConfirmedController {
+public class BookingConfirmationController {
 
     @FXML
     public Button ProfileButton;

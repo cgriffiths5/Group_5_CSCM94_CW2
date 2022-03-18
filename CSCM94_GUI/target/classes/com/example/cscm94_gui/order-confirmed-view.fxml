@@ -26,6 +26,15 @@
 
     <Label fx:id="LoginTitle">Order Confirmed - Your order will be ready in 15 minutes</Label>
 
+    <Label fx:id="ProfileButtonLAbel"></Label>
+    <Button fx:id="ProfileButton" onAction="#onProfileButtonClick">Profile</Button>
+
+    <Label fx:id="HomeButtonLabel"></Label>
+    <Button fx:id="homeButton" onAction="#onHomeButtonClick">Home</Button>
+
+    <Label fx:id="QuitButtonLabel"></Label>
+    <Button fx:id="QuitButton" onAction="#onQuitButtonClick">Quit</Button>
+
 
 </VBox>
 

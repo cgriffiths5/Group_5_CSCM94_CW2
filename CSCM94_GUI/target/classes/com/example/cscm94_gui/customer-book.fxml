@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.TextField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.cscm94_gui.LoginController">
+      fx:controller="com.example.cscm94_gui.customerBookController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -36,6 +36,6 @@
     <TextField></TextField>
 
     <Label fx:id="ConfirmBookingButtonLabel"></Label>
-    <Button fx:id="ConfirmBookingButton" text="Confirm Booking" />
+    <Button fx:id="ConfirmBookingButton" text="Confirm Booking" onAction="#onConfirmBookingClick" />
 
 </VBox>
