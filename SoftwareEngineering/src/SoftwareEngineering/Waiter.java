@@ -1,5 +1,13 @@
 package SoftwareEngineering;
 
+/*
+ * opening many windows at run time
+ * 
+ * thinking through how each screen would update itself
+ * when another window had recieved an input
+ */
+
+
 public class Waiter extends Staff {
 	private String role = "waiter";
 	
