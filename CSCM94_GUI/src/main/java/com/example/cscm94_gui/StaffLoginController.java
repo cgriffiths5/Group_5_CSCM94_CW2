@@ -12,14 +12,29 @@ import java.io.IOException;
 public class StaffLoginController {
 
     @FXML
-    public Button EnterButton;
+    public Button StaffEnterButton;
 
     @FXML
-    public void onEnterButtonClick(ActionEvent event)  {
+    public void onStaffEnterButtonClick(ActionEvent event)  {
         try {
-            Stage stage = (Stage) EnterButton.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(getClass().getResource("staffHome.fxml"));
-            stage.setTitle("Customer Profile");
+            Stage stage = (Stage) StaffEnterButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("staffHome-view.fxml"));
+            stage.setTitle("Staff");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
+    }
+
+    @FXML
+    public Button ReturnHomeButton;
+
+    @FXML
+    public void onReturnHomeButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) ReturnHomeButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+            stage.setTitle("Home");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");
