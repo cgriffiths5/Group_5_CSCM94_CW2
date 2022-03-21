@@ -17,6 +17,7 @@ public class Chef extends Staff {
 	}
 	
 	
+	
 	private boolean markOrderComplete(/*int orderID*/) {
 		/*
 		 * get order number from the database and 
@@ -25,16 +26,20 @@ public class Chef extends Staff {
 		return false;
 	}
 	
+	
 	private String alertWaiter() {
 		/*
-		 * 
+		 * see if markOrderComplete is ready and then
+		 * message waiter to collect the food
 		 */
 		return "orderReadyMessage";
 	}
 	
 	private void outstandingOrders(int[] dateTime) {
 		/*
-		 * 
+		 * compare order time and the actual time to see
+		 * if its taken to long. if the food has taken a while
+		 * notify the waiter
 		 */
 		/*String message, [orders]*/
 	}

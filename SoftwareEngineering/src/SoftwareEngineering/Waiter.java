@@ -25,6 +25,7 @@ public class Waiter extends Staff {
 	}
 	
 	
+	
 	public boolean approveBooking(/*booking data*/) {
 		/*
 		 * gather information about booking and then compare
