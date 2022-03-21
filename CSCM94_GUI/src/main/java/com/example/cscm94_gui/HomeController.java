@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
-
 import java.io.IOException;
 
 public class HomeController {
@@ -33,7 +32,7 @@ public class HomeController {
        try {
            Stage stage = (Stage) custButton.getScene().getWindow();
            Parent newRoot = FXMLLoader.load(getClass().getResource("staffLogin-view.fxml"));
-           stage.setTitle("Customer");
+           stage.setTitle("Staff");
            stage.getScene().setRoot(newRoot);
        } catch (IOException e) {
            System.out.println("Error loading page");
