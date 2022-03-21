@@ -22,7 +22,7 @@ public abstract class Staff extends Person {
 		/*
 		 * But gathering the staff unique id we can us
 		 * the database to retrieve the staff profile
-		 * then we can disply the profile and connect it to 
+		 * then we can display the profile and connect it to 
 		 * GUI
 		 */
 	}

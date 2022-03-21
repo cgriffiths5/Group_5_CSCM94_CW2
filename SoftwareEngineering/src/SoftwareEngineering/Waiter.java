@@ -25,6 +25,7 @@ public class Waiter extends Staff {
 	}
 	
 	
+	
 	public boolean approveBooking(/*booking data*/) {
 		/*
 		 * gather information about booking and then compare
@@ -61,6 +62,9 @@ public class Waiter extends Staff {
 	}
 	
 	public void customerRejectsOrder(/*OrderID*/) {
-		
+		/*
+		 * customer informs member of stadd that order 
+		 * is wrong
+		 */
 	}
 }
