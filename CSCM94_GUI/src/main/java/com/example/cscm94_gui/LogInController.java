@@ -29,6 +29,21 @@ public class LoginController {
     }
 
     @FXML
+    public Button GuestButton;
+
+    @FXML
+    public void onGuestButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) GuestButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("customer-view.fxml"));
+            stage.setTitle("Guest Profile");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
+    }
+
+    @FXML
     public Button RegisterButton;
 
     @FXML

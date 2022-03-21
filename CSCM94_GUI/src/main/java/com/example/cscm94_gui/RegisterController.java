@@ -23,7 +23,7 @@ public class RegisterController {
 
     @FXML
     public void Register(ActionEvent event) {
-        
+
         if(FirstNameField.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error");
