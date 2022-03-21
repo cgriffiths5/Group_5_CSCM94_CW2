@@ -35,4 +35,6 @@
     <Label fx:id="loginLabel" />
     <Button fx:id="StaffEnterButton" text="Enter" onAction="#onStaffEnterButtonClick"/>
 
+    <Button fx:id="ReturnHomeButton" text="Return Home" onAction="#onReturnHomeButtonClick"/>
+
 </VBox>

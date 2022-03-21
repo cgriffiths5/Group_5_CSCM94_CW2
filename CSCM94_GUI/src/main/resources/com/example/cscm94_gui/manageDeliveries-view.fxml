@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
@@ -8,7 +7,7 @@
 <?import javafx.scene.control.Button?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.cscm94_gui.StaffHomeController">
+      fx:controller="com.example.cscm94_gui.ManageDeliveriesController">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
@@ -22,18 +21,13 @@
 
     <Label>Staff Homepage</Label>
 
-    <Button fx:id="ManageStaffButton" text="Manage Staff (Manager)" onAction="#onManageStaffButtonClick" />
+    <Label>Check order status</Label>
 
-    <Button fx:id="ManageOrdersButton" text="Manage Orders (Waiters/Chefs)" onAction="#onManageOrdersButtonClick"/>
+    <Label>Mark order as delivered</Label>
 
-    <Button fx:id="ManageDeliveryButton" text="Manage Delivery (Waiters/Chefs/Delivery Drivers)" onAction="#onManageDeliveryButtonClick"/>
+    <Label>Get Customer Address</Label>
 
-    <Button text="Approve Bookings (Waiters)" />
-
-    <Button fx:id="LogOutButton" text="Log out" onAction="#onLogOutButtonClick" />
-
-
-
+    <Button fx:id="GoBackButton" text="Go Back" onAction="#onGoBackButtonClick" />
 
 </VBox>
 

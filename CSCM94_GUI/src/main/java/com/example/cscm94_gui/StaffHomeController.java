@@ -9,21 +9,66 @@ import java.io.IOException;
 
 public class StaffHomeController {
 
-    public Button OrderViewButton;
+    @FXML
+    public Button ManageStaffButton;
 
-    public void onOrderViewButtonClick(ActionEvent event) {
+    @FXML
+    public void onManageStaffButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) LogOutButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("manageStaff-view.fxml"));
+            stage.setTitle("Staff - Manage Staff");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
+    }
+
+    @FXML
+    public Button ManageOrdersButton;
+
+    @FXML
+    public void onManageOrdersButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) LogOutButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("manageOrders-view.fxml"));
+            stage.setTitle("Staff - Manage Orders");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
 
     }
 
-    public Button DeliveryViewButton;
+    @FXML
+    public Button ManageDeliveryButton;
 
-    public void onDeliveryViewButtonClick(ActionEvent event) {
-
+    @FXML
+    public void onManageDeliveryButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) LogOutButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("manageDeliveries-view.fxml"));
+            stage.setTitle("Staff - Manage Delivery");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
-    public Button CreateDailySpecialButton;
+    @FXML
+    public Button LogOutButton;
 
-    public void onCreateDailySpecialClick(ActionEvent event) {
-
+    @FXML
+    public void onLogOutButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) LogOutButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("staffLogin-view.fxml"));
+            stage.setTitle("Staff");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
+
+
 }

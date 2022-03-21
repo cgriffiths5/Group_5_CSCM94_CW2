@@ -24,7 +24,7 @@
     <Label fx:id="Subtitle">Rat free since 2017</Label>
 
     <Label fx:id="custButtonLabel"/>
-    <Button fx:id="custButton" text="Log In" onAction="#onCustButtonClick"/>
+    <Button fx:id="custButton" text="Customer Order and Book" onAction="#onCustButtonClick"/>
 
     <Label fx:id="StaffLoginButtonLabel" />
     <Button fx:id="staffLoginButton" text="Staff Log In" onAction="#onStaffLogInButtonClick" />

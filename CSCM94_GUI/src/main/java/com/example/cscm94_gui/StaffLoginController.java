@@ -25,4 +25,19 @@ public class StaffLoginController {
             System.out.println("Error loading page");
         }
     }
+
+    @FXML
+    public Button ReturnHomeButton;
+
+    @FXML
+    public void onReturnHomeButtonClick(ActionEvent event)  {
+        try {
+            Stage stage = (Stage) ReturnHomeButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
+            stage.setTitle("Home");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
+    }
 }

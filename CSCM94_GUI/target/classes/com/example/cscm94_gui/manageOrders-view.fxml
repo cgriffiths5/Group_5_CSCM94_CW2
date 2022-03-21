@@ -8,7 +8,7 @@
 <?import javafx.scene.control.Button?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.cscm94_gui.StaffHomeController">
+      fx:controller="com.example.cscm94_gui.ManageOrdersController">
 
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
@@ -21,19 +21,18 @@
     </ImageView>
 
     <Label>Staff Homepage</Label>
+    <Label>Manage Orders</Label>
 
-    <Button fx:id="ManageStaffButton" text="Manage Staff (Manager)" onAction="#onManageStaffButtonClick" />
+    <Label>Order Method</Label>
 
-    <Button fx:id="ManageOrdersButton" text="Manage Orders (Waiters/Chefs)" onAction="#onManageOrdersButtonClick"/>
+    <Label>Notify customer order is ready Method</Label>
 
-    <Button fx:id="ManageDeliveryButton" text="Manage Delivery (Waiters/Chefs/Delivery Drivers)" onAction="#onManageDeliveryButtonClick"/>
+    <Label>Check if customer has rejected order</Label>
 
-    <Button text="Approve Bookings (Waiters)" />
+    <Button fx:id="GoBackButton" text="Go Back" onAction="#onGoBackButtonClick" />
 
-    <Button fx:id="LogOutButton" text="Log out" onAction="#onLogOutButtonClick" />
 
 
 
 
 </VBox>
-
