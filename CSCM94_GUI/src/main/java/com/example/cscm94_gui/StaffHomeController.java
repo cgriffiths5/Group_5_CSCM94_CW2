@@ -62,7 +62,7 @@ public class StaffHomeController {
     public void onLogOutButtonClick(ActionEvent event) {
         try {
             Stage stage = (Stage) LogOutButton.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(getClass().getResource("staffLogin-view.fxml"));
+            Parent newRoot = FXMLLoader.load(getClass().getResource("home-view.fxml"));
             stage.setTitle("Staff");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {

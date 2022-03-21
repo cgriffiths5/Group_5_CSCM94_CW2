@@ -35,8 +35,8 @@
     <Label fx:id="loginLabel" />
     <Button fx:id="EnterButton" text="Enter" onAction="#onEnterButtonClick"/>
 
-    <Label fx:id="ContinueAsGuestLabel" />
-    <Button fx:id="GuestButton" text="Continue As Guest" onAction="#onGuestButtonClick"/>
+    <Label fx:id="StaffLogin" />
+    <Button fx:id="StaffLoginButton" text="Log in as staff" onAction="#onStaffLoginButtonClick" />
 
     <Button fx:id="RegisterButton" text="Register" onAction="#onRegisterButtonClick" />
 

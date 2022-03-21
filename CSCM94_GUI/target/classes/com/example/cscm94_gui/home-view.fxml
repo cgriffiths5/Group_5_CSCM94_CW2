@@ -26,9 +26,6 @@
     <Label fx:id="custButtonLabel"/>
     <Button fx:id="custButton" text="Customer Order and Book" onAction="#onCustButtonClick"/>
 
-    <Label fx:id="StaffLoginButtonLabel" />
-    <Button fx:id="staffLoginButton" text="Staff Log In" onAction="#onStaffLogInButtonClick" />
-
     <Label fx:id="buttonText"/>
     <Button fx:id="quitButton" text="Quit" onAction="#onQuitButtonClick"/>
 </VBox>

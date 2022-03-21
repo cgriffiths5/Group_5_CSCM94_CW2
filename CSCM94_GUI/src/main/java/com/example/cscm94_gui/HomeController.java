@@ -24,22 +24,6 @@ public class HomeController {
      }
    }
 
-   @FXML
-   public Button staffLoginButton;
-
-   @FXML
-   public void onStaffLogInButtonClick(ActionEvent event) {
-       try {
-           Stage stage = (Stage) custButton.getScene().getWindow();
-           Parent newRoot = FXMLLoader.load(getClass().getResource("staffLogin-view.fxml"));
-           stage.setTitle("Staff");
-           stage.getScene().setRoot(newRoot);
-       } catch (IOException e) {
-           System.out.println("Error loading page");
-       }
-   }
-
-
     @FXML
     public Button quitButton;
 

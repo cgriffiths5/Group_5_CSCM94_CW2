@@ -44,6 +44,21 @@ public class LoginController {
     }
 
     @FXML
+    public Button StaffLoginButton;
+
+    @FXML
+    public void onStaffLoginButtonClick(ActionEvent event) {
+        try {
+            Stage stage = (Stage) StaffLoginButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(getClass().getResource("staffHome-view.fxml"));
+            stage.setTitle("Staff Home");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
+    }
+
+    @FXML
     public Button RegisterButton;
 
     @FXML
@@ -53,7 +68,7 @@ public class LoginController {
             Parent newRoot = FXMLLoader.load(getClass().getResource("register-view.fxml"));
             stage.setTitle("Register");
             stage.getScene().setRoot(newRoot);
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println("Error loading page");
         }
     }
