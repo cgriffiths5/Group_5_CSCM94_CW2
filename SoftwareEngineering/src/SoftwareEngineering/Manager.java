@@ -39,6 +39,7 @@ public class Manager extends Waiter{
 	private int[] staffNeeded() {
 		/*
 		 * check database with how many staff are needed from capacity
+		 * check database with how mant staff are needed from capacity
 		 * 
 		 */
 		/*[chefsNeeded , waitersNeeded]*/

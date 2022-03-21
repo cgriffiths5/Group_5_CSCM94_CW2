@@ -31,6 +31,7 @@ public class Chef extends Staff {
 		/*
 		 * see if markOrderComplete is ready and then
 		 * message waiter to collect the food
+		 * 
 		 */
 		return "orderReadyMessage";
 	}
@@ -41,6 +42,7 @@ public class Chef extends Staff {
 		 * compare order time and the actual time to see
 		 * if its taken to long. if the food has taken a while
 		 * notify the waiter
+		 * 
 		 */
 		/*String message, [orders]*/
 	}
@@ -54,19 +56,3 @@ public class Chef extends Staff {
 		return "daily special";
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

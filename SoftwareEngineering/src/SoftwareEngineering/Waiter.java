@@ -8,6 +8,7 @@ package SoftwareEngineering;
  */
 
 
+
 public class Waiter extends Staff {
 	private String role = "waiter";
 	
