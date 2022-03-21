@@ -7,8 +7,6 @@ package SoftwareEngineering;
  * when another window had recieved an input
  */
 
-
-
 public class Waiter extends Staff {
 	private String role = "waiter";
 	
@@ -26,7 +24,7 @@ public class Waiter extends Staff {
 	}
 	
 	
-	
+	//make it so gui shows availability so waiter doesnt need to approve
 	public boolean approveBooking(/*booking data*/) {
 		/*
 		 * gather information about booking and then compare
@@ -52,7 +50,7 @@ public class Waiter extends Staff {
 		return 0;
 	}
 	
-	public boolean notifiesCustomerOrderReady(/*OrderID*/) {
+	public boolean notifiesCustomerOrderReady(String customerUsername) {
 		/*
 		 * for takeway and delivery
 		 * get values from database about orderId and 
@@ -62,10 +60,14 @@ public class Waiter extends Staff {
 		return false;
 	}
 	
-	public void customerRejectsOrder(/*OrderID*/) {
+	
+	/*
+	 * for a seated order
+	public void customerRejectsOrder(String customerUsername) {
 		/*
-		 * customer informs member of stadd that order 
+		 * customer informs member of staff that order 
 		 * is wrong
-		 */
+		 *
 	}
+	*/
 }

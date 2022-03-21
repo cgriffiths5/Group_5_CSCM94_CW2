@@ -17,8 +17,7 @@ public abstract class Staff extends Person {
 	}
 	
 	
-	private void showStaffProfile(int staffID) {
-		int a =0;
+	private void showStaffProfile(String staffUsername) {
 		/*
 		 * But gathering the staff unique id we can us
 		 * the database to retrieve the staff profile

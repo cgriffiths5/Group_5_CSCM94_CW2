@@ -18,7 +18,7 @@ public class Driver extends Staff {
 	
 	
 	//does this need to be public as well and should it be void
-	private boolean markOrderDelivered(int orderID) {
+	private boolean markOrderDelivered(String customerUsername) {
 		/*
 		 * when food is delivered mark food as delivered 
 		 * by boolean then update the database
@@ -26,7 +26,7 @@ public class Driver extends Staff {
 		return false;
 	}
 	
-	private int[] checkOrderStatus(int orderID) {
+	private int[] checkOrderStatus(String customerUsername) {
 		/*
 		 * Gather orderID from database to see if order
 		 * has been cooked
@@ -34,12 +34,11 @@ public class Driver extends Staff {
 		return null;
 	}
 	
-	private String getCustomerAddress(int orderID) {
+	private String getCustomerAddress(String customerUsername) {
 		/*
 		 * gather orderID value from the database and 
 		 * retrieve the address from the orderID value and 
 		 * database information for that ID
-		 *
 		 */
 		return "";
 	}

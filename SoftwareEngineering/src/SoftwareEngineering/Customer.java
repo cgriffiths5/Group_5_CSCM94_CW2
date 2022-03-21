@@ -1,5 +1,6 @@
 package SoftwareEngineering;
 
+
 public class Customer extends Person{
 	/*public int customerID = getCustomerProfileData(): || enterCustomerProfileData():*/
 	private String role = "customer";
@@ -55,15 +56,15 @@ public class Customer extends Person{
 		 */
 	}
 	
-	//Do we need to enter a string as well to know whats the problem??
+	
 	public /*-showProfile(customerID)*/ void problemWithOrder(int orderID, String orderProblem) {
 		/*
+		 * GUI box to explain problem
 		 */
 	}
 	
-	//does request a booking just need to be a boolean return? 
-	//as it'll just be a "yes booking confirmed" or "no space
-	// available"??
+
+	//gui will show that the date is greyed out so wont need boolean
 	public String[] requestBooking(int numOfGuests, int[] dateTime,
 			int customerID ,int bookingLength) {
 		/*
@@ -73,6 +74,7 @@ public class Customer extends Person{
 		return null;
 	}
 	
+	//dont need to implement
 	//Can this also be a boolean?
 	public String[]/*event info*/ requestEvent(String eventName, String[] menu, int[] dateTime, 
 			int numOfTables, int maxGuests, String description) {
@@ -83,7 +85,8 @@ public class Customer extends Person{
 		return null;
 	}
 	
-	public String checkExistingBooking() {
+	//username is unique so better than customer id
+	public String checkExistingBooking(String username) {
 		/*
 		 * grab information about booking from database
 		 * then show customer
@@ -91,7 +94,8 @@ public class Customer extends Person{
 		return "";
 	}
 	
-	public /*cancel booking*/ void requestCancelBooking(/*[booking data]*/ int customerID) {
+	//username is unique and date tiem of booking
+	public /*cancel booking*/ void requestCancelBooking(/*[booking data]*/ String username, int dateTime) {
 		/*
 		 * gather unique customer id then grab booking from database.
 		 * ask again if they are sure they want to cancel the booking then
@@ -99,6 +103,7 @@ public class Customer extends Person{
 		 */
 	}
 	
+	//NOT DOING IT LIKE THIS
 	//do we need address or can it be customer Id as that'll already have address?
 	//but for first time 
 	public int[] orders(int table, boolean delivery, boolean takeaway,
@@ -110,12 +115,4 @@ public class Customer extends Person{
 		return null;
 	}
 	
-	//Do we want this a string?
-	public int getCustomerID() {
-		/*
-		 * be able to go into the database and an gather the id
-		 * and display it 
-		 */
-		return 0;
-	}
 }
