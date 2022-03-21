@@ -62,6 +62,9 @@ public class Waiter extends Staff {
 	}
 	
 	public void customerRejectsOrder(/*OrderID*/) {
-		
+		/*
+		 * customer informs member of stadd that order 
+		 * is wrong
+		 */
 	}
 }

@@ -58,7 +58,6 @@ public class Customer extends Person{
 	//Do we need to enter a string as well to know whats the problem??
 	public /*-showProfile(customerID)*/ void problemWithOrder(int orderID, String orderProblem) {
 		/*
-		 * 
 		 */
 	}
 	

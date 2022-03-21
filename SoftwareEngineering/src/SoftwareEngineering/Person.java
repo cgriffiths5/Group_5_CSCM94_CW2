@@ -9,6 +9,7 @@ public abstract class Person {
 		this.lastName = lastName;
 	}
 	
+	//SETTERS AND GETTERS
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
