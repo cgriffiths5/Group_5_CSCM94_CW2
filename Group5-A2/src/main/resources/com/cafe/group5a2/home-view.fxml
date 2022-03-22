@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="375.0" prefWidth="465.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.HomeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="Title">Cafe 49</Label>
+    <Label fx:id="Subtitle">Rat free since 2017</Label>
+
+    <Label fx:id="custButtonLabel" />
+   <TextField fx:id="username" prefHeight="25.0" prefWidth="204.0" promptText="username..." />
+   <TextField fx:id="password" promptText="password..." />
+    <Button fx:id="custButton" onAction="#onCustButtonClick" text="login" />
+    <Button fx:id="quitButton" onAction="#onQuitButtonClick" text="Quit" />
+
+    <Label fx:id="buttonText" />
+</VBox>

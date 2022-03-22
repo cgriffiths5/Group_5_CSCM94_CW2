@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" spacing="20.0"
+      fx:controller="com.cafe.group5a2.ManageStaffController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <ImageView fitHeight="64" fitWidth="64">
+        <image>
+            <Image url="https://img.freepik.com/free-vector/waiter-serving-wine-flat-vector-illustration-young-boy-apron-holding-tray-with-wineglasses-cartoon-character-experienced-restaurant-staff-member-cafe-employee-male-catering-service-worker_198278-6210.jpg"/>
+        </image>
+    </ImageView>
+
+    <Label>Staff Homepage Method</Label>
+
+    <Label>Add Staff Method</Label>
+
+    <Label>Remove Staff Method</Label>
+
+    <Label>Check Staff Method</Label>
+
+    <Label>Get Reports Method</Label>
+
+    <Button fx:id="GoBackButton" text="Go Back" onAction="#onGoBackButtonClick"/>
+
+</VBox>
+
