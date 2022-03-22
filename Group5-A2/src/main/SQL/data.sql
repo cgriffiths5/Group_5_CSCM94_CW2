@@ -29,6 +29,54 @@ VALUES ('adam', 'tucker', 'manager', 'atucker', 'atucker1', '1', 'ABC123'),
        ('chunming', 'peng', 'customer', 'cpeng', 'cpeng1', '1', 'ABC123'),
        ('chenyu', 'tao', 'customer', 'ctao', 'ctao1', '1', 'ABC123');
 
+DROP PROCEDURE IF EXISTS fill_cap;
+
+DELIMITER //
+CREATE PROCEDURE fill_cap(start_date DATE, end_date DATE, start_table INT,
+                          start_seat INT, start_hour TIME)
+BEGIN
+    WHILE start_date <= end_date
+        DO
+            SET start_table = 1;
+            SET start_seat = 2;
+            WHILE start_table <= 11
+                DO
+                    SET start_hour = 1200;
+                    WHILE start_hour <= 2200
+                        DO
+                            INSERT INTO capacity (table_number, seats, date, hour)
+                            VALUES (start_table, start_seat, start_date, start_hour);
+                            SET start_hour = start_hour + 100;
+                        END WHILE;
+                    SET start_table = start_table + 1;
+                    IF start_table = 1 OR start_table = 2 OR start_table = 3 OR start_table = 4 THEN
+                        BEGIN
+                            SET start_seat = 2;
+                        END;
+                    END IF;
+                    IF start_table = 5 OR start_table = 6 OR start_table = 7 OR start_table = 8 THEN
+                        BEGIN
+                            SET start_seat = 4;
+                        END;
+                    END IF;
+                    IF start_table = 9 OR start_table = 10 THEN
+                        BEGIN
+                            SET start_seat = 8;
+                        END;
+                    END IF;
+                    IF start_table = 11 THEN
+                        BEGIN
+                            SET start_seat = 10;
+                        END;
+                    END IF;
+                END WHILE;
+            SET start_date = DATE_ADD(start_date, INTERVAL 1 day);
+        END WHILE;
+END //
+DELIMITER ;
+
+CALL fill_cap('2022-03-20', '2022-05-30', 1, 2, 1200);
+
 INSERT INTO bookings
     (b_user_ID, b_cap_ID, guests)
 VALUES (5, 4045, 4),  # we will need to actually show the user a list of every hour that
@@ -77,53 +125,7 @@ VALUES (5, 4045, 4),  # we will need to actually show the user a list of every h
 
  */
 
-DROP PROCEDURE IF EXISTS fill_cap;
 
-DELIMITER //
-CREATE PROCEDURE fill_cap(start_date DATE, end_date DATE, start_table INT,
-                          start_seat INT, start_hour TIME)
-BEGIN
-    WHILE start_date <= end_date
-        DO
-            SET start_table = 1;
-            SET start_seat = 2;
-            WHILE start_table <= 11
-                DO
-                    SET start_hour = 1200;
-                    WHILE start_hour <= 2200
-                        DO
-                            INSERT INTO capacity (table_number, seats, date, hour)
-                            VALUES (start_table, start_seat, start_date, start_hour);
-                            SET start_hour = start_hour + 100;
-                        END WHILE;
-                    SET start_table = start_table + 1;
-                    IF start_table = 1 OR start_table = 2 OR start_table = 3 OR start_table = 4 THEN
-                        BEGIN
-                            SET start_seat = 2;
-                        END;
-                    END IF;
-                    IF start_table = 5 OR start_table = 6 OR start_table = 7 OR start_table = 8 THEN
-                        BEGIN
-                            SET start_seat = 4;
-                        END;
-                    END IF;
-                    IF start_table = 9 OR start_table = 10 THEN
-                        BEGIN
-                            SET start_seat = 8;
-                        END;
-                    END IF;
-                    IF start_table = 11 THEN
-                        BEGIN
-                            SET start_seat = 10;
-                        END;
-                    END IF;
-                END WHILE;
-            SET start_date = DATE_ADD(start_date, INTERVAL 1 day);
-        END WHILE;
-END //
-DELIMITER ;
-
-CALL fill_cap('2022-03-20', '2022-05-30', 1, 2, 1200);
 
 
 DROP PROCEDURE IF EXISTS remove_old_bookings;
