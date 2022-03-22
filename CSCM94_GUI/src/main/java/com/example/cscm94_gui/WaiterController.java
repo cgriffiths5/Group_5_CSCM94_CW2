@@ -1,14 +1,15 @@
 package com.example.cscm94_gui;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
+
 import java.io.IOException;
 
-
-public class ManageStaffController {
+public class WaiterController {
 
     @FXML
     public Button GoBackButton;
@@ -24,5 +25,4 @@ public class ManageStaffController {
             System.out.println("Error loading page");
         }
     }
-
 }
