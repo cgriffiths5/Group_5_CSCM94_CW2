@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ManageDeliveriesController {
+public class DriverController {
 
     @FXML
     public Button GoBackButton;

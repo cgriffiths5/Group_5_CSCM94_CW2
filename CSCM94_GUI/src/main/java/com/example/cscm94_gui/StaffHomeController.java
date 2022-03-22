@@ -16,7 +16,7 @@ public class StaffHomeController {
     public void onManageStaffButtonClick(ActionEvent event) {
         try {
             Stage stage = (Stage) LogOutButton.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(getClass().getResource("manageStaff-view.fxml"));
+            Parent newRoot = FXMLLoader.load(getClass().getResource("manager-view.fxml"));
             stage.setTitle("Staff - Manage Staff");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
@@ -31,7 +31,7 @@ public class StaffHomeController {
     public void onManageOrdersButtonClick(ActionEvent event) {
         try {
             Stage stage = (Stage) LogOutButton.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(getClass().getResource("manageOrders-view.fxml"));
+            Parent newRoot = FXMLLoader.load(getClass().getResource("waiter-view.fxml"));
             stage.setTitle("Staff - Manage Orders");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
@@ -47,7 +47,7 @@ public class StaffHomeController {
     public void onManageDeliveryButtonClick(ActionEvent event) {
         try {
             Stage stage = (Stage) LogOutButton.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(getClass().getResource("manageDeliveries-view.fxml"));
+            Parent newRoot = FXMLLoader.load(getClass().getResource("driver-view.fxml"));
             stage.setTitle("Staff - Manage Delivery");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
