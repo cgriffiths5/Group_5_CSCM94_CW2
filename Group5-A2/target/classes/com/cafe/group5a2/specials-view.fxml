@@ -11,4 +11,6 @@
 
     <Text>Specials</Text>
 
+    <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick">Return To Customer Home</Button>
+
 </VBox>
