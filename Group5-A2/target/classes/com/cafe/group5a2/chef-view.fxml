@@ -28,14 +28,14 @@
         </Label>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="viewSpecials" fx:id="viewSpecials" prefHeight="27.0" prefWidth="150.0" text="View Specials">
+        <Button id="viewSpecials" fx:id="viewSpecials" onAction="#onViewSpecialsClick" prefHeight="27.0" prefWidth="150.0" text="View Specials">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="viewOustandingOrders" fx:id="viewOutstandingOrders"  prefHeight="27.0" prefWidth="150.0" text="View Outstanding Orders">
+        <Button id="viewOustandingOrders" fx:id="viewOutstandingOrders" onAction="#onViewOutstandingOrdersClick"  prefHeight="27.0" prefWidth="150.0" text="View Outstanding Orders">
             <font>
                 <Font size="15.0" />
             </font>
