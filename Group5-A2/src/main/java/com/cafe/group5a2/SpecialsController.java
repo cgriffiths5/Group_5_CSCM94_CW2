@@ -16,7 +16,7 @@ public class SpecialsController {
 
     /**
      *
-     * @param event
+     * @param event when the return back button is pressed the chef view FXML page is loaded
      */
 
     @FXML
@@ -24,6 +24,7 @@ public class SpecialsController {
         try {
             Stage stage = (Stage) ChefHomeReturn.getScene().getWindow();
             Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("chef-view.fxml")));
+
             stage.setTitle("Chef");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
