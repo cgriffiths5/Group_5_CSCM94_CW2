@@ -75,8 +75,8 @@ public class HomeController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
                         newRoot = loader.load();
 
-                        ManagerController mCont = loader.getController();
-                        mCont.setUserText(user);
+                        ManagerController cCont = loader.getController();
+                        cCont.setUserText(user);
 
                         stage = new Stage();
                         stage.setTitle(user);
@@ -194,7 +194,7 @@ public class HomeController {
                             FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
                             newRoot = loader.load();
 
-                            CustomerController cCont = loader.getController();
+                            ManagerController cCont = loader.getController();
                             cCont.setUserText(user);
 
                             stage = new Stage();
@@ -224,7 +224,7 @@ public class HomeController {
                             FXMLLoader loader = new FXMLLoader(getClass().getResource("chef-view.fxml"));
                             newRoot = loader.load();
 
-                            CustomerController cCont = loader.getController();
+                            ChefController cCont = loader.getController();
                             cCont.setUserText(user);
 
                             stage = new Stage();
