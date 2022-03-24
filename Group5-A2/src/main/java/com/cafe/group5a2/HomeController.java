@@ -105,8 +105,8 @@ public class HomeController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("chef-view.fxml"));
                         newRoot = loader.load();
 
-                        CustomerController cCont = loader.getController();
-                        cCont.setUserText(user);
+                        ChefController cCont = loader.getController();
+                        //cCont.setUserText(user);
 
                         stage = new Stage();
                         stage.setTitle(user);
