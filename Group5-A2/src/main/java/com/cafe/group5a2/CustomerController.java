@@ -61,7 +61,7 @@ public class CustomerController {
             stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
             stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
             stage.setTitle(username);
-            stage.setHeight(1200.0);
+            stage.setHeight(992.0);
             stage.setMaxHeight(2099.0);
             stage.setWidth(964.0);
             stage.setMaxWidth(964.0);
