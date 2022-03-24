@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ChefController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ManagerController">
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
         <Label fx:id="Title" text="Cafe 94">
             <font>
@@ -29,6 +29,13 @@
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
         <Button id="generateReports" fx:id="generateReports" onAction="#onGenerateReportsClick" prefHeight="27.0" prefWidth="150.0" text="Generate Reports">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+        <Button id="addRemoveStaff" fx:id="addRemoveStaff" onAction="#onAddRemoveStaffClick" prefHeight="27.0" prefWidth="150.0" text="Add and Remove Staff">
             <font>
                 <Font size="15.0" />
             </font>

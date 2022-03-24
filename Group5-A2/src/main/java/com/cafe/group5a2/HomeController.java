@@ -75,8 +75,8 @@ public class HomeController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
                         newRoot = loader.load();
 
-                        CustomerController cCont = loader.getController();
-                        cCont.setUserText(user);
+                        ManagerController mCont = loader.getController();
+                        mCont.setUserText(user);
 
                         stage = new Stage();
                         stage.setTitle(user);
