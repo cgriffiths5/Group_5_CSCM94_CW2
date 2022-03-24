@@ -10,6 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class ChefController {
@@ -21,10 +24,17 @@ public class ChefController {
     public String username;
     public Label userLabel;
 
+    public ChefController() throws SQLException {
+    }
+
     public void setUserText(String text) {
         username = text;
         userLabel.setText(text);
+
     }
+
+    //Database connection
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
     @FXML
     public void onViewSpecialsClick(ActionEvent event) {

@@ -7,11 +7,20 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class OutstandingOrdersController {
 
     @FXML public Button ChefHomeReturn;
+
+    //Database connection
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
+
+    public OutstandingOrdersController() throws SQLException {
+    }
 
     /**
      *
