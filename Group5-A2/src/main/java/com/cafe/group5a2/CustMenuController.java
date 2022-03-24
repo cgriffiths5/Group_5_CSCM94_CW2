@@ -210,7 +210,46 @@ public class CustMenuController {
         //System.out.println(counter);
         String itemList = getOrderList(counter);
         int id = getUserId(username);
-        String type = "seated";
+        String type = "takeaway";
+        String query =
+                "INSERT INTO orders (FK_user_ID, type, item_list) VALUES ("
+                        + id + "," + "'" + type + "'," + "'" + itemList + "')";
+        try (Statement stmt = con.createStatement()) {
+            stmt.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onDeliveryButtonClick(ActionEvent actionEvent) {
+        int counter = 0;
+        while (counter <= 20) {
+            if (!d1.getText().equals("")) counter++; else break;
+            if (!d2.getText().equals("")) counter++; else break;
+            if (!d3.getText().equals("")) counter++; else break;
+            if (!d4.getText().equals("")) counter++; else break;
+            if (!d5.getText().equals("")) counter++; else break;
+            if (!d6.getText().equals("")) counter++; else break;
+            if (!d7.getText().equals("")) counter++; else break;
+            if (!d8.getText().equals("")) counter++; else break;
+            if (!d9.getText().equals("")) counter++; else break;
+            if (!d10.getText().equals("")) counter++;else break;
+            if (!d11.getText().equals("")) counter++;else break;
+            if (!d12.getText().equals("")) counter++;else break;
+            if (!d13.getText().equals("")) counter++;else break;
+            if (!d14.getText().equals("")) counter++;else break;
+            if (!d15.getText().equals("")) counter++;else break;
+            if (!d16.getText().equals("")) counter++;else break;
+            if (!d17.getText().equals("")) counter++;else break;
+            if (!d18.getText().equals("")) counter++;else break;
+            if (!d19.getText().equals("")) counter++;else break;
+            if (!d20.getText().equals("")) counter++;else break;
+        }
+        //System.out.println(counter);
+        String itemList = getOrderList(counter);
+        int id = getUserId(username);
+        String type = "delivery";
         String query =
                 "INSERT INTO orders (FK_user_ID, type, item_list) VALUES ("
                         + id + "," + "'" + type + "'," + "'" + itemList + "')";
@@ -398,10 +437,9 @@ public class CustMenuController {
         return itemList.toString();
     }
     @FXML
-    public void onDeliveryButtonClick(ActionEvent actionEvent) {
 
 
-    }
+
 
     public String getItem(int num) throws SQLException {
         String val = "";

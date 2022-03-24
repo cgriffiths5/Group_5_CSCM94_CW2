@@ -66,7 +66,6 @@ public class CustomerController {
             stage.setWidth(964.0);
             stage.setMaxWidth(964.0);
             stage.getScene().setRoot(newRoot);
-            stage.initStyle(StageStyle.TRANSPARENT);
         } catch (IOException e) {
             System.out.println("Error loading page");
         } catch (SQLException e) {
