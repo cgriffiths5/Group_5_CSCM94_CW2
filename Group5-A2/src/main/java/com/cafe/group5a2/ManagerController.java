@@ -16,7 +16,7 @@ public class ManagerController {
 
     @FXML
     public Button homeButton;
-    public Button GenerateReports;
+    public Button generateReports;
     public Button addRemoveStaff;
     public String username;
     public Label userLabel;
@@ -31,8 +31,8 @@ public class ManagerController {
     @FXML
     public void onGenerateReportsClick(ActionEvent event) {
         try {
-            Stage stage = (Stage) GenerateReports.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("generate-reports-view.fxml")));
+            Stage stage = (Stage) generateReports.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("generateReports-view.fxml")));
             stage.setTitle("Generate Reports");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
@@ -43,7 +43,7 @@ public class ManagerController {
     @FXML
     public void onAddRemoveStaffClick(ActionEvent event) {
         try {
-            Stage stage = (Stage) GenerateReports.getScene().getWindow();
+            Stage stage = (Stage) addRemoveStaff.getScene().getWindow();
             Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addStaff-view.fxml")));
             stage.setTitle("Add and Remove Staff");
             stage.getScene().setRoot(newRoot);
