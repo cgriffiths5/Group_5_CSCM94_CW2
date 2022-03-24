@@ -38,7 +38,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.CustomerController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.cafe.group5a2.CustomerController">
    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
       <Label fx:id="Title" text="Cafe 94">
          <font>

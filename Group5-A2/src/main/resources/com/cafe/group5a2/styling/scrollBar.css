@@ -70,10 +70,22 @@
 .scroll-bar:horizontal:focused {
     -fx-background-color: rgb(96,96,96),rgb(96,96,96),rgb(96,96,96);
 }
+.scroll-bar:vertical {
+    -fx-unit-increment: 10 ;
+    -fx-block-increment: 50 ;
+}
 .scroll-pane > .corner {
     -fx-background-color: rgb(96,96,96);
 }
 .scroll-pane > .background {
     -fx-background-colour: rgb(96,96,96);
+}
+.scroll-pane .scroll-bar:vertical {
+    -fx-unit-increment: 10 ;
+    -fx-block-increment: 50 ;
+}
+.scroll-pane .scroll-bar:horizontal {
+    -fx-unit-increment: 5 ;
+    -fx-block-increment: 20 ;
 }
 
