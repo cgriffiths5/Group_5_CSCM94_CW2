@@ -34,7 +34,6 @@ public class HomeController {
     // THIS IS THE CONNECTOR, USE THIS IN OTHER CONTROLLERS
 
     public HomeController() throws SQLException {
-
     }
 
     @FXML
@@ -72,30 +71,80 @@ public class HomeController {
                         e.printStackTrace();
                     }
                 case "manager":
-                    stage = (Stage) custButton.getScene().getWindow();
-                    newRoot = FXMLLoader.load(Objects.requireNonNull
-                            (getClass().getResource("manager-view.fxml")));
-                    stage.getScene().setRoot(newRoot);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
+                        newRoot = loader.load();
+
+                        CustomerController cCont = loader.getController();
+                        cCont.setUserText(user);
+
+                        stage = new Stage();
+                        stage.setTitle(user);
+                        stage.setScene(new Scene(newRoot, 450, 450));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 case "waiter":
-                    stage = (Stage) custButton.getScene().getWindow();
-                    newRoot = FXMLLoader.load(Objects.requireNonNull
-                            (getClass().getResource("waiter-view.fxml")));
-                    stage.getScene().setRoot(newRoot);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("waiter-view.fxml"));
+                        newRoot = loader.load();
+
+                        CustomerController cCont = loader.getController();
+                        cCont.setUserText(user);
+
+                        stage = new Stage();
+                        stage.setTitle(user);
+                        stage.setScene(new Scene(newRoot, 450, 450));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 case "chef":
-                    stage = (Stage) custButton.getScene().getWindow();
-                    newRoot = FXMLLoader.load(Objects.requireNonNull
-                            (getClass().getResource("chef-view.fxml")));
-                    stage.getScene().setRoot(newRoot);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("chef-view.fxml"));
+                        newRoot = loader.load();
+
+                        CustomerController cCont = loader.getController();
+                        cCont.setUserText(user);
+
+                        stage = new Stage();
+                        stage.setTitle(user);
+                        stage.setScene(new Scene(newRoot, 450, 450));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 case "driver":
-                    stage = (Stage) custButton.getScene().getWindow();
-                    newRoot = FXMLLoader.load(Objects.requireNonNull
-                            (getClass().getResource("driver-view.fxml")));
-                    stage.getScene().setRoot(newRoot);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("driver-view.fxml"));
+                        newRoot = loader.load();
+
+                        CustomerController cCont = loader.getController();
+                        cCont.setUserText(user);
+
+                        stage = new Stage();
+                        stage.setTitle(user);
+                        stage.setScene(new Scene(newRoot, 450, 450));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 default:
-                    stage = (Stage) custButton.getScene().getWindow();
-                    newRoot = FXMLLoader.load(Objects.requireNonNull
-                            (getClass().getResource("home-view.fxml")));
-                    stage.getScene().setRoot(newRoot);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
+                        newRoot = loader.load();
+
+                        CustomerController cCont = loader.getController();
+                        cCont.setUserText(user);
+
+                        stage = new Stage();
+                        stage.setTitle(user);
+                        stage.setScene(new Scene(newRoot, 450, 450));
+                        stage.show();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
             }
 
         } catch (IOException e) {
@@ -141,30 +190,80 @@ public class HomeController {
                             e.printStackTrace();
                         }
                     case "manager":
-                        stage = (Stage) custButton.getScene().getWindow();
-                        newRoot = FXMLLoader.load(Objects.requireNonNull
-                                (getClass().getResource("manager-view.fxml")));
-                        stage.getScene().setRoot(newRoot);
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
+                            newRoot = loader.load();
+
+                            CustomerController cCont = loader.getController();
+                            cCont.setUserText(user);
+
+                            stage = new Stage();
+                            stage.setTitle(user);
+                            stage.setScene(new Scene(newRoot, 450, 450));
+                            stage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     case "waiter":
-                        stage = (Stage) custButton.getScene().getWindow();
-                        newRoot = FXMLLoader.load(Objects.requireNonNull
-                                (getClass().getResource("waiter-view.fxml")));
-                        stage.getScene().setRoot(newRoot);
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("waiter-view.fxml"));
+                            newRoot = loader.load();
+
+                            CustomerController cCont = loader.getController();
+                            cCont.setUserText(user);
+
+                            stage = new Stage();
+                            stage.setTitle(user);
+                            stage.setScene(new Scene(newRoot, 450, 450));
+                            stage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     case "chef":
-                        stage = (Stage) custButton.getScene().getWindow();
-                        newRoot = FXMLLoader.load(Objects.requireNonNull
-                                (getClass().getResource("chef-view.fxml")));
-                        stage.getScene().setRoot(newRoot);
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("chef-view.fxml"));
+                            newRoot = loader.load();
+
+                            CustomerController cCont = loader.getController();
+                            cCont.setUserText(user);
+
+                            stage = new Stage();
+                            stage.setTitle(user);
+                            stage.setScene(new Scene(newRoot, 450, 450));
+                            stage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     case "driver":
-                        stage = (Stage) custButton.getScene().getWindow();
-                        newRoot = FXMLLoader.load(Objects.requireNonNull
-                                (getClass().getResource("driver-view.fxml")));
-                        stage.getScene().setRoot(newRoot);
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("driver-view.fxml"));
+                            newRoot = loader.load();
+
+                            CustomerController cCont = loader.getController();
+                            cCont.setUserText(user);
+
+                            stage = new Stage();
+                            stage.setTitle(user);
+                            stage.setScene(new Scene(newRoot, 450, 450));
+                            stage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     default:
-                        stage = (Stage) custButton.getScene().getWindow();
-                        newRoot = FXMLLoader.load(Objects.requireNonNull
-                                (getClass().getResource("home-view.fxml")));
-                        stage.getScene().setRoot(newRoot);
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("home-view.fxml"));
+                            newRoot = loader.load();
+
+                            CustomerController cCont = loader.getController();
+                            cCont.setUserText(user);
+
+                            stage = new Stage();
+                            stage.setTitle(user);
+                            stage.setScene(new Scene(newRoot, 450, 450));
+                            stage.show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                 }
 
             } catch (IOException e) {
@@ -182,6 +281,13 @@ public class HomeController {
         stage.close();
     }
 
+    /**
+     *
+     * @param username is the username entered by the person logging in
+     * @param password is the password entered by the person logging in
+     * @return false if the username doesn't exist or the password doesn't match for that user
+     * @throws SQLException just to ensure the program doesn't crash, don't actually handle exception
+     */
     public boolean checkUsernamePassword(String username, String password) throws SQLException {
         String query = "SELECT password FROM users WHERE username = '" + username + "'";
         boolean retVal = false;
@@ -200,6 +306,12 @@ public class HomeController {
         return retVal;
     }
 
+    /**
+     *
+     * @param username
+     * @return
+     * @throws SQLException
+     */
     public String getRole(String username) throws SQLException {
         String query = "SELECT role FROM users WHERE username = '" + username + "'";
         String retRole = "null";

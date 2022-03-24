@@ -3,14 +3,21 @@ package com.cafe.group5a2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class CustomerController {
@@ -37,19 +44,33 @@ public class CustomerController {
         userLabel.setText(text);
     }
 
-
-
     @FXML
     public void onViewMenuButtonClick(ActionEvent event) {
         try {
             Stage stage = (Stage) viewMenu.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu-view.fxml")));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("custMenu-view.fxml"));
+            Parent newRoot = loader.load();
+
+            CustMenuController cMCont = loader.getController();
+            cMCont.setItemLabels();
+            cMCont.setPriceLabels();
+            cMCont.setDescLabels();
+            cMCont.setUserText(username);
             stage.setTitle("Order");
+            Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
+            stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
+            stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
+            stage.setTitle(username);
+            stage.setHeight(1200.0);
+            stage.setMaxHeight(2099.0);
+            stage.setWidth(964.0);
+            stage.setMaxWidth(964.0);
             stage.getScene().setRoot(newRoot);
-            stage.setHeight(820);
-            stage.setWidth(640);
+            stage.initStyle(StageStyle.TRANSPARENT);
         } catch (IOException e) {
             System.out.println("Error loading page");
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
