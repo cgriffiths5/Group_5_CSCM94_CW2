@@ -56,11 +56,10 @@ public class CustomerController {
             cMCont.setPriceLabels();
             cMCont.setDescLabels();
             cMCont.setUserText(username);
-            stage.setTitle("Order");
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
             stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
             stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
-            stage.setTitle(username);
+            stage.setTitle("Order");
             stage.setHeight(992.0);
             stage.setMaxHeight(2099.0);
             stage.setWidth(964.0);
@@ -77,8 +76,19 @@ public class CustomerController {
     public void onBookButtonClick(ActionEvent event) {
         try {
             Stage stage = (Stage) bookButton.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("customer-booking.fxml")));
-            stage.setTitle("Booking");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("customer-booking.fxml"));
+            Parent newRoot = loader.load();
+
+            CustBookingController cMCont = loader.getController();
+            cMCont.setUserText(username);
+            stage.setTitle("Reservation");
+            Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
+            stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
+            stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
+            stage.setHeight(1000.0);
+            stage.setMaxHeight(1199.0);
+            stage.setWidth(733.0);
+            stage.setMaxWidth(733.0);
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");

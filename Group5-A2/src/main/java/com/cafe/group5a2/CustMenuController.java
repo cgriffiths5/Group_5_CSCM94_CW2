@@ -211,13 +211,19 @@ public class CustMenuController {
         String itemList = getOrderList(counter);
         int id = getUserId(username);
         String type = "takeaway";
-        String query =
-                "INSERT INTO orders (FK_user_ID, type, item_list) VALUES ("
-                        + id + "," + "'" + type + "'," + "'" + itemList + "')";
-        try (Statement stmt = con.createStatement()) {
-            stmt.executeQuery(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (Integer.parseInt(q1.getText()) > 0 || Integer.parseInt(q2.getText()) > 0 || Integer.parseInt(q3.getText()) > 0 || Integer.parseInt(q4.getText()) > 0
+                || Integer.parseInt(q5.getText()) > 0 || Integer.parseInt(q6.getText()) > 0 || Integer.parseInt(q7.getText()) > 0 || Integer.parseInt(q8.getText()) > 0
+                || Integer.parseInt(q9.getText()) > 0 || Integer.parseInt(q10.getText()) > 0 || Integer.parseInt(q11.getText()) > 0 || Integer.parseInt(q12.getText()) > 0
+                || Integer.parseInt(q13.getText()) > 0 || Integer.parseInt(q14.getText()) > 0 || Integer.parseInt(q15.getText()) > 0 || Integer.parseInt(q16.getText()) > 0
+                || Integer.parseInt(q17.getText()) > 0 || Integer.parseInt(q18.getText()) > 0 || Integer.parseInt(q19.getText()) > 0 || Integer.parseInt(q20.getText()) > 0) {
+            String query =
+                    "INSERT INTO orders (FK_user_ID, type, item_list) VALUES ("
+                            + id + "," + "'" + type + "'," + "'" + itemList + "')";
+            try (Statement stmt = con.createStatement()) {
+                stmt.executeQuery(query);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -250,13 +256,20 @@ public class CustMenuController {
         String itemList = getOrderList(counter);
         int id = getUserId(username);
         String type = "delivery";
-        String query =
-                "INSERT INTO orders (FK_user_ID, type, item_list) VALUES ("
-                        + id + "," + "'" + type + "'," + "'" + itemList + "')";
-        try (Statement stmt = con.createStatement()) {
-            stmt.executeQuery(query);
-        } catch (SQLException e) {
-            e.printStackTrace();
+        System.out.println(Integer.parseInt(q1.getText()));
+        if (Integer.parseInt(q1.getText()) > 0 || Integer.parseInt(q2.getText()) > 0 || Integer.parseInt(q3.getText()) > 0 || Integer.parseInt(q4.getText()) > 0
+                || Integer.parseInt(q5.getText()) > 0 || Integer.parseInt(q6.getText()) > 0 || Integer.parseInt(q7.getText()) > 0 || Integer.parseInt(q8.getText()) > 0
+                || Integer.parseInt(q9.getText()) > 0 || Integer.parseInt(q10.getText()) > 0 || Integer.parseInt(q11.getText()) > 0 || Integer.parseInt(q12.getText()) > 0
+                || Integer.parseInt(q13.getText()) > 0 || Integer.parseInt(q14.getText()) > 0 || Integer.parseInt(q15.getText()) > 0 || Integer.parseInt(q16.getText()) > 0
+                || Integer.parseInt(q17.getText()) > 0 || Integer.parseInt(q18.getText()) > 0 || Integer.parseInt(q19.getText()) > 0 || Integer.parseInt(q20.getText()) > 0) {
+            String query =
+                    "INSERT INTO orders (FK_user_ID, type, item_list) VALUES ("
+                            + id + "," + "'" + type + "'," + "'" + itemList + "')";
+            try (Statement stmt = con.createStatement()) {
+                stmt.executeQuery(query);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -290,140 +303,140 @@ public class CustMenuController {
             int j = 0;
             while (rs.next() && i > 0) {
                 if (i==counter){
-                    value1= Integer.parseInt( q1.getText().trim());
+                    value1= Integer.parseInt( q1.getText().replaceAll("[^\\d.]", "").trim());
                     while (value1 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value1--;
                     }
                 }
                 if (i==counter-1){
-                    value2= Integer.parseInt( q2.getText().trim());
+                    value2= Integer.parseInt( q2.getText().replaceAll("[^\\d.]", "").trim());
                     while (value2 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value2--;
                     }
                 }
                 if (i==counter-2){
-                    value3= Integer.parseInt( q3.getText().trim());
+                    value3= Integer.parseInt( q3.getText().replaceAll("[^\\d.]", "").trim());
                     while (value3 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value3--;
                     }
                 }
                 if (i==counter-3){
-                    value4= Integer.parseInt( q4.getText().trim());
+                    value4= Integer.parseInt( q4.getText().replaceAll("[^\\d.]", "").trim());
                     while (value4 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value4--;
                     }
                 }
                 if (i==counter-4){
-                    value5= Integer.parseInt( q5.getText().trim());
+                    value5= Integer.parseInt( q5.getText().replaceAll("[^\\d.]", "").trim());
                     while (value5 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value5--;
                     }
                 }
                 if (i==counter-5){
-                    value6= Integer.parseInt( q6.getText().trim());
+                    value6= Integer.parseInt( q6.getText().replaceAll("[^\\d.]", "").trim());
                     while (value6 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value6--;
                     }
                 }
                 if (i==counter-6){
-                    value7= Integer.parseInt( q7.getText().trim());
+                    value7= Integer.parseInt( q7.getText().replaceAll("[^\\d.]", "").trim());
                     while (value7 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value7--;
                     }
                 }
                 if (i==counter-7){
-                    value8= Integer.parseInt( q8.getText().trim());
+                    value8= Integer.parseInt( q8.getText().replaceAll("[^\\d.]", "").trim());
                     while (value8 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value8--;
                     }
                 }
                 if (i==counter-8){
-                    value9= Integer.parseInt( q9.getText().trim());
+                    value9= Integer.parseInt( q9.getText().replaceAll("[^\\d.]", "").trim());
                     while (value9 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value9--;
                     }
                 }
                 if (i==counter-9){
-                    value10=Integer.parseInt(q10.getText().trim());
+                    value10=Integer.parseInt(q10.getText().replaceAll("[^\\d.]", "").trim());
                     while (value10 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value10--;
                     }
                 }
                 if (i==counter-10){
-                    value11=Integer.parseInt(q11.getText().trim());
+                    value11=Integer.parseInt(q11.getText().replaceAll("[^\\d.]", "").trim());
                     while (value11 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value11--;
                     }
                 }
                 if (i==counter-11) {
-                    value12=Integer.parseInt(q12.getText().trim());
+                    value12=Integer.parseInt(q12.getText().replaceAll("[^\\d.]", "").trim());
                     while (value12 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value12--;
                     }
                 }
                 if (i==counter-12) {
-                    value13=Integer.parseInt(q13.getText().trim());
+                    value13=Integer.parseInt(q13.getText().replaceAll("[^\\d.]", "").trim());
                     while (value13 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value13--;
                     }
                 }
                 if (i==counter-13) {
-                    value14=Integer.parseInt(q14.getText().trim());
+                    value14=Integer.parseInt(q14.getText().replaceAll("[^\\d.]", "").trim());
                     while (value14 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value14--;
                     }
                 }
                 if (i==counter-14) {
-                    value15=Integer.parseInt(q15.getText().trim());
+                    value15=Integer.parseInt(q15.getText().replaceAll("[^\\d.]", "").trim());
                     while (value15 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value15--;
                     }
                 }
                 if (i==counter-15) {
-                    value16=Integer.parseInt(q16.getText().trim());
+                    value16=Integer.parseInt(q16.getText().replaceAll("[^\\d.]", "").trim());
                     while (value16 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value16--;
                     }
                 }
                 if (i==counter-16) {
-                    value17=Integer.parseInt(q17.getText().trim());
+                    value17=Integer.parseInt(q17.getText().replaceAll("[^\\d.]", "").trim());
                     while (value17 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value17--;
                     }
                 }
                 if (i==counter-17) {
-                    value18=Integer.parseInt(q18.getText().trim());
+                    value18=Integer.parseInt(q18.getText().replaceAll("[^\\d.]", "").trim());
                     while (value18 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value18--;
                     }
                 }
                 if (i==counter-18) {
-                    value19=Integer.parseInt(q19.getText().trim());
+                    value19=Integer.parseInt(q19.getText().replaceAll("[^\\d.]", "").trim());
                     while (value19 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value19--;
                     }
                 }
                 if (i==counter-19) {
-                    value20=Integer.parseInt(q20.getText().trim());
+                    value20=Integer.parseInt(q20.getText().replaceAll("[^\\d.]", "").trim());
                     while (value20 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value20--;

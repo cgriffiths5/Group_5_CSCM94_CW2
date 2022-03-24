@@ -75,7 +75,7 @@ public class HomeController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
                         newRoot = loader.load();
 
-                        ManagerController cCont = loader.getController();
+                        CustomerController cCont = loader.getController();
                         cCont.setUserText(user);
 
                         stage = new Stage();
@@ -90,8 +90,8 @@ public class HomeController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("waiter-view.fxml"));
                         newRoot = loader.load();
 
-                        CustomerController cCont = loader.getController();
-                        cCont.setUserText(user);
+                        //CustomerController cCont = loader.getController();
+                        //cCont.setUserText(user);
 
                         stage = new Stage();
                         stage.setTitle(user);
@@ -105,7 +105,7 @@ public class HomeController {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("chef-view.fxml"));
                         newRoot = loader.load();
 
-                        ChefController cCont = loader.getController();
+                        CustomerController cCont = loader.getController();
                         cCont.setUserText(user);
 
                         stage = new Stage();
@@ -194,7 +194,7 @@ public class HomeController {
                             FXMLLoader loader = new FXMLLoader(getClass().getResource("manager-view.fxml"));
                             newRoot = loader.load();
 
-                            ManagerController cCont = loader.getController();
+                            CustomerController cCont = loader.getController();
                             cCont.setUserText(user);
 
                             stage = new Stage();
@@ -209,8 +209,8 @@ public class HomeController {
                             FXMLLoader loader = new FXMLLoader(getClass().getResource("waiter-view.fxml"));
                             newRoot = loader.load();
 
-                            CustomerController cCont = loader.getController();
-                            cCont.setUserText(user);
+                            //CustomerController cCont = loader.getController();
+                            //cCont.setUserText(user);
 
                             stage = new Stage();
                             stage.setTitle(user);
@@ -224,7 +224,7 @@ public class HomeController {
                             FXMLLoader loader = new FXMLLoader(getClass().getResource("chef-view.fxml"));
                             newRoot = loader.load();
 
-                            ChefController cCont = loader.getController();
+                            CustomerController cCont = loader.getController();
                             cCont.setUserText(user);
 
                             stage = new Stage();
@@ -308,9 +308,9 @@ public class HomeController {
 
     /**
      *
-     * @param username
-     * @return
-     * @throws SQLException
+     * @param username rhrhbr
+     * @return rhrth
+     * @throws SQLException rgrgr
      */
     public String getRole(String username) throws SQLException {
         String query = "SELECT role FROM users WHERE username = '" + username + "'";
