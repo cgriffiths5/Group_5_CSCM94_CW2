@@ -106,7 +106,7 @@ public class HomeController {
                         newRoot = loader.load();
 
                         ChefController cCont = loader.getController();
-                        //cCont.setUserText(user);
+                        cCont.setUserText(user);
 
                         stage = new Stage();
                         stage.setTitle(user);

@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
@@ -17,6 +18,13 @@ public class ChefController {
     public Button homeButton;
     public Button viewOutstandingOrders;
     public Button viewSpecials;
+    public String username;
+    public Label userLabel;
+
+    public void setUserText(String text) {
+        username = text;
+        userLabel.setText(text);
+    }
 
     @FXML
     public void onViewSpecialsClick(ActionEvent event) {
