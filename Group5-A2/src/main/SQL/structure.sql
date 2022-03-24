@@ -5,29 +5,24 @@ USE cafeDB;
 
 DROP TABLE IF EXISTS menu;
 
-CREATE TABLE menu
-(
+CREATE TABLE menu (
     menu_ID      SERIAL,                      ## primary key
     item         VARCHAR(50) UNIQUE,          ## could use this as the primary key but then it's slow
     ## because of string comparisons rather than int comparisons
     description  LONGTEXT NOT NULL UNIQUE,    ##longtext for wordy descriptions above 255 char
-    food_flag    BOOLEAN       default false, ## one of these must be true due to constraint
-    drink_flag   BOOLEAN       default false, ## it isn't a menu item is it isn't food or drink
-    special_flag BOOLEAN       default false, ## if the item is a special, can use to show
+    category varchar(20) NOT NULL,
     ## the current specials and quickly delete old ones or new ones
     ## in java we could do something where the price is set to null,
     ## and as a result, we do a delete query to delete all specials with null price
     ## easy way to update specials to only keep current ones on the menu
     price        DECIMAL(4, 2) DEFAULT NULL,  ## if null then the item is not available to order
-    CONSTRAINT pk_menu PRIMARY KEY (menu_ID),
-    CONSTRAINT food_or_drink CHECK (food_flag = 1 XOR drink_flag = 1)
+    CONSTRAINT pk_menu PRIMARY KEY (menu_ID)
     ## XOR because it must be either food or drink, not both
 );
 
 DROP TABLE IF EXISTS users;
 
-CREATE TABLE users
-(
+CREATE TABLE users (
     user_ID      BIGINT AUTO_INCREMENT,
     f_name       VARCHAR(50),
     l_name       VARCHAR(50),
@@ -44,8 +39,7 @@ CREATE TABLE users
 
 DROP TABLE IF EXISTS capacity;
 
-CREATE TABLE capacity
-(
+CREATE TABLE capacity (
     cap_ID       BIGINT AUTO_INCREMENT,
     table_number INT                  NOT NULL,
     seats        INT                  NOT NULL,
@@ -59,8 +53,7 @@ CREATE TABLE capacity
 
 DROP TABLE IF EXISTS bookings;
 
-CREATE TABLE bookings
-(
+CREATE TABLE bookings (
     booking_ID BIGINT AUTO_INCREMENT,
     b_user_ID  BIGINT,
     b_cap_ID   BIGINT UNIQUE,
@@ -74,8 +67,7 @@ CREATE TABLE bookings
 
 DROP TABLE IF EXISTS orders;
 
-CREATE TABLE orders
-(
+CREATE TABLE orders (
     order_ID     BIGINT AUTO_INCREMENT,
     FK_user_ID   BIGINT,
     CONSTRAINT pk_orders PRIMARY KEY (order_ID, FK_user_ID),

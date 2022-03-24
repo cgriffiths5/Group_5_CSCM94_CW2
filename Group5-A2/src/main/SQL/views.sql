@@ -210,3 +210,5 @@ FROM customer_order_history;
 
 SELECT password FROM users
 WHERE username = 'cpeng';
+
+SELECT price FROM menu ORDER BY category DESC;

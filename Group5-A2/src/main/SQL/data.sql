@@ -1,24 +1,24 @@
 USE cafeDB;
 
-INSERT INTO menu(item, description, food_flag, drink_flag, special_flag, price)
-VALUES ('Margherita pizza', 'cheese pizza with tomato sauce and mozzarella', 1, 0, 0, 08.45),
-       ('Cheese burger', 'beef burger with cheese in a brioche bun', 1, 0, 0, 10.50),
-       ('Spaghetti carbonara', 'spaghetti with pancetta coated in a peppery egg yolk and parmesan sauce', 1, 0, 1,
+INSERT INTO menu(item, description, category, price)
+VALUES ('Margherita pizza', 'cheese pizza with tomato sauce and mozzarella', 'food', 08.45),
+       ('Cheese burger', 'beef burger with cheese in a brioche bun', 'food', 10.50),
+       ('Spaghetti carbonara', 'spaghetti with pancetta coated in a peppery egg yolk and parmesan sauce', 'food',
         14.75),
-       ('Mango lassi', 'a sweet and thick mango flavoured yoghurt drink', 0, 1, 0, 3.00),
+       ('Mango lassi', 'a sweet and thick mango flavoured yoghurt drink', 'drink', 3.00),
        ('Fosters',
         'a refreshing water like beverage with a delicate hint of beer, please refrain from striking others after consumption',
-        0, 1, 0, 2.50),
+        'special', 2.50),
        ('Cafe94 kebab',
         '94 different meats in one giant kebab served with salad in a 1ft pita bread, if you can finish it in under 15 minutes it''s free!',
-        1, 0, 0, 40.00),
-       ('Tap water', 'ask your server for tap water, it''s free', 0, 1, 0, 00.00),
-       ('Lilt', 'tropical carbonated fruit drink', 0, 1, 0, 1.50),
-       ('CocaCola', 'the one that isn''t pepsi', 0, 1, 0, 1.60),
-       ('Fanta', 'orange flavoured carbonated drink', 0, 1, 0, 1.50),
+        'food', 40.00),
+       ('Tap water', 'ask your server for tap water, it''s free', 'drink', 00.00),
+       ('Lilt', 'tropical carbonated fruit drink', 'drink', 1.50),
+       ('CocaCola', 'the one that isn''t pepsi', 'drink', 1.60),
+       ('Fanta', 'orange flavoured carbonated drink', 'drink', 1.50),
        ('Gateau St. Honoré',
         'A layered desert made from a combination of different pastries, and a mixture of crème pâtissière and italian meringue known as Chiboust cream, please request this desert at the time of reservation as it takes hours to prepare',
-        1, 0, 1, 60.00);
+        'special', 60.00);
 
 INSERT INTO users
     (f_name, l_name, role, username, password, house_number, postcode)
