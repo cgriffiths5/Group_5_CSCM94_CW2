@@ -9,7 +9,7 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.OutstandingOrdersController">
 
-    <HBox alignment="CENTER" >
+    <HBox>
       <Text>Outstanding Orders</Text>
     </HBox>
 

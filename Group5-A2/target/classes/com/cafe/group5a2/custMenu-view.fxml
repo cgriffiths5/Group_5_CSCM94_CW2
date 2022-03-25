@@ -11,8 +11,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2099.0" prefWidth="964.0" style="-fx-background: #483c32; -fx-border-color: #483c32" stylesheets="@../group5a2/styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.CustMenuController">
-   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2138.0" prefWidth="1536.0" style="-fx-background-image:url('https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1263&amp;q=80'); -fx-background-size: cover; ">
+<ScrollPane fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="2099.0"
+            prefWidth="964.0"
+            style="-fx-background: #483c32; -fx-border-color: #483c32" stylesheets="@../group5a2/styling/scrollBar.css"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.cafe.group5a2.CustMenuController">
+   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2138.0" prefWidth="1536.0"
+               style="-fx-background-image:url('https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1263&amp;q=80'); -fx-background-size: cover; ">
       <Label alignment="CENTER" layoutX="441.0" layoutY="23.0" prefHeight="68.0" prefWidth="95.0" text="Menu" textFill="#ffd086">
          <font>
             <Font name="AdobeDevanagari-BoldItalic" size="37.0" />
@@ -568,5 +574,6 @@
       <String fx:value="track" />
       <String fx:value="corner" />
       <String fx:value="background" />
+      <String fx:value="scroll-pane" />
    </styleClass>
 </ScrollPane>
