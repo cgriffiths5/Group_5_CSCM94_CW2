@@ -12,6 +12,8 @@
 
       <Text>Outstanding Orders</Text>
 
+      <Text>Below is a list of orders to be prepared</Text>
+
       <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick" >Return To Customer Home</Button>
 
 </VBox>
