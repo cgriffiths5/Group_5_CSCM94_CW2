@@ -50,7 +50,7 @@ public class SpecialsController {
 
     public void setSpecial(String name, String description, float price) throws SQLException {
         String query = "INSERT INTO menu ( item, description, food_flag, drink_flag, special_flag, price) " +
-                       "VALUES ('" + name + "','" + description + "', 1, 0, 1cgri, '" + price + "');";
+                       "VALUES ('" + name + "','" + description + "', 1, 0, 1, '" + price + "');";
         try(Statement stmt = con.createStatement()) {
             stmt.executeQuery(query);
         } catch (Exception e) {

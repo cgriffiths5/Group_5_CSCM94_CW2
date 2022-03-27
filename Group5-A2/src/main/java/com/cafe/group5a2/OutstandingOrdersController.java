@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 public class OutstandingOrdersController {
@@ -30,6 +31,11 @@ public class OutstandingOrdersController {
     public OutstandingOrdersController() throws SQLException {
     }
 
+    /**
+     * A list of outstanding orders are displayed when this button is pressed
+     * @throws SQLException
+     */
+
     public void displayOutstandingOrders() throws SQLException {
         String query = "SELECT * FROM orders WHERE complete = 0;";
 
@@ -43,6 +49,7 @@ public class OutstandingOrdersController {
             }
 
             System.out.println(Arrays.asList(list.toArray()));
+            List orderList = Arrays.asList(list.toArray());
 
         } catch (SQLException e) {
             System.out.println("Error Detected");
@@ -50,6 +57,13 @@ public class OutstandingOrdersController {
         }
 
     }
+
+    /**
+     *
+     * @param actionEvent when the order is completed the order id is entered and the corresponding entry for that order
+     *                    is updated and marked as complete in the database
+     * @throws SQLException
+     */
 
     public void onSubmitCompletedOrderButtonClick(ActionEvent actionEvent) throws SQLException {
 
