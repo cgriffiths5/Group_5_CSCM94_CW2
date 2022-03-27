@@ -11,6 +11,28 @@
 
     <Text>Specials</Text>
 
+    <Text>Enter Special To Add</Text>
+
+    <Text fx:id="EnterNameLabel">Enter Name</Text>
+
+    <TextField fx:id="SpecialName"></TextField>
+
+    <Text fx:id="DescriptionName">Enter Description</Text>
+
+    <TextField fx:id="SpecialDescription"></TextField>
+
+    <Text fx:id="EnterPriceLabel">Enter Price</Text>
+
+    <TextField fx:id="SpecialPrice"></TextField>
+
+    <Button fx:id="SubmitButton" onAction="#onSubmitButtonClick">Submit</Button>
+
+    <Text fx:id="DeleteSpecialLabel" >Delete Special By Name (Enter Name)</Text>
+
+    <TextField fx:id="DeleteSpecial"></TextField>
+
+    <Button fx:id="DeleteSpecialButton" onAction="#onDeleteSpecialButtonClick">Delete</Button>
+
     <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick">Return To Customer Home</Button>
 
 </VBox>
