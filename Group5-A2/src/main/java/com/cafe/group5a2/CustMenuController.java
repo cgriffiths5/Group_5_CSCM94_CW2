@@ -6,7 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 
 import java.sql.*;
 
@@ -154,6 +160,9 @@ public class CustMenuController {
     public HBox h3i;
     public HBox h2d;
     public HBox h2i;
+    public VBox vBox;
+    public Label totalPLabel;
+    public AnchorPane aPane;
 
 
     private String username;
@@ -451,9 +460,6 @@ public class CustMenuController {
     }
     @FXML
 
-
-
-
     public String getItem(int num) throws SQLException {
         String val = "";
         String query = "SELECT * FROM menu ORDER BY category DESC";
@@ -576,7 +582,11 @@ public class CustMenuController {
     }
 
     public void setDescLabels() throws SQLException {
+
         d1.setText(getDesc(1));
+        d1.setMinHeight(100);
+        d1.setWrapText(true);
+        d1.setTextAlignment(TextAlignment.LEFT);
         d2.setText(getDesc(2));
         d3.setText(getDesc(3));
         d4.setText(getDesc(4));
@@ -596,6 +606,8 @@ public class CustMenuController {
         d18.setText(getDesc(18));
         d19.setText(getDesc(19));
         d20.setText(getDesc(20));
+
+        double scale = 83.0;
         if (d1.getText().equals("")) {
             q1.setOpacity(0.0);
             // delete the hbox... ? will need to set fx:id
@@ -604,11 +616,20 @@ public class CustMenuController {
             q2.setOpacity(0.0);
             h2d.setMaxHeight(0.1);
             h2i.setMaxHeight(0.1);
+            d2.setMaxHeight(0.1);
+            il2.setMaxHeight(0.1);
+            pl2.setMaxHeight(0.1);
+            q2.setMaxHeight(0.1);
         }
         if (d3.getText().equals("")) {
             q3.setOpacity(0.0);
             h3d.setMaxHeight(0.1);
             h3i.setMaxHeight(0.1);
+
+            d3.setMaxHeight(0.1);
+            il3.setMaxHeight(0.1);
+            pl3.setMaxHeight(0.1);
+            q3.setMaxHeight(0.1);
 
         }
         if (d4.getText().equals("")) {
@@ -616,11 +637,21 @@ public class CustMenuController {
             h4d.setMaxHeight(0.1);
             h4i.setMaxHeight(0.1);
 
+            d4.setMaxHeight(0.1);
+            il4.setMaxHeight(0.1);
+            pl4.setMaxHeight(0.1);
+            q4.setMaxHeight(0.1);
+
         }
         if (d5.getText().equals("")) {
             q5.setOpacity(0.0);
             h5d.setMaxHeight(0.1);
             h5i.setMaxHeight(0.1);
+
+            d5.setMaxHeight(0.1);
+            il5.setMaxHeight(0.1);
+            pl5.setMaxHeight(0.1);
+            q5.setMaxHeight(0.1);
 
         }
         if (d6.getText().equals("")) {
@@ -628,11 +659,21 @@ public class CustMenuController {
             h6d.setMaxHeight(0.1);
             h6i.setMaxHeight(0.1);
 
+            d6.setMaxHeight(0.1);
+            il6.setMaxHeight(0.1);
+            pl6.setMaxHeight(0.1);
+            q6.setMaxHeight(0.1);
+
         }
         if (d7.getText().equals("")) {
             q7.setOpacity(0.0);
             h7d.setMaxHeight(0.1);
             h7i.setMaxHeight(0.1);
+
+            d7.setMaxHeight(0.1);
+            il7.setMaxHeight(0.1);
+            pl7.setMaxHeight(0.1);
+            q7.setMaxHeight(0.1);
 
         }
         if (d8.getText().equals("")) {
@@ -640,11 +681,21 @@ public class CustMenuController {
             h8d.setMaxHeight(0.1);
             h8i.setMaxHeight(0.1);
 
+            d8.setMaxHeight(0.1);
+            il8.setMaxHeight(0.1);
+            pl8.setMaxHeight(0.1);
+            q8.setMaxHeight(0.1);
+
         }
         if (d9.getText().equals("")) {
             q9.setOpacity(0.0);
             h9d.setMaxHeight(0.1);
             h9i.setMaxHeight(0.1);
+
+            d9.setMaxHeight(0.1);
+            il9.setMaxHeight(0.1);
+            pl9.setMaxHeight(0.1);
+            q9.setMaxHeight(0.1);
 
         }
         if (d10.getText().equals("")) {
@@ -652,11 +703,21 @@ public class CustMenuController {
             h10d.setMaxHeight(0.1);
             h10i.setMaxHeight(0.1);
 
+            d10.setMaxHeight(0.1);
+            il10.setMaxHeight(0.1);
+            pl10.setMaxHeight(0.1);
+            q10.setMaxHeight(0.1);
+
         }
         if (d11.getText().equals("")) {
             q11.setOpacity(0.0);
             h11d.setMaxHeight(0.1);
             h11i.setMaxHeight(0.1);
+
+            d11.setMaxHeight(0.1);
+            il11.setMaxHeight(0.1);
+            pl11.setMaxHeight(0.1);
+            q11.setMaxHeight(0.1);
 
         }
         if (d12.getText().equals("")) {
@@ -664,11 +725,21 @@ public class CustMenuController {
             h12d.setMaxHeight(0.1);
             h12i.setMaxHeight(0.1);
 
+            d12.setMaxHeight(0.1);
+            il12.setMaxHeight(0.1);
+            pl12.setMaxHeight(0.1);
+            q12.setMaxHeight(0.1);
+
         }
         if (d13.getText().equals("")) {
             q13.setOpacity(0.0);
             h13d.setMaxHeight(0.1);
             h13i.setMaxHeight(0.1);
+
+            d13.setMaxHeight(0.1);
+            il13.setMaxHeight(0.1);
+            pl13.setMaxHeight(0.1);
+            q13.setMaxHeight(0.1);
 
         }
         if (d14.getText().equals("")) {
@@ -676,11 +747,21 @@ public class CustMenuController {
             h14d.setMaxHeight(0.1);
             h14i.setMaxHeight(0.1);
 
+            d14.setMaxHeight(0.1);
+            il14.setMaxHeight(0.1);
+            pl14.setMaxHeight(0.1);
+            q14.setMaxHeight(0.1);
+
         }
         if (d15.getText().equals("")) {
             q15.setOpacity(0.0);
             h15d.setMaxHeight(0.1);
             h15i.setMaxHeight(0.1);
+
+            d15.setMaxHeight(0.1);
+            il15.setMaxHeight(0.1);
+            pl15.setMaxHeight(0.1);
+            q15.setMaxHeight(0.1);
 
         }
         if (d16.getText().equals("")) {
@@ -688,11 +769,20 @@ public class CustMenuController {
             h16d.setMaxHeight(0.1);
             h16i.setMaxHeight(0.1);
 
+            d16.setMaxHeight(0.1);
+            il16.setMaxHeight(0.1);
+            pl16.setMaxHeight(0.1);
+            q16.setMaxHeight(0.1);
         }
         if (d17.getText().equals("")) {
             q17.setOpacity(0.0);
             h17d.setMaxHeight(0.1);
             h17i.setMaxHeight(0.1);
+
+            d17.setMaxHeight(0.1);
+            il17.setMaxHeight(0.1);
+            pl17.setMaxHeight(0.1);
+            q17.setMaxHeight(0.1);
 
         }
         if (d18.getText().equals("")) {
@@ -700,11 +790,21 @@ public class CustMenuController {
             h18d.setMaxHeight(0.1);
             h18i.setMaxHeight(0.1);
 
+            d18.setMaxHeight(0.1);
+            il18.setMaxHeight(0.1);
+            pl18.setMaxHeight(0.1);
+            q18.setMaxHeight(0.1);
+
         }
         if (d19.getText().equals("")) {
             q19.setOpacity(0.0);
             h19d.setMaxHeight(0.1);
             h19i.setMaxHeight(0.1);
+
+            d19.setMaxHeight(0.1);
+            il19.setMaxHeight(0.1);
+            pl19.setMaxHeight(0.1);
+            q19.setMaxHeight(0.1);
 
         }
         if (d20.getText().equals("")) {
@@ -712,7 +812,72 @@ public class CustMenuController {
             h20d.setMaxHeight(0.1);
             h20i.setMaxHeight(0.1);
 
+            d20.setMaxHeight(0.1);
+            il20.setMaxHeight(0.1);
+            pl20.setMaxHeight(0.1);
+            q20.setMaxHeight(0.1);
+
+            vBox.setPrefHeight(2030 - scale);
+            aPane.setPrefHeight(2209 - scale);
+            if (d19.getText().equals("")) {
+                vBox.setPrefHeight(2030 - (scale*2.0));
+                aPane.setPrefHeight(2209 - (scale*2.0));
+                if (d18.getText().equals("")) {
+                    vBox.setPrefHeight(2030 - (scale*3.0));
+                    aPane.setPrefHeight(2209 - (scale*3.0));
+                    if(d17.getText().equals("")) {
+                        vBox.setPrefHeight(2030 - (scale * 4.0));
+                        aPane.setPrefHeight(2209 - (scale * 4.0));
+                        if (d16.getText().equals("")) {
+                            vBox.setPrefHeight(2030 - (scale * 5.0));
+                            aPane.setPrefHeight(2209 - (scale * 5.0));
+                            if (d15.getText().equals("")) {
+                                vBox.setPrefHeight(2030 - (scale * 6.0));
+                                aPane.setPrefHeight(2209 - (scale * 6.0));
+                                if (d14.getText().equals("")) {
+                                    vBox.setPrefHeight(2030 - (scale * 7.0));
+                                    aPane.setPrefHeight(2209 - (scale * 7.0));
+                                    if (d13.getText().equals("")) {
+                                        vBox.setPrefHeight(2030 - (scale * 8.0));
+                                        aPane.setPrefHeight(2209 - (scale * 8.0));
+                                        if (d12.getText().equals("")) {
+                                            vBox.setPrefHeight(2030 - (scale * 9.0));
+                                            aPane.setPrefHeight(2209 - (scale * 9.0));
+                                            if (d11.getText().equals("")) {
+                                                vBox.setPrefHeight(2030 - (scale * 10.0));
+                                                aPane.setPrefHeight(2209 - (scale * 10.0));
+                                                if (d10.getText().equals("")) {
+                                                    vBox.setPrefHeight(2030 - (scale * 11.0));
+                                                    aPane.setPrefHeight(2209 - (scale * 11.0));
+                                                    if (d9.getText().equals("")) {
+                                                        vBox.setPrefHeight(2030 - (scale * 12.0));
+                                                        aPane.setPrefHeight(2209 - (scale * 12.0));
+                                                        if (d8.getText().equals("")) {
+                                                            vBox.setPrefHeight(2030 - (scale * 13.0));
+                                                            aPane.setPrefHeight(2209 - (scale * 13.0));
+                                                            if (d7.getText().equals("")) {
+                                                                vBox.setPrefHeight(2030 - (scale * 14.0));
+                                                                aPane.setPrefHeight(2209 - (scale * 14.0));
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+
     }
 
+    public void onTabPressUpdateTotal(KeyEvent keyEvent) {
+    }
+
+    public void onMouseMovedUpdateTotal(MouseEvent mouseEvent) {
+    }
 }

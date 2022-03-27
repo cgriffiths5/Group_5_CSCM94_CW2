@@ -9,6 +9,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -57,13 +59,14 @@ public class CustomerController {
             cMCont.setDescLabels();
             cMCont.setUserText(username);
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
-            stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
-            stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
+            //stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
+            //stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
+            stage.centerOnScreen();
             stage.setTitle("Order");
             stage.setHeight(992.0);
-            stage.setMaxHeight(2099.0);
-            stage.setWidth(964.0);
-            stage.setMaxWidth(964.0);
+            stage.setMaxHeight(2032.0);
+            stage.setWidth(744.0);
+            stage.setMaxWidth(744.0);
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");
@@ -83,12 +86,13 @@ public class CustomerController {
             cMCont.setUserText(username);
             stage.setTitle("Reservation");
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
-            stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
-            stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
-            stage.setHeight(1000.0);
-            stage.setMaxHeight(1199.0);
-            stage.setWidth(733.0);
-            stage.setMaxWidth(733.0);
+            //stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
+            //stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
+            stage.centerOnScreen();
+            stage.setHeight(800.0);
+            stage.setMaxHeight(1113.0);
+            stage.setWidth(658.0);
+            stage.setMaxWidth(658.0);
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");
