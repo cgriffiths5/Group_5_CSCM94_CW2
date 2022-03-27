@@ -20,6 +20,6 @@
 
       <Button id="SubmitCompletedOrder" fx:id="SubmitCompleteOrder" onAction="#onSubmitCompletedOrderButtonClick">Submit Completed Order</Button>
 
-      <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick" >Return To Customer Home</Button>
+      <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick" >Return To Chef Home</Button>
 
 </VBox>

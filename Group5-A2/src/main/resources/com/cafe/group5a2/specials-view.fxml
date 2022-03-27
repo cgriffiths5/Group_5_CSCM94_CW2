@@ -35,6 +35,6 @@
 
     <Button fx:id="DeleteSpecialButton" onAction="#onDeleteSpecialButtonClick">Delete</Button>
 
-    <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick">Return To Customer Home</Button>
+    <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick">Return To Chef Home</Button>
 
 </VBox>
