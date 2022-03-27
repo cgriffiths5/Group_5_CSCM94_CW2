@@ -12,7 +12,13 @@
 
       <Text>Outstanding Orders</Text>
 
-      <Text>Below is a list of orders to be prepared</Text>
+      <Button fx:id="DisplayOrdersButton" onAction="#displayOutstandingOrders">Get Outstanding Orders</Button>
+
+      <Text>Complete Order (Enter Order ID)</Text>
+
+      <TextField fx:id="OrderID"></TextField>
+
+      <Button id="SubmitCompletedOrder" fx:id="SubmitCompleteOrder" onAction="#onSubmitCompletedOrderButtonClick">Submit Completed Order</Button>
 
       <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick" >Return To Customer Home</Button>
 
