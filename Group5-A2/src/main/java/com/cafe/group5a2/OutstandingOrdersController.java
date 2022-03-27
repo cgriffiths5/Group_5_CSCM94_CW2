@@ -6,14 +6,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.Observable;
 
 public class OutstandingOrdersController {
 
@@ -48,8 +52,20 @@ public class OutstandingOrdersController {
                 list.add(rs.getString("order_id") + " " + rs.getString("date_time") + " " + rs.getString("type") + "\n");
             }
 
-            System.out.println(Arrays.asList(list.toArray()));
-            List orderList = Arrays.asList(list.toArray());
+            ObservableList orderList = list;
+
+            Stage secondStage = new Stage();
+            secondStage.setTitle("Outstanding Orders");
+
+            final ListView listView = new ListView(orderList);
+            listView.setPrefSize(200, 250);
+
+            listView.setItems(orderList);
+
+            StackPane root = new StackPane();
+            root.getChildren().add(listView);
+            secondStage.setScene(new Scene(root, 200, 250));
+            secondStage.show();
 
         } catch (SQLException e) {
             System.out.println("Error Detected");
