@@ -100,7 +100,7 @@ public class OutstandingOrdersController {
 
     /**
      *
-     * @param event when the return home button is pressed then the chef view FXML page is laoded
+     * @param event when the return home button is pressed then the chef view FXML page is loaded
      */
 
     @FXML
