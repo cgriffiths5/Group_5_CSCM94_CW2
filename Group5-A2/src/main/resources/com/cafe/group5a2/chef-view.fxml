@@ -6,9 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0"
-      prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.cafe.group5a2.ChefController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ChefController">
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
         <Label fx:id="Title" text="Cafe 94">
             <font>
@@ -30,14 +28,14 @@
         </Label>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="viewSpecials" fx:id="viewSpecials" prefHeight="27.0" prefWidth="150.0" text="View Specials">
+        <Button id="viewSpecials" fx:id="viewSpecials" onAction="#onViewSpecialsClick" prefHeight="27.0" prefWidth="150.0" text="View Specials">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="viewOustandingOrders" fx:id="viewOutstandingOrders"  prefHeight="27.0" prefWidth="150.0" text="View Outstanding Orders">
+        <Button id="viewOustandingOrders" fx:id="viewOutstandingOrders" onAction="#onViewOutstandingOrdersClick"  prefHeight="27.0" prefWidth="150.0" text="View Outstanding Orders">
             <font>
                 <Font size="15.0" />
             </font>
@@ -52,3 +50,5 @@
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0" />
 </VBox>
+
+
