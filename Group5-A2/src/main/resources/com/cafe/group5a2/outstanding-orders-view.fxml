@@ -7,14 +7,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.OutstandingOrdersController">
+<VBox spacing="20" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.OutstandingOrdersController">
 
-    <HBox alignment="CENTER" >
-        <Text>Outstanding Orders</Text>
-    </HBox>
 
-    <HBox>
-        <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick" >Return To Customer Home</Button>
-    </HBox>
+      <Text>Outstanding Orders</Text>
+
+      <Button fx:id="DisplayOrdersButton" onAction="#displayOutstandingOrders">Get Outstanding Orders</Button>
+
+      <Text>Complete Order (Enter Order ID)</Text>
+
+      <TextField fx:id="OrderID" maxWidth="60"></TextField>
+
+      <Button id="SubmitCompletedOrder" fx:id="SubmitCompleteOrder" onAction="#onSubmitCompletedOrderButtonClick">Submit Completed Order</Button>
+
+      <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick" >Return To Chef Home</Button>
 
 </VBox>
+
