@@ -7,10 +7,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 
-<VBox xmlns="http://javafx.com/javafx"
+<ScrollPane xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.cafe.group5a2.RegistrationController"
-      prefHeight="400.0" prefWidth="600.0">
+      fx:controller="com.cafe.group5a2.RegistrationController">
+    <VBox alignment="CENTER"  spacing="12" prefHeight="400.0" prefWidth="500.0">
 
     <Text>Registration</Text>
 
@@ -18,37 +18,37 @@
 
     <Text>Enter first name</Text>
 
-    <TextField fx:id="FirstName" ></TextField>
+    <TextField fx:id="FirstName" maxWidth="120" ></TextField>
 
     <Text>Enter last name</Text>
 
-    <TextField fx:id="LastName"></TextField>
+    <TextField fx:id="LastName" maxWidth="120"></TextField>
 
     <Text>Enter username</Text>
 
-    <TextField fx:id="Username"></TextField>
+    <TextField fx:id="Username" maxWidth="120"></TextField>
 
     <Text>Enter password</Text>
 
-    <PasswordField fx:id="Password"></PasswordField>
+    <PasswordField fx:id="Password" maxWidth="120"></PasswordField>
 
     <Text>Confirm Password</Text>
 
-    <PasswordField fx:id="ConfirmPassword" ></PasswordField>
+    <PasswordField fx:id="ConfirmPassword" maxWidth="120"></PasswordField>
 
     <Text>Enter house number</Text>
 
-    <TextField fx:id="HouseNO"></TextField>
+    <TextField fx:id="HouseNO" maxWidth="120"></TextField>
 
     <Text >Enter postcode</Text>
 
-    <TextField fx:id="Postcode"></TextField>
+    <TextField fx:id="Postcode" maxWidth="120"></TextField>
 
-    <Button fx:id="SubmitButton"  onAction="#OnSubmit">Register</Button>
+    <Button alignment="CENTER" fx:id="SubmitButton"  onAction="#OnSubmit">Register</Button>
 
     <Button fx:id="HomeButton" onAction="#onHomeButtonClick">Home</Button>
 
     <Text fx:id="ErrorLabel" text="" />
 
-
-</VBox>
+    </VBox>
+</ScrollPane>
