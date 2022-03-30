@@ -86,7 +86,7 @@ public class OutstandingOrdersController {
         String id = OrderID.getText();
         int order_id = Integer.parseInt(id);
 
-        String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + order_id + "';";
+        String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + order_id + "';";
 
         try (Statement stmt = con.createStatement()) {
              stmt.executeQuery(query);
