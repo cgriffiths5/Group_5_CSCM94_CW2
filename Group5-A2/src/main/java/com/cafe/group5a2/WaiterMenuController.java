@@ -179,38 +179,69 @@ public class WaiterMenuController {
     @FXML
     public void onRestButtonClick(ActionEvent actionEvent) throws IOException {
         int counter = 0;
+
         while (counter <= 20) {
-            if (!d1.getText().equals("")) counter++; else break;
-            if (!d2.getText().equals("")) counter++; else break;
-            if (!d3.getText().equals("")) counter++; else break;
-            if (!d4.getText().equals("")) counter++; else break;
-            if (!d5.getText().equals("")) counter++; else break;
-            if (!d6.getText().equals("")) counter++; else break;
-            if (!d7.getText().equals("")) counter++; else break;
-            if (!d8.getText().equals("")) counter++; else break;
-            if (!d9.getText().equals("")) counter++; else break;
-            if (!d10.getText().equals("")) counter++;else break;
-            if (!d11.getText().equals("")) counter++;else break;
-            if (!d12.getText().equals("")) counter++;else break;
-            if (!d13.getText().equals("")) counter++;else break;
-            if (!d14.getText().equals("")) counter++;else break;
-            if (!d15.getText().equals("")) counter++;else break;
-            if (!d16.getText().equals("")) counter++;else break;
-            if (!d17.getText().equals("")) counter++;else break;
-            if (!d18.getText().equals("")) counter++;else break;
-            if (!d19.getText().equals("")) counter++;else break;
-            if (!d20.getText().equals("")) counter++;else break;
+            if (!pl1.getText().equals("")) counter++; else break;
+            if (!pl2.getText().equals("")) counter++; else break;
+            if (!pl3.getText().equals("")) counter++; else break;
+            if (!pl4.getText().equals("")) counter++; else break;
+            if (!pl5.getText().equals("")) counter++; else break;
+            if (!pl6.getText().equals("")) counter++; else break;
+            if (!pl7.getText().equals("")) counter++; else break;
+            if (!pl8.getText().equals("")) counter++; else break;
+            if (!pl9.getText().equals("")) counter++; else break;
+            if (!pl10.getText().equals("")) counter++;else break;
+            if (!pl11.getText().equals("")) counter++;else break;
+            if (!pl12.getText().equals("")) counter++;else break;
+            if (!pl13.getText().equals("")) counter++;else break;
+            if (!pl14.getText().equals("")) counter++;else break;
+            if (!pl15.getText().equals("")) counter++;else break;
+            if (!pl16.getText().equals("")) counter++;else break;
+            if (!pl17.getText().equals("")) counter++;else break;
+            if (!pl18.getText().equals("")) counter++;else break;
+            if (!pl19.getText().equals("")) counter++;else break;
+            if (!pl20.getText().equals("")) counter++;else break;
         }
         //System.out.println(counter);
         String itemList = getOrderList(counter);
         int id = getUserId(username);
-        int tableNum = parseInt(tableNumField.getText());
-        String type = "seated";
-        if (parseInt(q1.getText()) > 0 || parseInt(q2.getText()) > 0 || parseInt(q3.getText()) > 0 || parseInt(q4.getText()) > 0
-                || parseInt(q5.getText()) > 0 || parseInt(q6.getText()) > 0 || parseInt(q7.getText()) > 0 || parseInt(q8.getText()) > 0
-                || parseInt(q9.getText()) > 0 || parseInt(q10.getText()) > 0 || parseInt(q11.getText()) > 0 || parseInt(q12.getText()) > 0
-                || parseInt(q13.getText()) > 0 || parseInt(q14.getText()) > 0 || parseInt(q15.getText()) > 0 || parseInt(q16.getText()) > 0
-                || parseInt(q17.getText()) > 0 || parseInt(q18.getText()) > 0 || parseInt(q19.getText()) > 0 || parseInt(q20.getText()) > 0) {
+
+        int check = 0;
+        if (!q1.getText().isEmpty()) check++;
+        if (!q2.getText().isEmpty()) check++;
+        if (!q3.getText().isEmpty()) check++;
+        if (!q4.getText().isEmpty()) check++;
+        if (!q5.getText().isEmpty()) check++;
+        if (!q6.getText().isEmpty()) check++;
+        if (!q7.getText().isEmpty()) check++;
+        if (!q8.getText().isEmpty()) check++;
+        if (!q9.getText().isEmpty()) check++;
+        if (!q10.getText().isEmpty()) check++;
+        if (!q11.getText().isEmpty()) check++;
+        if (!q12.getText().isEmpty()) check++;
+        if (!q13.getText().isEmpty()) check++;
+        if (!q14.getText().isEmpty()) check++;
+        if (!q15.getText().isEmpty()) check++;
+        if (!q16.getText().isEmpty()) check++;
+        if (!q17.getText().isEmpty()) check++;
+        if (!q18.getText().isEmpty()) check++;
+        if (!q19.getText().isEmpty()) check++;
+        if (!q20.getText().isEmpty()) check++;
+
+        if (check == 0 || tableNumField.getText().isEmpty()) { //send error message
+            //trying to get error message when no table number is entered
+            Parent newRoot1 = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("waiterMenu-EnterCorrectDetails.fxml")));
+            Scene scene1 = new Scene(newRoot1);
+            Stage stage1 = new Stage();
+
+            stage1.setTitle("Details Incorrect");
+            stage1.setScene(scene1);
+            stage1.initModality(Modality.WINDOW_MODAL);
+            stage1.show();
+        } else {
+            int tableNum = parseInt(tableNumField.getText());
+            String type = "seated";
+
             String query =
                     "INSERT INTO orders (FK_user_ID, type, table_number, item_list) VALUES ("
                             + id + "," + "'" + type + "'," + tableNum + ", '" + itemList + "')";
@@ -219,18 +250,39 @@ public class WaiterMenuController {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+
+            q1.setText("");
+            q2.setText("");
+            q3.setText("");
+            q4.setText("");
+            q5.setText("");
+            q6.setText("");
+            q7.setText("");
+            q8.setText("");
+            q9.setText("");
+            q10.setText("");
+            q11.setText("");
+            q12.setText("");
+            q13.setText("");
+            q14.setText("");
+            q15.setText("");
+            q16.setText("");
+            q17.setText("");
+            q18.setText("");
+            q19.setText("");
+            q20.setText("");
+            tableNumField.setText("");
+
+            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("waiterMenu-OrderSubmitted.fxml")));
+            Scene scene = new Scene(newRoot);
+            Stage stage = new Stage();
+
+            stage.setTitle("Order submitted");
+            stage.setScene(scene);
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.show();
         }
 
-        //Just want to open another window but keep the other one there as well??
-        Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("waiterMenu-OrderSubmitted.fxml")));
-
-        Scene scene = new Scene(newRoot);
-        Stage stage = new Stage();
-
-        stage.setTitle("Order submitted");
-        stage.setScene(scene);
-        stage.initModality(Modality.WINDOW_MODAL);
-        stage.show();
     }
 
     public int getUserId(String username) {
@@ -260,143 +312,142 @@ public class WaiterMenuController {
         ResultSet rs = null;
         try (Statement stmt = connect.createStatement()) {
             rs = stmt.executeQuery(query);
-            int j = 0;
             while (rs.next() && i > 0) {
-                if (i==counter){
-                    value1= parseInt( q1.getText().trim());
+                if (!q1.getText().isEmpty() && i==counter){
+                    value1= Integer.parseInt( q1.getText().replaceAll("[^\\d.]", "").trim());
                     while (value1 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value1--;
                     }
                 }
-                if (i==counter-1){
-                    value2= parseInt( q2.getText().trim());
+                if (!q2.getText().isEmpty() && i==counter-1){
+                    value2= Integer.parseInt( q2.getText().replaceAll("[^\\d.]", "").trim());
                     while (value2 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value2--;
                     }
                 }
-                if (i==counter-2){
-                    value3= parseInt( q3.getText().trim());
+                if (!q3.getText().isEmpty() && i==counter-2){
+                    value3= Integer.parseInt( q3.getText().replaceAll("[^\\d.]", "").trim());
                     while (value3 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value3--;
                     }
                 }
-                if (i==counter-3){
-                    value4= parseInt( q4.getText().trim());
+                if (!q4.getText().isEmpty() && i==counter-3){
+                    value4= Integer.parseInt( q4.getText().replaceAll("[^\\d.]", "").trim());
                     while (value4 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value4--;
                     }
                 }
-                if (i==counter-4){
-                    value5= parseInt( q5.getText().trim());
+                if (!q5.getText().isEmpty() && i==counter-4){
+                    value5= Integer.parseInt( q5.getText().replaceAll("[^\\d.]", "").trim());
                     while (value5 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value5--;
                     }
                 }
-                if (i==counter-5){
-                    value6= parseInt( q6.getText().trim());
+                if (!q6.getText().isEmpty() && i==counter-5){
+                    value6= Integer.parseInt( q6.getText().replaceAll("[^\\d.]", "").trim());
                     while (value6 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value6--;
                     }
                 }
-                if (i==counter-6){
-                    value7= parseInt( q7.getText().trim());
+                if (!q7.getText().isEmpty() && i==counter-6){
+                    value7= Integer.parseInt( q7.getText().replaceAll("[^\\d.]", "").trim());
                     while (value7 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value7--;
                     }
                 }
-                if (i==counter-7){
-                    value8= parseInt( q8.getText().trim());
+                if (!q8.getText().isEmpty() && i==counter-7){
+                    value8= Integer.parseInt( q8.getText().replaceAll("[^\\d.]", "").trim());
                     while (value8 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value8--;
                     }
                 }
-                if (i==counter-8){
-                    value9= parseInt( q9.getText().trim());
+                if (!q9.getText().isEmpty() && i==counter-8){
+                    value9= Integer.parseInt( q9.getText().replaceAll("[^\\d.]", "").trim());
                     while (value9 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value9--;
                     }
                 }
-                if (i==counter-9){
-                    value10= parseInt(q10.getText().trim());
+                if (!q10.getText().isEmpty() && i==counter-9){
+                    value10=Integer.parseInt(q10.getText().replaceAll("[^\\d.]", "").trim());
                     while (value10 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value10--;
                     }
                 }
-                if (i==counter-10){
-                    value11= parseInt(q11.getText().trim());
+                if (!q11.getText().isEmpty() && i==counter-10){
+                    value11=Integer.parseInt(q11.getText().replaceAll("[^\\d.]", "").trim());
                     while (value11 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value11--;
                     }
                 }
-                if (i==counter-11) {
-                    value12= parseInt(q12.getText().trim());
+                if (!q12.getText().isEmpty() && i==counter-11) {
+                    value12=Integer.parseInt(q12.getText().replaceAll("[^\\d.]", "").trim());
                     while (value12 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value12--;
                     }
                 }
-                if (i==counter-12) {
-                    value13= parseInt(q13.getText().trim());
+                if (!q13.getText().isEmpty() && i==counter-12) {
+                    value13=Integer.parseInt(q13.getText().replaceAll("[^\\d.]", "").trim());
                     while (value13 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value13--;
                     }
                 }
-                if (i==counter-13) {
-                    value14= parseInt(q14.getText().trim());
+                if (!q14.getText().isEmpty() && i==counter-13) {
+                    value14=Integer.parseInt(q14.getText().replaceAll("[^\\d.]", "").trim());
                     while (value14 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value14--;
                     }
                 }
-                if (i==counter-14) {
-                    value15= parseInt(q15.getText().trim());
+                if (!q15.getText().isEmpty() && i==counter-14) {
+                    value15=Integer.parseInt(q15.getText().replaceAll("[^\\d.]", "").trim());
                     while (value15 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value15--;
                     }
                 }
-                if (i==counter-15) {
-                    value16= parseInt(q16.getText().trim());
+                if (!q16.getText().isEmpty() && i==counter-15) {
+                    value16=Integer.parseInt(q16.getText().replaceAll("[^\\d.]", "").trim());
                     while (value16 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value16--;
                     }
                 }
-                if (i==counter-16) {
-                    value17= parseInt(q17.getText().trim());
+                if (!q17.getText().isEmpty() && i==counter-16) {
+                    value17=Integer.parseInt(q17.getText().replaceAll("[^\\d.]", "").trim());
                     while (value17 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value17--;
                     }
                 }
-                if (i==counter-17) {
-                    value18= parseInt(q18.getText().trim());
+                if (!q18.getText().isEmpty() && i==counter-17) {
+                    value18=Integer.parseInt(q18.getText().replaceAll("[^\\d.]", "").trim());
                     while (value18 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value18--;
                     }
                 }
-                if (i==counter-18) {
-                    value19= parseInt(q19.getText().trim());
+                if (!q19.getText().isEmpty() && i==counter-18) {
+                    value19=Integer.parseInt(q19.getText().replaceAll("[^\\d.]", "").trim());
                     while (value19 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value19--;
                     }
                 }
-                if (i==counter-19) {
-                    value20= parseInt(q20.getText().trim());
+                if (!q20.getText().isEmpty() && i==counter-19) {
+                    value20=Integer.parseInt(q20.getText().replaceAll("[^\\d.]", "").trim());
                     while (value20 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value20--;
