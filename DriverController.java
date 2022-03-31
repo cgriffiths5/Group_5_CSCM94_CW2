@@ -24,23 +24,23 @@ import static java.lang.Integer.parseInt;
 public class DriverController {
     @FXML
     public Label waiterName;
-    public Label ResOrdTab1;
-    public Label ResOrdTab2;
-    public Label ResOrdTab3;
-    public Label ResOrdTab4;
+    public Label DevOrdTab1;
+    public Label DevOrdTab2;
+    public Label DevOrdTab3;
+    public Label DevOrdTab4;
 
 
     public Button logoutBut;
 
     @FXML
-    public CheckBox ResOrdFinBox1; //Delivery problem
-    public CheckBox ResOrdFinBox2;
-    public CheckBox ResOrdFinBox3;
-    public CheckBox ResOrdFinBox4;
-    public CheckBox ResOrdProBox1; //Delivery problem
-    public CheckBox ResOrdProBox2;
-    public CheckBox ResOrdProBox3;
-    public CheckBox ResOrdProBox4;
+    public CheckBox DevOrdFinBox1; //Delivery problem
+    public CheckBox DevOrdFinBox2;
+    public CheckBox DevOrdFinBox3;
+    public CheckBox DevOrdFinBox4;
+    public CheckBox DevOrdProBox1; //Delivery problem
+    public CheckBox DevOrdProBox2;
+    public CheckBox DevOrdProBox3;
+    public CheckBox DevOrdProBox4;
 
 
     @FXML
@@ -75,28 +75,28 @@ public class DriverController {
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             int counter = 1;
-            ResOrdTab1.setText("No Order");
-            ResOrdTab2.setText("No Order");
-            ResOrdTab3.setText("No Order");
-            ResOrdTab4.setText("No Order");
+            DevOrdTab1.setText("No Order");
+            DevOrdTab2.setText("No Order");
+            DevOrdTab3.setText("No Order");
+            DevOrdTab4.setText("No Order");
             while (rs.next()) {
                 String result = rs.getString("postcode");
                 int resultID = parseInt(rs.getString("order_ID"));
                 switch (counter) {
                     case 1 -> {
-                        ResOrdTab1.setText(result);
+                        DevOrdTab1.setText(result);
                         orderID1 = resultID;
                     }
                     case 2 -> {
-                        ResOrdTab2.setText(result);
+                        DevOrdTab2.setText(result);
                         orderID2 = resultID;
                     }
                     case 3 -> {
-                        ResOrdTab3.setText(result);
+                        DevOrdTab3.setText(result);
                         orderID3 = resultID;
                     }
                     case 4 -> {
-                        ResOrdTab4.setText(result);
+                        DevOrdTab4.setText(result);
                         orderID4 = resultID;
                     }
                     default -> {
@@ -104,21 +104,21 @@ public class DriverController {
                 }
                 counter++;
             }
-            if(ResOrdTab1.getText().equals("postcode")){
-                ResOrdTab1.setText("No Order");
-                ResOrdProBox1.setOpacity(0.0); ResOrdFinBox1.setOpacity(0.0);
+            if(DevOrdTab1.getText().equals("postcode")){
+                DevOrdTab1.setText("No Order");
+                DevOrdProBox1.setOpacity(0.0); DevOrdFinBox1.setOpacity(0.0);
             }
-            if(ResOrdTab2.getText().equals("postcode")){
-                ResOrdTab2.setText("No Order");
-                ResOrdProBox2.setOpacity(0.0); ResOrdFinBox2.setOpacity(0.0);
+            if(DevOrdTab2.getText().equals("postcode")){
+                DevOrdTab2.setText("No Order");
+                DevOrdProBox2.setOpacity(0.0); DevOrdFinBox2.setOpacity(0.0);
             }
-            if(ResOrdTab3.getText().equals("postcode")){
-                ResOrdTab3.setText("No Order");
-                ResOrdProBox3.setOpacity(0.0); ResOrdFinBox3.setOpacity(0.0);
+            if(DevOrdTab3.getText().equals("postcode")){
+                DevOrdTab3.setText("No Order");
+                DevOrdProBox3.setOpacity(0.0); DevOrdFinBox3.setOpacity(0.0);
             }
-            if(ResOrdTab4.getText().equals("postcode")){
-                ResOrdTab4.setText("No Order");
-                ResOrdProBox4.setOpacity(0.0); ResOrdFinBox4.setOpacity(0.0);
+            if(DevOrdTab4.getText().equals("postcode")){
+                DevOrdTab4.setText("No Order");
+                DevOrdProBox4.setOpacity(0.0); DevOrdFinBox4.setOpacity(0.0);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -129,7 +129,7 @@ public class DriverController {
 
     //Delivery problem
 
-    public void OnClickResOrdProBox1(ActionEvent actionEvent) {
+    public void OnClickDevOrdProBox1(ActionEvent actionEvent) {
         /*
         when check box has been clicked. this needs to send order
         back to the kitchen to be remade
@@ -147,7 +147,7 @@ public class DriverController {
 
     }
 
-    public void OnClickResOrdProBox2(ActionEvent actionEvent) {
+    public void OnClickDevOrdProBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID2 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -158,7 +158,7 @@ public class DriverController {
         }
     }
 
-    public void OnClickResOrdProBox3(ActionEvent actionEvent) {
+    public void OnClickDevOrdProBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID3 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -169,7 +169,7 @@ public class DriverController {
         }
     }
 
-    public void OnClickResOrdProBox4(ActionEvent actionEvent) {
+    public void OnClickDevOrdProBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID4 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -182,7 +182,7 @@ public class DriverController {
 
     //Delivery finished
 
-    public void OnClickResOrdFinBox1(ActionEvent actionEvent) {
+    public void OnClickDevOrdFinBox1(ActionEvent actionEvent) {
         /*
         When check box has been clicked.
          */
@@ -195,7 +195,7 @@ public class DriverController {
         }
     }
 
-    public void OnClickResOrdFinBox2(ActionEvent actionEvent) {
+    public void OnClickDevOrdFinBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID2 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -206,7 +206,7 @@ public class DriverController {
         }
     }
 
-    public void OnClickResOrdFinBox3(ActionEvent actionEvent) {
+    public void OnClickDevOrdFinBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID3 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -217,7 +217,7 @@ public class DriverController {
         }
     }
 
-    public void OnClickResOrdFinBox4(ActionEvent actionEvent) {
+    public void OnClickDevOrdFinBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders complete = 1 WHERE order_ID = '" + orderID4 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -282,14 +282,14 @@ public class DriverController {
 
 
     public void resetCheckBoxes() {
-        ResOrdFinBox1.setSelected(false);
-        ResOrdFinBox2.setSelected(false);
-        ResOrdFinBox3.setSelected(false);
-        ResOrdFinBox4.setSelected(false);
-        ResOrdProBox1.setSelected(false);
-        ResOrdProBox2.setSelected(false);
-        ResOrdProBox3.setSelected(false);
-        ResOrdProBox4.setSelected(false);
+        DevOrdFinBox1.setSelected(false);
+        DevOrdFinBox2.setSelected(false);
+        DevOrdFinBox3.setSelected(false);
+        DevOrdFinBox4.setSelected(false);
+        DevOrdProBox1.setSelected(false);
+        DevOrdProBox2.setSelected(false);
+        DevOrdProBox3.setSelected(false);
+        DevOrdProBox4.setSelected(false);
 
     }
 }

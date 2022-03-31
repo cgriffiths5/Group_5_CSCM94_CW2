@@ -69,18 +69,18 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
-        <Label fx:id="ResOrdTab1" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" />
-        <Label fx:id="ResOrdTab2" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-        <Label fx:id="ResOrdTab3" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-        <CheckBox fx:id="ResOrdProBox1" mnemonicParsing="false" onAction="#OnClickResOrdProBox1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-        <CheckBox fx:id="ResOrdFinBox1" mnemonicParsing="false" onAction="#OnClickResOrdFinBox1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-        <CheckBox fx:id="ResOrdProBox2" mnemonicParsing="false" onAction="#OnClickResOrdProBox2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-        <CheckBox fx:id="ResOrdFinBox2" mnemonicParsing="false" onAction="#OnClickResOrdFinBox2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-        <CheckBox fx:id="ResOrdProBox3" mnemonicParsing="false" onAction="#OnClickResOrdProBox3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-        <CheckBox fx:id="ResOrdFinBox3" mnemonicParsing="false" onAction="#OnClickResOrdFinBox3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-        <Label fx:id="ResOrdTab4" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-        <CheckBox fx:id="ResOrdProBox4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnClickResOrdProBox4" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-        <CheckBox fx:id="ResOrdFinBox4" mnemonicParsing="false" onAction="#OnClickResOrdFinBox4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Label fx:id="DevOrdTab1" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" />
+        <Label fx:id="DevOrdTab2" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label fx:id="DevOrdTab3" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <CheckBox fx:id="DevOrdProBox1" mnemonicParsing="false" onAction="#OnClickDevOrdProBox1" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+        <CheckBox fx:id="DevOrdFinBox1" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+        <CheckBox fx:id="DevOrdProBox2" mnemonicParsing="false" onAction="#OnClickDevOrdProBox2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <CheckBox fx:id="DevOrdFinBox2" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <CheckBox fx:id="DevOrdProBox3" mnemonicParsing="false" onAction="#OnClickDevOrdProBox3" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <CheckBox fx:id="DevOrdFinBox3" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Label fx:id="DevOrdTab4" text="No Order" textFill="#1a0d03" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <CheckBox fx:id="DevOrdProBox4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#OnClickDevOrdProBox4" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <CheckBox fx:id="DevOrdFinBox4" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
     </GridPane>
 
 
