@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox spacing="10" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.SpecialsController">
+
+    <Text>Specials</Text>
+
+    <Button fx:id="DisplaySpecialsButton" onAction="#onDisplaySpecialsButtonClick">Display Specials</Button>
+
+    <Text>Enter Special To Add</Text>
+
+    <Text fx:id="EnterNameLabel">Enter Name</Text>
+
+    <TextField fx:id="SpecialName" maxWidth="160"></TextField>
+
+    <Text fx:id="DescriptionName">Enter Description</Text>
+
+    <TextField fx:id="SpecialDescription" maxWidth="160"></TextField>
+
+    <Text fx:id="EnterPriceLabel">Enter Price</Text>
+
+    <TextField fx:id="SpecialPrice" maxWidth="120"></TextField>
+
+    <Button fx:id="SubmitButton" onAction="#onSubmitButtonClick">Submit</Button>
+
+    <Text fx:id="DeleteSpecialLabel" >Delete Special By Name (Enter Name)</Text>
+
+    <TextField fx:id="DeleteSpecial" maxWidth="160"></TextField>
+
+    <Button fx:id="DeleteSpecialButton" onAction="#onDeleteSpecialButtonClick">Delete</Button>
+
+    <Button id="ChefHomeReturn" fx:id="ChefHomeReturn" onAction="#onChefHomeReturnClick">Return To Chef Home</Button>
+
+</VBox>
