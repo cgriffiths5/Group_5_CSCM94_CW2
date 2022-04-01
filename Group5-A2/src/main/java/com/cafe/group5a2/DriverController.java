@@ -17,6 +17,12 @@ import java.sql.*;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * This controller represents a view for a driver after they have logged in on the system
+ * @author Chris Griffiths
+ * @author Cameron Turner
+ */
+
 public class DriverController {
     @FXML
     public Label waiterName;
@@ -53,16 +59,29 @@ public class DriverController {
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     public DriverController() throws SQLException {
     }
-
+    
+    /**
+     * Set label waiterName as text
+     * @param text
+     */
 
     public void setUserText(String text) {
         waiterName.setText(username = text);
     }
-
+    
+    /**
+     * When actionEvent is executed log out of the system
+     * @param actionEvent
+     */
 
     public void logout(ActionEvent actionEvent) {
         ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
     }
+    
+    /**
+     * Sets the DevOrdTab labels with orders if delivery is required. Once executed if there is a delivery waiting the
+     * text is set to the postcode of that delivery destination
+     */
 
 
     public void setDevTab() {
@@ -122,8 +141,11 @@ public class DriverController {
     }
 
 
-
-    //Delivery problem
+     /**
+     * When actionEvent is triggered by a checkbox being checked then the order is marked as unprepared as there is
+     * a problem with the delivered order.
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdProBox1(ActionEvent actionEvent) {
         /*
@@ -142,6 +164,12 @@ public class DriverController {
         }
 
     }
+    
+    /**
+     * When actionEvent is triggered by a checkbox being checked then the order is marked as unprepared as there is
+     * a problem with the delivered order.
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdProBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID2 + "'";
@@ -153,6 +181,12 @@ public class DriverController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * When actionEvent is triggered by a checkbox being checked then the order is marked as unprepared as there is
+     * a problem with the delivered order.
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdProBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID3 + "'";
@@ -164,6 +198,12 @@ public class DriverController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * When actionEvent is triggered by a checkbox being checked then the order is marked as unprepared as there is
+     * a problem with the delivered order.
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdProBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID4 + "'";
@@ -176,7 +216,11 @@ public class DriverController {
         }
     }
 
-    //Delivery finished
+    /**
+     * When actionEvent is triggered by a checkbox being checked the order is marked as complete in the database as
+     * it has been delivered
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdFinBox1(ActionEvent actionEvent) {
         /*
@@ -190,6 +234,12 @@ public class DriverController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * When actionEvent is triggered by a checkbox being checked the order is marked as complete in the database as
+     * it has been delivered
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdFinBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID2 + "'";
@@ -201,6 +251,12 @@ public class DriverController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * When actionEvent is triggered by a checkbox being checked the order is marked as complete in the database as
+     * it has been delivered
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdFinBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID3 + "'";
@@ -212,6 +268,12 @@ public class DriverController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * When actionEvent is triggered by a checkbox being checked the order is marked as complete in the database as
+     * it has been delivered
+     * @param actionEvent
+     */
 
     public void OnClickDevOrdFinBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders complete = 1 WHERE order_ID = '" + orderID4 + "'";
@@ -223,7 +285,12 @@ public class DriverController {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * When actionEvent is triggered by pressing the refresh button the page is reloaded and the deliveries are
+     * updated
+     * @param actionEvent
+     */
 
     @FXML
     public void refreshClick(ActionEvent actionEvent) {
@@ -249,6 +316,11 @@ public class DriverController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Whenever an order is clicked on and marked as finished or has problem then the page is refreshed and the
+     * deliveries are updated
+     */
 
     @FXML
     public void refresh() {
@@ -276,6 +348,9 @@ public class DriverController {
         }
     }
 
+    /**
+     * When this method is called then the checkboxes are refreshed and any checked ones are unchecked
+     */
 
     public void resetCheckBoxes() {
         DevOrdFinBox1.setSelected(false);
