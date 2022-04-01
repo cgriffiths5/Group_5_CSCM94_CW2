@@ -19,6 +19,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Observable;
 
+/**
+ * @author Chris Griffiths
+ */
+
 public class OutstandingOrdersController {
 
     @FXML
@@ -36,7 +40,7 @@ public class OutstandingOrdersController {
     }
 
     /**
-     * A list of outstanding orders are displayed when this button is pressed
+     * A list of outstanding orders are displayed when the display button is pressed
      * @throws SQLException
      */
 
@@ -75,9 +79,8 @@ public class OutstandingOrdersController {
     }
 
     /**
-     *
-     * @param actionEvent when the order is completed the order id is entered and the corresponding entry for that order
-     *                    is updated and marked as complete in the database
+     * When the order is prepared the entry in the database is marked as prepared
+     * @param actionEvent is triggered when submit completed order button is pressed
      * @throws SQLException
      */
 
@@ -99,8 +102,8 @@ public class OutstandingOrdersController {
 
 
     /**
-     *
-     * @param event when the return home button is pressed then the chef view FXML page is loaded
+     * When the event is triggered the chef view is loaded
+     * @param event is triggered when the return home button is pressed
      */
 
     @FXML
