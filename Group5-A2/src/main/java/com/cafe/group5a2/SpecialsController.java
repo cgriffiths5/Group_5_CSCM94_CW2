@@ -37,7 +37,7 @@ public class SpecialsController {
     ObservableList<String> specialList = FXCollections.observableArrayList();
 
    /**
-     * When the display specials button is pressed a list of specials are returned from the database
+     * When the display specials button is pressed a list of specials are returned from the database from a view
      * @throws SQLException
      */
     
