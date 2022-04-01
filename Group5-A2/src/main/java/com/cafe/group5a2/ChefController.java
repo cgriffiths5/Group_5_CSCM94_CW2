@@ -15,6 +15,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Objects;
 
+/**
+ * @author Cameron Turner
+ * @author Chris Griffiths
+ */
+
 public class ChefController {
 
     @FXML
@@ -28,6 +33,11 @@ public class ChefController {
 
     public ChefController() throws SQLException {
     }
+    
+    /**
+     * The variable username and label userLabel are set as the parameter text
+     * @param text is entered when a user enters their username
+     */
 
     public void setUserText(String text) {
         username = text;
@@ -37,6 +47,11 @@ public class ChefController {
     //Database connection
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
+    /**
+     * When the action event is triggered the specials page is loaded
+     * @param event is triggered by pressing the specials button
+     */
+    
     @FXML
     public void onViewSpecialsClick(ActionEvent event) {
         try {
@@ -48,6 +63,11 @@ public class ChefController {
             System.out.println("Error loading page");
         }
     }
+    
+    /**
+     * When the event is triggered the outstanding orders page is loaded
+     * @param event is triggered by pressing the outstanding orders button
+     */
 
     @FXML
     public void onViewOutstandingOrdersClick(ActionEvent event) {
@@ -60,7 +80,6 @@ public class ChefController {
             chefOrdCont.setUserTextOrders(username);
             chefOrdCont.setOrderID();
 
-            //cgriffiths
             stage.setHeight(530);
             stage.setMaxHeight(530);
             stage.setWidth(630);
@@ -74,7 +93,7 @@ public class ChefController {
     }
 
     /**
-     *
+     * This method returns to the homepage 
      * @param event is entered when a user presses the home button
      *
      */
