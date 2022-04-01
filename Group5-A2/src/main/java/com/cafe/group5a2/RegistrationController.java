@@ -23,6 +23,12 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Observable;
 
+
+/**
+ * @author Chris Griffiths
+ * @author 
+ */
+
 public class RegistrationController {
 
     public Button HomeButton1;
@@ -57,10 +63,10 @@ public class RegistrationController {
     }
 
     /**
-     *
-     * @param event on submit button click a new person is added to the users table
-     *              in the database. If any textfield is left blank then an error
-     *              message is given.
+     * When the submit button is pressed the information entered into the textfields is submitted into the database
+     * as a new user. The role is automatically set to customer in order to avoid giving a user access to staff only
+     * controls.
+     * @param event is triggered when the submit button is pressed
      */
 
     @FXML
@@ -109,8 +115,8 @@ public class RegistrationController {
     }
 
     /**
-     *
-     * @param event on button click the home page is returned
+     * When the home button is pressed then the login page is returned
+     * @param event is triggered when the return home button is pressed
      * @throws IOException
      */
 
