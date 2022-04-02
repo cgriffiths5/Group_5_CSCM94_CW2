@@ -26,8 +26,10 @@ import java.util.Observable;
 
 /**
  * @author Chris Griffiths
- * @author 
+ * @author Adam Tucker
  */
+
+
 
 public class RegistrationController {
 
@@ -80,29 +82,56 @@ public class RegistrationController {
         String HouseNumber = HouseNO.getText();
         String Post = Postcode.getText();
 
-        String query = "INSERT INTO users (f_name, l_name, role, username, password, house_number, postcode)" +
+        String query1 = "SELECT username FROM users";
+
+        Boolean sameUsername = false;
+
+        try {
+            Statement stmt1 = con.createStatement();
+            ResultSet r1 = stmt1.executeQuery(query1);
+            String currUsername;
+
+            while(r1.next()) {
+                    if (User.equals(r1.getString("username"))) {
+                        sameUsername = true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        String query2 = "INSERT INTO users (f_name, l_name, role, username, password, house_number, postcode)" +
                 "VALUES ('" + First + "','" + Last + "', 'customer', '" + User + "','" + Pass + "','"
                 + HouseNumber + "','" + Post + "')";
 
         if (FirstName.getText().isEmpty()) {
             ErrorLabel.setText("Error: First name is empty");
+            ErrorLabel.setOpacity(1);
         } else if (LastName.getText().isEmpty()) {
             ErrorLabel.setText("Error: Last name is empty");
+            ErrorLabel.setOpacity(1);
         } else if (Username.getText().isEmpty()) {
             ErrorLabel.setText("Error: Username is empty");
+            ErrorLabel.setOpacity(1);
         } else if (Password.getText().isEmpty()) {
             ErrorLabel.setText("Error: Password is empty");
+            ErrorLabel.setOpacity(1);
         } else if (ConfirmPassword.getText().isEmpty()) {
             ErrorLabel.setText("Error: Confirm password is empty");
+            ErrorLabel.setOpacity(1);
         } else if (HouseNO.getText().isEmpty()) {
             ErrorLabel.setText("Error: House number is empty");
+            ErrorLabel.setOpacity(1);
         } else if (Postcode.getText().isEmpty()) {
             ErrorLabel.setText("Error: Postcode is empty");
+            ErrorLabel.setOpacity(1);
+        } else if (sameUsername) {
+            ErrorLabel.setText("Username already used");
+            ErrorLabel.setOpacity(1);
         }
-
         else if (Pass.equals(ConPass)) {
             try (Statement stmt = con.createStatement()) {
-                stmt.executeQuery(query);
+                stmt.executeQuery(query2);
             } catch (Exception e) {
                 System.out.println("Errors Detected");
                 e.printStackTrace();
@@ -131,3 +160,5 @@ public class RegistrationController {
 
 
 }
+
+
