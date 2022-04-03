@@ -32,7 +32,17 @@ public class AddStaffController {
 
     @FXML
     public void onAddStaffButtonClick(ActionEvent event) {
-        //Method to go to add staff page
+        try {
+            Stage stage = (Stage) AddStaffButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addNewStaff-view.fxml")));
+
+            stage.setTitle("Manager");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+            e.printStackTrace();
+        }
+
     }
 
     @FXML
@@ -49,7 +59,8 @@ public class AddStaffController {
             ResultSet rs = stmt.executeQuery(query);
 
             while(rs.next()) {
-                staffList.add(rs.getString("f_name") + " " + rs.getString("l_name") + " " + rs.getString("role") + "\n");
+                staffList.add("First name: " + rs.getString("f_name") +
+                        " Last Name: " + rs.getString("l_name") + " Role: " + rs.getString("role") + "\n");
             }
 
             ObservableList<String> staffList1 = staffList;
