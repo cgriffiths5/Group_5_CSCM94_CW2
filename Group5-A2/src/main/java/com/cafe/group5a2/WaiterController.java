@@ -20,6 +20,14 @@ import java.sql.*;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * Waiter controller class shows relevant information and buttons
+ * that the waiter needs to have functionality in the program
+ * @author Cameron Turner
+ * @author Adam Tucker
+ * @version 1.0
+ */
+
 public class WaiterController {
     @FXML
     public Label waiterName;
@@ -31,7 +39,6 @@ public class WaiterController {
     public Label TakOrdCust2;
     public Label TakOrdCust3;
     public Label TakOrdCust4;
-
     public Button newOrderBut;
     public Button approveBookingBut;
     public Button logoutBut;
@@ -54,11 +61,8 @@ public class WaiterController {
     public CheckBox TakOrdFinBox3;
     public CheckBox TakOrdFinBox4;
 
-
     @FXML
     public Button refreshButton;
-
-
     private String username;
     private int orderID1;
     private int orderID2;
@@ -70,12 +74,19 @@ public class WaiterController {
     private int takeawayOrderID3;
     private int takeawayOrderID4;
 
-
-
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
+   
+    /**
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public WaiterController() throws SQLException {
     }
 
+    /**
+     * Return void. 
+     * Takes you to the approve booking page
+     * @param actionEvent Approve booking button
+     */
     @FXML
     public void approveBooking(ActionEvent actionEvent) {
         try {
@@ -99,17 +110,29 @@ public class WaiterController {
         }
     }
 
-
+   /**
+    * Returns void.
+    * Sets the name of the user using the application
+    * @param text The username
+    */
     public void setUserText(String text) {
         waiterName.setText(username = text);
     }
 
-
+    /**
+     * Returns void and when logout button is pressed
+     * the stage changes to the home screen
+     * @param actionEvent Logout button
+     */
     public void logout(ActionEvent actionEvent) {
         ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
     }
 
-
+   /**
+    * Returns void and when the "New Order" button is clicked
+    * goes to a new stage to
+    * @param actionEvent new order Button
+    */
     public void newOrder(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) newOrderBut.getScene().getWindow();
@@ -136,7 +159,15 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
+    
+   /**
+    * Returns void. 
+    * Sets the on screen data to show the relevant information
+    * for the waiter to see which order needs to go to which table in the
+    * restaurant.
+    * If there is no information then a label with "No Order" will show up
+    * and none of the check boxes can be clicked
+    */
     public void setResOrdTab() {
         String query = "SELECT order_ID, table_number, complete FROM orders WHERE type='seated' AND prepared=1 AND complete=0 ORDER BY date_time LIMIT 4";
 
@@ -193,6 +224,13 @@ public class WaiterController {
         }
     }
 
+   /**
+    * Returns void. Shows the on screen information for takeaway orders.
+    * Shows parts of the customers details so the waiter can find the
+    * correct customer when handing over the order.
+    * If there is no takeaway orders available then a "No Order" label will
+    * appear
+    */
     public void setTakeawayOrdTable() {
         String query = "SELECT f_name, l_name, order_ID FROM list_orders WHERE type = 'takeaway' AND prepared = 1 AND complete = 0 ORDER BY date_time ASC LIMIT 4" ;
 
@@ -251,15 +289,15 @@ public class WaiterController {
         }
     }
 
-    //restaurant problem
-
+    
+    /**
+     * Returns void.
+     * When restaurant order 1 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdProBox1(ActionEvent actionEvent) {
-        /*
-        when check box has been clicked. this needs to send order
-        back to the kitchen to be remade
-        UPDATE orders SET complete = 1 WHERE order_ID = orderIDLabel1
-        UPDATE orders SET complete = 1 WHERE order_ID = orderIDLabel2
-        */
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID1 + "'";
 
         try (Statement stmt = con.createStatement()) {
@@ -270,7 +308,14 @@ public class WaiterController {
         }
 
     }
-
+    
+    /**
+     * Returns void.
+     * When restaurant order 2 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdProBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID2 + "'";
 
@@ -281,7 +326,14 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Returns void.
+     * When restaurant order 3 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdProBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID3 + "'";
 
@@ -293,6 +345,13 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When restaurant order 4 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdProBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID4 + "'";
 
@@ -304,12 +363,16 @@ public class WaiterController {
         }
     }
 
-    //restaurant finished
-
+    /**
+     * Returns void.
+     * When restaurant order 1 has been delivered to the table and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdFinBox1(ActionEvent actionEvent) {
-        /*
-        When check box has been clicked.
-         */
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID1 + "'";
         try (Statement stmt = con.createStatement()) {
             stmt.executeQuery(query);
@@ -319,6 +382,15 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When restaurant order 2 has been delivered to the table and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */    
     public void OnClickResOrdFinBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID2 + "'";
 
@@ -329,7 +401,16 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
+    
+   /**
+     * Returns void.
+     * When restaurant order 3 has been delivered to the table and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdFinBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID3 + "'";
 
@@ -341,6 +422,15 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When restaurant order 4 has been delivered to the table and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */
     public void OnClickResOrdFinBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders complete = 1 WHERE order_ID = '" + orderID4 + "'";
 
@@ -352,8 +442,13 @@ public class WaiterController {
         }
     }
 
-    //Takeaway problem
-
+    /**
+     * Returns void.
+     * When takeaway order 1 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickTakOrdProBox1(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + takeawayOrderID1 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -364,6 +459,13 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When takeaway order 2 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickTakOrdProBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + takeawayOrderID2 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -373,7 +475,14 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Returns void.
+     * When takeaway order 3 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */
     public void OnClickTakOrdProBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + takeawayOrderID3 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -384,6 +493,13 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When takeaway order 4 has a problem this boxed can be clicked so the chef can
+     * remake the order for the customer and updates the relevant information
+     * in the database. When the box had been checked it will refresh the page
+     * @param actionEvent Check box button
+     */    
     public void OnClickTakOrdProBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + takeawayOrderID4 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -393,9 +509,16 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
-    //Takeaway finished
-
+    
+    /**
+     * Returns void.
+     * When takeaway order 1 has been given to the customer and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */
     public void OnClickTakOrdFinBox1(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + takeawayOrderID1 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -406,6 +529,15 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When takeaway order 2 has been given to the customer and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */    
     public void OnClickTakOrdFinBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + takeawayOrderID2 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -416,6 +548,15 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When takeaway order 3 has been given to the customer and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */    
     public void OnClickTakOrdFinBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + takeawayOrderID3 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -425,7 +566,16 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Returns void.
+     * When takeaway order 4 has been given to the customer and is all correct
+     * a check box can be clicked to complete the order which changes the
+     * relevant information on the database and removes the information
+     * from the app. When the box has been clicked the page will
+     * refresh
+     * @param actionEvent Check box button
+     */
     public void OnClickTakOrdFinBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + takeawayOrderID4 + "'";
         try (Statement stmt = con.createStatement()) {
@@ -436,6 +586,12 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When the refresh button has been clicked a new stage is set to refresh
+     * all the relevant information on that page. This is done through an on click event
+     * @param actionEvent refresh button
+     */    
     @FXML
     public void refreshClick(ActionEvent actionEvent) {
         try {
@@ -462,6 +618,11 @@ public class WaiterController {
         }
     }
 
+    /**
+     * Returns void.
+     * When this method is called it refreshes the page with the relevant information
+     * too load the takeaway and restaurant orders
+     */    
     @FXML
     public void refresh() {
         try {
@@ -489,7 +650,10 @@ public class WaiterController {
         }
     }
 
-
+    /**
+     * Returns void
+     * This method is used to clear the check boxes on screen
+     */
     public void resetCheckBoxes() {
         ResOrdFinBox1.setSelected(false);
         ResOrdFinBox2.setSelected(false);
