@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.AddNewStaffController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.AddNewStaffController">
     <VBox alignment="CENTER" prefHeight="690.0" prefWidth="461.0" spacing="12">
         <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0" />
         <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
@@ -51,8 +51,9 @@
             <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0" />
         </HBox>
         <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="44.0" />
             <PasswordField fx:id="Password1" maxWidth="132.0" prefHeight="25.0" prefWidth="132.0" promptText="password" />
-            <Separator opacity="0.0" prefHeight="20.0" prefWidth="143.0" />
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0" />
         </HBox>
         <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
             <Separator opacity="0.0" prefHeight="20.0" prefWidth="44.0" />
@@ -89,4 +90,4 @@
         </HBox>
         <HBox alignment="CENTER" prefHeight="59.0" prefWidth="465.0" />
     </VBox>
-</AnchorPane>
+</ScrollPane>
