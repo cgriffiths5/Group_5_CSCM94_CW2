@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -28,6 +29,7 @@ public class AddNewStaffController {
     public TextField Role;
     public Text ErrorLabel;
     public Button HomeButton;
+
 
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
@@ -61,7 +63,6 @@ public class AddNewStaffController {
         try {
             Statement stmt1 = con.createStatement();
             ResultSet r1 = stmt1.executeQuery(query1);
-            String currUsername;
 
             while(r1.next()) {
                 if (User.equals(r1.getString("username"))) {

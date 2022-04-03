@@ -9,6 +9,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -23,6 +26,10 @@ public class AddStaffController {
     public Button AddStaffButton;
     public Button ViewStaffButton;
     public Button DeleteStaffButton;
+
+
+
+    ObservableList<String> staffList = FXCollections.observableArrayList();
 
     //Database connection
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
@@ -48,25 +55,27 @@ public class AddStaffController {
     @FXML
     public void onViewStaffButtonClick() throws SQLException {
 
-        ObservableList<String> staffList = FXCollections.observableArrayList();
+
 
         String query = "SELECT * FROM users WHERE role = 'manager' OR role = 'waiter' OR role = 'chef' OR role = 'driver';";
-
-        staffList.clear();
 
         try {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
 
+
             while(rs.next()) {
+
                 staffList.add("First name: " + rs.getString("f_name") +
                         " Last Name: " + rs.getString("l_name") + " Role: " + rs.getString("role") + "\n");
+
             }
 
+            
             ObservableList<String> staffList1 = staffList;
 
             Stage secondStage = new Stage();
-            secondStage.setTitle("Specials");
+            secondStage.setTitle("Staff List");
 
             final ListView staffListView = new ListView(staffList1);
             staffListView.setPrefSize(400, 500);
@@ -77,6 +86,8 @@ public class AddStaffController {
             root.getChildren().add(staffListView);
             secondStage.setScene(new Scene(root, 400, 500));
             secondStage.show();
+
+             
 
         } catch (SQLException e) {
             System.out.println("Error Detected");
