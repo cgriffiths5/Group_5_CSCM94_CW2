@@ -39,7 +39,7 @@
             <TextField fx:id="Role" maxWidth="120" prefWidth="132.0" promptText="role" />
         </HBox>
         <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
-            <Text text="Choose username, password and role">
+            <Text text="Choose username and password">
                 <font>
                     <Font name="AdobeDevanagari-Regular" size="16.0" />
                 </font>
