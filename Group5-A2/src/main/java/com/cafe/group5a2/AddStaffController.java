@@ -22,6 +22,7 @@ public class AddStaffController {
     public Button ManagerHomeReturn;
     public Button AddStaffButton;
     public Button ViewStaffButton;
+    public Button DeleteStaffButton;
 
     //Database connection
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
@@ -84,5 +85,19 @@ public class AddStaffController {
         } catch (IOException e) {
             System.out.println("Error loading page");
         }
+    }
+
+    public void onDeleteStaffMember(ActionEvent event) {
+        try {
+            Stage stage = (Stage) DeleteStaffButton.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteStaff-view.fxml")));
+
+            stage.setTitle("Delete Staff Member");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+            e.printStackTrace();
+        }
+
     }
 }
