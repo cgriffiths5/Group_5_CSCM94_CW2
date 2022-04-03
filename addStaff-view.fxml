@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="8"
+      prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.AddStaffController">
+
+    <Text >Add Staff</Text>
+
+    <Button fx:id="AddStaffButton" text="Add New Staff Member" onAction="#onAddStaffButtonClick" />
+
+    <Button fx:id="ViewStaffButton" text="View Current Staff" onAction="#onViewStaffButtonClick"/>
+
+    <Button fx:id="DeleteStaffButton" text="Delete Staff Member" onAction="#onDeleteStaffMember" />
+
+    <Button id="ManagerHomeReturn" fx:id="ManagerHomeReturn" onAction="#onManagerHomeReturnClick">Return To Manager Home</Button>
+
+</VBox>
