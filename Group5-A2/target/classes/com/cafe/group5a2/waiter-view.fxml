@@ -17,8 +17,9 @@
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="142.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="106.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="140.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="213.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="227.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="76.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="68.5" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -34,16 +35,8 @@
                 </GridPane.margin>
             </Label>
             <Label fx:id="waiterName" text="Name" textFill="#1a0d03" GridPane.columnIndex="2" />
-            <Button fx:id="newOrderBut" mnemonicParsing="false" onAction="#newOrder" text="New Order" GridPane.columnIndex="3">
-                <GridPane.margin>
-                    <Insets left="15.0" />
-                </GridPane.margin>
-            </Button>
-            <Button fx:id="approveBookingBut" mnemonicParsing="false" onAction="#approveBooking" prefHeight="25.0" prefWidth="109.0" text="Approve Booking" GridPane.columnIndex="3">
-                <GridPane.margin>
-                    <Insets left="95.0" />
-                </GridPane.margin>
-            </Button>
+          <Button fx:id="logoutBut" mnemonicParsing="false" onAction="#logout" text="Logout" GridPane.columnIndex="4" />
+          <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshClick" prefHeight="25.0" prefWidth="66.0" text="Refresh" GridPane.columnIndex="3" />
         </GridPane>
     </HBox>
     <HBox layoutY="72.0" prefHeight="41.0" prefWidth="600.0" style="-fx-border-color: #000000;">
@@ -132,6 +125,6 @@
             </font>
         </Label>
     </HBox>
-    <Button fx:id="logoutBut" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
-    <Button fx:id="refreshButton" layoutX="86.0" layoutY="41.0" mnemonicParsing="false" onAction="#refreshClick" text="Refresh" />
+      <Button fx:id="newOrderBut" layoutX="8.0" layoutY="41.0" mnemonicParsing="false" onAction="#newOrder" text="New Order" />
+      <Button fx:id="approveBookingBut" layoutX="85.0" layoutY="41.0" mnemonicParsing="false" onAction="#approveBooking" prefHeight="25.0" prefWidth="112.0" text="Manage Bookings" />
 </Pane>

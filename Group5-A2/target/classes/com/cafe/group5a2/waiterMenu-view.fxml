@@ -13,7 +13,7 @@
 
 <ScrollPane fx:id="mainPane" hbarPolicy="NEVER" maxHeight="802.0" maxWidth="511.0" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="802.0" prefWidth="511.0" style="-fx-background: #483c32; -fx-border-color: #483c32"
-            stylesheets="@styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.WaiterMenuController">
+            stylesheets="@../group5a2/styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.WaiterMenuController">
    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="796.0" prefWidth="503.0">
       <Label alignment="CENTER" layoutX="187.0" layoutY="24.0" prefHeight="68.0" prefWidth="95.0" text="Menu" textFill="#ffd086">
          <font>

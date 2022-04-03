@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -13,9 +15,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="896.0" prefWidth="482.0" style="-fx-background: #483c32; -fx-border-color: #483c32" stylesheets="@../group5a2/styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ChefCustOrderController">
+<ScrollPane fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="896.0" prefWidth="482.0" style="-fx-background: #483c32; -fx-border-color: #483c32" stylesheets="@styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.CustomerViewOrderController">
     <AnchorPane fx:id="aPane" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="484.0">
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="20.0" prefHeight="54.0" prefWidth="246.0" text="Customers Order" textFill="#ffd086">
+        <ImageView fitHeight="1032.0" fitWidth="792.0">
+            <Image url="@styling/back2.jpg"/>
+        </ImageView>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="17.0" prefHeight="54.0" prefWidth="227.0" text="Order" textFill="#ffd086">
             <font>
                 <Font name="AdobeDevanagari-BoldItalic" size="37.0" />
             </font>
@@ -222,9 +227,9 @@
             </HBox>
             <HBox minHeight="1.0" prefHeight="85.0" prefWidth="561.0" />
         </VBox>
-        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#onClickGoBack" prefHeight="20.0" prefWidth="97.0" text="Go Back" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0">
+        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="371.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickGoBack" prefHeight="31.0" prefWidth="81.0" text="Go Back" AnchorPane.leftAnchor="371.0" AnchorPane.topAnchor="17.0">
             <font>
-                <Font size="18.0" />
+                <Font size="15.0" />
             </font>
         </Button>
         <HBox layoutX="-3.0" layoutY="85.0" prefHeight="42.0" prefWidth="584.0">
