@@ -144,6 +144,8 @@ public class WaiterController {
             wMCont.setPriceLabels();
             wMCont.setDescLabels();
             wMCont.setUserText(username);
+            wMCont.resetCheckBoxes();
+            
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
             stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
             stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 4));
