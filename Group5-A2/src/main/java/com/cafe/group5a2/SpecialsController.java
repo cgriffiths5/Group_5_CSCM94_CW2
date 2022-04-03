@@ -36,11 +36,6 @@ public class SpecialsController {
 
     ObservableList<String> specialList = FXCollections.observableArrayList();
 
-   /**
-     * When the display specials button is pressed a list of specials are returned from the database from a view
-     * @throws SQLException
-     */
-    
     public void onDisplaySpecialsButtonClick() throws SQLException {
         String query = "SELECT * FROM menu WHERE category = 'special';";
 
@@ -76,9 +71,8 @@ public class SpecialsController {
     }
 
     /**
-     * When this event is triggered the name, description and price of a new special are collected from the
-     * textfields and then the setSpecial method that inputs these into the database are triggered
-     * @param event is triggered when the submit button is pressed
+     *
+     * @param event when the submit button is pressed a special is entered into the menu
      */
 
     @FXML
@@ -93,14 +87,6 @@ public class SpecialsController {
         setSpecial(name, description, Integer.parseInt(price));
 
     }
-    
-    /**
-     * An SQL query is triggered to input these parameters in a new entry in the database
-     * @param name is given through the name textfield
-     * @param description is given through the description textfield
-     * @param price is given through the price textfield
-     * @throws SQLException
-     */
 
     public void setSpecial(String name, String description, float price) throws SQLException {
         String special = "special";
@@ -114,12 +100,6 @@ public class SpecialsController {
         }
 
     }
-    
-    /**
-     * Once the actionEvent is triggered a special is deleted by name
-     * @param actionEvent is triggered when delete button is pressed
-     * @throws SQLException
-     */
 
     public void onDeleteSpecialButtonClick(ActionEvent actionEvent) throws SQLException {
         String name = DeleteSpecial.getText();
@@ -136,8 +116,8 @@ public class SpecialsController {
 
 
     /**
-     * When the event is triggered the chef home page is loaded
-     * @param event when the return back button is pressed the event is triggered
+     *
+     * @param event when the return back button is pressed the chef view FXML page is loaded
      */
 
     @FXML

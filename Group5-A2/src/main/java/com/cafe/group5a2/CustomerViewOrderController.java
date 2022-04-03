@@ -1,20 +1,28 @@
 package com.cafe.group5a2;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.List;
 
-public class ChefCustOrderController {
+import static java.lang.Integer.parseInt;
+
+public class CustomerViewOrderController {
 
     public ScrollPane mainPane;
     public AnchorPane aPane;
@@ -87,12 +95,12 @@ public class ChefCustOrderController {
 
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
-    public ChefCustOrderController() throws SQLException {
+    public CustomerViewOrderController() throws SQLException {
     }
 
     public void setItemsAndQuant(int orderID) {
 
-        String query = "SELECT * FROM items_separate_orders WHERE prepared=0 AND complete=0 AND order_ID = '" + orderID + "' ORDER BY date_time";
+        String query = "SELECT * FROM items_separate_orders WHERE complete= 1 AND order_ID = '" + orderID + "' ORDER BY date_time";
 
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
@@ -303,45 +311,45 @@ public class ChefCustOrderController {
                 int j = 0;
                 while (j < length) {
                     if (j == 0){ il1.setText(items[j]);
-                    ql1.setText(String.valueOf(count1));}
+                        ql1.setText(String.valueOf(count1));}
                     if (j == 1) {il2.setText(items[j]);
-                    ql2.setText(String.valueOf(count2));}
+                        ql2.setText(String.valueOf(count2));}
                     if (j == 2) {il3.setText(items[j]);
-                    ql3.setText(String.valueOf(count3));}
+                        ql3.setText(String.valueOf(count3));}
                     if (j == 3) {il4.setText(items[j]);
-                    ql4.setText(String.valueOf(count4));}
+                        ql4.setText(String.valueOf(count4));}
                     if (j == 4) {il5.setText(items[j]);
-                    ql5.setText(String.valueOf(count5));}
+                        ql5.setText(String.valueOf(count5));}
                     if (j == 5) {il6.setText(items[j]);
-                    ql6.setText(String.valueOf(count6));}
+                        ql6.setText(String.valueOf(count6));}
                     if (j == 6) {il7.setText(items[j]);
-                    ql7.setText(String.valueOf(count7));}
+                        ql7.setText(String.valueOf(count7));}
                     if (j == 7) {il8.setText(items[j]);
-                    ql8.setText(String.valueOf(count8));}
+                        ql8.setText(String.valueOf(count8));}
                     if (j == 8) {il9.setText(items[j]);
-                    ql9.setText(String.valueOf(count9));}
+                        ql9.setText(String.valueOf(count9));}
                     if (j == 9) {il10.setText(items[j]);
-                    ql10.setText(String.valueOf(count10));}
+                        ql10.setText(String.valueOf(count10));}
                     if (j == 10) {il11.setText(items[j]);
-                    ql11.setText(String.valueOf(count11));}
+                        ql11.setText(String.valueOf(count11));}
                     if (j == 11) {il12.setText(items[j]);
-                    ql12.setText(String.valueOf(count12));}
+                        ql12.setText(String.valueOf(count12));}
                     if (j == 12){ il13.setText(items[j]);
-                    ql13.setText(String.valueOf(count13));}
+                        ql13.setText(String.valueOf(count13));}
                     if (j == 13) {il14.setText(items[j]);
-                    ql14.setText(String.valueOf(count14));}
+                        ql14.setText(String.valueOf(count14));}
                     if (j == 14) {il15.setText(items[j]);
-                    ql15.setText(String.valueOf(count15));}
+                        ql15.setText(String.valueOf(count15));}
                     if (j == 15) {il16.setText(items[j]);
-                    ql16.setText(String.valueOf(count16));}
+                        ql16.setText(String.valueOf(count16));}
                     if (j == 16) {il17.setText(items[j]);
-                    ql17.setText(String.valueOf(count17));}
+                        ql17.setText(String.valueOf(count17));}
                     if (j == 17) {il18.setText(items[j]);
-                    ql18.setText(String.valueOf(count18));}
+                        ql18.setText(String.valueOf(count18));}
                     if (j == 18) {il19.setText(items[j]);
-                    ql19.setText(String.valueOf(count19));}
+                        ql19.setText(String.valueOf(count19));}
                     if (j == 19) {il20.setText(items[j]);
-                    ql20.setText(String.valueOf(count20));}
+                        ql20.setText(String.valueOf(count20));}
                     j++;
                 }
                 double paneSize = 890;

@@ -75,7 +75,7 @@ BEGIN
 END //
 DELIMITER ;
 
-CALL fill_cap('2022-03-20', '2022-05-30', 1, 2, 1200);
+CALL fill_cap(CURRENT_DATE, '2022-12-31', 1, 2, 1200);
 
 INSERT INTO bookings
     (b_user_ID, b_cap_ID, guests)
@@ -143,7 +143,7 @@ DELIMITER ;
 INSERT INTO orders
     (FK_user_ID, type, item_list, date_time, table_number, prepared)
 VALUES (2, 'seated',
-        'Margherita pizza,Cheese burger,Spaghetti carbonara,Mango lassi,Fosters,Cafe94 kebab,Tap water,Lilt,CocaCola,Fanta,Gateau St. Honoré,,,,,,,,,,,,,,,,,,,',
+        'Margherita pizza,Cheese burger,Spaghetti carbonara,Mango lassi,Fosters,Cafe94 kebab,Tap water,Lilt,CocaCola,Fanta,Gateau St. Honoré,',
         CURRENT_TIMESTAMP, 11, 0),
        (2, 'seated',
         'Cheese burger,Tap water,',

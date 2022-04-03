@@ -76,7 +76,28 @@ public class WaiterController {
     public WaiterController() throws SQLException {
     }
 
+    @FXML
+    public void approveBooking(ActionEvent actionEvent) {
+        try {
+            Stage stage = (Stage) approveBookingBut.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("waiterApproveBooking.fxml"));
+            Parent newRoot = loader.load();
 
+            WaiterBookingManagement wBMng = loader.getController();
+            wBMng.setUser(username);
+            wBMng.setLabels();
+            wBMng.hideEmpty();
+
+            stage.centerOnScreen();
+            stage.setTitle("Booking Management");
+            stage.setHeight(800);
+            stage.setWidth(800);
+            stage.setMaxWidth(800);
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
+    }
 
 
     public void setUserText(String text) {
@@ -115,12 +136,6 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-
-
-    public void approveBooking(ActionEvent actionEvent) {
-
-    }
-
 
     public void setResOrdTab() {
         String query = "SELECT order_ID, table_number, complete FROM orders WHERE type='seated' AND prepared=1 AND complete=0 ORDER BY date_time LIMIT 4";

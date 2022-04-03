@@ -229,4 +229,35 @@ WHERE username = 'cpeng';#the customers username
 
 #DELETE FROM orders WHERE order_ID > 18;
 #DELETE FROM orders WHERE order_ID > 0;
+#SELECT * FROM capacity WHERE hour = 2200 AND date = 20220404 ORDER BY table_number;
+
+
+CREATE OR REPLACE VIEW waiter_booking_view AS
+SELECT booking_ID as b_ID, user_ID, cap_ID, l_name, date, hour, guests, table_number
+FROM bookings
+INNER JOIN capacity
+ON bookings.b_cap_ID = capacity.cap_ID
+INNER JOIN users u on bookings.b_user_ID = u.user_ID
+WHERE
+((date > CURRENT_DATE || (date = CURRENT_DATE && hour > (2000 + HOUR(CURRENT_TIMESTAMP)*100))) && approved = 0)
+ORDER BY date, hour;
+
+CREATE OR REPLACE VIEW today_bookings AS
+SELECT booking_ID as b_ID, user_ID, cap_ID, l_name, date, hour, guests, table_number
+FROM bookings
+         INNER JOIN capacity
+                    ON bookings.b_cap_ID = capacity.cap_ID
+         INNER JOIN users u on bookings.b_user_ID = u.user_ID
+WHERE date = CURRENT_DATE && ((hour >= (HOUR(CURRENT_TIME) * 100)) - 1000) && approved = 1
+ORDER BY hour;
+
+#SELECT * FROM today_bookings;
+
+SELECT * FROM waiter_booking_view;
+#for customer
+#SELECT * from waiter_booking_view
+#WHERE user_ID = 'username';
+
+#SELECT order_ID, table_number, date_time, type FROM orders
+# WHERE complete = 1 AND FK_user_ID = 6 ORDER BY date_time LIMIT 21;
 

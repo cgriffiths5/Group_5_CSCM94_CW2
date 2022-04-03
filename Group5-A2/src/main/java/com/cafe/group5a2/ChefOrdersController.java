@@ -44,15 +44,19 @@ public class ChefOrdersController {
     private int orderID3;
     private int orderID4;
 
+
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
+
     public ChefOrdersController() throws SQLException {
     }
+
     @FXML
     public void setUserTextOrders(String text) {
         username = text;
         chefName.setText(text);
     }
+
     @FXML
     public void onClickRefreshPage(ActionEvent actionEvent) {
         try {
@@ -76,6 +80,7 @@ public class ChefOrdersController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void onClickReturnChefHome(ActionEvent actionEvent) {
         try {
@@ -111,22 +116,22 @@ public class ChefOrdersController {
                 switch (counter) {
                     case 1 -> {
                         orderID1 = resultID;
-                        if (type.equals("seated")) label1.setText((rs.getString("table_number")));
+                        if (type.equals("seated")) label1.setText(("Table Number: " + rs.getString("table_number")));
                         else label1.setText(type);
                     }
                     case 2 -> {
                         orderID2 = resultID;
-                        if (type.equals("seated")) label2.setText((rs.getString("table_number")));
+                        if (type.equals("seated")) label2.setText(("Table Number: " + rs.getString("table_number")));
                         else label2.setText(type);
                     }
                     case 3 -> {
                         orderID3 = resultID;
-                        if (type.equals("seated")) label3.setText((rs.getString("table_number")));
+                        if (type.equals("seated")) label3.setText(("Table Number: " + rs.getString("table_number")));
                         else label3.setText(type);
                     }
                     case 4 -> {
                         orderID4 = resultID;
-                        if (type.equals("seated")) label4.setText((rs.getString("table_number")));
+                        if (type.equals("seated")) label4.setText(("Table Number: " + rs.getString("table_number")));
                         else label4.setText(type);
                     }
                     default -> {
@@ -155,7 +160,6 @@ public class ChefOrdersController {
         }
     }
 
-
     @FXML
     public void onClickCheckBoxOrder1(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID1 + "'";
@@ -167,6 +171,7 @@ public class ChefOrdersController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void onClickCheckBoxOrder2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID2 + "'";
@@ -178,6 +183,7 @@ public class ChefOrdersController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void onClickCheckBoxOrder3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID3 + "'";
@@ -189,6 +195,7 @@ public class ChefOrdersController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void onClickCheckBoxOrder4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID4 + "'";
@@ -210,9 +217,6 @@ public class ChefOrdersController {
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
 
             ChefCustOrderController chefCustOrdCont = loader.getController();
-            //
-
-            //
             stage.centerOnScreen();
             stage.setY(0);
             stage.setHeight(800.0);
@@ -227,13 +231,73 @@ public class ChefOrdersController {
         }
     }
 
+    @FXML
     public void onClickViewOrder2(ActionEvent actionEvent) {
+        try {
+            Stage stage = (Stage) viewOrder1.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("chefMenuOrder.fxml"));
+            Parent newRoot = loader.load();
+            Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
+
+            ChefCustOrderController chefCustOrdCont = loader.getController();
+            stage.centerOnScreen();
+            stage.setY(0);
+            stage.setHeight(800.0);
+            stage.setMaxHeight(800.0);
+            stage.setWidth(500);
+            stage.setMaxWidth(500);
+            chefCustOrdCont.setItemsAndQuant(orderID2);
+            stage.setTitle("Customers Order");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
+    @FXML
     public void onClickViewOrder3(ActionEvent actionEvent) {
+        try {
+            Stage stage = (Stage) viewOrder1.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("chefMenuOrder.fxml"));
+            Parent newRoot = loader.load();
+            Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
+
+            ChefCustOrderController chefCustOrdCont = loader.getController();
+            stage.centerOnScreen();
+            stage.setY(0);
+            stage.setHeight(800.0);
+            stage.setMaxHeight(800.0);
+            stage.setWidth(500);
+            stage.setMaxWidth(500);
+            chefCustOrdCont.setItemsAndQuant(orderID3);
+            stage.setTitle("Customers Order");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
+    @FXML
     public void onClickViewOrder4(ActionEvent actionEvent) {
+        try {
+            Stage stage = (Stage) viewOrder1.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("chefMenuOrder.fxml"));
+            Parent newRoot = loader.load();
+            Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
+
+            ChefCustOrderController chefCustOrdCont = loader.getController();
+            stage.centerOnScreen();
+            stage.setY(0);
+            stage.setHeight(800.0);
+            stage.setMaxHeight(800.0);
+            stage.setWidth(500);
+            stage.setMaxWidth(500);
+            chefCustOrdCont.setItemsAndQuant(orderID4);
+            stage.setTitle("Customers Order");
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML
@@ -260,6 +324,7 @@ public class ChefOrdersController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void resetCheckBoxes() {
         checkBoxOrder1.setSelected(false);

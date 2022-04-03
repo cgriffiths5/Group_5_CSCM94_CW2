@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -1053,11 +1052,11 @@ public class CustMenuController {
             cCont.setUserText(username);//550, 523
 
             stage.setTitle("Main menu");
-            stage.centerOnScreen();
             stage.setHeight(550);
             stage.setMaxHeight(550);
-            stage.setWidth(523);
-            stage.setMaxWidth(523);
+            stage.setWidth(550);
+            stage.setMaxWidth(550);
+            stage.centerOnScreen();
             stage.getScene().setRoot(newRoot);
 
         } catch (IOException e) {

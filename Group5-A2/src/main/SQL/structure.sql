@@ -58,6 +58,7 @@ CREATE TABLE bookings (
     b_user_ID  BIGINT,
     b_cap_ID   BIGINT UNIQUE,
     guests     INT NOT NULL,
+    approved   BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (b_user_ID) REFERENCES users (user_ID),
     FOREIGN KEY (b_cap_ID) REFERENCES capacity (cap_ID),
     CONSTRAINT pk_bookings PRIMARY KEY (booking_ID, b_user_ID, b_cap_ID),

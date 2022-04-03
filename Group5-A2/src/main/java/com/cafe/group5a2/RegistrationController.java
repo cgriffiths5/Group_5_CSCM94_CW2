@@ -92,8 +92,8 @@ public class RegistrationController {
             String currUsername;
 
             while(r1.next()) {
-                    if (User.equals(r1.getString("username"))) {
-                        sameUsername = true;
+                if (User.equals(r1.getString("username"))) {
+                    sameUsername = true;
                 }
             }
         } catch (SQLException e) {
@@ -160,5 +160,3 @@ public class RegistrationController {
 
 
 }
-
-

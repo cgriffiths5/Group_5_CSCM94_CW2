@@ -17,6 +17,7 @@ import java.sql.SQLException;
 public class CustomerController {
 
     private String username;
+
     @FXML
     public Button bookButton;
     public Button homeButton;
@@ -74,17 +75,14 @@ public class CustomerController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("customer-booking.fxml"));
             Parent newRoot = loader.load();
 
-            CustBookingController cMCont = loader.getController();
-            cMCont.setUserText(username);
+            CustBookingController cBCont = loader.getController();
+            cBCont.setUserText(username);
             stage.setTitle("Reservation");
-            Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
-            //stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
-            //stage.setY(((sBound.getHeight() - stage.getWidth())/2) - (sBound.getHeight() / 3));
-            stage.centerOnScreen();
-            stage.setHeight(800.0);
+            stage.setHeight(1000.0);
             stage.setMaxHeight(1113.0);
             stage.setWidth(658.0);
             stage.setMaxWidth(658.0);
+            stage.centerOnScreen();
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");
@@ -93,13 +91,28 @@ public class CustomerController {
 
     @FXML
     public void onViewOrdersButtonClick(ActionEvent event) {
-        Stage stage = (Stage) quitButton.getScene().getWindow();
-        stage.close();
+        try {
+            Stage stage = (Stage) viewOrders.getScene().getWindow();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("customer-order-history.fxml"));
+            Parent newRoot = loader.load();
+
+            CustomerOrderHistoryController cOHCont = loader.getController();
+            cOHCont.setUser(username);
+            cOHCont.setOrderID();
+            stage.setTitle("View Order History");
+            stage.setHeight(969.0);
+            stage.setMaxHeight(969.0);
+            stage.setWidth(440.0);
+            stage.setMaxWidth(440.0);
+            stage.centerOnScreen();
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            System.out.println("Error loading page");
+        }
     }
 
     @FXML
     public void onHomeButtonClick(ActionEvent event) {
         ((Node)(event.getSource())).getScene().getWindow().hide();
     }
-
 }

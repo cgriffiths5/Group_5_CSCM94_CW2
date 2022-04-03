@@ -68,7 +68,7 @@ public class HomeController {
 
                         stage = new Stage();
                         stage.setTitle("Main menu");
-                        stage.setScene(new Scene(newRoot, 550, 523));
+                        stage.setScene(new Scene(newRoot, 550, 550));
                         stage.show();
                         break;
                     } catch (IOException e) {
@@ -89,6 +89,7 @@ public class HomeController {
                         stage.setTitle("Manager Homepage");
                         stage.setScene(new Scene(newRoot, 450, 450));
                         stage.show();
+                        break;
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -136,7 +137,7 @@ public class HomeController {
 
                         stage = new Stage();
                         stage.setTitle("Driver Homepage");
-                        stage.setScene(new Scene(newRoot, 450, 450));
+                        stage.setScene(new Scene(newRoot, 657, 574));
                         stage.show();
                         break;
                     } catch (IOException e) {
@@ -195,7 +196,7 @@ public class HomeController {
                             cCont.setUserText(user);
                             stage = new Stage();
                             stage.setTitle("Main menu");
-                            stage.setScene(new Scene(newRoot, 550, 523));
+                            stage.setScene(new Scene(newRoot, 550, 550));
                             stage.show();
                             break;
                         } catch (IOException e) {
@@ -214,6 +215,7 @@ public class HomeController {
                             stage.setTitle("Manager Homepage");
                             stage.setScene(new Scene(newRoot, 450, 450));
                             stage.show();
+                            break;
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -259,7 +261,7 @@ public class HomeController {
 
                             stage = new Stage();
                             stage.setTitle("Driver HomePage");
-                            stage.setScene(new Scene(newRoot, 450, 450));
+                            stage.setScene(new Scene(newRoot, 657, 574));
                             stage.show();
                             break;
                         } catch (IOException e) {
