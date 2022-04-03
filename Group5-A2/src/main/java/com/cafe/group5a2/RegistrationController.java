@@ -25,6 +25,7 @@ import java.util.Observable;
 
 
 /**
+ * This class registers a new customer in the database
  * @author Chris Griffiths
  * @author Adam Tucker
  */
