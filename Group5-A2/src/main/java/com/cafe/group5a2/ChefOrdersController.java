@@ -16,6 +16,12 @@ import java.sql.*;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * @author Cameron Turner
+ * @author Adam Tucker
+ * @version 1.0
+ */
+
 public class ChefOrdersController {
     @FXML
     public Button refreshButton;
@@ -44,15 +50,29 @@ public class ChefOrdersController {
     private int orderID4;
     private String username;
 
+    /**
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public ChefOrdersController() throws SQLException {
     }
 
+    /**
+     * Returns void
+     * Sets the username
+     * @param text The users name
+     */
     @FXML
     public void setUserTextOrders(String text) {
         username = text;
         chefName.setText(text);
     }
 
+    /**
+     * Returns void.
+     * This method refreshes the current page and updates
+     * all the information
+     * @param actionEvent Refresh button
+     */
     @FXML
     public void onClickRefreshPage(ActionEvent actionEvent) {
         try {
@@ -77,6 +97,12 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * Returns void.
+     * This method changes the page to the chefs home page
+     * when a button is pressed
+     * @param actionEvent Return to chef home button
+     */
     @FXML
     public void onClickReturnChefHome(ActionEvent actionEvent) {
         try {
@@ -95,6 +121,12 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * Returns void.
+     * This method sets the order ID label on the page with the table number
+     * If there is no order then a "No Order" label will be shown
+     * and the check boxes will be removed
+     */
     @FXML
     public void setOrderID() {
         String query = "SELECT order_ID, table_number, type FROM orders WHERE prepared=0 ORDER BY date_time LIMIT 4";
@@ -156,6 +188,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method is used when a check box is clicked to notify the waiter
+     * the order is ready to be collected. The order is updated on the database
+     * @param actionEvent check box order 1 button
+     */
     @FXML
     public void onClickCheckBoxOrder1(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID1 + "'";
@@ -168,6 +205,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method is used when a check box is clicked to notify the waiter
+     * the order is ready to be collected. The order is updated on the database
+     * @param actionEvent check box order 2 button
+     */
     @FXML
     public void onClickCheckBoxOrder2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID2 + "'";
@@ -180,6 +222,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method is used when a check box is clicked to notify the waiter
+     * the order is ready to be collected. The order is updated on the database
+     * @param actionEvent check box order 3 button
+     */
     @FXML
     public void onClickCheckBoxOrder3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID3 + "'";
@@ -192,6 +239,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method is used when a check box is clicked to notify the waiter
+     * the order is ready to be collected. The order is updated on the database
+     * @param actionEvent check box order 4 button
+     */
     @FXML
     public void onClickCheckBoxOrder4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 1 WHERE order_ID = '" + orderID4 + "'";
@@ -204,6 +256,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method will show the particular customers menu order
+     * by opening a new page
+     * @param actionEvent View Order 1 button
+     */
     @FXML
     public void onClickViewOrder1(ActionEvent actionEvent) {
         try {
@@ -227,6 +284,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method will show the particular customers menu order
+     * by opening a new page
+     * @param actionEvent View Order 2 button
+     */
     @FXML
     public void onClickViewOrder2(ActionEvent actionEvent) {
         try {
@@ -250,6 +312,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method will show the particular customers menu order
+     * by opening a new page
+     * @param actionEvent View Order 3 button
+     */
     @FXML
     public void onClickViewOrder3(ActionEvent actionEvent) {
         try {
@@ -273,6 +340,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * This method will show the particular customers menu order
+     * by opening a new page
+     * @param actionEvent View Order 4 button
+     */
     @FXML
     public void onClickViewOrder4(ActionEvent actionEvent) {
         try {
@@ -296,6 +368,11 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * Returns void.
+     * This method is called when the page needs to be refresh and
+     * all the values are updated
+     */
     @FXML
     public void refresh() {
         try {
@@ -321,6 +398,10 @@ public class ChefOrdersController {
         }
     }
 
+    /**
+     * Returns void.
+     * This method is called to reset all the check boxes
+     */
     @FXML
     public void resetCheckBoxes() {
         checkBoxOrder1.setSelected(false);
