@@ -12,6 +12,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
+/**
+ * @author Cameron Turner 
+ * @author Adam Tucker
+ * @version 1.0
+ */
+
 public class WaiterBookingManagement {
     public Button refreshButton;
     public Button returnButton;
