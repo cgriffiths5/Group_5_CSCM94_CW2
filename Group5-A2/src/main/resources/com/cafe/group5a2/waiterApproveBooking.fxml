@@ -13,8 +13,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1934.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.WaiterBookingManagement">
-   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1933.0" prefWidth="762.0">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1934.0" prefWidth="783.0" style="-fx-background-color: #1e202f;" stylesheets="@styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.WaiterBookingManagement">
+   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1933.0" prefWidth="770.0" style="-fx-background-color: #1e202f;">
       <Button fx:id="refreshButton" layoutX="493.0" layoutY="16.0" mnemonicParsing="false" onAction="#onClickRefreshPage" prefHeight="40.0" prefWidth="90.0" text="Refresh">
          <font>
             <Font size="14.0" />
@@ -57,7 +57,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="12">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name13" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name13" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -66,13 +66,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data13" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data13" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables13" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables13" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -86,7 +86,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="21">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name22" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name22" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -95,13 +95,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data22" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data22" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables22" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables22" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -111,7 +111,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="20">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name21" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name21" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -120,13 +120,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data21" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data21" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables21" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables21" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -136,7 +136,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="19">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name20" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name20" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -145,13 +145,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data20" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data20" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables20" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables20" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -161,7 +161,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="18">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name19" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name19" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -170,13 +170,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data19" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data19" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables19" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables19" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -186,7 +186,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="17">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name18" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name18" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -195,13 +195,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data18" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data18" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables18" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables18" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -211,7 +211,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="16">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name17" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name17" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -220,13 +220,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data17" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data17" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables17" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables17" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -236,7 +236,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="15">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name16" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name16" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -245,13 +245,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data16" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data16" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables16" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables16" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -261,7 +261,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="14">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name15" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name15" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -270,13 +270,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data15" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data15" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables15" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables15" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -286,7 +286,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="13">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name14" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name14" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -295,13 +295,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data14" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data14" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables14" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables14" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -311,7 +311,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="10">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name11" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name11" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -320,13 +320,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data11" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data11" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables11" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables11" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -336,7 +336,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="8">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name9" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name9" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -345,13 +345,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data9" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data9" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables9" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables9" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -361,7 +361,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="7">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name8" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name8" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -370,13 +370,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data8" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data8" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables8" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables8" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -386,7 +386,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="6">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name7" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name7" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -395,13 +395,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data7" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data7" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables7" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables7" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -411,7 +411,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="5">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name6" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name6" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -420,13 +420,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data6" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data6" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables6" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables6" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -436,7 +436,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name5" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name5" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -445,13 +445,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data5" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data5" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables5" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables5" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -461,7 +461,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name4" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name4" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -470,13 +470,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data4" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data4" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables4" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables4" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -486,7 +486,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name3" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name3" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -495,13 +495,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data3" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data3" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables3" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables3" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -520,13 +520,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data2" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data2" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables2" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables2" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -536,7 +536,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="11">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name12" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name12" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -545,13 +545,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data12" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data12" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables12" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables12" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -561,7 +561,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="9">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name10" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name10" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -570,13 +570,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data10" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data10" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables10" prefHeight="26.0" prefWidth="271.0" text="Table">
+               <Label fx:id="tables10" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -586,7 +586,7 @@
          <VBox prefHeight="200.0" prefWidth="100.0">
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0" />
-               <Label fx:id="name1" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+               <Label fx:id="name1" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name" textFill="#fff0d1">
                   <font>
                      <Font name="System Bold" size="17.0" />
                   </font>
@@ -595,13 +595,13 @@
             <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0" />
             <HBox prefHeight="30.0" prefWidth="200.0">
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0" />
-               <Label fx:id="data1" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50">
+               <Label fx:id="data1" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
                </Label>
                <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0" />
-               <Label fx:id="tables1" prefHeight="26.0" prefWidth="270.0" text="Table">
+               <Label fx:id="tables1" prefHeight="26.0" prefWidth="270.0" text="Table" textFill="#fff0d1">
                   <font>
                      <Font size="17.0" />
                   </font>
@@ -645,22 +645,22 @@
          <CheckBox fx:id="approve9" mnemonicParsing="false" onAction="#onClickApprove9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
          <CheckBox fx:id="reject9" mnemonicParsing="false" onAction="#onClickReject9" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
       </GridPane>
-      <Label layoutX="73.0" layoutY="28.0" prefHeight="78.0" prefWidth="392.0" text="Unapproved Bookings">
+      <Label layoutX="73.0" layoutY="28.0" prefHeight="78.0" prefWidth="392.0" text="Unapproved Bookings" textFill="#fff0d1">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
       </Label>
-      <Label layoutX="626.0" layoutY="91.0" prefHeight="30.0" prefWidth="140.0" text="reject   approve">
+      <Label layoutX="626.0" layoutY="91.0" prefHeight="30.0" prefWidth="140.0" text="reject   approve" textFill="#fff0d1">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="649.0" layoutY="121.0" prefHeight="31.0" prefWidth="17.0" text="X">
+      <Label layoutX="649.0" layoutY="121.0" prefHeight="31.0" prefWidth="17.0" text="X" textFill="#fff0d1">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="719.0" layoutY="121.0" prefHeight="30.0" prefWidth="22.0" text="✓">
+      <Label layoutX="719.0" layoutY="121.0" prefHeight="30.0" prefWidth="22.0" text="✓" textFill="#fff0d1">
          <font>
             <Font size="20.0" />
          </font>

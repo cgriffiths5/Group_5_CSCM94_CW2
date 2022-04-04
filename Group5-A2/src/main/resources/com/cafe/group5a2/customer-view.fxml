@@ -52,7 +52,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
                <children>
-                  <Label fx:id="Title" prefHeight="49.0" prefWidth="133.0" text="Cafe 94" textFill="#ffa8c8">
+                  <Label fx:id="Title" prefHeight="49.0" prefWidth="133.0" text="Cafe 94" textFill="#fff0d1">
                      <font>
                         <Font name="AdobeDevanagari-BoldItalic" size="41.0" />
                      </font>
@@ -61,7 +61,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
                <children>
-                  <Label prefHeight="36.0" prefWidth="126.0" text="Username: " textFill="#ffa8c8">
+                  <Label prefHeight="36.0" prefWidth="126.0" text="Username: " textFill="#fff0d1">
                      <font>
                         <Font size="16.0" />
                      </font>

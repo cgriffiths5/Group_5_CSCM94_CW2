@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.RegistrationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="463.0" style="-fx-background-color: #1e202f;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.RegistrationController">
    <ImageView fitHeight="922.0" fitWidth="667.0" layoutX="-46.0" layoutY="-189.0">
       <Image url="@styling/back2.jpg" />
    </ImageView>
@@ -20,9 +20,9 @@
       <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0" />
       <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="20.0" />
-         <Text fill="#ffd3eb" text="Enter your details below to register" wrappingWidth="316.65625">
+         <Text fill="#fff0d1" text="Enter your details below to register" wrappingWidth="316.65625">
             <font>
-               <Font name="AdobeDevanagari-Bold" size="23.0" />
+               <Font name="System Bold" size="18.0" />
             </font>
          </Text>
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="8.0" />
@@ -33,9 +33,9 @@
          </Button>
       </HBox>
       <HBox alignment="BOTTOM_CENTER" prefHeight="47.0" prefWidth="500.0">
-         <Text fill="#e9fffc" text="Enter your name">
+         <Text fill="#fff0d1" text="Enter your name">
             <font>
-               <Font name="AdobeDevanagari-Regular" size="16.0" />
+               <Font size="17.0" />
             </font>
          </Text>
       </HBox>
@@ -45,9 +45,9 @@
          <TextField fx:id="LastName1" maxWidth="120" prefWidth="132.0" promptText="last name" style="-fx-background-color: #f0f8ff;" />
       </HBox>
       <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
-         <Text fill="#e9fffc" text="Choose username and password">
+         <Text fill="#fff0d1" text="Choose username and password">
             <font>
-               <Font name="AdobeDevanagari-Regular" size="16.0" />
+               <Font size="17.0" />
             </font>
          </Text>
       </HBox>
@@ -55,9 +55,9 @@
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="44.0" />
          <TextField fx:id="Username1" maxWidth="130.0" prefHeight="25.0" prefWidth="132.0" promptText="username" style="-fx-background-color: #f0f8ff;" />
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0" />
-         <Text fx:id="ErrorUsername" fill="#fff86f" text="Username is already taken!">
+         <Text fx:id="ErrorUsername" fill="#d2ff00" text="Username is already taken!">
             <font>
-               <Font size="15.0" />
+               <Font name="System Bold" size="15.0" />
             </font>
          </Text>
       </HBox>
@@ -69,16 +69,16 @@
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="44.0" />
          <PasswordField fx:id="ConfirmPassword1" maxWidth="133.0" prefHeight="25.0" prefWidth="132.0" promptText="confirm password" />
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0" />
-         <Text fx:id="ErrorPassword" fill="#fff86f" text="Password does not match!">
+         <Text fx:id="ErrorPassword" fill="#d2ff00" text="Password does not match!">
             <font>
-               <Font size="15.0" />
+               <Font name="System Bold" size="15.0" />
             </font>
          </Text>
       </HBox>
       <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
-         <Text fill="#e9fffc" text="Enter your address">
+         <Text fill="#fff0d1" text="Enter your address">
             <font>
-               <Font name="AdobeDevanagari-Regular" size="16.0" />
+               <Font size="17.0" />
             </font>
          </Text>
       </HBox>
@@ -88,18 +88,18 @@
          <TextField fx:id="Postcode1" maxWidth="120" promptText="post code" style="-fx-background-color: #f0f8ff;" />
       </HBox>
       <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
-         <Text fill="#e9fffc" text="Click below to submit">
+         <Text fill="#fff0d1" text="Click below to submit">
             <font>
-               <Font name="AdobeDevanagari-Regular" size="16.0" />
+               <Font size="17.0" />
             </font>
          </Text>
       </HBox>
       <HBox alignment="CENTER" prefHeight="47.0" prefWidth="500.0">
          <Button fx:id="SubmitButton1" alignment="CENTER" onAction="#OnSubmit" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: f0fff0;" text="Register" textFill="#1e1c03" />
          <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0" />
-         <Text fx:id="ErrorLabel1" fill="#fff86f" text="All details must be entered!">
+         <Text fx:id="ErrorLabel1" fill="#d2ff00" text="All details must be entered!">
             <font>
-               <Font size="15.0" />
+               <Font name="System Bold" size="15.0" />
             </font>
          </Text>
       </HBox>

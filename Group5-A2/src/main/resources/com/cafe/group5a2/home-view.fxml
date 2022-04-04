@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="484.0" style="-fx-background-color: #1e202f;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.HomeController">
    <ImageView fitHeight="947.0" fitWidth="678.0" layoutX="-29.0" layoutY="-301.0">
       <Image url="@styling/back2.jpg" />
    </ImageView>
@@ -21,12 +21,12 @@
       <padding>
          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
       </padding>
-      <Label fx:id="Title" alignment="CENTER" prefHeight="64.0" prefWidth="241.0" text="Cafe 94" textFill="#ffafaf">
+      <Label fx:id="Title" alignment="CENTER" prefHeight="64.0" prefWidth="241.0" text="Cafe 94" textFill="#fff0d1">
          <font>
             <Font name="AdobeDevanagari-BoldItalic" size="30.0" />
          </font>
       </Label>
-      <Label fx:id="Subtitle" alignment="CENTER" prefHeight="16.0" prefWidth="210.0" text="Rat free since 2017" textFill="#ffafaf">
+      <Label fx:id="Subtitle" alignment="CENTER" prefHeight="16.0" prefWidth="210.0" text="Rat free since 2017" textFill="#fff0d1">
          <font>
             <Font name="AdobeDevanagari-Regular" size="13.0" />
          </font>

@@ -34,7 +34,7 @@
       <ImageView fitHeight="1140.0" fitWidth="809.4">
          <Image url="@styling/back2.jpg" />
       </ImageView>
-      <Label alignment="CENTER" layoutX="188.0" layoutY="47.0" prefHeight="68.0" prefWidth="278.0" text="Make a Reservation" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="188.0" layoutY="47.0" prefHeight="68.0" prefWidth="278.0" text="Make a Reservation" textFill="#fff0d1">
          <font>
             <Font name="AdobeDevanagari-BoldItalic" size="36.0" />
          </font>
@@ -42,7 +42,7 @@
       <VBox layoutX="34.0" layoutY="131.0" prefHeight="980.0" prefWidth="581.0">
          <HBox prefHeight="52.0" prefWidth="640.0">
             <Separator opacity="0.0" prefHeight="60.0" prefWidth="22.0" />
-            <Label alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="220.0" text="How Many Guests?" textFill="#ffeaf2">
+            <Label alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="220.0" text="How Many Guests?" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="23.0" />
                </font>
@@ -56,12 +56,12 @@
             <Separator opacity="0.0" prefHeight="45.0" prefWidth="186.0" />
          </HBox>
          <HBox prefHeight="55.0" prefWidth="581.0">
-            <Label alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="111.0" text="Seating Capacity" textFill="#ffeaf2">
+            <Label alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="111.0" text="Seating Capacity" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="12.0" />
                </font>
             </Label>
-            <Label alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="185.0" text="Table Number" textFill="#ffeaf2">
+            <Label alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="185.0" text="Table Number" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="12.0" />
                </font>
@@ -70,7 +70,7 @@
          </HBox>
          <HBox prefHeight="44.0" prefWidth="700.0">
             <Separator opacity="0.0" prefHeight="15.0" prefWidth="38.0" />
-            <Label prefHeight="20.0" prefWidth="112.0" text="Seats two" textFill="#ffeaf2">
+            <Label prefHeight="20.0" prefWidth="112.0" text="Seats two" textFill="#b59c82">
                <font>
                   <Font name="AdobeDevanagari-Bold" size="17.0" />
                </font>
@@ -171,7 +171,7 @@
          </HBox>
          <HBox prefHeight="44.0" prefWidth="700.0">
             <Separator opacity="0.0" prefHeight="15.0" prefWidth="23.0" />
-            <Label prefHeight="20.0" prefWidth="112.0" text="Seats four" textFill="#ffeaf2">
+            <Label prefHeight="20.0" prefWidth="112.0" text="Seats four" textFill="#b59c82">
                <font>
                   <Font name="AdobeDevanagari-Bold" size="17.0" />
                </font>
@@ -296,7 +296,7 @@
          </HBox>
          <HBox prefHeight="44.0" prefWidth="700.0">
             <Separator opacity="0.0" prefHeight="15.0" prefWidth="32.0" />
-            <Label prefHeight="20.0" prefWidth="112.0" text="Seats eight" textFill="#ffeaf2">
+            <Label prefHeight="20.0" prefWidth="112.0" text="Seats eight" textFill="#b59c82">
                <font>
                   <Font name="AdobeDevanagari-Bold" size="17.0" />
                </font>
@@ -325,7 +325,7 @@
          </HBox>
          <HBox prefHeight="44.0" prefWidth="700.0">
             <Separator opacity="0.0" prefHeight="15.0" prefWidth="33.0" />
-            <Label prefHeight="20.0" prefWidth="112.0" text="Seats ten" textFill="#ffeaf2">
+            <Label prefHeight="20.0" prefWidth="112.0" text="Seats ten" textFill="#b59c82">
                <font>
                   <Font name="AdobeDevanagari-Bold" size="17.0" />
                </font>
@@ -361,7 +361,7 @@
          </HBox>
          <HBox prefHeight="71.0" prefWidth="581.0">
             <Separator opacity="0.0" prefHeight="74.0" prefWidth="14.0" />
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="109.0" text="Check Hours:" textFill="#ffeaf2">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="109.0" text="Check Hours:" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="21.0" />
                </font>

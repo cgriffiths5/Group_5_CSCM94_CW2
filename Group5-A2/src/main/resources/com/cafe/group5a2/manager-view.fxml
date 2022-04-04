@@ -6,43 +6,43 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ManagerController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="494.0" style="-fx-background-color: #1e202f;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ManagerController">
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Label fx:id="Title" text="Cafe 94">
+        <Label fx:id="Title" text="Manager Menu" textFill="#fff0d1">
             <font>
-                <Font name="AdobeDevanagari-BoldItalic" size="41.0" />
+                <Font name="AdobeDevanagari-Bold" size="41.0" />
             </font>
         </Label>
     </HBox>
-    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Label prefHeight="36.0" prefWidth="126.0" text="Username: ">
+    <HBox alignment="CENTER" prefHeight="96.0" prefWidth="494.0">
+        <Label prefHeight="36.0" prefWidth="126.0" text="Username: " textFill="#fff0d1">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
         <VBox prefHeight="51.0" prefWidth="21.0" />
-        <Label fx:id="userLabel" prefHeight="37.0" prefWidth="76.0">
+        <Label fx:id="userLabel" prefHeight="37.0" prefWidth="76.0" textFill="#fff0d1">
             <font>
                 <Font size="16.0" />
             </font>
         </Label>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="generateReports" fx:id="generateReports" onAction="#onGenerateReportsClick" prefHeight="27.0" prefWidth="150.0" text="Generate Reports">
+        <Button id="generateReports" fx:id="generateReports" onAction="#onClickGenReports" prefHeight="31.0" prefWidth="173.0" text="Generate Reports">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="addRemoveStaff" fx:id="addRemoveStaff" onAction="#onAddRemoveStaffClick" prefHeight="27.0" prefWidth="150.0" text="Add and Remove Staff">
+        <Button id="addRemoveStaff" fx:id="addRemoveStaff" onAction="#onAddRemoveStaffClick" prefHeight="31.0" prefWidth="174.0" text="Manage Staff">
             <font>
                 <Font size="15.0" />
             </font>
         </Button>
     </HBox>
     <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
-        <Button id="homeScreen" fx:id="homeButton" onAction="#onHomeButtonClick" prefHeight="27.0" prefWidth="150.0" text="Home Screen">
+        <Button id="homeScreen" fx:id="homeButton" onAction="#onHomeButtonClick" prefHeight="31.0" prefWidth="174.0" text="Home Screen">
             <font>
                 <Font size="15.0" />
             </font>

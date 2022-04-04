@@ -20,20 +20,20 @@
          <Image url="@styling/back2.jpg" />
       </ImageView>
 
-      <Label alignment="CENTER" layoutX="351.0" layoutY="48.0" prefHeight="68.0" prefWidth="109.0" text="Menu" textFill="MISTYROSE">
+      <Label alignment="CENTER" layoutX="351.0" layoutY="48.0" prefHeight="68.0" prefWidth="109.0" text="Menu" textFill="#fff0d1">
          <font>
             <Font name="AdobeDevanagari-BoldItalic" size="47.0" />
          </font>
       </Label>
       <VBox fx:id="vBox" alignment="CENTER" layoutX="43.0" layoutY="136.0" prefHeight="3673.0" prefWidth="724.0">
          <HBox minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il1" prefHeight="25.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il1" prefHeight="25.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl1" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl1" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -54,13 +54,13 @@
          </HBox>
          <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h2i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il2" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il2" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl2" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl2" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -81,13 +81,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h3i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il3" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il3" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl3" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl3" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -108,13 +108,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h4i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il4" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il4" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl4" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl4" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -135,13 +135,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h5i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il5" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il5" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl5" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl5" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -162,13 +162,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h6i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il6" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il6" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl6" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl6" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -189,13 +189,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h7i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il7" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il7" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl7" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl7" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -216,13 +216,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h8i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il8" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il8" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl8" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl8" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -243,13 +243,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h9i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il9" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il9" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl9" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl9" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -270,13 +270,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h10i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il10" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il10" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl10" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl10" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -297,13 +297,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h11i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il11" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il11" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl11" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl11" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -324,13 +324,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h12d" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il12" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il12" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl12" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl12" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -351,13 +351,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h13i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il13" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il13" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl13" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl13" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -378,13 +378,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h14i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il14" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il14" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl14" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl14" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -405,13 +405,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h15i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il15" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il15" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl15" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl15" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -432,13 +432,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h16i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il16" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il16" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl16" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl16" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -459,13 +459,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h17i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il17" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il17" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl17" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl17" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -486,13 +486,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h18i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il18" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il18" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl18" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl18" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -513,13 +513,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h19i" minHeight="40.0" prefHeight="40.0" prefWidth="724.0">
-            <Label id="ItemLabel1" fx:id="il19" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il19" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl19" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl19" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -540,13 +540,13 @@
          </HBox>
          <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0" />
          <HBox fx:id="h20i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
-            <Label id="ItemLabel1" fx:id="il20" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#ffd2e8">
+            <Label id="ItemLabel1" fx:id="il20" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
                </font>
             </Label>
             <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0" />
-            <Label fx:id="pl20" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff1fa">
+            <Label fx:id="pl20" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="24.0" />
                </font>
@@ -567,7 +567,7 @@
          </HBox>
          <HBox fx:id="hTbox" onMouseEntered="#onTboxEntered" prefHeight="67.0" prefWidth="724.0">
             <Separator opacity="0.0" prefHeight="53.0" prefWidth="108.0" />
-            <Label prefHeight="60.0" prefWidth="109.0" text="Total:" textFill="#ffe5f2">
+            <Label prefHeight="60.0" prefWidth="109.0" text="Total:" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-Bold" size="36.0" />
                </font>
@@ -578,12 +578,12 @@
                   <Font name="Castellar" size="27.0" />
                </font>
             </Label>
-            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="57.0" prefWidth="67.0" text="£" textFill="#fff1fa">
+            <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="57.0" prefWidth="67.0" text="£" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-Italic" size="45.0" />
                </font>
             </Label>
-            <Label fx:id="totalPLabel" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" onKeyReleased="#onKeyReleased" prefHeight="50.0" prefWidth="189.0" text="00.00" textFill="#ffe5f2">
+            <Label fx:id="totalPLabel" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" onKeyReleased="#onKeyReleased" prefHeight="50.0" prefWidth="189.0" text="00.00" textFill="#fff0d1">
                <font>
                   <Font name="AdobeDevanagari-BoldItalic" size="37.0" />
                </font>
