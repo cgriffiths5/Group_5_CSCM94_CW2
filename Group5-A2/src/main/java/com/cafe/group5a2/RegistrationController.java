@@ -16,6 +16,7 @@ import java.util.Objects;
 
 
 /**
+ * This class allows a customer to register themselves in the system
  * @author Chris Griffiths
  * @author Adam Tucker
  */
