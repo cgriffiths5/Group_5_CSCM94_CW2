@@ -15,11 +15,11 @@
 
     <Text>First Name</Text>
 
-    <TextField fx:id="FirstName" maxWidth="120"></TextField>
+    <TextField fx:id="FirstName"/>
 
     <Text>Last Name</Text>
 
-    <TextField fx:id="LastName" maxWidth="120"></TextField>
+    <TextField fx:id="LastName"/>
 
     <Button id="OnSubmitButton" fx:id="OnSubmitButton" onAction="#onSubmitButtonClick" >Submit</Button>
 
