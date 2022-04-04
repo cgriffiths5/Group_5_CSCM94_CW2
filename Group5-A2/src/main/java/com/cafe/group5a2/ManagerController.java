@@ -15,6 +15,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Objects;
 
+/**
+ * This class is the home page of the manager
+ * @author Chris Griffiths
+ * @version 1.6
+ */
+
 public class ManagerController {
 
     @FXML
@@ -28,11 +34,22 @@ public class ManagerController {
 
     public ManagerController() throws SQLException {
     }
+    
+    /**
+     * This method sets the users name
+     * @param text is the name parameter
+     */
 
     public void setUserText(String text) {
         username = text;
         userLabel.setText(text);
     }
+    
+    /**
+     * When the generate reports button is pressed the generate reports page is
+     * loaded
+     * @param event is triggered when the generate reports button is pressed
+     */
 
     @FXML
     public void onClickGenReports() {
@@ -52,6 +69,11 @@ public class ManagerController {
             System.out.println("Error loading page");
         }
     }
+    
+     /**
+     * The add staff page is returned
+     * @param event is triggered when the add staff button is pressed
+     */
 
 
     @FXML
@@ -66,7 +88,8 @@ public class ManagerController {
         }
     }
 
-    /**
+     /**
+     * The home page is returned when the user pressed the home button
      * @param event is entered when a user presses the home button
      */
     @FXML
