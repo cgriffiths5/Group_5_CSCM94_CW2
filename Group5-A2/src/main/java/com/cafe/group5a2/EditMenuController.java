@@ -14,7 +14,9 @@ import static java.lang.Integer.parseInt;
 
 
 /**
+ * This file allows a user to edit the menu
  * @author Adam Tucker
+ * @version 1.6
  */
 public class EditMenuController {
 
