@@ -17,6 +17,10 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+/**
+ * This class shows the customer an order that they had made previously
+ * @version 1.0
+ */
 public class CustomerViewOrderController {
 
     public ScrollPane mainPane;
@@ -88,8 +92,19 @@ public class CustomerViewOrderController {
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
 
+    /**
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
+
     public CustomerViewOrderController() throws SQLException {
     }
+
+    /**
+     * Returns void.
+     * This method puts all the items and the quantity of items
+     * ordered by the customer on the page
+     * @param orderID The customers orderID
+     */
 
     public void setItemsAndQuant(int orderID) {
 
@@ -485,6 +500,12 @@ public class CustomerViewOrderController {
         }
     }
 
+    /**
+     * Returns void
+     * takes the user back to the Order History page when the Go back button is
+     * clicked
+     * @param event is entered when a user presses the home button
+     */
 
     public void onClickGoBack(ActionEvent actionEvent) {
         try {
