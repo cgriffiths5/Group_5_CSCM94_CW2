@@ -24,6 +24,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * This controller represents a view for the Customer Menu
+ * @author Adam Tucker
+ * @version 1.6
  */
 
 public class CustMenuController {
@@ -558,6 +560,11 @@ public class CustMenuController {
         }
         return itemList.toString();
     }
+    
+    /**
+     * This returns an item according to its place in the database
+     * @params num 
+     */
 
     @FXML
     public String getItem(int num) throws SQLException {
@@ -584,6 +591,10 @@ public class CustMenuController {
         }
         return val;
     }
+    
+    /**
+     * This sets the text to fetch the items from the database
+     */
 
     public void setItemLabels() throws SQLException {
         progBar.setOpacity(0);
@@ -608,6 +619,10 @@ public class CustMenuController {
         il19.setText(getItem(19));
         il20.setText(getItem(20));
     }
+    
+    /**
+     * This returns the menu item at the location of the given number
+     * @params num is the location in the database
 
     public String getPrice(int num) throws SQLException {
         String val = "";
@@ -633,6 +648,10 @@ public class CustMenuController {
         }
         return val;
     }
+    
+    /**
+     * This sets the text of the labels to match those fetched from the getPrice method
+     */
 
     public void setPriceLabels() throws SQLException {
         pl1.setText(getPrice(1));
@@ -656,6 +675,11 @@ public class CustMenuController {
         pl19.setText(getPrice(19));
         pl20.setText(getPrice(20));
     }
+    
+    /**
+     * This fetches the description of the item at the location of the inputted number 
+     * @params num is inputted to find the location of the item description
+     */
 
     public String getDesc(int num) throws SQLException {
         String val = "";
@@ -681,6 +705,10 @@ public class CustMenuController {
         }
         return val;
     }
+    
+    /**
+     * This method sets the description labels with the item descriptions fetched from the database
+     */
 
     public void setDescLabels() throws SQLException {
 
@@ -1053,6 +1081,10 @@ public class CustMenuController {
         }
 
     }
+    
+    /**
+     * This method updates the total price of what a customer is ordering
+     */
 
     private void updateTotal() {
         double t = 0.00;
@@ -1200,6 +1232,11 @@ public class CustMenuController {
 
         totalPLabel.setText(String.format("%.2f", t));
     }
+    
+    /**
+     * This updates the total when the keyboard is used
+     * @keyEvent is triggered when a user uses the keyboard
+     */
 
     @FXML
     public void onKeyReleased(KeyEvent keyEvent) {
@@ -1207,11 +1244,21 @@ public class CustMenuController {
             updateTotal();
         }
     }
+    
+    /**
+     * This method updates the page when a scrollEvent occurs
+     * @params scrollEvent is triggered when the page is scrolled
+     */
 
     @FXML
     public void onScrollFin(ScrollEvent scrollEvent) {
         updateTotal();
     }
+    
+    /**
+     * This method returns a user to the customer home page
+     * @actionEvent is triggered when the go back button is pressed
+     */
 
     @FXML
     public void onBackButtClick(ActionEvent actionEvent) {
@@ -1242,6 +1289,11 @@ public class CustMenuController {
             updateTotal();
         });
     }
+    
+    /**
+     * The total is updated when a mouse is clicked 
+     * @params mouseEvent is triggered when the mouse is moved 
+     */
 
     public void onQClick(MouseEvent mouseEvent) {
         q1.setOnMouseClicked((event) -> {
