@@ -16,6 +16,11 @@ import java.sql.*;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * This class adds a menu item 
+ * @author Adam Tucker
+ */
+
 public class AddMenuItemController {
     public Button GoBackButt;
     public TextField ItemName;
@@ -30,11 +35,21 @@ public class AddMenuItemController {
 
     public AddMenuItemController() throws SQLException {
     }
+    
+    /**
+     * This method sets a username
+     * @params text
+     */
 
     public void setUserText(String text) {
         username = text;
         uID = getUserId(text);
     }
+    
+    /**
+     * This selects a username from the database
+     * @params username 
+     */
 
     public int getUserId(String username) {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
@@ -51,6 +66,11 @@ public class AddMenuItemController {
         }
         return a;
     }
+    
+    /**
+     * This method adds a special to the menu
+     * @params actionEvent
+     */
 
     public void onSubmitButClick(ActionEvent actionEvent) {
         String item = ItemName.getText();
@@ -74,6 +94,11 @@ public class AddMenuItemController {
 
 
     }
+    
+    /**
+     * This method returns the edit menu page
+     * @params actionEvent is triggered when the goBack button is pressed
+     */
 
     public void onGoBackClick(ActionEvent actionEvent) {
         try {
