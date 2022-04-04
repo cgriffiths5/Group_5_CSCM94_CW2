@@ -17,6 +17,11 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+/**
+ * @author Cameron Turner
+ * @version 1.0
+ */
+
 public class ChefCustOrderController {
 
     public ScrollPane mainPane;
