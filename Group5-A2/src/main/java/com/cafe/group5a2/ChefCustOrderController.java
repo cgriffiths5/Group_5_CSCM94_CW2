@@ -18,6 +18,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
+ * This class shows what the customer has ordered
+ * to the chef so they know what to cook
  * @author Cameron Turner
  * @version 1.0
  */
