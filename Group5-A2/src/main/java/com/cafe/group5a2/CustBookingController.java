@@ -22,6 +22,11 @@ import java.util.concurrent.TimeUnit;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * This class allows a customer to make a booking
+ * @author Adam Tucker
+ */
+
 public class CustBookingController {
 
 
