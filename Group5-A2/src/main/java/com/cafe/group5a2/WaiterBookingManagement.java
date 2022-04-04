@@ -13,6 +13,11 @@ import java.io.IOException;
 import java.sql.*;
 
 /**
+ * This class displays and shows all the bookings that have
+ * been made by a customer. It gives the waiter the ability 
+ * to approve or reject the booking.
+ * All the information is taken from the database and when
+ * a decision has been made the database is updated
  * @author Cameron Turner 
  * @author Adam Tucker
  * @version 1.0
