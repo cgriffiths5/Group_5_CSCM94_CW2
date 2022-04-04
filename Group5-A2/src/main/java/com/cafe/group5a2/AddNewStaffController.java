@@ -16,6 +16,7 @@ import java.sql.*;
 import java.util.Objects;
 
 /**
+ * This class allows the manager to add a new staff member 
  * @author Chris Griffiths
  * @version 1.6
  */
