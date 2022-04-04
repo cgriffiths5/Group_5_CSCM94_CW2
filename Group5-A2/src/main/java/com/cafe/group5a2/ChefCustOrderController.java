@@ -88,9 +88,18 @@ public class ChefCustOrderController {
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
 
+    /**
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public ChefCustOrderController() throws SQLException {
     }
 
+    /**
+     * Returns void.
+     * This method puts all the items and the quantity of items
+     * ordered by the customer on the page
+     * @param orderID The customers orderID
+     */
     public void setItemsAndQuant(int orderID) {
 
         String query = "SELECT * FROM items_separate_orders WHERE prepared=0 AND complete=0 AND order_ID = '" + orderID + "' ORDER BY date_time";
@@ -485,7 +494,12 @@ public class ChefCustOrderController {
         }
     }
 
-
+    /**
+     * Returns void.
+     * This method navigates to the page previously when the
+     * "Go Back" button has been clicked
+     * @param actionEvent The "Go Back" button
+     */
     public void onClickGoBack(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) goBack.getScene().getWindow();
