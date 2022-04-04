@@ -41,13 +41,17 @@ public class ReportsController {
 
     public ReportsController() throws SQLException {
     }
+    
+    /**
+     * Sets the username of the user who has logged in
+     */
 
     public void setUserText(String text) {
         username = text;
     }
 
     /**
-     * add info
+     * Generates the methods required to get the report information
      */
     public void generate() {
         getTop3Items();
@@ -61,6 +65,10 @@ public class ReportsController {
         getMaxOrderCustomer();
         // gets the customer who placed the most orders and how many orders that is
     }
+    
+    /**
+     * Returns the hour with the most orders
+     */
 
     private void getMaxAvgOrderHour() {
         String query = "SELECT * FROM most_orders_hour";
@@ -76,7 +84,7 @@ public class ReportsController {
     }
 
     /**
-     * add info
+     * Returns the customer who has ordered the most
      */
     private void getMaxOrderCustomer() {
         String query = "SELECT * FROM active_customer";
@@ -98,7 +106,7 @@ public class ReportsController {
     }
 
     /**
-     * add info
+     * Returns the busisest hour
      */
     private void getMaxAvgHourBooking() {
         String query = "SELECT * FROM most_booked_hour";
@@ -114,7 +122,7 @@ public class ReportsController {
     }
 
     /**
-     * add info
+     * Returns the most booked hour 
      */
     private void getMaxAvgDayBooking() {
         String query = "SELECT * FROM most_booked_day";
@@ -128,6 +136,10 @@ public class ReportsController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * This method returns an ArrayList of orders
+     */
 
     private ArrayList<String> allOrdersItems() {
         ArrayList<String> a = new ArrayList<>();
@@ -172,6 +184,10 @@ public class ReportsController {
         a.removeIf(Objects::isNull);
         return a;
     }
+    
+    /**
+     * This method returns an ArrayList of menu items
+     */
 
     private ArrayList<String> menuItems() {
         ArrayList<String> a = new ArrayList<>();
@@ -266,7 +282,7 @@ public class ReportsController {
     }
 
     /**
-     * add info
+     * add Refreshes the page so the information is updated
      */
     public void refresh() {
         try {
@@ -287,7 +303,8 @@ public class ReportsController {
     }
 
     /**
-     * @param actionEvent add info
+     * Page is refreshed when clicked
+     * @param actionEvent is called when refresh button is clicked
      */
     @FXML
     public void onClickRefresh(ActionEvent actionEvent) {
@@ -295,7 +312,8 @@ public class ReportsController {
     }
 
     /**
-     * @param actionEvent add info
+     * When the go back button is pressed the manager home page is returned 
+     * @param actionEvent is called when go back button is clicked
      */
     @FXML
     public void onClickGoBack(ActionEvent actionEvent) {
@@ -314,6 +332,11 @@ public class ReportsController {
             System.out.println("Error loading page");
         }
     }
+    
+    /**
+     * This method returns the day of the week for a given date
+     * @param date is a given data
+     */
 
     public String dayOfWeek(Date date) {
         String day = "Date Error";
