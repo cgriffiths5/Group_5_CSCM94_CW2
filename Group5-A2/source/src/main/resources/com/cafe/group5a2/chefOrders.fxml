@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="600.0" style="-fx-background-color: #1e202f; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.ChefOrdersController">
+    <Label layoutX="20.0" layoutY="6.0" text="Chef Page" textFill="#fff0d1">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Label>
+    <Button fx:id="refreshButton" layoutX="437.0" layoutY="16.0" mnemonicParsing="false" onAction="#onClickRefreshPage" prefHeight="26.0" prefWidth="64.0" text="Refresh" />
+    <Button fx:id="returnToChefHome" layoutX="516.0" layoutY="16.0" mnemonicParsing="false" onAction="#onClickReturnChefHome" prefHeight="26.0" prefWidth="63.0" text="Go Back" />
+    <Label layoutX="32.0" layoutY="52.0" text="Username: " textFill="#fff0d1" />
+    <Label fx:id="chefName" layoutX="98.0" layoutY="51.0" prefHeight="20.0" prefWidth="138.0" text="NAME" textFill="#fff0d1" />
+    <GridPane alignment="CENTER" gridLinesVisible="true" layoutY="116.0" prefHeight="308.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <Button fx:id="viewOrder1" mnemonicParsing="false" onAction="#onClickViewOrder1" prefHeight="49.0" prefWidth="97.0" text="View Order" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <CheckBox fx:id="checkBoxOrder1" mnemonicParsing="false" onAction="#onClickCheckBoxOrder1" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+        <CheckBox fx:id="checkBoxOrder2" mnemonicParsing="false" onAction="#onClickCheckBoxOrder2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <CheckBox fx:id="checkBoxOrder3" mnemonicParsing="false" onAction="#onClickCheckBoxOrder3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <CheckBox fx:id="checkBoxOrder4" mnemonicParsing="false" onAction="#onClickCheckBoxOrder4" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Button fx:id="viewOrder4" mnemonicParsing="false" onAction="#onClickViewOrder4" prefHeight="49.0" prefWidth="97.0" text="View Order" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="viewOrder3" mnemonicParsing="false" onAction="#onClickViewOrder3" prefHeight="49.0" prefWidth="97.0" text="View Order" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="viewOrder2" mnemonicParsing="false" onAction="#onClickViewOrder2" prefHeight="49.0" prefWidth="97.0" text="View Order" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0" text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+        <Label fx:id="label2" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0" text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+        <Label fx:id="label3" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0" text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+        <Label fx:id="label4" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0" text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+    </GridPane>
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="78.0" prefHeight="30.0" prefWidth="64.0" text="Type" textFill="#fff0d1">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Label>
+    <Label layoutX="397.0" layoutY="78.0" text="Order Prepared" textFill="#fff0d1">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Label>
+</Pane>

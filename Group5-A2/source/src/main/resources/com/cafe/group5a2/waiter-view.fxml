@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="490.0" prefWidth="600.0"
+      style="-fx-background-color: #1e202f; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/17"
+      fx:controller="com.cafe.group5a2.WaiterController">
+    <HBox prefHeight="41.0" prefWidth="600.0">
+        <GridPane prefHeight="41.0" prefWidth="601.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="156.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="106.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="194.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="76.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="68.5"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Label prefHeight="35.0" prefWidth="142.0" text="Waiter Page" textFill="#fff0d1"
+                   GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Label>
+            <Label contentDisplay="RIGHT" prefHeight="21.0" prefWidth="108.0" text="Username:" textFill="#fff0d1"
+                   GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets left="30.0"/>
+                </GridPane.margin>
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Label>
+            <Label fx:id="waiterName" text="Name" textFill="#fff0d1" GridPane.columnIndex="2">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Label>
+            <Button fx:id="logoutBut" mnemonicParsing="false" onAction="#logout" text="Logout"
+                    GridPane.columnIndex="4"/>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshClick" prefHeight="25.0"
+                    prefWidth="66.0" text="Refresh" GridPane.columnIndex="3"/>
+        </GridPane>
+    </HBox>
+    <HBox layoutY="72.0" prefHeight="41.0" prefWidth="600.0">
+        <HBox fillHeight="false" maxHeight="-Infinity" prefHeight="38.0" prefWidth="598.0">
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="384.0" text="Restaurant orders"
+                   textAlignment="CENTER" textFill="#fff0d1">
+                <font>
+                    <Font name="System Bold" size="25.0"/>
+                </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="110.0" text="Order problem" textFill="#fff0d1">
+                <font>
+                    <Font name="System Bold" size="14.0"/>
+                </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="38.0" prefWidth="110.0" text="Order finished"
+                   textFill="#fff0d1" HBox.hgrow="ALWAYS">
+                <font>
+                    <Font name="System Bold" size="14.0"/>
+                </font>
+            </Label>
+        </HBox>
+    </HBox>
+    <GridPane gridLinesVisible="true" layoutY="112.0" prefHeight="150.0" prefWidth="601.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="384.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="110.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="110.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label fx:id="ResOrdTab1" text="Table number" textFill="#fff0d1" GridPane.halignment="CENTER">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="ResOrdTab2" text="Table number" textFill="#fff0d1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="1">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="ResOrdTab3" text="Table number" textFill="#fff0d1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="2">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="ResOrdProBox1" mnemonicParsing="false" onAction="#OnClickResOrdProBox1"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+        <CheckBox fx:id="ResOrdFinBox1" mnemonicParsing="false" onAction="#OnClickResOrdFinBox1"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+        <CheckBox fx:id="ResOrdProBox2" mnemonicParsing="false" onAction="#OnClickResOrdProBox2"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <CheckBox fx:id="ResOrdFinBox2" mnemonicParsing="false" onAction="#OnClickResOrdFinBox2"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <CheckBox fx:id="ResOrdProBox3" mnemonicParsing="false" onAction="#OnClickResOrdProBox3"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <CheckBox fx:id="ResOrdFinBox3" mnemonicParsing="false" onAction="#OnClickResOrdFinBox3"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <Label fx:id="ResOrdTab4" text="Table number" textFill="#fff0d1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="3">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="ResOrdProBox4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                  onAction="#OnClickResOrdProBox4" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                  GridPane.rowIndex="3"/>
+        <CheckBox fx:id="ResOrdFinBox4" mnemonicParsing="false" onAction="#OnClickResOrdFinBox4"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+    </GridPane>
+    <GridPane gridLinesVisible="true" layoutY="338.0" prefHeight="150.0" prefWidth="601.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="384.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="110.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="110.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label fx:id="TakOrdCust1" text="first name last name" textFill="#fff0d1" GridPane.halignment="CENTER">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="TakOrdCust2" text="first name last name" textFill="#fff0d1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="1">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <Label fx:id="TakOrdCust3" text="first name last name" textFill="#fff0d1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="2">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="TakOrdProBox1" mnemonicParsing="false" onAction="#OnClickTakOrdProBox1"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+        <CheckBox fx:id="TakOrdFinBox1" mnemonicParsing="false" onAction="#OnClickTakOrdFinBox1"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+        <CheckBox fx:id="TakOrdProBox2" mnemonicParsing="false" onAction="#OnClickTakOrdProBox2"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <CheckBox fx:id="TakOrdFinBox2" mnemonicParsing="false" onAction="#OnClickTakOrdFinBox2"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <CheckBox fx:id="TakOrdProBox3" mnemonicParsing="false" onAction="#OnClickTakOrdProBox3"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <CheckBox fx:id="TakOrdFinBox3" mnemonicParsing="false" onAction="#OnClickTakOrdFinBox3"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <Label fx:id="TakOrdCust4" text="first name last name" textFill="#fff0d1" GridPane.halignment="CENTER"
+               GridPane.rowIndex="3">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </Label>
+        <CheckBox fx:id="TakOrdProBox4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                  onAction="#OnClickTakOrdProBox4" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                  GridPane.rowIndex="3"/>
+        <CheckBox fx:id="TakOrdFinBox4" mnemonicParsing="false" onAction="#OnClickTakOrdFinBox4"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+    </GridPane>
+    <HBox layoutY="297.0" maxHeight="-Infinity" prefHeight="41.0" prefWidth="601.0">
+        <Label alignment="CENTER" prefHeight="40.0" prefWidth="384.0" text="Takeaway orders" textAlignment="CENTER"
+               textFill="#fff0d1">
+            <font>
+                <Font name="System Bold" size="25.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" prefHeight="40.0" prefWidth="110.0" text="Order problem" textFill="#fff0d1">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" prefHeight="40.0" prefWidth="110.0" text="Order finished" textFill="#fff0d1">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Label>
+    </HBox>
+    <Button fx:id="newOrderBut" layoutX="8.0" layoutY="41.0" mnemonicParsing="false" onAction="#newOrder"
+            text="New Order"/>
+    <Button fx:id="approveBookingBut" layoutX="85.0" layoutY="41.0" mnemonicParsing="false" onAction="#approveBooking"
+            prefHeight="25.0" prefWidth="112.0" text="Manage Bookings"/>
+</Pane>

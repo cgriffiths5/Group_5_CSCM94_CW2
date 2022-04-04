@@ -1,0 +1,24 @@
+.my-progress-bar .bar {
+    -fx-background-radius: 10;
+    -fx-background-color: #282828;
+    -fx-indeterminate-bar-length: 500;
+}
+
+.my-progress-bar .track {
+    -fx-background-radius: 5;
+    -fx-background-color: #282828;
+}
+
+.my-progress-bar {
+    -fx-background-radius: 5;
+    -fx-indeterminate-bar-length: 250;
+    -fx-indeterminate-bar-animation-time: 2.5;
+}
+
+.blue-progress-bar .bar {
+    -fx-background-color: linear-gradient(to left, #282828, #003e57, #00738a, #5d63a6, #ab5cff, #ff8ad0, #ff8ae0);
+}
+
+.pink-progress-bar .bar {
+    -fx-background-color: linear-gradient(to left, #282828, #ff759f);
+}

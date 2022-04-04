@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="523.0" prefWidth="484.0" style="-fx-background-color: #1e202f;"
+            xmlns="http://javafx.com/javafx/17" fx:controller="com.cafe.group5a2.HomeController">
+    <ImageView fitHeight="947.0" fitWidth="678.0" layoutX="-29.0" layoutY="-301.0">
+        <Image url="@styling/back2.jpg"/>
+    </ImageView>
+    <VBox alignment="CENTER" layoutX="8.0" prefHeight="540.0" prefWidth="465.0" spacing="20.0">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+        <Label fx:id="Title" alignment="CENTER" prefHeight="64.0" prefWidth="241.0" text="Cafe 94" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-BoldItalic" size="30.0"/>
+            </font>
+        </Label>
+        <Label fx:id="Subtitle" alignment="CENTER" prefHeight="16.0" prefWidth="210.0" text="Rat free since 2017"
+               textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Regular" size="13.0"/>
+            </font>
+        </Label>
+        <Separator prefWidth="200.0"/>
+        <TextField fx:id="username" blendMode="SRC_ATOP" prefHeight="27.0" prefWidth="262.0" promptText="username...">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </TextField>
+        <PasswordField fx:id="password" blendMode="SRC_ATOP" onKeyPressed="#onEnter" promptText="password...">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </PasswordField>
+        <Separator prefWidth="200.0"/>
+        <HBox alignment="CENTER" prefHeight="82.0" prefWidth="425.0">
+            <Button fx:id="quitButton" onAction="#onQuitButtonClick" prefHeight="25.0" prefWidth="77.0" text="Quit">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Button>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="42.0"/>
+            <Button fx:id="custButton" onAction="#onCustButtonClick" prefHeight="25.0" prefWidth="77.0" text="login">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </Button>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="42.0"/>
+            <Button fx:id="registerButton" onAction="#onRegButtonClick" prefHeight="35.0" prefWidth="87.0"
+                    text="Register">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </Button>
+        </HBox>
+        <Label fx:id="custButtonLabel"/>
+        <Label fx:id="buttonText"/>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="mainPane" hbarPolicy="NEVER" maxHeight="802.0" maxWidth="511.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="800.0" style="-fx-background: #1e202f; -fx-border-color: #483c32" stylesheets="@../group5a2/styling/scrollBar.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cafe.group5a2.EditMenuController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="800.0">
+        <Label alignment="CENTER" layoutX="226.0" layoutY="32.0" prefHeight="68.0" prefWidth="283.0" text="Manage Menu" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-BoldItalic" size="48.0" />
+            </font>
+        </Label>
+        <VBox layoutX="26.0" layoutY="200.0" prefHeight="1900.0" prefWidth="749.0">
+            <HBox minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il1" prefHeight="25.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl1" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type01" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del1" mnemonicParsing="false" onAction="#onDel1Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d1" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h2i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il2" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl2" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type02" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del2" mnemonicParsing="false" onAction="#onDel2Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h2d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d2" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h3i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il3" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl3" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type03" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del3" mnemonicParsing="false" onAction="#onDel3Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h3d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d3" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h4i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il4" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl4" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type04" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del4" mnemonicParsing="false" onAction="#onDel4Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h4d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d4" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h5i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il5" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl5" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type05" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del5" mnemonicParsing="false" onAction="#onDel5Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h5d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d5" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h6i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il6" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl6" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type06" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del6" mnemonicParsing="false" onAction="#onDel6Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h6d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d6" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h7i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il7" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl7" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type07" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del7" mnemonicParsing="false" onAction="#onDel7Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h7d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d7" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h8i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il8" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl8" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type08" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del8" mnemonicParsing="false" onAction="#onDel8Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h8d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d8" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h9i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il9" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl9" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type09" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del9" mnemonicParsing="false" onAction="#onDel9Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h9d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d9" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h10i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il10" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl10" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type10" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del10" mnemonicParsing="false" onAction="#onDel10Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h10d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d10" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h11i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il11" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl11" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type11" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del11" mnemonicParsing="false" onAction="#onDel11Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h11d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d11" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h12d" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il12" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl12" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type12" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del12" mnemonicParsing="false" onAction="#onDel12Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h12i" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d12" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h13i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il13" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl13" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type13" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del13" mnemonicParsing="false" onAction="#onDel13Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h13d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d13" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h14i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il14" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl14" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type14" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del14" mnemonicParsing="false" onAction="#onDel14Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h14d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d14" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h15i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il15" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl15" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type15" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del15" mnemonicParsing="false" onAction="#onDel15Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h15d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d15" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h16i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il16" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl16" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type16" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del16" mnemonicParsing="false" onAction="#onDel16Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h16d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d16" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h17i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il17" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl17" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type17" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del17" mnemonicParsing="false" onAction="#onDel17Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h17d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d17" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h18i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il18" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl18" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type18" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del18" mnemonicParsing="false" onAction="#onDel18Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h18d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d18" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h19i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il19" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl19" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type19" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del19" mnemonicParsing="false" onAction="#onDel19Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h19d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d19" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="757.0" />
+            <HBox fx:id="h20i" minHeight="1.0" prefHeight="55.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il20" prefHeight="24.0" prefWidth="435.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="30.0" />
+                <Label fx:id="pl20" prefHeight="24.0" prefWidth="70.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="20.0" />
+                <Label fx:id="Type20" prefHeight="24.0" prefWidth="70.0" text="Type" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="22.0" />
+                <CheckBox fx:id="Del20" mnemonicParsing="false" onAction="#onDel20Click" prefHeight="25.0" prefWidth="100.0" text="Delete" textFill="#fff0d1">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </CheckBox>
+            </HBox>
+            <HBox fx:id="h20d" minHeight="1.0" prefHeight="68.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="45.0" />
+                <Label id="DescLabel1" fx:id="d20" alignment="TOP_LEFT" prefHeight="68.0" prefWidth="550.0" text="Description" textFill="#ffd086" wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="19.0" />
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="40.0" prefWidth="96.0" />
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="44.0" prefWidth="757.0" />
+            <HBox prefHeight="91.0" prefWidth="465.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="146.0" />
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="79.0" prefWidth="160.0" />
+            </HBox>
+        </VBox>
+        <Label fx:id="userHolder" layoutX="51.0" layoutY="29.0" opacity="0.0" prefHeight="57.0" prefWidth="157.0" />
+        <Button fx:id="goBack" layoutX="682.0" layoutY="24.0" mnemonicParsing="false" onAction="#onClickGoBack" prefHeight="34.0" prefWidth="75.0" text="Go Back">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="addNewButton" layoutX="298.0" layoutY="108.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#onAddNewButtonClick" prefHeight="40.0" prefWidth="138.0" text="Add New Item" textFill="#0C090A">
+            <font>
+                <Font name="System Bold" size="17.0" />
+            </font>
+        </Button>
+        <Button fx:id="RefreshBut" layoutX="589.0" layoutY="24.0" mnemonicParsing="false" onAction="#onClickRefresh" prefHeight="34.0" prefWidth="75.0" text="Refresh">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+    </AnchorPane>
+    <styleClass>
+        <String fx:value="track-background" />
+        <String fx:value="decrement-arrow" />
+        <String fx:value="decrement-button" />
+        <String fx:value="increment-arrow" />
+        <String fx:value="increment-button" />
+        <String fx:value="scroll-bar" />
+        <String fx:value="thumb" />
+        <String fx:value="track" />
+        <String fx:value="corner" />
+        <String fx:value="background" />
+    </styleClass>
+</ScrollPane>

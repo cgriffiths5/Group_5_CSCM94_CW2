@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="969.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.cafe.group5a2.CustomerOrderHistoryController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="967.0" prefWidth="412.0">
+        <ImageView fitHeight="967.0" fitWidth="717.0">
+            <Image url="@styling/back2.jpg"/>
+        </ImageView>
+        <Label layoutX="34.0" layoutY="22.0" text="Order History" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Bold" size="30.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="74.0" prefHeight="30.0"
+               prefWidth="64.0" text="Type" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="164.0" layoutY="73.0" prefHeight="30.0"
+               prefWidth="64.0" text="Date" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Bold" size="20.0"/>
+            </font>
+        </Label>
+        <GridPane alignment="CENTER" layoutX="-1.0" layoutY="106.0" prefHeight="796.0" prefWidth="397.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0"
+                                   prefWidth="213.3333282470703"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0"
+                                   prefWidth="213.3333282470703"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="417.0" minWidth="10.0"
+                                   prefWidth="214.6666717529297"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="109.0" minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="160.0" minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="94.33331298828125" minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="46.33331298828125" minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="45.33331298828125" minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="15.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Label fx:id="Type1" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type2" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+                   GridPane.valignment="CENTER">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type3" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.rowIndex="2"
+                   GridPane.valignment="CENTER">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type4" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.halignment="CENTER" GridPane.rowIndex="3"
+                   GridPane.valignment="CENTER">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type21" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="20">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type5" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="4">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type6" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="5">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type7" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="6">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type8" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="7">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type9" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="8">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type10" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="9">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type11" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="10">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type12" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="11">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type13" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="12">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type14" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="13">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type15" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="14">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type16" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="15">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type17" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="16">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type18" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="17">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type19" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="18">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Type20" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="NAME" textFill="#fff0d1" GridPane.rowIndex="19">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date1" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date2" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date3" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date4" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date5" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date6" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date7" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date8" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date9" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date10" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date11" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date12" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date13" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date14" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date15" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date16" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date17" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="16">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date18" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="17">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date19" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="18">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date20" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="19">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Label fx:id="Date21" alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="200.0"
+                   text="DATE" textFill="#fff0d1" GridPane.columnIndex="1" GridPane.rowIndex="20">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="12.0"/>
+                </font>
+            </Label>
+            <Button fx:id="viewOrder1" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder1"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder4" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder4"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder3" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder3"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder2" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder2"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder5" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder5"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="4">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder6" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder6"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="5">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder7" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder7"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="6">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder8" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder8"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="7">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder9" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder9"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="8">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder10" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder10"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="9">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder11" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder11"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="10">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder12" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder12"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="11">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder13" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder13"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="12">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder14" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder14"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="13">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder15" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder15"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="14">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder16" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder16"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="15">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder17" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder17"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="16">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder18" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder18"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="17">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder19" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder19"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="18">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder20" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder20"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="19">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+            <Button fx:id="viewOrder21" maxHeight="-Infinity" mnemonicParsing="false" onAction="#onClickViewOrder21"
+                    prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #aab8d0;" text="View Order"
+                    GridPane.columnIndex="2" GridPane.rowIndex="20">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </Button>
+        </GridPane>
+        <HBox layoutX="257.0" layoutY="17.0" prefHeight="25.0" prefWidth="150.0">
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#onClickRefreshPage" prefHeight="27.0"
+                    prefWidth="64.0" text="Refresh"/>
+            <Separator opacity="0.0" prefHeight="26.0" prefWidth="18.0"/>
+            <Button fx:id="goBack" mnemonicParsing="false" onAction="#onClickGoBack" prefHeight="27.0" prefWidth="64.0"
+                    text="Go back"/>
+        </HBox>
+    </AnchorPane>
+</ScrollPane>
