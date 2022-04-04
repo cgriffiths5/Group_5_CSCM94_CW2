@@ -134,6 +134,8 @@ public class HomeController {
 
                         DriverController dCont = loader.getController();
                         dCont.setUserText(user);
+                        dCont.setDevTab();
+                        dCont.resetCheckBoxes();
 
                         stage = new Stage();
                         stage.setTitle("Driver Homepage");
@@ -258,6 +260,8 @@ public class HomeController {
 
                             DriverController dCont = loader.getController();
                             dCont.setUserText(user);
+                            dCont.setDevTab();
+                            dCont.resetCheckBoxes();
 
                             stage = new Stage();
                             stage.setTitle("Driver HomePage");
@@ -331,6 +335,10 @@ public class HomeController {
         Stage stage = (Stage) registerButton.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(Objects.requireNonNull
                 (getClass().getResource("registration-view.fxml")));
+        stage.setHeight(690.0);
+        stage.setMaxHeight(690.0);
+        stage.setWidth(480.0);
+        stage.setMaxWidth(480.0);
         stage.getScene().setRoot(newRoot);
 
     }

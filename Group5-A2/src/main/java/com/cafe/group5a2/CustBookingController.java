@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -152,6 +153,7 @@ public class CustBookingController {
     }
 
     private void myTask(ScheduledExecutorService e) {
+        SubmitMsg.setText("ORDER SUBMITTED");
         progBar.setOpacity(0);
         submitReservationButton.setDisable(false);
         SubmitMsg.setOpacity(1);
@@ -191,15 +193,18 @@ public class CustBookingController {
         if (capID9  > 0) capIDList.add(capID9 );
         if (capID10 > 0) capIDList.add(capID10);
         if (capID11 > 0) capIDList.add(capID11);
+        capIDList.removeIf(Objects::isNull);
 
         boolean submitted = false;
 
-        for (int i = 0; i < capIDList.size()-1; i++) {
+        for (Integer integer : capIDList) {
+            getUserID();
+            System.out.println(userID);
             String query =
                     "INSERT INTO bookings (b_user_ID, b_cap_ID, guests) " +
-                            "VALUES (" + userID + "," + capIDList.get(i) + "," + guestNum + ")";
+                            "VALUES (" + userID + "," + integer + "," + guestNum + ")";
             String q2 =
-                    "UPDATE capacity SET is_available = 0 WHERE cap_ID = '" + capIDList.get(i) + "'";
+                    "UPDATE capacity SET is_available = 0 WHERE cap_ID = '" + integer + "'";
             try (Statement stmt = con.createStatement()) {
                 stmt.executeQuery(query);
                 stmt.executeQuery(q2);
@@ -212,12 +217,8 @@ public class CustBookingController {
 
         if (submitted) {
             final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
-            executorService.scheduleAtFixedRate(new Runnable() {
-                @Override
-                public void run() {
-                    myTask(executorService);
-                }
-            }, 3, 5, TimeUnit.SECONDS);
+            executorService.scheduleAtFixedRate(() ->
+                    myTask(executorService), 3, 2, TimeUnit.SECONDS);
         } else {
             progBar.setOpacity(0.0);
             SubmitMsg.setText("Error, reload and try another booking");
@@ -472,28 +473,28 @@ public class CustBookingController {
                     T4.setTextFill(Color.web(T_RED, 1.0));
                     T4Select.setDisable(true);
                 }
-                if (available > 0 && tableCounter == 5 && guestNum > 3) {
+                if (available > 0 && tableCounter == 5 && guestNum > 2) {
                     T5.setTextFill(Color.web(GREEN, 1.0));
                     T5Select.setDisable(false);
                 } else if (tableCounter == 5) {
                     T5.setTextFill(Color.web(T_RED, 1.0));
                     T5Select.setDisable(true);
                 }
-                if (available > 0 && tableCounter == 6 && guestNum > 3) {
+                if (available > 0 && tableCounter == 6 && guestNum > 2) {
                     T6.setTextFill(Color.web(GREEN, 1.0));
                     T6Select.setDisable(false);
                 } else if (tableCounter == 6) {
                     T6.setTextFill(Color.web(T_RED, 1.0));
                     T6Select.setDisable(true);
                 }
-                if (available > 0 && tableCounter == 7 && guestNum > 3) {
+                if (available > 0 && tableCounter == 7 && guestNum > 2) {
                     T7.setTextFill(Color.web(GREEN, 1.0));
                     T7Select.setDisable(false);
                 } else if (tableCounter == 7) {
                     T7.setTextFill(Color.web(T_RED, 1.0));
                     T7Select.setDisable(true);
                 }
-                if (available > 0 && tableCounter == 8 && guestNum > 3) {
+                if (available > 0 && tableCounter == 8 && guestNum > 2) {
                     T8.setTextFill(Color.web(GREEN, 1.0));
                     T8Select.setDisable(false);
                 } else if (tableCounter == 8) {

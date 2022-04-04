@@ -10,9 +10,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Objects;
 
 public class ManagerController {
@@ -36,23 +34,31 @@ public class ManagerController {
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
     @FXML
-    public void onGenerateReportsClick(ActionEvent event) {
+    public void onClickGenReports() {
         try {
             Stage stage = (Stage) generateReports.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("generateReports-view.fxml")));
-            stage.setTitle("Generate Reports");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("reports-view.fxml"));
+            Parent newRoot = loader.load();
+            ReportsController RCont = loader.getController();
+            RCont.generate();
+            stage.setTitle("Reports");
+            stage.setHeight(800.0);
+            stage.setMaxHeight(800.0);
+            stage.setWidth(550.0);
+            stage.setMaxWidth(550.0);
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");
         }
     }
 
+
     @FXML
     public void onAddRemoveStaffClick(ActionEvent event) {
         try {
             Stage stage = (Stage) addRemoveStaff.getScene().getWindow();
             Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addStaff-view.fxml")));
-            stage.setTitle("Add and Remove Staff");
+            stage.setTitle("Manage Staff");
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");

@@ -4,28 +4,18 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
-import java.util.Observable;
 
 
 /**
- * This class registers a new customer in the database
  * @author Chris Griffiths
  * @author Adam Tucker
  */
@@ -71,6 +61,7 @@ public class RegistrationController {
      * controls.
      * @param event is triggered when the submit button is pressed
      */
+
 
     @FXML
     public void OnSubmit(ActionEvent event) {
@@ -150,8 +141,9 @@ public class RegistrationController {
      * @throws IOException
      */
 
+    @FXML
     public void onHomeButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) HomeButton.getScene().getWindow();
+        Stage stage = (Stage) HomeButton1.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(Objects.requireNonNull
                 (getClass().getResource("home-view.fxml")));
         stage.getScene().setRoot(newRoot);

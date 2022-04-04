@@ -187,20 +187,6 @@ public class CustMenuController {
         orderSubL.setOpacity(0.0);
     }
 
-    //q1,q2,q3...20 if (d1.equals("")) then make q1 have 0.0 opacity
-    // check q1, then q2, then q3... until one of them has 0.0 opacity,
-    // when button is clicked, get the sum of each q1 int values.
-    // if sum <=30 AND sum > 0 then proceed, else put up dialogue error message
-    // saying order too large.
-    // when the button is clicked, build a String by adding each item Integer.valueOf(q1.getText()) times
-    // to the string, each time adding a "," between items
-    // IN ORDER TABLE
-    //get userID with query using username,
-    //type = which button is clicked, either "takeaway" OR "delivery"
-    //item_list is the string we built
-    //      don't do datetime, default is now()
-    //      don't do prepared/complete boolean, default is false
-    //      don't do table_number, default is null
     private void myTask(ScheduledExecutorService e) throws IOException {
         progBar.setOpacity(0);
         orderSubL.setOpacity(1.0);

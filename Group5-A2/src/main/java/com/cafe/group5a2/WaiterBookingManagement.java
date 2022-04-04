@@ -221,8 +221,7 @@ public class WaiterBookingManagement {
         }
     }
 
-    public void hideEmpty() {
-        if (name1 .getText().equals("Name")) { name1 .setOpacity(0.0); data1 .setOpacity(0.0); tables1 .setOpacity(0.0); approve1 .setOpacity(0.0); reject1 .setOpacity(0.0); }
+    public void hideBelow1() {
         if (name2 .getText().equals("Name")) { name2 .setOpacity(0.0); data2 .setOpacity(0.0); tables2 .setOpacity(0.0); approve2 .setOpacity(0.0); reject2 .setOpacity(0.0); }
         if (name3 .getText().equals("Name")) { name3 .setOpacity(0.0); data3 .setOpacity(0.0); tables3 .setOpacity(0.0); approve3 .setOpacity(0.0); reject3 .setOpacity(0.0); }
         if (name4 .getText().equals("Name")) { name4 .setOpacity(0.0); data4 .setOpacity(0.0); tables4 .setOpacity(0.0); approve4 .setOpacity(0.0); reject4 .setOpacity(0.0); }
@@ -244,6 +243,25 @@ public class WaiterBookingManagement {
         if (name20.getText().equals("Name")) { name20.setOpacity(0.0); data20.setOpacity(0.0); tables20.setOpacity(0.0); approve20.setOpacity(0.0); reject20.setOpacity(0.0); }
         if (name21.getText().equals("Name")) { name21.setOpacity(0.0); data21.setOpacity(0.0); tables21.setOpacity(0.0); approve21.setOpacity(0.0); reject21.setOpacity(0.0); }
         if (name22.getText().equals("Name")) { name22.setOpacity(0.0); data22.setOpacity(0.0); tables22.setOpacity(0.0); approve22.setOpacity(0.0); reject22.setOpacity(0.0); }
+    }
+
+    public void noBookings() {
+        if (name1 .getText().equals("Name")) {
+            name1 .setText("No Unapproved Bookings");
+            data1 .setOpacity(0.0);
+            tables1 .setOpacity(0.0);
+            approve1 .setOpacity(0.0);
+            reject1 .setOpacity(0.0);
+        }
+        hideBelow1();
+    }
+
+    public void hideEmpty() {
+        if (name1 .getText().equals("Name")) {
+            noBookings();
+        } else {
+            hideBelow1();
+        }
     }
 
     /**
