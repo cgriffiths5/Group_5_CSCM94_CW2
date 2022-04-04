@@ -18,6 +18,13 @@ import java.sql.*;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * Waiter controller class shows relevant information and buttons
+ * that the waiter needs to have functionality in the program
+ * @author Cameron Turner
+ * @version 1.0
+ */
+
 public class WaiterController {
     @FXML
     public Label waiterName;
