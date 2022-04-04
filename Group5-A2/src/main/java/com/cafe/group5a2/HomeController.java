@@ -84,8 +84,8 @@ public class HomeController {
                         Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
                         //stage.setX(((sBound.getWidth() - stage.getWidth())/2) - (sBound.getWidth() / 10));
                         stage = new Stage();
-                        stage.setY(sBound.getHeight() - (sBound.getHeight()/1.25));
-                        stage.setX(sBound.getWidth() - (sBound.getWidth()/1.25));
+                        stage.setY(sBound.getHeight() - (sBound.getHeight() / 1.25));
+                        stage.setX(sBound.getWidth() - (sBound.getWidth() / 1.25));
                         stage.setTitle("Manager Homepage");
                         stage.setScene(new Scene(newRoot, 450, 450));
                         stage.show();
@@ -212,8 +212,8 @@ public class HomeController {
                             mCont.setUserText(user);
                             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
                             stage = new Stage();
-                            stage.setY(sBound.getHeight() - (sBound.getHeight()/1.25));
-                            stage.setX(sBound.getWidth() - (sBound.getWidth()/1.25));
+                            stage.setY(sBound.getHeight() - (sBound.getHeight() / 1.25));
+                            stage.setX(sBound.getWidth() - (sBound.getWidth() / 1.25));
                             stage.setTitle("Manager Homepage");
                             stage.setScene(new Scene(newRoot, 450, 450));
                             stage.show();
@@ -305,7 +305,6 @@ public class HomeController {
     }
 
     /**
-     *
      * @param username is the username entered by the person logging in
      * @param password is the password entered by the person logging in
      * @return false if the username doesn't exist or the password doesn't match for that user
@@ -344,7 +343,6 @@ public class HomeController {
     }
 
     /**
-     *
      * @param username rhrhbr
      * @return rhrth
      * @throws SQLException rgrgr

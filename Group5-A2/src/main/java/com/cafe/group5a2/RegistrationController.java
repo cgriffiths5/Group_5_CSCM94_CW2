@@ -2,14 +2,14 @@ package com.cafe.group5a2;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
@@ -19,7 +19,6 @@ import java.util.Objects;
  * @author Chris Griffiths
  * @author Adam Tucker
  */
-
 
 
 public class RegistrationController {
@@ -36,21 +35,8 @@ public class RegistrationController {
     public TextField Postcode1;
     public Button SubmitButton1;
     public Text ErrorLabel1;
-    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
-
-
-
     @FXML
-    public Button SubmitButton;
-    public TextField FirstName;
-    public TextField LastName;
-    public TextField Username;
-    public TextField Password;
-    public TextField ConfirmPassword;
-    public TextField HouseNO;
-    public TextField Postcode;
-    public Text ErrorLabel;
-    public Button HomeButton;
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
     public RegistrationController() throws SQLException {
     }
@@ -59,6 +45,7 @@ public class RegistrationController {
      * When the submit button is pressed the information entered into the textfields is submitted into the database
      * as a new user. The role is automatically set to customer in order to avoid giving a user access to staff only
      * controls.
+     *
      * @param event is triggered when the submit button is pressed
      */
 
@@ -66,24 +53,24 @@ public class RegistrationController {
     @FXML
     public void OnSubmit(ActionEvent event) {
 
-        String First = FirstName.getText();
-        String Last = LastName.getText();
-        String User = Username.getText();
-        String Pass = Password.getText();
-        String ConPass = ConfirmPassword.getText();
-        String HouseNumber = HouseNO.getText();
-        String Post = Postcode.getText();
+        String First = FirstName1.getText();
+        String Last = LastName1.getText();
+        String User = Username1.getText();
+        String Pass = Password1.getText();
+        String ConPass = ConfirmPassword1.getText();
+        String HouseNumber = HouseNO1.getText();
+        String Post = Postcode1.getText();
 
         String query1 = "SELECT username FROM users";
 
-        Boolean sameUsername = false;
+        boolean sameUsername = false;
 
         try {
             Statement stmt1 = con.createStatement();
             ResultSet r1 = stmt1.executeQuery(query1);
             String currUsername;
 
-            while(r1.next()) {
+            while (r1.next()) {
                 if (User.equals(r1.getString("username"))) {
                     sameUsername = true;
                 }
@@ -96,32 +83,31 @@ public class RegistrationController {
                 "VALUES ('" + First + "','" + Last + "', 'customer', '" + User + "','" + Pass + "','"
                 + HouseNumber + "','" + Post + "')";
 
-        if (FirstName.getText().isEmpty()) {
-            ErrorLabel.setText("Error: First name is empty");
-            ErrorLabel.setOpacity(1);
-        } else if (LastName.getText().isEmpty()) {
-            ErrorLabel.setText("Error: Last name is empty");
-            ErrorLabel.setOpacity(1);
-        } else if (Username.getText().isEmpty()) {
-            ErrorLabel.setText("Error: Username is empty");
-            ErrorLabel.setOpacity(1);
-        } else if (Password.getText().isEmpty()) {
-            ErrorLabel.setText("Error: Password is empty");
-            ErrorLabel.setOpacity(1);
-        } else if (ConfirmPassword.getText().isEmpty()) {
-            ErrorLabel.setText("Error: Confirm password is empty");
-            ErrorLabel.setOpacity(1);
-        } else if (HouseNO.getText().isEmpty()) {
-            ErrorLabel.setText("Error: House number is empty");
-            ErrorLabel.setOpacity(1);
-        } else if (Postcode.getText().isEmpty()) {
-            ErrorLabel.setText("Error: Postcode is empty");
-            ErrorLabel.setOpacity(1);
+        if (FirstName1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: First name is empty");
+            ErrorLabel1.setOpacity(1);
+        } else if (LastName1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: Last name is empty");
+            ErrorLabel1.setOpacity(1);
+        } else if (Username1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: Username is empty");
+            ErrorLabel1.setOpacity(1);
+        } else if (Password1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: Password is empty");
+            ErrorLabel1.setOpacity(1);
+        } else if (ConfirmPassword1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: Confirm password is empty");
+            ErrorLabel1.setOpacity(1);
+        } else if (HouseNO1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: House number is empty");
+            ErrorLabel1.setOpacity(1);
+        } else if (Postcode1.getText().isEmpty()) {
+            ErrorLabel1.setText("Error: Postcode is empty");
+            ErrorLabel1.setOpacity(1);
         } else if (sameUsername) {
-            ErrorLabel.setText("Username already used");
-            ErrorLabel.setOpacity(1);
-        }
-        else if (Pass.equals(ConPass)) {
+            ErrorLabel1.setText("Username already used");
+            ErrorLabel1.setOpacity(1);
+        } else if (Pass.equals(ConPass)) {
             try (Statement stmt = con.createStatement()) {
                 stmt.executeQuery(query2);
             } catch (Exception e) {
@@ -130,13 +116,14 @@ public class RegistrationController {
             }
 
         } else {
-            ErrorLabel.setText("Error: Passwords don't match");
+            ErrorLabel1.setText("Error: Passwords don't match");
         }
 
     }
 
     /**
      * When the home button is pressed then the login page is returned
+     *
      * @param event is triggered when the return home button is pressed
      * @throws IOException
      */
@@ -149,7 +136,6 @@ public class RegistrationController {
         stage.getScene().setRoot(newRoot);
 
     }
-
 
 
 }

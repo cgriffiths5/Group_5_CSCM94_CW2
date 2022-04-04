@@ -5,14 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
 import java.sql.*;
 
 import static java.lang.Integer.parseInt;
@@ -41,16 +39,13 @@ public class DriverController {
 
     @FXML
     public Button refreshButton;
-
-
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
     private int orderID1;
     private int orderID2;
     private int orderID3;
     private int orderID4;
 
-
-    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     public DriverController() throws SQLException {
     }
 
@@ -61,7 +56,7 @@ public class DriverController {
 
 
     public void logout(ActionEvent actionEvent) {
-        ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
+        ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
     }
 
 
@@ -101,27 +96,30 @@ public class DriverController {
                 }
                 counter++;
             }
-            if(DevOrdTab1.getText().equals("postcode")){
+            if (DevOrdTab1.getText().equals("postcode")) {
                 DevOrdTab1.setText("No Order");
-                DevOrdProBox1.setOpacity(0.0); DevOrdFinBox1.setOpacity(0.0);
+                DevOrdProBox1.setOpacity(0.0);
+                DevOrdFinBox1.setOpacity(0.0);
             }
-            if(DevOrdTab2.getText().equals("postcode")){
+            if (DevOrdTab2.getText().equals("postcode")) {
                 DevOrdTab2.setText("No Order");
-                DevOrdProBox2.setOpacity(0.0); DevOrdFinBox2.setOpacity(0.0);
+                DevOrdProBox2.setOpacity(0.0);
+                DevOrdFinBox2.setOpacity(0.0);
             }
-            if(DevOrdTab3.getText().equals("postcode")){
+            if (DevOrdTab3.getText().equals("postcode")) {
                 DevOrdTab3.setText("No Order");
-                DevOrdProBox3.setOpacity(0.0); DevOrdFinBox3.setOpacity(0.0);
+                DevOrdProBox3.setOpacity(0.0);
+                DevOrdFinBox3.setOpacity(0.0);
             }
-            if(DevOrdTab4.getText().equals("postcode")){
+            if (DevOrdTab4.getText().equals("postcode")) {
                 DevOrdTab4.setText("No Order");
-                DevOrdProBox4.setOpacity(0.0); DevOrdFinBox4.setOpacity(0.0);
+                DevOrdProBox4.setOpacity(0.0);
+                DevOrdFinBox4.setOpacity(0.0);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 
 
     //Delivery problem

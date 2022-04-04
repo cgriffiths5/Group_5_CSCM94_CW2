@@ -5,7 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -15,16 +18,6 @@ import java.sql.*;
 import java.util.Objects;
 
 import static java.lang.Integer.parseInt;
-
-/**
- * This class shows the menu items, and check boxes allow the waiter
- * to enter the quantity of a certain item to create an
- * order for a customer then submit this order to the
- * database
- * @author Cameron Turner
- * @author Adam Tucker
- * @version 1.0
- */
 
 public class WaiterMenuController {
 
@@ -172,63 +165,63 @@ public class WaiterMenuController {
     public Button restaurantButton;
     public TextField tableNumField;
 
-    public Button goBack;
 
+    public Button goBack;
+    Connection connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
 
-    Connection connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
-
-    /**
-     * @throws SQLException throw a type of Exception that
-     * the IDE doesn't support
-     */
     public WaiterMenuController() throws SQLException {
     }
-    
-    /**
-     * Returns void.
-     * Sets the name of the user using the application
-     * @param text The users name
-     */
+
     public void setUserText(String text) {
         userHolder.setText(username = text);
     }
 
-    /**
-     * Returns void.
-     * This method checks what the waiter has entered for the order
-     * and then submits the order to the correct parts of the
-     * database
-     * It checks to see whether the check boxes are empty to throw an error
-     * message
-     * @param actionEvent Submit order button
-     * @throws IOException throw a type of Exception that the IDE doesn't support
-     */    
     @FXML
     public void onRestButtonClick(ActionEvent actionEvent) throws IOException {
         int counter = 0;
 
         while (counter <= 20) {
-            if (!pl1.getText().equals("")) counter++; else break;
-            if (!pl2.getText().equals("")) counter++; else break;
-            if (!pl3.getText().equals("")) counter++; else break;
-            if (!pl4.getText().equals("")) counter++; else break;
-            if (!pl5.getText().equals("")) counter++; else break;
-            if (!pl6.getText().equals("")) counter++; else break;
-            if (!pl7.getText().equals("")) counter++; else break;
-            if (!pl8.getText().equals("")) counter++; else break;
-            if (!pl9.getText().equals("")) counter++; else break;
-            if (!pl10.getText().equals("")) counter++;else break;
-            if (!pl11.getText().equals("")) counter++;else break;
-            if (!pl12.getText().equals("")) counter++;else break;
-            if (!pl13.getText().equals("")) counter++;else break;
-            if (!pl14.getText().equals("")) counter++;else break;
-            if (!pl15.getText().equals("")) counter++;else break;
-            if (!pl16.getText().equals("")) counter++;else break;
-            if (!pl17.getText().equals("")) counter++;else break;
-            if (!pl18.getText().equals("")) counter++;else break;
-            if (!pl19.getText().equals("")) counter++;else break;
-            if (!pl20.getText().equals("")) counter++;else break;
+            if (!pl1.getText().equals("")) counter++;
+            else break;
+            if (!pl2.getText().equals("")) counter++;
+            else break;
+            if (!pl3.getText().equals("")) counter++;
+            else break;
+            if (!pl4.getText().equals("")) counter++;
+            else break;
+            if (!pl5.getText().equals("")) counter++;
+            else break;
+            if (!pl6.getText().equals("")) counter++;
+            else break;
+            if (!pl7.getText().equals("")) counter++;
+            else break;
+            if (!pl8.getText().equals("")) counter++;
+            else break;
+            if (!pl9.getText().equals("")) counter++;
+            else break;
+            if (!pl10.getText().equals("")) counter++;
+            else break;
+            if (!pl11.getText().equals("")) counter++;
+            else break;
+            if (!pl12.getText().equals("")) counter++;
+            else break;
+            if (!pl13.getText().equals("")) counter++;
+            else break;
+            if (!pl14.getText().equals("")) counter++;
+            else break;
+            if (!pl15.getText().equals("")) counter++;
+            else break;
+            if (!pl16.getText().equals("")) counter++;
+            else break;
+            if (!pl17.getText().equals("")) counter++;
+            else break;
+            if (!pl18.getText().equals("")) counter++;
+            else break;
+            if (!pl19.getText().equals("")) counter++;
+            else break;
+            if (!pl20.getText().equals("")) counter++;
+            else break;
         }
         //System.out.println(counter);
         String itemList = getOrderList(counter);
@@ -313,13 +306,6 @@ public class WaiterMenuController {
 
     }
 
-    /**
-     * Returns an int value.
-     * Method gets the usersID which is an int value but using an
-     * SQL query
-     * @param username the users name
-     * @return userID
-     */    
     public int getUserId(String username) {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
         ResultSet rs = null;
@@ -336,17 +322,9 @@ public class WaiterMenuController {
         return a;
     }
 
-    /**
-     * Returns a String value.
-     * From the values entered in the check boxes a string value is
-     * made to list all teh items that have been chosen.
-     * This data is sent to the database
-     * @param counter number which represents how many items need to be shown
-     * @return String
-     */    
     public String getOrderList(int counter) {
         int i = counter;
-        int value1 = 0, value2 = 0, value3 =0,value4 = 0, value5 = 0, value6 =0,value7 = 0, value8 = 0, value9 =0,value10 = 0, value11 = 0, value12 =0,value13 = 0, value14 = 0, value15 =0,value16 = 0, value17 = 0, value18 =0,value19=0,value20=0;
+        int value1 = 0, value2 = 0, value3 = 0, value4 = 0, value5 = 0, value6 = 0, value7 = 0, value8 = 0, value9 = 0, value10 = 0, value11 = 0, value12 = 0, value13 = 0, value14 = 0, value15 = 0, value16 = 0, value17 = 0, value18 = 0, value19 = 0, value20 = 0;
         StringBuilder itemList = new StringBuilder();
         String c = ",";
         String query = "SELECT * FROM menu ORDER BY category DESC";
@@ -356,141 +334,141 @@ public class WaiterMenuController {
         try (Statement stmt = connect.createStatement()) {
             rs = stmt.executeQuery(query);
             while (rs.next() && i > 0) {
-                if (!q1.getText().isEmpty() && i==counter){
-                    value1= Integer.parseInt( q1.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q1.getText().isEmpty() && i == counter) {
+                    value1 = Integer.parseInt(q1.getText().replaceAll("[^\\d.]", "").trim());
                     while (value1 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value1--;
                     }
                 }
-                if (!q2.getText().isEmpty() && i==counter-1){
-                    value2= Integer.parseInt( q2.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q2.getText().isEmpty() && i == counter - 1) {
+                    value2 = Integer.parseInt(q2.getText().replaceAll("[^\\d.]", "").trim());
                     while (value2 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value2--;
                     }
                 }
-                if (!q3.getText().isEmpty() && i==counter-2){
-                    value3= Integer.parseInt( q3.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q3.getText().isEmpty() && i == counter - 2) {
+                    value3 = Integer.parseInt(q3.getText().replaceAll("[^\\d.]", "").trim());
                     while (value3 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value3--;
                     }
                 }
-                if (!q4.getText().isEmpty() && i==counter-3){
-                    value4= Integer.parseInt( q4.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q4.getText().isEmpty() && i == counter - 3) {
+                    value4 = Integer.parseInt(q4.getText().replaceAll("[^\\d.]", "").trim());
                     while (value4 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value4--;
                     }
                 }
-                if (!q5.getText().isEmpty() && i==counter-4){
-                    value5= Integer.parseInt( q5.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q5.getText().isEmpty() && i == counter - 4) {
+                    value5 = Integer.parseInt(q5.getText().replaceAll("[^\\d.]", "").trim());
                     while (value5 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value5--;
                     }
                 }
-                if (!q6.getText().isEmpty() && i==counter-5){
-                    value6= Integer.parseInt( q6.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q6.getText().isEmpty() && i == counter - 5) {
+                    value6 = Integer.parseInt(q6.getText().replaceAll("[^\\d.]", "").trim());
                     while (value6 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value6--;
                     }
                 }
-                if (!q7.getText().isEmpty() && i==counter-6){
-                    value7= Integer.parseInt( q7.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q7.getText().isEmpty() && i == counter - 6) {
+                    value7 = Integer.parseInt(q7.getText().replaceAll("[^\\d.]", "").trim());
                     while (value7 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value7--;
                     }
                 }
-                if (!q8.getText().isEmpty() && i==counter-7){
-                    value8= Integer.parseInt( q8.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q8.getText().isEmpty() && i == counter - 7) {
+                    value8 = Integer.parseInt(q8.getText().replaceAll("[^\\d.]", "").trim());
                     while (value8 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value8--;
                     }
                 }
-                if (!q9.getText().isEmpty() && i==counter-8){
-                    value9= Integer.parseInt( q9.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q9.getText().isEmpty() && i == counter - 8) {
+                    value9 = Integer.parseInt(q9.getText().replaceAll("[^\\d.]", "").trim());
                     while (value9 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value9--;
                     }
                 }
-                if (!q10.getText().isEmpty() && i==counter-9){
-                    value10=Integer.parseInt(q10.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q10.getText().isEmpty() && i == counter - 9) {
+                    value10 = Integer.parseInt(q10.getText().replaceAll("[^\\d.]", "").trim());
                     while (value10 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value10--;
                     }
                 }
-                if (!q11.getText().isEmpty() && i==counter-10){
-                    value11=Integer.parseInt(q11.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q11.getText().isEmpty() && i == counter - 10) {
+                    value11 = Integer.parseInt(q11.getText().replaceAll("[^\\d.]", "").trim());
                     while (value11 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value11--;
                     }
                 }
-                if (!q12.getText().isEmpty() && i==counter-11) {
-                    value12=Integer.parseInt(q12.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q12.getText().isEmpty() && i == counter - 11) {
+                    value12 = Integer.parseInt(q12.getText().replaceAll("[^\\d.]", "").trim());
                     while (value12 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value12--;
                     }
                 }
-                if (!q13.getText().isEmpty() && i==counter-12) {
-                    value13=Integer.parseInt(q13.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q13.getText().isEmpty() && i == counter - 12) {
+                    value13 = Integer.parseInt(q13.getText().replaceAll("[^\\d.]", "").trim());
                     while (value13 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value13--;
                     }
                 }
-                if (!q14.getText().isEmpty() && i==counter-13) {
-                    value14=Integer.parseInt(q14.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q14.getText().isEmpty() && i == counter - 13) {
+                    value14 = Integer.parseInt(q14.getText().replaceAll("[^\\d.]", "").trim());
                     while (value14 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value14--;
                     }
                 }
-                if (!q15.getText().isEmpty() && i==counter-14) {
-                    value15=Integer.parseInt(q15.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q15.getText().isEmpty() && i == counter - 14) {
+                    value15 = Integer.parseInt(q15.getText().replaceAll("[^\\d.]", "").trim());
                     while (value15 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value15--;
                     }
                 }
-                if (!q16.getText().isEmpty() && i==counter-15) {
-                    value16=Integer.parseInt(q16.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q16.getText().isEmpty() && i == counter - 15) {
+                    value16 = Integer.parseInt(q16.getText().replaceAll("[^\\d.]", "").trim());
                     while (value16 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value16--;
                     }
                 }
-                if (!q17.getText().isEmpty() && i==counter-16) {
-                    value17=Integer.parseInt(q17.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q17.getText().isEmpty() && i == counter - 16) {
+                    value17 = Integer.parseInt(q17.getText().replaceAll("[^\\d.]", "").trim());
                     while (value17 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value17--;
                     }
                 }
-                if (!q18.getText().isEmpty() && i==counter-17) {
-                    value18=Integer.parseInt(q18.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q18.getText().isEmpty() && i == counter - 17) {
+                    value18 = Integer.parseInt(q18.getText().replaceAll("[^\\d.]", "").trim());
                     while (value18 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value18--;
                     }
                 }
-                if (!q19.getText().isEmpty() && i==counter-18) {
-                    value19=Integer.parseInt(q19.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q19.getText().isEmpty() && i == counter - 18) {
+                    value19 = Integer.parseInt(q19.getText().replaceAll("[^\\d.]", "").trim());
                     while (value19 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value19--;
                     }
                 }
-                if (!q20.getText().isEmpty() && i==counter-19) {
-                    value20=Integer.parseInt(q20.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q20.getText().isEmpty() && i == counter - 19) {
+                    value20 = Integer.parseInt(q20.getText().replaceAll("[^\\d.]", "").trim());
                     while (value20 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value20--;
@@ -504,14 +482,6 @@ public class WaiterMenuController {
         return itemList.toString();
     }
 
-    /**
-     * Returns a String.
-     * This method gets the item related to the number value
-     * in the menu table from the database
-     * @param num Number of the item from database
-     * @return val
-     * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */    
     @FXML
     public String getItem(int num) throws SQLException {
         String val = "";
@@ -520,10 +490,10 @@ public class WaiterMenuController {
         try (Statement stmt = connect.createStatement()) {
             rs = stmt.executeQuery(query);
             int i = 0;
-            while(rs.next()) {
+            while (rs.next()) {
                 val = rs.getString("item");
                 i++;
-                if (i==num) {
+                if (i == num) {
                     return val;
                 }
             }
@@ -538,12 +508,6 @@ public class WaiterMenuController {
         return val;
     }
 
-    /**
-     * Returns void.
-     * This method sets the item labels for the menu on the
-     * database to show which foods are available on the menu.
-     * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */    
     public void setItemLabels() throws SQLException {
         il1.setText(getItem(1));
         il2.setText(getItem(2));
@@ -567,15 +531,6 @@ public class WaiterMenuController {
         il20.setText(getItem(20));
     }
 
-    /**
-     * Returns a String value.
-     * This method gets the prices of the food to
-     * display on the menu page.
-     * Input value is the item num to related to the correct price
-     * @param num Item number to get price for it
-     * @return val
-     * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */    
     public String getPrice(int num) throws SQLException {
         String val = "";
         String query = "SELECT * FROM menu ORDER BY category DESC";
@@ -583,10 +538,10 @@ public class WaiterMenuController {
         try (Statement stmt = connect.createStatement()) {
             rs = stmt.executeQuery(query);
             int i = 0;
-            while(rs.next()) {
+            while (rs.next()) {
                 val = rs.getString("price");
                 i++;
-                if (i==num) {
+                if (i == num) {
                     return val;
                 }
             }
@@ -601,12 +556,6 @@ public class WaiterMenuController {
         return val;
     }
 
-    /**
-     * Returns void.
-     * Sets the price son teh correlated label boxes
-     * on screen
-     * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */    
     public void setPriceLabels() throws SQLException {
         pl1.setText(getPrice(1));
         pl2.setText(getPrice(2));
@@ -630,14 +579,6 @@ public class WaiterMenuController {
         pl20.setText(getPrice(20));
     }
 
-    /**
-     * Returns a String value.
-     * Gets the description of the relevant item from the
-     * database using an SQL query
-     * @param num item number to get description
-     * @return val
-     * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */    
     public String getDesc(int num) throws SQLException {
         String val = "";
         String query = "SELECT * FROM menu ORDER BY category DESC";
@@ -645,10 +586,10 @@ public class WaiterMenuController {
         try (Statement stmt = connect.createStatement()) {
             rs = stmt.executeQuery(query);
             int i = 0;
-            while(rs.next()) {
+            while (rs.next()) {
                 val = rs.getString("description");
                 i++;
-                if (i==num) {
+                if (i == num) {
                     return val;
                 }
             }
@@ -663,14 +604,6 @@ public class WaiterMenuController {
         return val;
     }
 
-    /**
-     * Returns void.
-     * Sets the description label of the certain item to
-     * the label fx:id values on the fxml file.
-     * Also sorts the screen to match the sixe of how many
-     * items are on show
-     * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */    
     public void setDescLabels() throws SQLException {
         d1.setText(getDesc(1));
         d2.setText(getDesc(2));
@@ -811,13 +744,7 @@ public class WaiterMenuController {
         }
     }
 
-    /**
-     * Returns void.
-     * When the "Go Back" button is clicked on the page,
-     * this method is called to change the stage to the
-     * one before which is the waiters view
-     * @param actionEvent Go Back button
-     */
+    //goBack
     public void onClickGoBack(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) goBack.getScene().getWindow();
@@ -841,33 +768,5 @@ public class WaiterMenuController {
         } catch (IOException e) {
             System.out.println("Error loading page");
         }
-    }
-    
-    /**
-     * Returns void.
-     * When this method is called all check boxes are set to
-     * null
-     */
-    public void resetCheckBoxes(){
-        q1.setText("");
-        q2.setText("");
-        q3.setText("");
-        q4.setText("");
-        q5.setText("");
-        q6.setText("");
-        q7.setText("");
-        q8.setText("");
-        q9.setText("");
-        q10.setText("");
-        q11.setText("");
-        q12.setText("");
-        q13.setText("");
-        q14.setText("");
-        q15.setText("");
-        q16.setText("");
-        q17.setText("");
-        q18.setText("");
-        q19.setText("");
-        q20.setText("");
     }
 }

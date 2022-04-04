@@ -10,7 +10,9 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class ManagerController {
@@ -21,6 +23,8 @@ public class ManagerController {
     public Button addRemoveStaff;
     public String username;
     public Label userLabel;
+    //Database connection
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
     public ManagerController() throws SQLException {
     }
@@ -29,9 +33,6 @@ public class ManagerController {
         username = text;
         userLabel.setText(text);
     }
-
-    //Database connection
-    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
     @FXML
     public void onClickGenReports() {
@@ -66,13 +67,11 @@ public class ManagerController {
     }
 
     /**
-     *
      * @param event is entered when a user presses the home button
-     *
      */
     @FXML
     public void onHomeButtonClick(ActionEvent event) {
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 
 }

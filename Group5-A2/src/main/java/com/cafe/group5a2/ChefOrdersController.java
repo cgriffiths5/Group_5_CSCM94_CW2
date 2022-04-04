@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.Objects;
 
 import static java.lang.Integer.parseInt;
 
@@ -38,14 +37,11 @@ public class ChefOrdersController {
     public Label label2;
     public Label label3;
     public Label label4;
-
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private int orderID1;
     private int orderID2;
     private int orderID3;
     private int orderID4;
-
-
-    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
 
     public ChefOrdersController() throws SQLException {

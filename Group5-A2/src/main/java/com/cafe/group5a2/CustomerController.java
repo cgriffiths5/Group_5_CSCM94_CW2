@@ -16,8 +16,6 @@ import java.sql.SQLException;
 
 public class CustomerController {
 
-    private String username;
-
     @FXML
     public Button bookButton;
     public Button homeButton;
@@ -32,7 +30,7 @@ public class CustomerController {
     public Label Title;
     public Label userLabel;
     public Label passLabel;
-
+    private String username;
 
     public void setUserText(String text) {
         username = text;
@@ -113,6 +111,6 @@ public class CustomerController {
 
     @FXML
     public void onHomeButtonClick(ActionEvent event) {
-        ((Node)(event.getSource())).getScene().getWindow().hide();
+        ((Node) (event.getSource())).getScene().getWindow().hide();
     }
 }

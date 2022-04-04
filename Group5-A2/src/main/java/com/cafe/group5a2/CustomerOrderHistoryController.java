@@ -16,15 +16,15 @@ import static java.lang.Integer.parseInt;
 public class CustomerOrderHistoryController {
 
     @FXML
-    public Label Type1 ;
-    public Label Type2 ;
-    public Label Type3 ;
-    public Label Type4 ;
-    public Label Type5 ;
-    public Label Type6 ;
-    public Label Type7 ;
-    public Label Type8 ;
-    public Label Type9 ;
+    public Label Type1;
+    public Label Type2;
+    public Label Type3;
+    public Label Type4;
+    public Label Type5;
+    public Label Type6;
+    public Label Type7;
+    public Label Type8;
+    public Label Type9;
     public Label Type10;
     public Label Type11;
     public Label Type12;
@@ -81,7 +81,7 @@ public class CustomerOrderHistoryController {
     public Button viewOrder21;
     public Button refreshButton;
     public Button goBack;
-
+    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private int orderID1;
     private int orderID2;
     private int orderID3;
@@ -103,22 +103,17 @@ public class CustomerOrderHistoryController {
     private int orderID19;
     private int orderID20;
     private int orderID21;
-
     private int uID;
     private String username;
 
-    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
-
 
     /**
-     *
      * @throws SQLException add info
      */
     public CustomerOrderHistoryController() throws SQLException {
     }
 
     /**
-     *
      * @param text add info
      */
     public void setUser(String text) {
@@ -128,9 +123,9 @@ public class CustomerOrderHistoryController {
 
     public void getUserID() {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
-        try (Statement stmt = con.createStatement()){
+        try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()) {
+            while (rs.next()) {
                 uID = rs.getInt("user_ID");
             }
         } catch (SQLException e) {
@@ -145,15 +140,15 @@ public class CustomerOrderHistoryController {
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             int counter = 1;
-            Type1.setText( "NAME");
-            Type2.setText( "NAME");
-            Type3.setText( "NAME");
-            Type4.setText( "NAME");
-            Type5.setText( "NAME");
-            Type6.setText( "NAME");
-            Type7.setText( "NAME");
-            Type8.setText( "NAME");
-            Type9.setText( "NAME");
+            Type1.setText("NAME");
+            Type2.setText("NAME");
+            Type3.setText("NAME");
+            Type4.setText("NAME");
+            Type5.setText("NAME");
+            Type6.setText("NAME");
+            Type7.setText("NAME");
+            Type8.setText("NAME");
+            Type9.setText("NAME");
             Type10.setText("NAME");
             Type11.setText("NAME");
             Type12.setText("NAME");
@@ -171,59 +166,227 @@ public class CustomerOrderHistoryController {
                 String type = rs.getString("type");
                 String date = String.valueOf(rs.getDate("date_time"));
                 switch (counter) {
-                    case 1  -> { orderID1  = resultID; Type1 .setText(type); Date1 .setText(date);}
-                    case 2  -> { orderID2  = resultID; Type2 .setText(type); Date2 .setText(date);}
-                    case 3  -> { orderID3  = resultID; Type3 .setText(type); Date3 .setText(date);}
-                    case 4  -> { orderID4  = resultID; Type4 .setText(type); Date4 .setText(date);}
-                    case 5  -> { orderID5  = resultID; Type5 .setText(type); Date5 .setText(date);}
-                    case 6  -> { orderID6  = resultID; Type6 .setText(type); Date6 .setText(date);}
-                    case 7  -> { orderID7  = resultID; Type7 .setText(type); Date7 .setText(date);}
-                    case 8  -> { orderID8  = resultID; Type8 .setText(type); Date8 .setText(date);}
-                    case 9  -> { orderID9  = resultID; Type9 .setText(type); Date9 .setText(date);}
-                    case 10 -> { orderID10 = resultID; Type10.setText(type); Date10.setText(date);}
-                    case 11 -> { orderID11 = resultID; Type11.setText(type); Date11.setText(date);}
-                    case 12 -> { orderID12 = resultID; Type12.setText(type); Date12.setText(date);}
-                    case 13 -> { orderID13 = resultID; Type13.setText(type); Date13.setText(date);}
-                    case 14 -> { orderID14 = resultID; Type14.setText(type); Date14.setText(date);}
-                    case 15 -> { orderID15 = resultID; Type15.setText(type); Date15.setText(date);}
-                    case 16 -> { orderID16 = resultID; Type16.setText(type); Date16.setText(date);}
-                    case 17 -> { orderID17 = resultID; Type17.setText(type); Date17.setText(date);}
-                    case 18 -> { orderID18 = resultID; Type18.setText(type); Date18.setText(date);}
-                    case 19 -> { orderID19 = resultID; Type19.setText(type); Date19.setText(date);}
-                    case 20 -> { orderID20 = resultID; Type20.setText(type); Date20.setText(date);}
-                    case 21 -> { orderID21 = resultID; Type21.setText(type); Date21.setText(date);}
-                    default -> { }
+                    case 1 -> {
+                        orderID1 = resultID;
+                        Type1.setText(type);
+                        Date1.setText(date);
+                    }
+                    case 2 -> {
+                        orderID2 = resultID;
+                        Type2.setText(type);
+                        Date2.setText(date);
+                    }
+                    case 3 -> {
+                        orderID3 = resultID;
+                        Type3.setText(type);
+                        Date3.setText(date);
+                    }
+                    case 4 -> {
+                        orderID4 = resultID;
+                        Type4.setText(type);
+                        Date4.setText(date);
+                    }
+                    case 5 -> {
+                        orderID5 = resultID;
+                        Type5.setText(type);
+                        Date5.setText(date);
+                    }
+                    case 6 -> {
+                        orderID6 = resultID;
+                        Type6.setText(type);
+                        Date6.setText(date);
+                    }
+                    case 7 -> {
+                        orderID7 = resultID;
+                        Type7.setText(type);
+                        Date7.setText(date);
+                    }
+                    case 8 -> {
+                        orderID8 = resultID;
+                        Type8.setText(type);
+                        Date8.setText(date);
+                    }
+                    case 9 -> {
+                        orderID9 = resultID;
+                        Type9.setText(type);
+                        Date9.setText(date);
+                    }
+                    case 10 -> {
+                        orderID10 = resultID;
+                        Type10.setText(type);
+                        Date10.setText(date);
+                    }
+                    case 11 -> {
+                        orderID11 = resultID;
+                        Type11.setText(type);
+                        Date11.setText(date);
+                    }
+                    case 12 -> {
+                        orderID12 = resultID;
+                        Type12.setText(type);
+                        Date12.setText(date);
+                    }
+                    case 13 -> {
+                        orderID13 = resultID;
+                        Type13.setText(type);
+                        Date13.setText(date);
+                    }
+                    case 14 -> {
+                        orderID14 = resultID;
+                        Type14.setText(type);
+                        Date14.setText(date);
+                    }
+                    case 15 -> {
+                        orderID15 = resultID;
+                        Type15.setText(type);
+                        Date15.setText(date);
+                    }
+                    case 16 -> {
+                        orderID16 = resultID;
+                        Type16.setText(type);
+                        Date16.setText(date);
+                    }
+                    case 17 -> {
+                        orderID17 = resultID;
+                        Type17.setText(type);
+                        Date17.setText(date);
+                    }
+                    case 18 -> {
+                        orderID18 = resultID;
+                        Type18.setText(type);
+                        Date18.setText(date);
+                    }
+                    case 19 -> {
+                        orderID19 = resultID;
+                        Type19.setText(type);
+                        Date19.setText(date);
+                    }
+                    case 20 -> {
+                        orderID20 = resultID;
+                        Type20.setText(type);
+                        Date20.setText(date);
+                    }
+                    case 21 -> {
+                        orderID21 = resultID;
+                        Type21.setText(type);
+                        Date21.setText(date);
+                    }
+                    default -> {
+                    }
                 }
                 counter++;
             }
-            if (Type1.getText( ).equals("NAME")) { Type1.setText( "No Order"); viewOrder1.setDisable( true); Date1.setText( ""); }
-            if (Type2.getText( ).equals("NAME")) { Type2.setText( "No Order"); viewOrder2.setDisable( true); Date2.setText( ""); }
-            if (Type3.getText( ).equals("NAME")) { Type3.setText( "No Order"); viewOrder3.setDisable( true); Date3.setText( ""); }
-            if (Type4.getText( ).equals("NAME")) { Type4.setText( "No Order"); viewOrder4.setDisable( true); Date4.setText( ""); }
-            if (Type5.getText( ).equals("NAME")) { Type5.setText( "No Order"); viewOrder5.setDisable( true); Date5.setText( ""); }
-            if (Type6.getText( ).equals("NAME")) { Type6.setText( "No Order"); viewOrder6.setDisable( true); Date6.setText( ""); }
-            if (Type7.getText( ).equals("NAME")) { Type7.setText( "No Order"); viewOrder7.setDisable( true); Date7.setText( ""); }
-            if (Type8.getText( ).equals("NAME")) { Type8.setText( "No Order"); viewOrder8.setDisable( true); Date8.setText( ""); }
-            if (Type9.getText( ).equals("NAME")) { Type9.setText( "No Order"); viewOrder9.setDisable( true); Date9.setText( ""); }
-            if (Type10.getText().equals("NAME")) { Type10.setText("No Order"); viewOrder10.setDisable(true); Date10.setText(""); }
-            if (Type11.getText().equals("NAME")) { Type11.setText("No Order"); viewOrder11.setDisable(true); Date11.setText(""); }
-            if (Type12.getText().equals("NAME")) { Type12.setText("No Order"); viewOrder12.setDisable(true); Date12.setText(""); }
-            if (Type13.getText().equals("NAME")) { Type13.setText("No Order"); viewOrder13.setDisable(true); Date13.setText(""); }
-            if (Type14.getText().equals("NAME")) { Type14.setText("No Order"); viewOrder14.setDisable(true); Date14.setText(""); }
-            if (Type15.getText().equals("NAME")) { Type15.setText("No Order"); viewOrder15.setDisable(true); Date15.setText(""); }
-            if (Type16.getText().equals("NAME")) { Type16.setText("No Order"); viewOrder16.setDisable(true); Date16.setText(""); }
-            if (Type17.getText().equals("NAME")) { Type17.setText("No Order"); viewOrder17.setDisable(true); Date17.setText(""); }
-            if (Type18.getText().equals("NAME")) { Type18.setText("No Order"); viewOrder18.setDisable(true); Date18.setText(""); }
-            if (Type19.getText().equals("NAME")) { Type19.setText("No Order"); viewOrder19.setDisable(true); Date19.setText(""); }
-            if (Type20.getText().equals("NAME")) { Type20.setText("No Order"); viewOrder20.setDisable(true); Date20.setText(""); }
-            if (Type21.getText().equals("NAME")) { Type21.setText("No Order"); viewOrder21.setDisable(true); Date21.setText(""); }
+            if (Type1.getText().equals("NAME")) {
+                Type1.setText("No Order");
+                viewOrder1.setDisable(true);
+                Date1.setText("");
+            }
+            if (Type2.getText().equals("NAME")) {
+                Type2.setText("No Order");
+                viewOrder2.setDisable(true);
+                Date2.setText("");
+            }
+            if (Type3.getText().equals("NAME")) {
+                Type3.setText("No Order");
+                viewOrder3.setDisable(true);
+                Date3.setText("");
+            }
+            if (Type4.getText().equals("NAME")) {
+                Type4.setText("No Order");
+                viewOrder4.setDisable(true);
+                Date4.setText("");
+            }
+            if (Type5.getText().equals("NAME")) {
+                Type5.setText("No Order");
+                viewOrder5.setDisable(true);
+                Date5.setText("");
+            }
+            if (Type6.getText().equals("NAME")) {
+                Type6.setText("No Order");
+                viewOrder6.setDisable(true);
+                Date6.setText("");
+            }
+            if (Type7.getText().equals("NAME")) {
+                Type7.setText("No Order");
+                viewOrder7.setDisable(true);
+                Date7.setText("");
+            }
+            if (Type8.getText().equals("NAME")) {
+                Type8.setText("No Order");
+                viewOrder8.setDisable(true);
+                Date8.setText("");
+            }
+            if (Type9.getText().equals("NAME")) {
+                Type9.setText("No Order");
+                viewOrder9.setDisable(true);
+                Date9.setText("");
+            }
+            if (Type10.getText().equals("NAME")) {
+                Type10.setText("No Order");
+                viewOrder10.setDisable(true);
+                Date10.setText("");
+            }
+            if (Type11.getText().equals("NAME")) {
+                Type11.setText("No Order");
+                viewOrder11.setDisable(true);
+                Date11.setText("");
+            }
+            if (Type12.getText().equals("NAME")) {
+                Type12.setText("No Order");
+                viewOrder12.setDisable(true);
+                Date12.setText("");
+            }
+            if (Type13.getText().equals("NAME")) {
+                Type13.setText("No Order");
+                viewOrder13.setDisable(true);
+                Date13.setText("");
+            }
+            if (Type14.getText().equals("NAME")) {
+                Type14.setText("No Order");
+                viewOrder14.setDisable(true);
+                Date14.setText("");
+            }
+            if (Type15.getText().equals("NAME")) {
+                Type15.setText("No Order");
+                viewOrder15.setDisable(true);
+                Date15.setText("");
+            }
+            if (Type16.getText().equals("NAME")) {
+                Type16.setText("No Order");
+                viewOrder16.setDisable(true);
+                Date16.setText("");
+            }
+            if (Type17.getText().equals("NAME")) {
+                Type17.setText("No Order");
+                viewOrder17.setDisable(true);
+                Date17.setText("");
+            }
+            if (Type18.getText().equals("NAME")) {
+                Type18.setText("No Order");
+                viewOrder18.setDisable(true);
+                Date18.setText("");
+            }
+            if (Type19.getText().equals("NAME")) {
+                Type19.setText("No Order");
+                viewOrder19.setDisable(true);
+                Date19.setText("");
+            }
+            if (Type20.getText().equals("NAME")) {
+                Type20.setText("No Order");
+                viewOrder20.setDisable(true);
+                Date20.setText("");
+            }
+            if (Type21.getText().equals("NAME")) {
+                Type21.setText("No Order");
+                viewOrder21.setDisable(true);
+                Date21.setText("");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -232,7 +395,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -241,9 +403,7 @@ public class CustomerOrderHistoryController {
     }
 
 
-
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -269,7 +429,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -295,7 +454,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -321,7 +479,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -347,7 +504,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -373,7 +529,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -399,7 +554,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -425,7 +579,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -451,7 +604,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -477,7 +629,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -503,7 +654,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -529,7 +679,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -555,7 +704,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -581,7 +729,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -607,7 +754,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -633,7 +779,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -659,7 +804,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -685,7 +829,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -711,7 +854,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -737,7 +879,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML
@@ -763,7 +904,6 @@ public class CustomerOrderHistoryController {
     }
 
     /**
-     *
      * @param actionEvent add info
      */
     @FXML

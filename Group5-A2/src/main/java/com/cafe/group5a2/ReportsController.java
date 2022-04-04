@@ -36,9 +36,8 @@ public class ReportsController {
     public Label customerOrdersVal;
     public Button Refresh;
     public Button GoBack;
-    private String username;
-
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
+    private String username;
 
     public ReportsController() throws SQLException {
     }
@@ -69,7 +68,7 @@ public class ReportsController {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 hourAvgOrders.setText(String.valueOf(rs.getInt("count") + "  avg"));
-                OrderHour.setText(String.valueOf(rs.getInt("hour")));
+                OrderHour.setText(String.valueOf("24H: " + rs.getInt("hour")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -135,7 +134,7 @@ public class ReportsController {
         String query = "SELECT * FROM items_separate_orders";
         try (Statement stmt = con.createStatement();) {
             ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()) {
+            while (rs.next()) {
                 a.add(rs.getString("1st"));
                 a.add(rs.getString("2nd"));
                 a.add(rs.getString("3rd"));
@@ -179,7 +178,7 @@ public class ReportsController {
         String query = "SELECT item FROM menu";
         try (Statement stmt = con.createStatement();) {
             ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()) {
+            while (rs.next()) {
                 a.add(rs.getString("item"));
             }
         } catch (SQLException e) {
@@ -308,8 +307,8 @@ public class ReportsController {
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
             mCont.setUserText(username);
             stage.setTitle("Manager Homepage");
-            stage.setY(sBound.getHeight() - (sBound.getHeight()/1.25));
-            stage.setX(sBound.getWidth() - (sBound.getWidth()/1.25));
+            stage.setY(sBound.getHeight() - (sBound.getHeight() / 1.25));
+            stage.setX(sBound.getWidth() - (sBound.getWidth() / 1.25));
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");

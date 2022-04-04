@@ -1,16 +1,13 @@
 package com.cafe.group5a2;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,8 +16,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
-
-import static java.lang.Integer.parseInt;
 
 public class CustomerViewOrderController {
 
@@ -90,10 +85,8 @@ public class CustomerViewOrderController {
     public HBox h20i;
 
     public Button goBack;
-
-    private String username;
-
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
+    private String username;
 
     public CustomerViewOrderController() throws SQLException {
     }
@@ -172,7 +165,7 @@ public class CustomerViewOrderController {
                     System.out.println(Arrays.toString(items));
                     System.out.println(Arrays.toString(r));
 
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1 - 1) {
                         i++;
                     }
                     count1 = i - previousPointer;
@@ -181,7 +174,7 @@ public class CustomerViewOrderController {
                     System.out.println(count1);
 
                     k = 1;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1 - 1) {
                         i++;
                     }
                     count2 = i - previousPointer;
@@ -190,7 +183,7 @@ public class CustomerViewOrderController {
                     System.out.println(count2);
 
                     k = 2;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1 - 1) {
                         i++;
                     }
                     count3 = i - previousPointer;
@@ -199,7 +192,7 @@ public class CustomerViewOrderController {
                     System.out.println(count3);
 
                     k = 3;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count4 = i - previousPointer;
@@ -208,97 +201,97 @@ public class CustomerViewOrderController {
                     System.out.println(count4);
 
                     k = 4;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count5 = i - previousPointer;
                     previousPointer = i;
                     k = 5;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count6 = i - previousPointer;
                     previousPointer = i;
                     k = 6;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count7 = i - previousPointer;
                     previousPointer = i;
                     k = 7;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count8 = i - previousPointer;
                     previousPointer = i;
                     k = 8;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count9 = i - previousPointer;
                     previousPointer = i;
                     k = 9;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count10 = i - previousPointer;
                     previousPointer = i;
                     k = 10;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count11 = i - previousPointer;
                     previousPointer = i;
                     k = 11;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count12 = i - previousPointer;
                     previousPointer = i;
                     k = 12;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count13 = i - previousPointer;
                     previousPointer = i;
                     k = 13;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count14 = i - previousPointer;
                     previousPointer = i;
                     k = 14;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count15 = i - previousPointer;
                     previousPointer = i;
                     k = 15;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count16 = i - previousPointer;
                     previousPointer = i;
                     k = 16;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count17 = i - previousPointer;
                     previousPointer = i;
                     k = 17;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count18 = i - previousPointer;
                     previousPointer = i;
                     k = 18;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count19 = i - previousPointer;
                     previousPointer = i;
                     k = 19;
-                    while (k < items.length && items[k].equals(r[i]) && i < r.length-1) {
+                    while (k < items.length && items[k].equals(r[i]) && i < r.length - 1) {
                         i++;
                     }
                     count20 = i - previousPointer;
@@ -310,46 +303,86 @@ public class CustomerViewOrderController {
                 int length = items.length - 1;
                 int j = 0;
                 while (j < length) {
-                    if (j == 0){ il1.setText(items[j]);
-                        ql1.setText(String.valueOf(count1));}
-                    if (j == 1) {il2.setText(items[j]);
-                        ql2.setText(String.valueOf(count2));}
-                    if (j == 2) {il3.setText(items[j]);
-                        ql3.setText(String.valueOf(count3));}
-                    if (j == 3) {il4.setText(items[j]);
-                        ql4.setText(String.valueOf(count4));}
-                    if (j == 4) {il5.setText(items[j]);
-                        ql5.setText(String.valueOf(count5));}
-                    if (j == 5) {il6.setText(items[j]);
-                        ql6.setText(String.valueOf(count6));}
-                    if (j == 6) {il7.setText(items[j]);
-                        ql7.setText(String.valueOf(count7));}
-                    if (j == 7) {il8.setText(items[j]);
-                        ql8.setText(String.valueOf(count8));}
-                    if (j == 8) {il9.setText(items[j]);
-                        ql9.setText(String.valueOf(count9));}
-                    if (j == 9) {il10.setText(items[j]);
-                        ql10.setText(String.valueOf(count10));}
-                    if (j == 10) {il11.setText(items[j]);
-                        ql11.setText(String.valueOf(count11));}
-                    if (j == 11) {il12.setText(items[j]);
-                        ql12.setText(String.valueOf(count12));}
-                    if (j == 12){ il13.setText(items[j]);
-                        ql13.setText(String.valueOf(count13));}
-                    if (j == 13) {il14.setText(items[j]);
-                        ql14.setText(String.valueOf(count14));}
-                    if (j == 14) {il15.setText(items[j]);
-                        ql15.setText(String.valueOf(count15));}
-                    if (j == 15) {il16.setText(items[j]);
-                        ql16.setText(String.valueOf(count16));}
-                    if (j == 16) {il17.setText(items[j]);
-                        ql17.setText(String.valueOf(count17));}
-                    if (j == 17) {il18.setText(items[j]);
-                        ql18.setText(String.valueOf(count18));}
-                    if (j == 18) {il19.setText(items[j]);
-                        ql19.setText(String.valueOf(count19));}
-                    if (j == 19) {il20.setText(items[j]);
-                        ql20.setText(String.valueOf(count20));}
+                    if (j == 0) {
+                        il1.setText(items[j]);
+                        ql1.setText(String.valueOf(count1));
+                    }
+                    if (j == 1) {
+                        il2.setText(items[j]);
+                        ql2.setText(String.valueOf(count2));
+                    }
+                    if (j == 2) {
+                        il3.setText(items[j]);
+                        ql3.setText(String.valueOf(count3));
+                    }
+                    if (j == 3) {
+                        il4.setText(items[j]);
+                        ql4.setText(String.valueOf(count4));
+                    }
+                    if (j == 4) {
+                        il5.setText(items[j]);
+                        ql5.setText(String.valueOf(count5));
+                    }
+                    if (j == 5) {
+                        il6.setText(items[j]);
+                        ql6.setText(String.valueOf(count6));
+                    }
+                    if (j == 6) {
+                        il7.setText(items[j]);
+                        ql7.setText(String.valueOf(count7));
+                    }
+                    if (j == 7) {
+                        il8.setText(items[j]);
+                        ql8.setText(String.valueOf(count8));
+                    }
+                    if (j == 8) {
+                        il9.setText(items[j]);
+                        ql9.setText(String.valueOf(count9));
+                    }
+                    if (j == 9) {
+                        il10.setText(items[j]);
+                        ql10.setText(String.valueOf(count10));
+                    }
+                    if (j == 10) {
+                        il11.setText(items[j]);
+                        ql11.setText(String.valueOf(count11));
+                    }
+                    if (j == 11) {
+                        il12.setText(items[j]);
+                        ql12.setText(String.valueOf(count12));
+                    }
+                    if (j == 12) {
+                        il13.setText(items[j]);
+                        ql13.setText(String.valueOf(count13));
+                    }
+                    if (j == 13) {
+                        il14.setText(items[j]);
+                        ql14.setText(String.valueOf(count14));
+                    }
+                    if (j == 14) {
+                        il15.setText(items[j]);
+                        ql15.setText(String.valueOf(count15));
+                    }
+                    if (j == 15) {
+                        il16.setText(items[j]);
+                        ql16.setText(String.valueOf(count16));
+                    }
+                    if (j == 16) {
+                        il17.setText(items[j]);
+                        ql17.setText(String.valueOf(count17));
+                    }
+                    if (j == 17) {
+                        il18.setText(items[j]);
+                        ql18.setText(String.valueOf(count18));
+                    }
+                    if (j == 18) {
+                        il19.setText(items[j]);
+                        ql19.setText(String.valueOf(count19));
+                    }
+                    if (j == 19) {
+                        il20.setText(items[j]);
+                        ql20.setText(String.valueOf(count20));
+                    }
                     j++;
                 }
                 double paneSize = 890;

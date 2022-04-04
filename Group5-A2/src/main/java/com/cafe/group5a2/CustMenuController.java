@@ -27,97 +27,97 @@ public class CustMenuController {
     public Label pl1;
     public TextField q1;
     public Label d1;
-    
+
     public Label il2;
     public Label pl2;
     public TextField q2;
     public Label d2;
-    
+
     public Label il3;
     public Label pl3;
     public TextField q3;
     public Label d3;
-    
+
     public Label il4;
     public Label pl4;
     public TextField q4;
     public Label d4;
-    
+
     public Label il5;
     public Label pl5;
     public TextField q5;
     public Label d5;
-    
+
     public Label il6;
     public Label pl6;
     public TextField q6;
     public Label d6;
-    
+
     public Label il7;
     public Label pl7;
     public TextField q7;
     public Label d7;
-    
+
     public Label il8;
     public Label pl8;
     public TextField q8;
     public Label d8;
-    
+
     public Label il9;
     public Label pl9;
     public TextField q9;
     public Label d9;
-    
+
     public Label il10;
     public Label pl10;
     public TextField q10;
     public Label d10;
-    
+
     public Label il11;
     public Label pl11;
     public TextField q11;
     public Label d11;
-    
+
     public Label il12;
     public Label pl12;
     public TextField q12;
     public Label d12;
-    
+
     public Label il13;
     public Label pl13;
     public TextField q13;
     public Label d13;
-    
+
     public Label il14;
     public Label pl14;
     public TextField q14;
     public Label d14;
-    
+
     public Label il15;
     public Label pl15;
     public TextField q15;
     public Label d15;
-    
+
     public Label il16;
     public Label pl16;
     public TextField q16;
     public Label d16;
-    
+
     public Label il17;
     public Label pl17;
     public TextField q17;
     public Label d17;
-    
+
     public Label il18;
     public Label pl18;
     public TextField q18;
     public Label d18;
-    
+
     public Label il19;
     public Label pl19;
     public TextField q19;
     public Label d19;
-    
+
     public Label il20;
     public Label pl20;
     public TextField q20;
@@ -172,11 +172,8 @@ public class CustMenuController {
     public Button backButt;
     public HBox hTbox;
     public Label orderSubL;
-
-
-    private String username;
-
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
+    private String username;
 
     public CustMenuController() throws SQLException {
     }
@@ -198,33 +195,53 @@ public class CustMenuController {
 
         int counter = 0;
         while (counter <= 20) {
-            if (!d1.getText().isEmpty()) counter++; else break;
-            if (!d2.getText().isEmpty()) counter++; else break;
-            if (!d3.getText().isEmpty()) counter++; else break;
-            if (!d4.getText().isEmpty()) counter++; else break;
-            if (!d5.getText().isEmpty()) counter++; else break;
-            if (!d6.getText().isEmpty()) counter++; else break;
-            if (!d7.getText().isEmpty()) counter++; else break;
-            if (!d8.getText().isEmpty()) counter++; else break;
-            if (!d9.getText().isEmpty()) counter++; else break;
-            if (!d10.getText().isEmpty()) counter++;else break;
-            if (!d11.getText().isEmpty()) counter++;else break;
-            if (!d12.getText().isEmpty()) counter++;else break;
-            if (!d13.getText().isEmpty()) counter++;else break;
-            if (!d14.getText().isEmpty()) counter++;else break;
-            if (!d15.getText().isEmpty()) counter++;else break;
-            if (!d16.getText().isEmpty()) counter++;else break;
-            if (!d17.getText().isEmpty()) counter++;else break;
-            if (!d18.getText().isEmpty()) counter++;else break;
-            if (!d19.getText().isEmpty()) counter++;else break;
-            if (!d20.getText().isEmpty()) counter++;else break;
+            if (!d1.getText().isEmpty()) counter++;
+            else break;
+            if (!d2.getText().isEmpty()) counter++;
+            else break;
+            if (!d3.getText().isEmpty()) counter++;
+            else break;
+            if (!d4.getText().isEmpty()) counter++;
+            else break;
+            if (!d5.getText().isEmpty()) counter++;
+            else break;
+            if (!d6.getText().isEmpty()) counter++;
+            else break;
+            if (!d7.getText().isEmpty()) counter++;
+            else break;
+            if (!d8.getText().isEmpty()) counter++;
+            else break;
+            if (!d9.getText().isEmpty()) counter++;
+            else break;
+            if (!d10.getText().isEmpty()) counter++;
+            else break;
+            if (!d11.getText().isEmpty()) counter++;
+            else break;
+            if (!d12.getText().isEmpty()) counter++;
+            else break;
+            if (!d13.getText().isEmpty()) counter++;
+            else break;
+            if (!d14.getText().isEmpty()) counter++;
+            else break;
+            if (!d15.getText().isEmpty()) counter++;
+            else break;
+            if (!d16.getText().isEmpty()) counter++;
+            else break;
+            if (!d17.getText().isEmpty()) counter++;
+            else break;
+            if (!d18.getText().isEmpty()) counter++;
+            else break;
+            if (!d19.getText().isEmpty()) counter++;
+            else break;
+            if (!d20.getText().isEmpty()) counter++;
+            else break;
         }
         String itemList = getOrderList(counter);
         int id = getUserId(username);
         String type = "takeaway";
-        if (       !(q1 .getText().isEmpty()) || !(q2 .getText().isEmpty()) || !(q3 .getText().isEmpty()) || !(q4 .getText().isEmpty())
-                || !(q5 .getText().isEmpty()) || !(q6 .getText().isEmpty()) || !(q7 .getText().isEmpty()) || !(q8 .getText().isEmpty())
-                || !(q9 .getText().isEmpty()) || !(q10.getText().isEmpty()) || !(q11.getText().isEmpty()) || !(q12.getText().isEmpty())
+        if (!(q1.getText().isEmpty()) || !(q2.getText().isEmpty()) || !(q3.getText().isEmpty()) || !(q4.getText().isEmpty())
+                || !(q5.getText().isEmpty()) || !(q6.getText().isEmpty()) || !(q7.getText().isEmpty()) || !(q8.getText().isEmpty())
+                || !(q9.getText().isEmpty()) || !(q10.getText().isEmpty()) || !(q11.getText().isEmpty()) || !(q12.getText().isEmpty())
                 || !(q13.getText().isEmpty()) || !(q14.getText().isEmpty()) || !(q15.getText().isEmpty()) || !(q16.getText().isEmpty())
                 || !(q17.getText().isEmpty()) || !(q18.getText().isEmpty()) || !(q19.getText().isEmpty()) || !(q20.getText().isEmpty())) {
             String query =
@@ -257,37 +274,57 @@ public class CustMenuController {
     }
 
     @FXML
-    public void onDeliveryButtonClick(ActionEvent actionEvent) throws InterruptedException{
+    public void onDeliveryButtonClick(ActionEvent actionEvent) throws InterruptedException {
 
         int counter = 0;
         while (counter <= 20) {
-            if (!d1.getText().isEmpty()) counter++; else break;
-            if (!d2.getText().isEmpty()) counter++; else break;
-            if (!d3.getText().isEmpty()) counter++; else break;
-            if (!d4.getText().isEmpty()) counter++; else break;
-            if (!d5.getText().isEmpty()) counter++; else break;
-            if (!d6.getText().isEmpty()) counter++; else break;
-            if (!d7.getText().isEmpty()) counter++; else break;
-            if (!d8.getText().isEmpty()) counter++; else break;
-            if (!d9.getText().isEmpty()) counter++; else break;
-            if (!d10.getText().isEmpty()) counter++;else break;
-            if (!d11.getText().isEmpty()) counter++;else break;
-            if (!d12.getText().isEmpty()) counter++;else break;
-            if (!d13.getText().isEmpty()) counter++;else break;
-            if (!d14.getText().isEmpty()) counter++;else break;
-            if (!d15.getText().isEmpty()) counter++;else break;
-            if (!d16.getText().isEmpty()) counter++;else break;
-            if (!d17.getText().isEmpty()) counter++;else break;
-            if (!d18.getText().isEmpty()) counter++;else break;
-            if (!d19.getText().isEmpty()) counter++;else break;
-            if (!d20.getText().isEmpty()) counter++;else break;
+            if (!d1.getText().isEmpty()) counter++;
+            else break;
+            if (!d2.getText().isEmpty()) counter++;
+            else break;
+            if (!d3.getText().isEmpty()) counter++;
+            else break;
+            if (!d4.getText().isEmpty()) counter++;
+            else break;
+            if (!d5.getText().isEmpty()) counter++;
+            else break;
+            if (!d6.getText().isEmpty()) counter++;
+            else break;
+            if (!d7.getText().isEmpty()) counter++;
+            else break;
+            if (!d8.getText().isEmpty()) counter++;
+            else break;
+            if (!d9.getText().isEmpty()) counter++;
+            else break;
+            if (!d10.getText().isEmpty()) counter++;
+            else break;
+            if (!d11.getText().isEmpty()) counter++;
+            else break;
+            if (!d12.getText().isEmpty()) counter++;
+            else break;
+            if (!d13.getText().isEmpty()) counter++;
+            else break;
+            if (!d14.getText().isEmpty()) counter++;
+            else break;
+            if (!d15.getText().isEmpty()) counter++;
+            else break;
+            if (!d16.getText().isEmpty()) counter++;
+            else break;
+            if (!d17.getText().isEmpty()) counter++;
+            else break;
+            if (!d18.getText().isEmpty()) counter++;
+            else break;
+            if (!d19.getText().isEmpty()) counter++;
+            else break;
+            if (!d20.getText().isEmpty()) counter++;
+            else break;
         }
         String itemList = getOrderList(counter);
         int id = getUserId(username);
         String type = "delivery";
-        if (       !(q1 .getText().isEmpty()) || !(q2 .getText().isEmpty()) || !(q3 .getText().isEmpty()) || !(q4 .getText().isEmpty())
-                || !(q5 .getText().isEmpty()) || !(q6 .getText().isEmpty()) || !(q7 .getText().isEmpty()) || !(q8 .getText().isEmpty())
-                || !(q9 .getText().isEmpty()) || !(q10.getText().isEmpty()) || !(q11.getText().isEmpty()) || !(q12.getText().isEmpty())
+        if (!(q1.getText().isEmpty()) || !(q2.getText().isEmpty()) || !(q3.getText().isEmpty()) || !(q4.getText().isEmpty())
+                || !(q5.getText().isEmpty()) || !(q6.getText().isEmpty()) || !(q7.getText().isEmpty()) || !(q8.getText().isEmpty())
+                || !(q9.getText().isEmpty()) || !(q10.getText().isEmpty()) || !(q11.getText().isEmpty()) || !(q12.getText().isEmpty())
                 || !(q13.getText().isEmpty()) || !(q14.getText().isEmpty()) || !(q15.getText().isEmpty()) || !(q16.getText().isEmpty())
                 || !(q17.getText().isEmpty()) || !(q18.getText().isEmpty()) || !(q19.getText().isEmpty()) || !(q20.getText().isEmpty())) {
             String query =
@@ -334,151 +371,151 @@ public class CustMenuController {
 
     public String getOrderList(int counter) {
         int i = counter;
-        int value1 = 0, value2 = 0, value3 =0,value4 = 0, value5 = 0, value6 =0,value7 = 0, value8 = 0, value9 =0,value10 = 0, value11 = 0, value12 =0,value13 = 0, value14 = 0, value15 =0,value16 = 0, value17 = 0, value18 =0,value19=0,value20=0;
+        int value1 = 0, value2 = 0, value3 = 0, value4 = 0, value5 = 0, value6 = 0, value7 = 0, value8 = 0, value9 = 0, value10 = 0, value11 = 0, value12 = 0, value13 = 0, value14 = 0, value15 = 0, value16 = 0, value17 = 0, value18 = 0, value19 = 0, value20 = 0;
         StringBuilder itemList = new StringBuilder();
         String c = ",";
         String query = "SELECT * FROM menu ORDER BY category DESC";
-            //get q1 string, i--;
-            //get q2 string, i--;
+        //get q1 string, i--;
+        //get q2 string, i--;
         ResultSet rs = null;
         try (Statement stmt = con.createStatement()) {
             rs = stmt.executeQuery(query);
             while (rs.next() && i > 0) {
-                if (!q1.getText().isEmpty() && i==counter){
-                    value1= Integer.parseInt( q1.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q1.getText().isEmpty() && i == counter) {
+                    value1 = Integer.parseInt(q1.getText().replaceAll("[^\\d.]", "").trim());
                     while (value1 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value1--;
                     }
                 }
-                if (!q2.getText().isEmpty() && i==counter-1){
-                    value2= Integer.parseInt( q2.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q2.getText().isEmpty() && i == counter - 1) {
+                    value2 = Integer.parseInt(q2.getText().replaceAll("[^\\d.]", "").trim());
                     while (value2 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value2--;
                     }
                 }
-                if (!q3.getText().isEmpty() && i==counter-2){
-                    value3= Integer.parseInt( q3.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q3.getText().isEmpty() && i == counter - 2) {
+                    value3 = Integer.parseInt(q3.getText().replaceAll("[^\\d.]", "").trim());
                     while (value3 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value3--;
                     }
                 }
-                if (!q4.getText().isEmpty() && i==counter-3){
-                    value4= Integer.parseInt( q4.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q4.getText().isEmpty() && i == counter - 3) {
+                    value4 = Integer.parseInt(q4.getText().replaceAll("[^\\d.]", "").trim());
                     while (value4 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value4--;
                     }
                 }
-                if (!q5.getText().isEmpty() && i==counter-4){
-                    value5= Integer.parseInt( q5.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q5.getText().isEmpty() && i == counter - 4) {
+                    value5 = Integer.parseInt(q5.getText().replaceAll("[^\\d.]", "").trim());
                     while (value5 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value5--;
                     }
                 }
-                if (!q6.getText().isEmpty() && i==counter-5){
-                    value6= Integer.parseInt( q6.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q6.getText().isEmpty() && i == counter - 5) {
+                    value6 = Integer.parseInt(q6.getText().replaceAll("[^\\d.]", "").trim());
                     while (value6 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value6--;
                     }
                 }
-                if (!q7.getText().isEmpty() && i==counter-6){
-                    value7= Integer.parseInt( q7.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q7.getText().isEmpty() && i == counter - 6) {
+                    value7 = Integer.parseInt(q7.getText().replaceAll("[^\\d.]", "").trim());
                     while (value7 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value7--;
                     }
                 }
-                if (!q8.getText().isEmpty() && i==counter-7){
-                    value8= Integer.parseInt( q8.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q8.getText().isEmpty() && i == counter - 7) {
+                    value8 = Integer.parseInt(q8.getText().replaceAll("[^\\d.]", "").trim());
                     while (value8 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value8--;
                     }
                 }
-                if (!q9.getText().isEmpty() && i==counter-8){
-                    value9= Integer.parseInt( q9.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q9.getText().isEmpty() && i == counter - 8) {
+                    value9 = Integer.parseInt(q9.getText().replaceAll("[^\\d.]", "").trim());
                     while (value9 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value9--;
                     }
                 }
-                if (!q10.getText().isEmpty() && i==counter-9){
-                    value10=Integer.parseInt(q10.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q10.getText().isEmpty() && i == counter - 9) {
+                    value10 = Integer.parseInt(q10.getText().replaceAll("[^\\d.]", "").trim());
                     while (value10 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value10--;
                     }
                 }
-                if (!q11.getText().isEmpty() && i==counter-10){
-                    value11=Integer.parseInt(q11.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q11.getText().isEmpty() && i == counter - 10) {
+                    value11 = Integer.parseInt(q11.getText().replaceAll("[^\\d.]", "").trim());
                     while (value11 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value11--;
                     }
                 }
-                if (!q12.getText().isEmpty() && i==counter-11) {
-                    value12=Integer.parseInt(q12.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q12.getText().isEmpty() && i == counter - 11) {
+                    value12 = Integer.parseInt(q12.getText().replaceAll("[^\\d.]", "").trim());
                     while (value12 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value12--;
                     }
                 }
-                if (!q13.getText().isEmpty() && i==counter-12) {
-                    value13=Integer.parseInt(q13.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q13.getText().isEmpty() && i == counter - 12) {
+                    value13 = Integer.parseInt(q13.getText().replaceAll("[^\\d.]", "").trim());
                     while (value13 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value13--;
                     }
                 }
-                if (!q14.getText().isEmpty() && i==counter-13) {
-                    value14=Integer.parseInt(q14.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q14.getText().isEmpty() && i == counter - 13) {
+                    value14 = Integer.parseInt(q14.getText().replaceAll("[^\\d.]", "").trim());
                     while (value14 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value14--;
                     }
                 }
-                if (!q15.getText().isEmpty() && i==counter-14) {
-                    value15=Integer.parseInt(q15.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q15.getText().isEmpty() && i == counter - 14) {
+                    value15 = Integer.parseInt(q15.getText().replaceAll("[^\\d.]", "").trim());
                     while (value15 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value15--;
                     }
                 }
-                if (!q16.getText().isEmpty() && i==counter-15) {
-                    value16=Integer.parseInt(q16.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q16.getText().isEmpty() && i == counter - 15) {
+                    value16 = Integer.parseInt(q16.getText().replaceAll("[^\\d.]", "").trim());
                     while (value16 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value16--;
                     }
                 }
-                if (!q17.getText().isEmpty() && i==counter-16) {
-                    value17=Integer.parseInt(q17.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q17.getText().isEmpty() && i == counter - 16) {
+                    value17 = Integer.parseInt(q17.getText().replaceAll("[^\\d.]", "").trim());
                     while (value17 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value17--;
                     }
                 }
-                if (!q18.getText().isEmpty() && i==counter-17) {
-                    value18=Integer.parseInt(q18.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q18.getText().isEmpty() && i == counter - 17) {
+                    value18 = Integer.parseInt(q18.getText().replaceAll("[^\\d.]", "").trim());
                     while (value18 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value18--;
                     }
                 }
-                if (!q19.getText().isEmpty() && i==counter-18) {
-                    value19=Integer.parseInt(q19.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q19.getText().isEmpty() && i == counter - 18) {
+                    value19 = Integer.parseInt(q19.getText().replaceAll("[^\\d.]", "").trim());
                     while (value19 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value19--;
                     }
                 }
-                if (!q20.getText().isEmpty() && i==counter-19) {
-                    value20=Integer.parseInt(q20.getText().replaceAll("[^\\d.]", "").trim());
+                if (!q20.getText().isEmpty() && i == counter - 19) {
+                    value20 = Integer.parseInt(q20.getText().replaceAll("[^\\d.]", "").trim());
                     while (value20 > 0) {
                         itemList.append(rs.getString("item")).append(c);
                         value20--;
@@ -500,10 +537,10 @@ public class CustMenuController {
         try (Statement stmt = con.createStatement()) {
             rs = stmt.executeQuery(query);
             int i = 0;
-            while(rs.next()) {
+            while (rs.next()) {
                 val = rs.getString("item");
                 i++;
-                if (i==num) {
+                if (i == num) {
                     return val;
                 }
             }
@@ -549,10 +586,10 @@ public class CustMenuController {
         try (Statement stmt = con.createStatement()) {
             rs = stmt.executeQuery(query);
             int i = 0;
-            while(rs.next()) {
+            while (rs.next()) {
                 val = rs.getString("price");
                 i++;
-                if (i==num) {
+                if (i == num) {
                     return val;
                 }
             }
@@ -597,10 +634,10 @@ public class CustMenuController {
         try (Statement stmt = con.createStatement()) {
             rs = stmt.executeQuery(query);
             int i = 0;
-            while(rs.next()) {
+            while (rs.next()) {
                 val = rs.getString("description");
                 i++;
-                if (i==num) {
+                if (i == num) {
                     return val;
                 }
             }
@@ -932,12 +969,12 @@ public class CustMenuController {
             vBox.setPrefHeight(3673 - scaleV);
             aPane.setPrefHeight(3840 - scaleA);
             if (d19.getText().equals("")) {
-                vBox.setPrefHeight(3673 - (scaleV*2.0));
-                aPane.setPrefHeight(3840 - (scaleA*2.0));
+                vBox.setPrefHeight(3673 - (scaleV * 2.0));
+                aPane.setPrefHeight(3840 - (scaleA * 2.0));
                 if (d18.getText().equals("")) {
-                    vBox.setPrefHeight(3673 - (scaleV*3.0));
-                    aPane.setPrefHeight(3840 - (scaleA*3.0));
-                    if(d17.getText().equals("")) {
+                    vBox.setPrefHeight(3673 - (scaleV * 3.0));
+                    aPane.setPrefHeight(3840 - (scaleA * 3.0));
+                    if (d17.getText().equals("")) {
                         vBox.setPrefHeight(3673 - (scaleV * 4.0));
                         aPane.setPrefHeight(3840 - (scaleA * 4.0));
                         if (d16.getText().equals("")) {
@@ -990,26 +1027,146 @@ public class CustMenuController {
     private void updateTotal() {
         double t = 0.00;
         double add = 0.00;
-        try {if (!(pl1 .getText().isEmpty() && !(q1 .getText().isEmpty())) ) { add = Double.parseDouble(pl1 .getText()) * Double.parseDouble(q1 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl2 .getText().isEmpty() && !(q2 .getText().isEmpty())) ) { add = Double.parseDouble(pl2 .getText()) * Double.parseDouble(q2 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl3 .getText().isEmpty() && !(q3 .getText().isEmpty())) ) { add = Double.parseDouble(pl3 .getText()) * Double.parseDouble(q3 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl4 .getText().isEmpty() && !(q4 .getText().isEmpty())) ) { add = Double.parseDouble(pl4 .getText()) * Double.parseDouble(q4 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl5 .getText().isEmpty() && !(q5 .getText().isEmpty())) ) { add = Double.parseDouble(pl5 .getText()) * Double.parseDouble(q5 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl6 .getText().isEmpty() && !(q6 .getText().isEmpty())) ) { add = Double.parseDouble(pl6 .getText()) * Double.parseDouble(q6 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl7 .getText().isEmpty() && !(q7 .getText().isEmpty())) ) { add = Double.parseDouble(pl7 .getText()) * Double.parseDouble(q7 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl8 .getText().isEmpty() && !(q8 .getText().isEmpty())) ) { add = Double.parseDouble(pl8 .getText()) * Double.parseDouble(q8 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl9 .getText().isEmpty() && !(q9 .getText().isEmpty())) ) { add = Double.parseDouble(pl9 .getText()) * Double.parseDouble(q9 .getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl10.getText().isEmpty() && !(q10.getText().isEmpty())) ) { add = Double.parseDouble(pl10.getText()) * Double.parseDouble(q10.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl11.getText().isEmpty() && !(q11.getText().isEmpty())) ) { add = Double.parseDouble(pl11.getText()) * Double.parseDouble(q11.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl12.getText().isEmpty() && !(q12.getText().isEmpty())) ) { add = Double.parseDouble(pl12.getText()) * Double.parseDouble(q12.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl13.getText().isEmpty() && !(q13.getText().isEmpty())) ) { add = Double.parseDouble(pl13.getText()) * Double.parseDouble(q13.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl14.getText().isEmpty() && !(q14.getText().isEmpty())) ) { add = Double.parseDouble(pl14.getText()) * Double.parseDouble(q14.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl15.getText().isEmpty() && !(q15.getText().isEmpty())) ) { add = Double.parseDouble(pl15.getText()) * Double.parseDouble(q15.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl16.getText().isEmpty() && !(q16.getText().isEmpty())) ) { add = Double.parseDouble(pl16.getText()) * Double.parseDouble(q16.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl17.getText().isEmpty() && !(q17.getText().isEmpty())) ) { add = Double.parseDouble(pl17.getText()) * Double.parseDouble(q17.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl18.getText().isEmpty() && !(q18.getText().isEmpty())) ) { add = Double.parseDouble(pl18.getText()) * Double.parseDouble(q18.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl19.getText().isEmpty() && !(q19.getText().isEmpty())) ) { add = Double.parseDouble(pl19.getText()) * Double.parseDouble(q19.getText());t+=add; }} catch (NumberFormatException ignored) {}
-        try {if (!(pl20.getText().isEmpty() && !(q20.getText().isEmpty())) ) { add = Double.parseDouble(pl20.getText()) * Double.parseDouble(q20.getText());t+=add; }} catch (NumberFormatException ignored) {}
+        try {
+            if (!(pl1.getText().isEmpty() && !(q1.getText().isEmpty()))) {
+                add = Double.parseDouble(pl1.getText()) * Double.parseDouble(q1.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl2.getText().isEmpty() && !(q2.getText().isEmpty()))) {
+                add = Double.parseDouble(pl2.getText()) * Double.parseDouble(q2.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl3.getText().isEmpty() && !(q3.getText().isEmpty()))) {
+                add = Double.parseDouble(pl3.getText()) * Double.parseDouble(q3.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl4.getText().isEmpty() && !(q4.getText().isEmpty()))) {
+                add = Double.parseDouble(pl4.getText()) * Double.parseDouble(q4.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl5.getText().isEmpty() && !(q5.getText().isEmpty()))) {
+                add = Double.parseDouble(pl5.getText()) * Double.parseDouble(q5.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl6.getText().isEmpty() && !(q6.getText().isEmpty()))) {
+                add = Double.parseDouble(pl6.getText()) * Double.parseDouble(q6.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl7.getText().isEmpty() && !(q7.getText().isEmpty()))) {
+                add = Double.parseDouble(pl7.getText()) * Double.parseDouble(q7.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl8.getText().isEmpty() && !(q8.getText().isEmpty()))) {
+                add = Double.parseDouble(pl8.getText()) * Double.parseDouble(q8.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl9.getText().isEmpty() && !(q9.getText().isEmpty()))) {
+                add = Double.parseDouble(pl9.getText()) * Double.parseDouble(q9.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl10.getText().isEmpty() && !(q10.getText().isEmpty()))) {
+                add = Double.parseDouble(pl10.getText()) * Double.parseDouble(q10.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl11.getText().isEmpty() && !(q11.getText().isEmpty()))) {
+                add = Double.parseDouble(pl11.getText()) * Double.parseDouble(q11.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl12.getText().isEmpty() && !(q12.getText().isEmpty()))) {
+                add = Double.parseDouble(pl12.getText()) * Double.parseDouble(q12.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl13.getText().isEmpty() && !(q13.getText().isEmpty()))) {
+                add = Double.parseDouble(pl13.getText()) * Double.parseDouble(q13.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl14.getText().isEmpty() && !(q14.getText().isEmpty()))) {
+                add = Double.parseDouble(pl14.getText()) * Double.parseDouble(q14.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl15.getText().isEmpty() && !(q15.getText().isEmpty()))) {
+                add = Double.parseDouble(pl15.getText()) * Double.parseDouble(q15.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl16.getText().isEmpty() && !(q16.getText().isEmpty()))) {
+                add = Double.parseDouble(pl16.getText()) * Double.parseDouble(q16.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl17.getText().isEmpty() && !(q17.getText().isEmpty()))) {
+                add = Double.parseDouble(pl17.getText()) * Double.parseDouble(q17.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl18.getText().isEmpty() && !(q18.getText().isEmpty()))) {
+                add = Double.parseDouble(pl18.getText()) * Double.parseDouble(q18.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl19.getText().isEmpty() && !(q19.getText().isEmpty()))) {
+                add = Double.parseDouble(pl19.getText()) * Double.parseDouble(q19.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
+        try {
+            if (!(pl20.getText().isEmpty() && !(q20.getText().isEmpty()))) {
+                add = Double.parseDouble(pl20.getText()) * Double.parseDouble(q20.getText());
+                t += add;
+            }
+        } catch (NumberFormatException ignored) {
+        }
 
         totalPLabel.setText(String.format("%.2f", t));
     }
