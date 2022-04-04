@@ -130,7 +130,9 @@ public class WaiterBookingManagement {
     public Label tables20;
     public Label tables21;
     public Label tables22;
+    
     Connection connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
+    
     private String username;
     private String date1;
     private String date2;
@@ -210,11 +212,16 @@ public class WaiterBookingManagement {
     private int userID21;
     private int userID22;
 
+    /**
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */   
     public WaiterBookingManagement() throws SQLException {
     }
 
     /**
-     * @param text add info
+     * Returns void
+     * sets the username of the user
+     * @param text the user name
      */
     @FXML
     public void setUser(String text) {
@@ -222,7 +229,10 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void
+     * When refresh button has been clicked this method
+     * refreshes the page and updates the information
+     * @param actionEvent refresh button
      */
     @FXML
     public void onClickRefreshPage(ActionEvent actionEvent) {
@@ -230,7 +240,8 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * add info
+     * Returns void
+     * This is called when the refresh button has been pressed
      */
     private void refresh() {
         try {
@@ -254,6 +265,11 @@ public class WaiterBookingManagement {
         }
     }
 
+    /**
+     * Returns void.
+     * This method sets labels 2-22 to hidden
+     * if there is no data to show
+     */
     public void hideBelow1() {
         if (name2.getText().equals("Name")) {
             name2.setOpacity(0.0);
@@ -404,6 +420,12 @@ public class WaiterBookingManagement {
         }
     }
 
+    /**
+     * Returns void.
+     * When there is only one booking the rest of the
+     * labels are hidden and the check boxes are
+     * set to be see through
+     */
     public void noBookings() {
         if (name1.getText().equals("Name")) {
             name1.setText("No Unapproved Bookings");
@@ -415,6 +437,11 @@ public class WaiterBookingManagement {
         hideBelow1();
     }
 
+    /**
+     * Returns void.
+     * looks at the first line and if there is
+     * no bookings then it hides all data
+     */
     public void hideEmpty() {
         if (name1.getText().equals("Name")) {
             noBookings();
@@ -424,7 +451,11 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method is called when a button is clicked
+     * and returns from the current page to the
+     * page before which is the waiter view
+     * @param actionEvent Return button
      */
     @FXML
     public void onClickReturnButton(ActionEvent actionEvent) {
@@ -451,7 +482,10 @@ public class WaiterBookingManagement {
 
 
     /**
-     * add info
+     * Returns void
+     * Updates the page with all the relevant information from the database
+     * about the customer bookings that need to be approve
+     * or rejected
      */
     public void setLabels() {
 
@@ -877,9 +911,12 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param uID  add info
-     * @param d    add info
-     * @param hour add info
+     * Returns void.
+     * sets the capacity ids using the userId, data and hour
+     * of the booking
+     * @param uID user ID
+     * @param dateString the date
+     * @param hour hour in the day
      */
     public void setCapIDs(int uID, String d, int hour) {
         Date date = Date.valueOf(d);
@@ -907,7 +944,10 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param cID add info
+     * Returns void.
+     * This method will update the capacity table
+     * availability to one using and SQL query
+     * @param cID customer ID
      */
     public void updateCapacityTableAvailabilityTo1(int cID) {
         String query = "UPDATE capacity SET is_available = 1 WHERE cap_ID = " + cID + "";
@@ -919,7 +959,10 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param cID add info
+     * Returns void.
+     * This will delete a booking by using an
+     * SQL query
+     * @param cID customer ID
      */
     public void deleteBooking(int cID) {
         String query = "DELETE FROM bookings WHERE b_cap_ID = " + cID + "";
@@ -931,7 +974,10 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param cID add info
+     * Returns void.
+     * This method will approve the booking and
+     * using an SQL query will update the database
+     * @param cID customer ID
      */
     public void approveBooking(int cID) {
         String query = "UPDATE bookings SET approved = 1 WHERE b_cap_ID = " + cID + "";
@@ -943,7 +989,8 @@ public class WaiterBookingManagement {
     }
 
     /**
-     *
+     * Returns void
+     * Gets correct capID and marks approve to all of them
      */
     public void approve() {
         approveBooking(capID1);
@@ -960,7 +1007,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     *
+     * Returns void
+     * Gets the capacity id and updates the availability to one
+     * then deletes the id on each booking
      */
     public void remove() {
         updateCapacityTableAvailabilityTo1(capID1);
@@ -988,7 +1037,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 1 and updates database
+     * @param actionEvent check box reject 1
      */
     @FXML
     public void onClickReject1(ActionEvent actionEvent) {
@@ -998,7 +1049,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 2 and updates database
+     * @param actionEvent check box reject 2
      */
     @FXML
     public void onClickReject2(ActionEvent actionEvent) {
@@ -1008,7 +1061,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 3 and updates database
+     * @param actionEvent check box reject 3
      */
     @FXML
     public void onClickReject3(ActionEvent actionEvent) {
@@ -1018,7 +1073,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 4 and updates database
+     * @param actionEvent check box reject 4
      */
     @FXML
     public void onClickReject4(ActionEvent actionEvent) {
@@ -1028,7 +1085,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 5 and updates database
+     * @param actionEvent check box reject 5
      */
     @FXML
     public void onClickReject5(ActionEvent actionEvent) {
@@ -1038,7 +1097,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 6 and updates database
+     * @param actionEvent check box reject 6
      */
     @FXML
     public void onClickReject6(ActionEvent actionEvent) {
@@ -1048,7 +1109,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 7 and updates database
+     * @param actionEvent check box reject 7
      */
     @FXML
     public void onClickReject7(ActionEvent actionEvent) {
@@ -1058,7 +1121,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 8 and updates database
+     * @param actionEvent check box reject 8
      */
     @FXML
     public void onClickReject8(ActionEvent actionEvent) {
@@ -1068,7 +1133,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 9 and updates database
+     * @param actionEvent check box reject 9
      */
     @FXML
     public void onClickReject9(ActionEvent actionEvent) {
@@ -1078,7 +1145,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 10 and updates database
+     * @param actionEvent check box reject 10
      */
     @FXML
     public void onClickReject10(ActionEvent actionEvent) {
@@ -1088,7 +1157,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 11 and updates database
+     * @param actionEvent check box reject 11
      */
     @FXML
     public void onClickReject11(ActionEvent actionEvent) {
@@ -1098,7 +1169,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 12 and updates database
+     * @param actionEvent check box reject 12
      */
     @FXML
     public void onClickReject12(ActionEvent actionEvent) {
@@ -1108,7 +1181,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 13 and updates database
+     * @param actionEvent check box reject 13
      */
     @FXML
     public void onClickReject13(ActionEvent actionEvent) {
@@ -1118,7 +1193,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 14 and updates database
+     * @param actionEvent check box reject 14
      */
     @FXML
     public void onClickReject14(ActionEvent actionEvent) {
@@ -1128,7 +1205,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 15 and updates database
+     * @param actionEvent check box reject 15
      */
     @FXML
     public void onClickReject15(ActionEvent actionEvent) {
@@ -1138,7 +1217,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 16 and updates database
+     * @param actionEvent check box reject 16
      */
     @FXML
     public void onClickReject16(ActionEvent actionEvent) {
@@ -1148,7 +1229,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 17 and updates database
+     * @param actionEvent check box reject 17
      */
     @FXML
     public void onClickReject17(ActionEvent actionEvent) {
@@ -1158,7 +1241,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 18 and updates database
+     * @param actionEvent check box reject 18
      */
     @FXML
     public void onClickReject18(ActionEvent actionEvent) {
@@ -1168,7 +1253,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 19 and updates database
+     * @param actionEvent check box reject 19
      */
     @FXML
     public void onClickReject19(ActionEvent actionEvent) {
@@ -1178,7 +1265,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 20 and updates database
+     * @param actionEvent check box reject 20
      */
     @FXML
     public void onClickReject20(ActionEvent actionEvent) {
@@ -1188,7 +1277,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 21 and updates database
+     * @param actionEvent check box reject 21
      */
     @FXML
     public void onClickReject21(ActionEvent actionEvent) {
@@ -1198,7 +1289,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method rejects booking 22 and updates database
+     * @param actionEvent check box reject 22
      */
     @FXML
     public void onClickReject22(ActionEvent actionEvent) {
@@ -1209,7 +1302,9 @@ public class WaiterBookingManagement {
 
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 1 and updates database
+     * @param actionEvent check box approve 1
      */
     @FXML
     public void onClickApprove1(ActionEvent actionEvent) {
@@ -1219,7 +1314,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 2 and updates database
+     * @param actionEvent check box approve 2
      */
     @FXML
     public void onClickApprove2(ActionEvent actionEvent) {
@@ -1229,7 +1326,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 3 and updates database
+     * @param actionEvent check box approve 3
      */
     @FXML
     public void onClickApprove3(ActionEvent actionEvent) {
@@ -1239,8 +1338,10 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
-     */
+     * Returns void.
+     * This method approves booking 4 and updates database
+     * @param actionEvent check box approve 4
+     *
     @FXML
     public void onClickApprove4(ActionEvent actionEvent) {
         setCapIDs(userID4, date4, hour4);
@@ -1249,7 +1350,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 5 and updates database
+     * @param actionEvent check box approve 5
      */
     @FXML
     public void onClickApprove5(ActionEvent actionEvent) {
@@ -1259,7 +1362,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 6 and updates database
+     * @param actionEvent check box approve 6
      */
     @FXML
     public void onClickApprove6(ActionEvent actionEvent) {
@@ -1269,7 +1374,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 7 and updates database
+     * @param actionEvent check box approve 7
      */
     @FXML
     public void onClickApprove7(ActionEvent actionEvent) {
@@ -1279,7 +1386,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 8 and updates database
+     * @param actionEvent check box approve 8
      */
     @FXML
     public void onClickApprove8(ActionEvent actionEvent) {
@@ -1289,7 +1398,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 9 and updates database
+     * @param actionEvent check box approve 9
      */
     @FXML
     public void onClickApprove9(ActionEvent actionEvent) {
@@ -1299,7 +1410,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 10 and updates database
+     * @param actionEvent check box approve 10
      */
     @FXML
     public void onClickApprove10(ActionEvent actionEvent) {
@@ -1309,7 +1422,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 11 and updates database
+     * @param actionEvent check box approve 11
      */
     @FXML
     public void onClickApprove11(ActionEvent actionEvent) {
@@ -1319,7 +1434,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 12 and updates database
+     * @param actionEvent check box approve 12
      */
     @FXML
     public void onClickApprove12(ActionEvent actionEvent) {
@@ -1329,7 +1446,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 13 and updates database
+     * @param actionEvent check box approve 13
      */
     @FXML
     public void onClickApprove13(ActionEvent actionEvent) {
@@ -1339,7 +1458,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 14 and updates database
+     * @param actionEvent check box approve 14
      */
     @FXML
     public void onClickApprove14(ActionEvent actionEvent) {
@@ -1349,7 +1470,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 15 and updates database
+     * @param actionEvent check box approve 15
      */
     @FXML
     public void onClickApprove15(ActionEvent actionEvent) {
@@ -1359,7 +1482,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 16 and updates database
+     * @param actionEvent check box approve 16
      */
     @FXML
     public void onClickApprove16(ActionEvent actionEvent) {
@@ -1369,7 +1494,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 17 and updates database
+     * @param actionEvent check box approve 17
      */
     @FXML
     public void onClickApprove17(ActionEvent actionEvent) {
@@ -1379,7 +1506,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 18 and updates database
+     * @param actionEvent check box approve 18
      */
     @FXML
     public void onClickApprove18(ActionEvent actionEvent) {
@@ -1389,7 +1518,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 19 and updates database
+     * @param actionEvent check box approve 19
      */
     @FXML
     public void onClickApprove19(ActionEvent actionEvent) {
@@ -1399,7 +1530,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 20 and updates database
+     * @param actionEvent check box approve 20
      */
     @FXML
     public void onClickApprove20(ActionEvent actionEvent) {
@@ -1409,7 +1542,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 21 and updates database
+     * @param actionEvent check box approve 21
      */
     @FXML
     public void onClickApprove21(ActionEvent actionEvent) {
@@ -1419,7 +1554,9 @@ public class WaiterBookingManagement {
     }
 
     /**
-     * @param actionEvent add info
+     * Returns void.
+     * This method approves booking 22 and updates database
+     * @param actionEvent check box approve 22
      */
     @FXML
     public void onClickApprove22(ActionEvent actionEvent) {
