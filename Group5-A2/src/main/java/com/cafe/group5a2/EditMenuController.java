@@ -14,6 +14,12 @@ import java.sql.*;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * This method edits a menu
+ * @author Adam Tucker
+ * @version 1.6 
+ */
+
 public class EditMenuController {
 
     public Label il1;
@@ -188,11 +194,21 @@ public class EditMenuController {
 
     public EditMenuController() throws SQLException {
     }
+    
+    /**
+     * This sets the username
+     * @params username
+     */
 
     public void setUserText(String text) {
         userHolder.setText(username = text);
         uID = getUserId(text);
     }
+    
+    /**
+     * This gets a user id from the database
+     * @params username
+     */
 
     public int getUserId(String username) {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
@@ -209,6 +225,11 @@ public class EditMenuController {
         }
         return a;
     }
+    
+    /**
+     * This gets an item from the menu
+     * @params num 
+     */
 
     public String getItem(int num) throws SQLException {
         String val = "";
@@ -234,6 +255,11 @@ public class EditMenuController {
         }
         return val;
     }
+    
+    /**
+     * This gets the type from the menu
+     * @params num
+     */
 
     public String getType(int num) throws SQLException {
         String val = "";
@@ -259,6 +285,11 @@ public class EditMenuController {
         }
         return val;
     }
+    
+    /**
+     * This method sets the type labels
+     */
+    
 
     public void setTypeLabels() throws SQLException {
         Type01.setText(getType(1));
@@ -282,6 +313,10 @@ public class EditMenuController {
         Type19.setText(getType(19));
         Type20.setText(getType(20));
     }
+    
+    /**
+     * This sets the item labels
+     */
 
     public void setItemLabels() throws SQLException {
         il1.setText(getItem(1));
@@ -305,6 +340,11 @@ public class EditMenuController {
         il19.setText(getItem(19));
         il20.setText(getItem(20));
     }
+    
+    /**
+     * This gets the price from an item
+     * @params num
+     */
 
     public String getPrice(int num) throws SQLException {
         String val = "";
@@ -330,6 +370,10 @@ public class EditMenuController {
         }
         return val;
     }
+    
+    /**
+     * This sets the price labels
+     */
 
     public void setPriceLabels() throws SQLException {
         pl1.setText(getPrice(1));
@@ -353,6 +397,11 @@ public class EditMenuController {
         pl19.setText(getPrice(19));
         pl20.setText(getPrice(20));
     }
+    
+    /**
+     * This gets the item description 
+     * @params num
+     */
 
     public String getDesc(int num) throws SQLException {
         String val = "";
@@ -378,6 +427,10 @@ public class EditMenuController {
         }
         return val;
     }
+    
+    /**
+     * This sets the description labels 
+     */
 
     public void setDescLabels() throws SQLException {
         d1.setText(getDesc(1));
@@ -518,6 +571,11 @@ public class EditMenuController {
 
         }
     }
+    
+    /**
+     * When the goback button is pressed the chef menu is returned 
+     * @actionEvent is triggered when the go back button is pressed 
+     */
 
     //goBack
     public void onClickGoBack(ActionEvent actionEvent) {
@@ -539,6 +597,11 @@ public class EditMenuController {
             System.out.println("Error loading page");
         }
     }
+    
+    /**
+     * An item is deleted if it matches string input
+     * @params s 
+     */
 
     public void deleteItem(String s) {
         String q = "DELETE FROM menu WHERE item = '" + s + "'";
@@ -549,86 +612,191 @@ public class EditMenuController {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel1Click(ActionEvent actionEvent) {
         deleteItem(il1.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel2Click(ActionEvent actionEvent) {
         deleteItem(il2.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel3Click(ActionEvent actionEvent) {
         deleteItem(il3.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel4Click(ActionEvent actionEvent) {
         deleteItem(il4.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel5Click(ActionEvent actionEvent) {
         deleteItem(il5.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel6Click(ActionEvent actionEvent) {
         deleteItem(il6.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel7Click(ActionEvent actionEvent) {
         deleteItem(il7.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel8Click(ActionEvent actionEvent) {
         deleteItem(il8.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel9Click(ActionEvent actionEvent) {
         deleteItem(il9.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel10Click(ActionEvent actionEvent) {
         deleteItem(il10.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel11Click(ActionEvent actionEvent) {
         deleteItem(il11.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel12Click(ActionEvent actionEvent) {
         deleteItem(il12.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel13Click(ActionEvent actionEvent) {
         deleteItem(il13.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel14Click(ActionEvent actionEvent) {
         deleteItem(il14.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel15Click(ActionEvent actionEvent) {
         deleteItem(il15.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel16Click(ActionEvent actionEvent) {
         deleteItem(il16.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel17Click(ActionEvent actionEvent) {
         deleteItem(il17.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel18Click(ActionEvent actionEvent) {
         deleteItem(il18.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel19Click(ActionEvent actionEvent) {
         deleteItem(il19.getText());
     }
+    
+    /**
+     * Item is deleted when checkbox is clicked
+     * @params actionEvent
+     */
 
     public void onDel20Click(ActionEvent actionEvent) {
         deleteItem(il20.getText());
     }
+    
+    /**
+     * When the add menu button is pressed the add menu item page is loaded
+     * @params actionEvent
+     */
 
     public void onAddNewButtonClick(ActionEvent actionEvent) {
         try {
@@ -649,10 +817,19 @@ public class EditMenuController {
             System.out.println("Error loading page");
         }
     }
+    
+    /**
+     * When the refresh button is pressed the page is refreshed 
+     * @params actionEvent
+     */
 
     public void onClickRefresh(ActionEvent actionEvent) {
         refresh();
     }
+    
+    /**
+     * This refreshes the page and updates the menu items if changed 
+     */
 
     public void refresh() {
         try {
