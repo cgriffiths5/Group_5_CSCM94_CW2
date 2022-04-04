@@ -41,12 +41,6 @@ public class AddNewStaffController {
     public AddNewStaffController() throws SQLException {
     }
 
-    /**
-     * When the submit button is pressed the information entered into the textfields is submitted into the database
-     * as a new user. The role is automatically set to customer in order to avoid giving a user access to staff only
-     * controls.
-     * @param event is triggered when the submit button is pressed
-     */
 
     /**
      * When the submit button is pressed the information entered into the textfields is submitted into the database
