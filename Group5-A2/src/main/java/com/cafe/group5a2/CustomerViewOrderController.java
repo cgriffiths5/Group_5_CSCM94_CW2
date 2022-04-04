@@ -9,7 +9,6 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
@@ -19,13 +18,13 @@ import java.util.List;
 
 /**
  * This class shows the customer an order that they had made previously
+ * @author Adam Tucker
  * @version 1.0
  */
 public class CustomerViewOrderController {
 
     public ScrollPane mainPane;
     public AnchorPane aPane;
-
     public Label il1;
     public Label il2;
     public Label il3;
@@ -46,7 +45,6 @@ public class CustomerViewOrderController {
     public Label il18;
     public Label il19;
     public Label il20;
-
     public Label ql1;
     public Label ql2;
     public Label ql3;
@@ -67,7 +65,6 @@ public class CustomerViewOrderController {
     public Label ql18;
     public Label ql19;
     public Label ql20;
-
     public HBox h2i;
     public HBox h3i;
     public HBox h4i;
@@ -95,7 +92,6 @@ public class CustomerViewOrderController {
     /**
      * @throws SQLException throw a type of Exception that the IDE doesn't support
      */
-
     public CustomerViewOrderController() throws SQLException {
     }
 
@@ -105,11 +101,9 @@ public class CustomerViewOrderController {
      * ordered by the customer on the page
      * @param orderID The customers orderID
      */
-
     public void setItemsAndQuant(int orderID) {
 
         String query = "SELECT * FROM items_separate_orders WHERE complete= 1 AND order_ID = '" + orderID + "' ORDER BY date_time";
-
         try (Statement stmt = con.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
@@ -504,9 +498,8 @@ public class CustomerViewOrderController {
      * Returns void
      * takes the user back to the Order History page when the Go back button is
      * clicked
-     * @param event is entered when a user presses the home button
+     * @param actionEvent is entered when a user presses the home button
      */
-
     public void onClickGoBack(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) goBack.getScene().getWindow();

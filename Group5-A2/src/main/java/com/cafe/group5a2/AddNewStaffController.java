@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -16,11 +15,10 @@ import java.sql.*;
 import java.util.Objects;
 
 /**
- * This class allows the manager to add a new staff member 
+ * This class allows the manager to add a new staff member
  * @author Chris Griffiths
  * @version 1.6
  */
-
 public class AddNewStaffController {
 
     public Button HomeButton1;
@@ -50,6 +48,12 @@ public class AddNewStaffController {
      * @param event is triggered when the submit button is pressed
      */
 
+    /**
+     * When the submit button is pressed the information entered into the textfields is submitted into the database
+     * as a new user. The role is automatically set to customer in order to avoid giving a user access to staff only
+     * controls.
+     * @param event is triggered when the submit button is pressed
+     */
     @FXML
     public void OnSubmit(ActionEvent event) {
 
@@ -64,7 +68,7 @@ public class AddNewStaffController {
 
         String query1 = "SELECT username FROM users";
 
-        Boolean sameUsername = false;
+        boolean sameUsername = false;
 
         try {
             Statement stmt1 = con.createStatement();
@@ -129,7 +133,6 @@ public class AddNewStaffController {
      * @param event is triggered when the return home button is pressed
      * @throws IOException
      */
-
     public void onHomeButtonClick(ActionEvent event) throws IOException {
         Stage stage = (Stage) HomeButton.getScene().getWindow();
         Parent newRoot = FXMLLoader.load(Objects.requireNonNull

@@ -21,7 +21,6 @@ import java.util.Objects;
  * @author Chris Griffiths
  * @version 1.6
  */
-
 public class ManageStaffController {
 
     @FXML
@@ -39,12 +38,11 @@ public class ManageStaffController {
 
     public ManageStaffController() throws SQLException {
     }
-    
+
     /**
      * This method brings up the add staff registration form
      * @param event is triggered by pressing the add staff button
      */
-
     @FXML
     public void onAddStaffButtonClick(ActionEvent event) {
         try {
@@ -59,12 +57,11 @@ public class ManageStaffController {
         }
 
     }
-    
+
     /**
      * This method brings up the list of current employed staff
      * @throws SQLException
      */
-
     @FXML
     public void onViewStaffButtonClick() throws SQLException {
 
@@ -108,12 +105,11 @@ public class ManageStaffController {
         }
 
     }
-    
+
     /**
      * This method returns the manager home page
      * @param event is triggered when the manager home button is pressed
      */
-
     @FXML
     public void onManagerHomeReturnClick(ActionEvent event) {
         try {
@@ -126,7 +122,7 @@ public class ManageStaffController {
             System.out.println("Error loading page");
         }
     }
-    
+
     /**
      * This method returns the delete staff page
      * @param event is triggered when the delete staff button is pressed

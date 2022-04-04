@@ -1,10 +1,6 @@
-/*
-DONT HAVE TO IMPLEMENT
-restaurant availability,
-staff cover,
-events
-*/
-
+/**
+ * @author Adam Tucker
+ */
 USE cafeDB;
 
 CREATE OR REPLACE VIEW customers as

@@ -19,8 +19,8 @@ import static java.lang.Integer.parseInt;
  * This controller represents a view for a driver after they have logged in on the system
  * @author Chris Griffiths
  * @author Cameron Turner
+ * @author Adam Tucker
  */
-
 public class DriverController {
     @FXML
     public Label waiterName;
@@ -169,7 +169,6 @@ public class DriverController {
      * a problem with the delivered order.
      * @param actionEvent
      */
-
     public void OnClickDevOrdProBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID2 + "'";
 
@@ -186,7 +185,6 @@ public class DriverController {
      * a problem with the delivered order.
      * @param actionEvent
      */
-
     public void OnClickDevOrdProBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID3 + "'";
 
@@ -203,7 +201,6 @@ public class DriverController {
      * a problem with the delivered order.
      * @param actionEvent
      */
-
     public void OnClickDevOrdProBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders SET prepared = 0 WHERE order_ID = '" + orderID4 + "'";
 
@@ -220,7 +217,6 @@ public class DriverController {
      * it has been delivered
      * @param actionEvent
      */
-
     public void OnClickDevOrdFinBox1(ActionEvent actionEvent) {
         /*
         When check box has been clicked.
@@ -239,7 +235,6 @@ public class DriverController {
      * it has been delivered
      * @param actionEvent
      */
-
     public void OnClickDevOrdFinBox2(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID2 + "'";
 
@@ -256,7 +251,6 @@ public class DriverController {
      * it has been delivered
      * @param actionEvent
      */
-
     public void OnClickDevOrdFinBox3(ActionEvent actionEvent) {
         String query = "UPDATE orders SET complete = 1 WHERE order_ID = '" + orderID3 + "'";
 
@@ -273,7 +267,6 @@ public class DriverController {
      * it has been delivered
      * @param actionEvent
      */
-
     public void OnClickDevOrdFinBox4(ActionEvent actionEvent) {
         String query = "UPDATE orders complete = 1 WHERE order_ID = '" + orderID4 + "'";
 
@@ -290,7 +283,6 @@ public class DriverController {
      * updated
      * @param actionEvent
      */
-
     @FXML
     public void refreshClick(ActionEvent actionEvent) {
         refresh();
@@ -300,7 +292,6 @@ public class DriverController {
      * Whenever an order is clicked on and marked as finished or has problem then the page is refreshed and the
      * deliveries are updated
      */
-
     @FXML
     public void refresh() {
         try {
@@ -326,7 +317,6 @@ public class DriverController {
             e.printStackTrace();
         }
     }
-
 
     public void resetCheckBoxes() {
         DevOrdFinBox1.setSelected(false);

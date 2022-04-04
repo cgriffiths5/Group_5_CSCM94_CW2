@@ -3,10 +3,12 @@ package com.cafe.group5a2;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,13 +18,12 @@ import java.sql.SQLException;
 import java.util.Objects;
 
 /**
-* This class shows options the chef can click which is the orders
-* the daily specials and to be able to logout
-* @author Chris Griffiths
-* @author Cameron Turner
-* @version 1.0
-*/
-
+ * This class shows options the chef can click which is the orders
+ * the daily specials and to be able to log out
+ * @author Chris Griffiths
+ * @author Cameron Turner
+ * @version 1.0
+ */
 public class ChefController {
 
     @FXML
@@ -32,7 +33,7 @@ public class ChefController {
     public String username;
     public Label userLabel;
     public Label Title;
-    
+    //Database connection
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
     /**
@@ -53,7 +54,7 @@ public class ChefController {
 
     /**
      * Returns void.
-     * Method is called when a button is pressed to set up 
+     * Method is called when a button is pressed to set up
      * a new page
      * @param event the view specials button
      */
@@ -61,11 +62,26 @@ public class ChefController {
     public void onViewSpecialsClick(ActionEvent event) {
         try {
             Stage stage = (Stage) viewSpecials.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("specials-view.fxml")));
-            stage.setTitle("Specials");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("editMenu-view.fxml"));
+            Parent newRoot = loader.load();
+
+            EditMenuController eMCont = loader.getController();
+            eMCont.setUserText(username);
+            eMCont.setItemLabels();
+            eMCont.setPriceLabels();
+            eMCont.setTypeLabels();
+            eMCont.setDescLabels();
+            stage.setTitle("Manage Menu");
+            stage.setHeight(1080.0);
+            stage.setMaxHeight(2000.0);
+            stage.setWidth(850.0);
+            stage.setMaxWidth(850.0);
+            stage.centerOnScreen();
             stage.getScene().setRoot(newRoot);
         } catch (IOException e) {
             System.out.println("Error loading page");
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -85,8 +101,6 @@ public class ChefController {
             ChefOrdersController chefOrdCont = loader.getController();
             chefOrdCont.setUserTextOrders(username);
             chefOrdCont.setOrderID();
-
-            //cgriffiths
             stage.setHeight(530);
             stage.setMaxHeight(530);
             stage.setWidth(630);

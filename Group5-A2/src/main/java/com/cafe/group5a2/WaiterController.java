@@ -22,6 +22,7 @@ import static java.lang.Integer.parseInt;
  * Waiter controller class shows relevant information and buttons
  * that the waiter needs to have functionality in the program
  * @author Cameron Turner
+ * @author Adam Tucker
  * @version 1.0
  */
 
@@ -141,8 +142,6 @@ public class WaiterController {
             wMCont.setPriceLabels();
             wMCont.setDescLabels();
             wMCont.setUserText(username);
-            wMCont.resetCheckBoxes();
-            
             Rectangle2D sBound = Screen.getPrimary().getVisualBounds();
             stage.setX(((sBound.getWidth() - stage.getWidth()) / 2) - (sBound.getWidth() / 10));
             stage.setY(((sBound.getHeight() - stage.getWidth()) / 2) - (sBound.getHeight() / 4));
@@ -456,7 +455,7 @@ public class WaiterController {
             e.printStackTrace();
         }
     }
-    
+
     /**
      * Returns void.
      * When takeaway order 1 has a problem this boxed can be clicked so the chef can

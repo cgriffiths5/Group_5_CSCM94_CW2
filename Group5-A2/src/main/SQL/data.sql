@@ -1,3 +1,8 @@
+/**
+ * @author Adam Tucker
+ */
+
+
 USE cafeDB;
 
 INSERT INTO menu(item, description, category, price)

@@ -15,9 +15,9 @@ import static java.lang.Integer.parseInt;
 
 /**
  * This class shows the customer all order that they had made previously
+ * @author Adam Tucker
  * @version 1.0
  */
-
 public class CustomerOrderHistoryController {
 
     @FXML
@@ -115,7 +115,6 @@ public class CustomerOrderHistoryController {
     /**
      * @throws SQLException throw a type of Exception that the IDE doesn't support
      */
-
     public CustomerOrderHistoryController() throws SQLException {
     }
 
@@ -124,7 +123,6 @@ public class CustomerOrderHistoryController {
      * Sets the name of the user using the application
      * @param text The users name
      */
-
     public void setUser(String text) {
         username = text;
         getUserID();
@@ -134,10 +132,7 @@ public class CustomerOrderHistoryController {
      * Returns an int value.
      * Method gets the usersID which is an int value but using an
      * SQL query
-     * @param username the users name
-     * @return userID
      */
-
     public void getUserID() {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
         try (Statement stmt = con.createStatement()) {
@@ -431,7 +426,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
     @FXML
     public void onClickViewOrder1(ActionEvent actionEvent) {
@@ -457,7 +452,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -484,7 +479,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -511,7 +506,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -538,7 +533,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -565,7 +560,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -592,7 +587,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -619,7 +614,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -646,7 +641,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -673,7 +668,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -700,7 +695,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -727,7 +722,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -754,7 +749,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -781,7 +776,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -808,7 +803,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -835,7 +830,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -862,7 +857,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -889,7 +884,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -916,7 +911,7 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
 
     @FXML
@@ -943,9 +938,8 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
-
     @FXML
     public void onClickViewOrder20(ActionEvent actionEvent) {
         try {
@@ -970,9 +964,8 @@ public class CustomerOrderHistoryController {
 
     /**
      * The Customer View Order page is brought up when the user presses the view order button
-     * @param event is entered when a user presses the view order button
+     * @param actionEvent is entered when a user presses the view order button
      */
-
     @FXML
     public void onClickViewOrder21(ActionEvent actionEvent) {
         try {

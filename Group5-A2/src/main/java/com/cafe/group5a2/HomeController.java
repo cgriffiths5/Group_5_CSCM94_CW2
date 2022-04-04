@@ -19,6 +19,7 @@ import java.sql.*;
 import java.util.Objects;
 
 /**
+ * @author Adam Tucker
  * This class represents the system login page
  * @version HomeController
  */
@@ -43,12 +44,6 @@ public class HomeController {
 
     public HomeController() throws SQLException {
     }
-
-    /**
-     * ActionEvent is triggered by pressing the login button, the input information of username and password is checked with the user database.
-     * Once verified the information on roles that is assigned to the user on the database is retrieved and the assigned role page is brought up
-     * @param event is the username entered by the person logging in
-     */
 
     @FXML
     public void onCustButtonClick(ActionEvent event) throws NullPointerException {
@@ -308,13 +303,6 @@ public class HomeController {
         }
     }
 
-    /**
-     * When event is triggered by the Quit button is pressed,
-     * the stage is closed and the applications is shutdown.
-     * @param event
-     */
-
-
     @FXML
     public void onQuitButtonClick(ActionEvent event) {
 
@@ -323,10 +311,10 @@ public class HomeController {
     }
 
     /**
-     * The method below checks the inputed username and password  and whether it corresponds with the database
-     * An SQL query is triggered to input these parameters from the database
-     * @return checkUsernamePassword checks the password and username
-     * @throws SQLException
+     * @param username is the username entered by the person logging in
+     * @param password is the password entered by the person logging in
+     * @return false if the username doesn't exist or the password doesn't match for that user
+     * @throws SQLException just to ensure the program doesn't crash, don't actually handle exception
      */
     public boolean checkUsernamePassword(String username, String password) throws SQLException {
         String query = "SELECT password FROM users WHERE username = '" + username + "'";
@@ -346,11 +334,6 @@ public class HomeController {
         return retVal;
     }
 
-    /**
-     * The Registration page is brought up when the user presses the Register button
-     * @param event is entered when a user presses the Register button
-     */
-
     @FXML
     public void onRegButtonClick(ActionEvent event) throws IOException {
 
@@ -366,10 +349,9 @@ public class HomeController {
     }
 
     /**
-     * An SQL query is triggered to output these parameters from the database
-     * @param username is given through the username textfield
-     * @param role is given through the role textfield
-     * @throws SQLException
+     * @param username rhrhbr
+     * @return rhrth
+     * @throws SQLException rgrgr
      */
     public String getRole(String username) throws SQLException {
         String query = "SELECT role FROM users WHERE username = '" + username + "'";

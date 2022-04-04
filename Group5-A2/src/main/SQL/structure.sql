@@ -1,3 +1,7 @@
+/**
+ * @author Adam Tucker
+ */
+
 DROP DATABASE IF EXISTS cafeDB;
 CREATE DATABASE cafeDB;
 

@@ -14,13 +14,11 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
 
-
 /**
  * This class allows a customer to register themselves in the system
  * @author Chris Griffiths
  * @author Adam Tucker
  */
-
 
 public class RegistrationController {
 
@@ -49,11 +47,8 @@ public class RegistrationController {
      *
      * @param event is triggered when the submit button is pressed
      */
-
-
     @FXML
     public void OnSubmit(ActionEvent event) {
-
         String First = FirstName1.getText();
         String Last = LastName1.getText();
         String User = Username1.getText();
@@ -61,16 +56,12 @@ public class RegistrationController {
         String ConPass = ConfirmPassword1.getText();
         String HouseNumber = HouseNO1.getText();
         String Post = Postcode1.getText();
-
         String query1 = "SELECT username FROM users";
-
         boolean sameUsername = false;
-
         try {
             Statement stmt1 = con.createStatement();
             ResultSet r1 = stmt1.executeQuery(query1);
             String currUsername;
-
             while (r1.next()) {
                 if (User.equals(r1.getString("username"))) {
                     sameUsername = true;
@@ -79,11 +70,9 @@ public class RegistrationController {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         String query2 = "INSERT INTO users (f_name, l_name, role, username, password, house_number, postcode)" +
                 "VALUES ('" + First + "','" + Last + "', 'customer', '" + User + "','" + Pass + "','"
                 + HouseNumber + "','" + Post + "')";
-
         if (FirstName1.getText().isEmpty()) {
             ErrorLabel1.setText("Error: First name is empty");
             ErrorLabel1.setOpacity(1);
@@ -115,28 +104,24 @@ public class RegistrationController {
                 System.out.println("Errors Detected");
                 e.printStackTrace();
             }
-
         } else {
             ErrorLabel1.setText("Error: Passwords don't match");
         }
-
     }
 
     /**
      * When the home button is pressed then the login page is returned
-     *
      * @param event is triggered when the return home button is pressed
-     * @throws IOException
      */
-
     @FXML
-    public void onHomeButtonClick(ActionEvent event) throws IOException {
-        Stage stage = (Stage) HomeButton1.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(Objects.requireNonNull
-                (getClass().getResource("home-view.fxml")));
-        stage.getScene().setRoot(newRoot);
-
+    public void onHomeButtonClick(ActionEvent event){
+        try {
+            Stage stage = (Stage) HomeButton1.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(Objects.requireNonNull
+                    (getClass().getResource("home-view.fxml")));
+            stage.getScene().setRoot(newRoot);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-
 }

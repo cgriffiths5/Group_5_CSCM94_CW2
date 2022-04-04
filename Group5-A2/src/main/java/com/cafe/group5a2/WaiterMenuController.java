@@ -864,7 +864,7 @@ public class WaiterMenuController {
             System.out.println("Error loading page");
         }
     }
-    
+
     /**
      * Returns void.
      * When this method is called all check boxes are set to

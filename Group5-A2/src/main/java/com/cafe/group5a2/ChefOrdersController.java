@@ -17,15 +17,14 @@ import java.sql.*;
 import static java.lang.Integer.parseInt;
 
 /**
- * Displays key information the chef needs about the 
+ * Displays key information the chef needs about the
  * customer and is able to click buttons to view order
- * and update the database that an order has been 
+ * and update the database that an order has been
  * completed
  * @author Cameron Turner
  * @author Adam Tucker
  * @version 1.0
  */
-
 public class ChefOrdersController {
     @FXML
     public Button refreshButton;
@@ -129,7 +128,7 @@ public class ChefOrdersController {
      * Returns void.
      * This method sets the order ID label on the page with the table number
      * If there is no order then a "No Order" label will be shown
-     * and the check boxes will be removed
+     * and the checkboxes will be removed
      */
     @FXML
     public void setOrderID() {
@@ -193,7 +192,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method is used when a check box is clicked to notify the waiter
+     * This method is used when a checkbox is clicked to notify the waiter
      * the order is ready to be collected. The order is updated on the database
      * @param actionEvent check box order 1 button
      */
@@ -210,7 +209,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method is used when a check box is clicked to notify the waiter
+     * This method is used when a checkbox is clicked to notify the waiter
      * the order is ready to be collected. The order is updated on the database
      * @param actionEvent check box order 2 button
      */
@@ -227,7 +226,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method is used when a check box is clicked to notify the waiter
+     * This method is used when a checkbox is clicked to notify the waiter
      * the order is ready to be collected. The order is updated on the database
      * @param actionEvent check box order 3 button
      */
@@ -244,7 +243,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method is used when a check box is clicked to notify the waiter
+     * This method is used when a checkbox is clicked to notify the waiter
      * the order is ready to be collected. The order is updated on the database
      * @param actionEvent check box order 4 button
      */
@@ -261,7 +260,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method will show the particular customers menu order
+     * This method will show the particular customers' menu order
      * by opening a new page
      * @param actionEvent View Order 1 button
      */
@@ -289,7 +288,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method will show the particular customers menu order
+     * This method will show the particular customers' menu order
      * by opening a new page
      * @param actionEvent View Order 2 button
      */
@@ -317,7 +316,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method will show the particular customers menu order
+     * This method will show the particular customers' menu order
      * by opening a new page
      * @param actionEvent View Order 3 button
      */
@@ -345,7 +344,7 @@ public class ChefOrdersController {
     }
 
     /**
-     * This method will show the particular customers menu order
+     * This method will show the particular customers' menu order
      * by opening a new page
      * @param actionEvent View Order 4 button
      */
@@ -374,7 +373,7 @@ public class ChefOrdersController {
 
     /**
      * Returns void.
-     * This method is called when the page needs to be refresh and
+     * This method is called when the page needs to be refreshed and
      * all the values are updated
      */
     @FXML
@@ -401,10 +400,9 @@ public class ChefOrdersController {
             e.printStackTrace();
         }
     }
-
     /**
      * Returns void.
-     * This method is called to reset all the check boxes
+     * This method is called to reset all the checkboxes
      */
     @FXML
     public void resetCheckBoxes() {

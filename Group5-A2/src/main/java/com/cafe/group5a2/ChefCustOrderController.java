@@ -19,11 +19,11 @@ import java.util.List;
 
 /**
  * This class shows what the customer has ordered
- * to the chef so they know what to cook
+ * to the chef, so they know what to cook
  * @author Cameron Turner
+ * @author Adam Tucker
  * @version 1.0
  */
-
 public class ChefCustOrderController {
 
     public ScrollPane mainPane;
@@ -500,6 +500,7 @@ public class ChefCustOrderController {
             e.printStackTrace();
         }
     }
+
 
     /**
      * Returns void.

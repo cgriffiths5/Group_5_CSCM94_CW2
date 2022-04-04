@@ -14,12 +14,12 @@ import java.sql.*;
 
 /**
  * This class displays and shows all the bookings that have
- * been made by a customer. It gives the waiter the ability 
+ * been made by a customer. It gives the waiter the ability
  * to approve or reject the booking.
  * All the information is taken from the database and when
  * a decision has been made the database is updated
- * @author Cameron Turner 
  * @author Adam Tucker
+ * @author Cameron Turner
  * @version 1.0
  */
 
@@ -141,9 +141,9 @@ public class WaiterBookingManagement {
     public Label tables20;
     public Label tables21;
     public Label tables22;
-    
+
     Connection connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
-    
+
     private String username;
     private String date1;
     private String date2;
@@ -225,7 +225,7 @@ public class WaiterBookingManagement {
 
     /**
      * @throws SQLException throw a type of Exception that the IDE doesn't support
-     */   
+     */
     public WaiterBookingManagement() throws SQLException {
     }
 
@@ -1353,17 +1353,16 @@ public class WaiterBookingManagement {
      * This method approves booking 4 and updates database
      * @param actionEvent check box approve 4
      *
-    @FXML
-    public void onClickApprove4(ActionEvent actionEvent) {
-        setCapIDs(userID4, date4, hour4);
-        approve();
-        refresh();
-    }
-
-    /**
-     * Returns void.
-     * This method approves booking 5 and updates database
-     * @param actionEvent check box approve 5
+     @FXML
+     public void onClickApprove4(ActionEvent actionEvent) {
+     setCapIDs(userID4, date4, hour4);
+     approve();
+     refresh();
+     }
+     /**
+      * Returns void.
+      * This method approves booking 5 and updates database
+      * @param actionEvent check box approve 5
      */
     @FXML
     public void onClickApprove5(ActionEvent actionEvent) {

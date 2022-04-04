@@ -642,7 +642,7 @@ public class CustBookingController {
 
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
     @FXML
@@ -662,10 +662,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -686,10 +686,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -710,10 +710,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -734,10 +734,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -758,10 +758,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -782,10 +782,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -806,10 +806,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -830,10 +830,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -854,10 +854,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -878,10 +878,10 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * @author Adam Tucker
-     * Table is selected with capacity being checked 
+     * Table is selected with capacity being checked
      * @param actionEvent ignored scene builder param
      */
 
@@ -902,7 +902,7 @@ public class CustBookingController {
         }
         disableUnselectedSelBoxes();
     }
-    
+
     /**
      * Values are reset on mouse click
      * @params mouseEvent is triggered when date is clicked
@@ -912,9 +912,9 @@ public class CustBookingController {
     public void onDateClick(MouseEvent mouseEvent) {
         resetVals();
     }
-    
+
     /**
-     * Values are reset when this method is triggered 
+     * Values are reset when this method is triggered
      */
 
     public void resetVals() {
@@ -935,7 +935,7 @@ public class CustBookingController {
         T10Select.setSelected(false);
         T11Select.setSelected(false);
     }
-    
+
     /**
      * Values are reset on mouseEvent
      * @params mouseEvent
@@ -945,7 +945,7 @@ public class CustBookingController {
     public void onGuestClick(MouseEvent mouseEvent) {
         resetVals();
     }
-    
+
     /**
      * Values are reset on key release
      * @params keyRelease
@@ -957,9 +957,9 @@ public class CustBookingController {
             resetVals();
         }
     }
-    
+
     /**
-     * This refreshes the customer booking page 
+     * This refreshes the customer booking page
      */
 
     @FXML

@@ -27,7 +27,6 @@ import java.util.concurrent.TimeUnit;
  * @author Adam Tucker
  * @version 1.6
  */
-
 public class CustMenuController {
 
     public Label il1;
@@ -189,7 +188,6 @@ public class CustMenuController {
      * Set label username as text
      * @param text
      */
-
     public void setUserText(String text) {
         username = text;
         userHolder.setText(text);
@@ -206,7 +204,6 @@ public class CustMenuController {
      * The actionEvent creates a takeaway order in the database using item, time, amount and is a takeaway
      * @param actionEvent is entered when a user presses the Order Takeaway button
      */
-
     @FXML
     public void onTakeawayButtonClick(ActionEvent actionEvent) throws InterruptedException {
 
@@ -294,7 +291,6 @@ public class CustMenuController {
      * The actionEvent creates a delivery order in the database using item, time, amount and is a delivery
      * @param actionEvent is entered when a user presses the Order Delivery button
      */
-
     @FXML
     public void onDeliveryButtonClick(ActionEvent actionEvent) throws InterruptedException {
 
@@ -379,7 +375,6 @@ public class CustMenuController {
      * Grabs User ID Number from database and converts it to username
      * @returns username
      */
-
     public int getUserId(String username) {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
         ResultSet rs = null;
@@ -400,7 +395,6 @@ public class CustMenuController {
      * Grabs all items from database and arranges in descending order
      *
      */
-
     public String getOrderList(int counter) {
         int i = counter;
         int value1 = 0, value2 = 0, value3 = 0, value4 = 0, value5 = 0, value6 = 0, value7 = 0, value8 = 0, value9 = 0, value10 = 0, value11 = 0, value12 = 0, value13 = 0, value14 = 0, value15 = 0, value16 = 0, value17 = 0, value18 = 0, value19 = 0, value20 = 0;
@@ -560,12 +554,11 @@ public class CustMenuController {
         }
         return itemList.toString();
     }
-    
+
     /**
      * This returns an item according to its place in the database
-     * @params num 
+     * @params num
      */
-
     @FXML
     public String getItem(int num) throws SQLException {
         String val = "";
@@ -591,11 +584,10 @@ public class CustMenuController {
         }
         return val;
     }
-    
+
     /**
      * This sets the text to fetch the items from the database
      */
-
     public void setItemLabels() throws SQLException {
         progBar.setOpacity(0);
         il1.setText(getItem(1));
@@ -619,36 +611,35 @@ public class CustMenuController {
         il19.setText(getItem(19));
         il20.setText(getItem(20));
     }
-    
+
     /**
      * This returns the menu item at the location of the given number
      * @params num is the location in the database
-
+     */
     public String getPrice(int num) throws SQLException {
-        String val = "";
-        String query = "SELECT * FROM menu ORDER BY category DESC";
-        ResultSet rs = null;
-        try (Statement stmt = con.createStatement()) {
-            rs = stmt.executeQuery(query);
-            int i = 0;
-            while (rs.next()) {
-                val = rs.getString("price");
-                i++;
-                if (i == num) {
-                    return val;
-                }
-            }
-            return "";
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            assert rs != null;
-            rs.close();
-        }
-        return val;
+    String val = "";
+    String query = "SELECT * FROM menu ORDER BY category DESC";
+    ResultSet rs = null;
+    try (Statement stmt = con.createStatement()) {
+    rs = stmt.executeQuery(query);
+    int i = 0;
+    while (rs.next()) {
+    val = rs.getString("price");
+    i++;
+    if (i == num) {
+    return val;
     }
-    
+    }
+    return "";
+    } catch (SQLException e) {
+    e.printStackTrace();
+    } finally {
+    assert rs != null;
+    rs.close();
+    }
+    return val;
+    }
+
     /**
      * This sets the text of the labels to match those fetched from the getPrice method
      */
@@ -675,9 +666,9 @@ public class CustMenuController {
         pl19.setText(getPrice(19));
         pl20.setText(getPrice(20));
     }
-    
+
     /**
-     * This fetches the description of the item at the location of the inputted number 
+     * This fetches the description of the item at the location of the inputted number
      * @params num is inputted to find the location of the item description
      */
 
@@ -705,7 +696,7 @@ public class CustMenuController {
         }
         return val;
     }
-    
+
     /**
      * This method sets the description labels with the item descriptions fetched from the database
      */
@@ -1081,7 +1072,7 @@ public class CustMenuController {
         }
 
     }
-    
+
     /**
      * This method updates the total price of what a customer is ordering
      */
@@ -1232,7 +1223,7 @@ public class CustMenuController {
 
         totalPLabel.setText(String.format("%.2f", t));
     }
-    
+
     /**
      * This updates the total when the keyboard is used
      * @keyEvent is triggered when a user uses the keyboard
@@ -1244,7 +1235,7 @@ public class CustMenuController {
             updateTotal();
         }
     }
-    
+
     /**
      * This method updates the page when a scrollEvent occurs
      * @params scrollEvent is triggered when the page is scrolled
@@ -1254,7 +1245,7 @@ public class CustMenuController {
     public void onScrollFin(ScrollEvent scrollEvent) {
         updateTotal();
     }
-    
+
     /**
      * This method returns a user to the customer home page
      * @actionEvent is triggered when the go back button is pressed
@@ -1289,10 +1280,10 @@ public class CustMenuController {
             updateTotal();
         });
     }
-    
+
     /**
-     * The total is updated when a mouse is clicked 
-     * @params mouseEvent is triggered when the mouse is moved 
+     * The total is updated when a mouse is clicked
+     * @params mouseEvent is triggered when the mouse is moved
      */
 
     public void onQClick(MouseEvent mouseEvent) {

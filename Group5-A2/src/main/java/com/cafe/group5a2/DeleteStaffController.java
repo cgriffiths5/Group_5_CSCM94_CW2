@@ -20,7 +20,6 @@ import java.util.Objects;
  * @author Chris Griffiths
  * @version 1.6
  */
-
 public class DeleteStaffController {
 
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
@@ -33,12 +32,11 @@ public class DeleteStaffController {
 
     public DeleteStaffController() throws SQLException {
     }
-    
+
     /**
      * This returns the manager homepage
      * @param event this is triggered by the home button
      */
-
     @FXML
     public void onManagerHomeReturnClick(ActionEvent event) {
         try {
@@ -51,13 +49,12 @@ public class DeleteStaffController {
             System.out.println("Error loading page");
         }
     }
-    
+
     /**
      * When the submit button is clicked a user is deleted using the first and last names as
      * parameters
      * @param actionEvent this is triggered the submit button click
      */
-
     public void onSubmitButtonClick(ActionEvent actionEvent) {
         String FirstName1 = FirstName.getText();
         String LastName1 = LastName.getText();

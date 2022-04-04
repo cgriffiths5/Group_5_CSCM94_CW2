@@ -10,37 +10,28 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.sql.SQLException;
 
 /**
+ * @author Adam Tucker
  * This controller represents a view for the Customer Homepage
  */
-
 public class CustomerController {
 
     @FXML
     public Button bookButton;
     public Button homeButton;
-    public Button quitButton;
     public Button viewMenu;
-    public Label loginButtonLabel;
-    public Label bookButtonLabel;
     public Button viewOrders;
-    public Label homeButtonLabel;
-    public Label buttonText;
-    public Label Subtitle;
     public Label Title;
     public Label userLabel;
-    public Label passLabel;
     private String username;
 
     /**
      * Set label username as text
-     * @param text
+     * @param text username
      */
-
     public void setUserText(String text) {
         username = text;
         userLabel.setText(text);
@@ -50,7 +41,6 @@ public class CustomerController {
      * The Menu page is brought up when the user presses the Menu button
      * @param event is entered when a user presses the Menu button
      */
-
     @FXML
     public void onViewMenuButtonClick(ActionEvent event) {
         try {
@@ -82,9 +72,9 @@ public class CustomerController {
 
     /**
      * The Customer Booking Page is brought up when the user presses the Customer Booking button
+     *
      * @param event is entered when a user presses the Customer Booking button
      */
-
     @FXML
     public void onBookButtonClick(ActionEvent event) {
         try {
@@ -110,7 +100,6 @@ public class CustomerController {
      * The View Orders Page is brought up when the user presses the View Orders button
      * @param event is entered when a user presses the View Orders button
      */
-
     @FXML
     public void onViewOrdersButtonClick(ActionEvent event) {
         try {
