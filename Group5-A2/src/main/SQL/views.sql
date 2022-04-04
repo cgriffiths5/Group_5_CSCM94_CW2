@@ -261,3 +261,44 @@ SELECT * FROM waiter_booking_view;
 #SELECT order_ID, table_number, date_time, type FROM orders
 # WHERE complete = 1 AND FK_user_ID = 6 ORDER BY date_time LIMIT 21;
 
+CREATE OR REPLACE VIEW active_customer AS (
+SELECT username, f_name, l_name, COUNT(user_ID) AS customerMostOrders FROM orders
+INNER JOIN users
+ON orders.FK_user_ID = users.user_ID
+WHERE role = 'customer');
+
+#SELECT * FROM active_customer;
+
+CREATE OR REPLACE VIEW most_booked_hour AS
+(
+SELECT * FROM
+    (SELECT hour, count(*) as count
+     FROM capacity
+     WHERE is_available = 0
+     GROUP BY hour ORDER BY hour DESC) as s);
+
+CREATE OR REPLACE VIEW most_booked_day AS
+(
+SELECT * FROM
+    (SELECT date, count(*) as count
+    FROM capacity
+    WHERE is_available = 0
+    GROUP BY date ORDER BY date DESC) as s);
+
+CREATE OR REPLACE VIEW most_orders_hour AS
+(
+SELECT * FROM
+    (SELECT HOUR(date_time) as hour, count(*) as count
+     FROM orders
+     GROUP BY hour ORDER BY hour DESC) as s);
+
+SELECT * FROM most_orders_hour;
+
+SELECT * FROM items_separate_orders WHERE 1st = 'Margherita pizza';
+
+
+#SELECT * FROM most_booked_hour;
+
+#SELECT * FROM capacity WHERE is_available = 0 ORDER BY hour;
+
+
