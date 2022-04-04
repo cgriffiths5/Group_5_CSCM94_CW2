@@ -19,6 +19,12 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
 
+/**
+ * This class represents a homepage for adding, viewing and deleting staff
+ * @author Chris Griffiths
+ * @version 1.6
+ */
+
 public class AddStaffController {
 
     @FXML
@@ -36,6 +42,11 @@ public class AddStaffController {
 
     public AddStaffController() throws SQLException {
     }
+    
+    /**
+     * This method brings up the add staff registration form
+     * @param event is triggered by pressing the add staff button
+     */
 
     @FXML
     public void onAddStaffButtonClick(ActionEvent event) {
@@ -51,6 +62,11 @@ public class AddStaffController {
         }
 
     }
+    
+    /**
+     * This method brings up the list of current employed staff
+     * @throws SQLException
+     */
 
     @FXML
     public void onViewStaffButtonClick() throws SQLException {
@@ -95,6 +111,11 @@ public class AddStaffController {
         }
 
     }
+    
+    /**
+     * This method returns the manager home page
+     * @param event is triggered when the manager home button is pressed
+     */
 
     @FXML
     public void onManagerHomeReturnClick(ActionEvent event) {
@@ -108,6 +129,11 @@ public class AddStaffController {
             System.out.println("Error loading page");
         }
     }
+    
+    /**
+     * This method deletes a staff member
+     * @param event
+     */
 
     public void onDeleteStaffMember(ActionEvent event) {
         try {

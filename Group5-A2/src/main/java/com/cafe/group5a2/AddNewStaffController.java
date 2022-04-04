@@ -15,6 +15,11 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
 
+/**
+ * @author Chris Griffiths
+ * @version 1.6
+ */
+
 public class AddNewStaffController {
 
     public Button HomeButton1;
