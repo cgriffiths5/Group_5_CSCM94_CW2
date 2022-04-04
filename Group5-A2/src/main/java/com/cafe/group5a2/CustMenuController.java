@@ -21,6 +21,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * This controller represents a view for the Customer Menu
+ */
+
 public class CustMenuController {
 
     public Label il1;
@@ -178,6 +183,11 @@ public class CustMenuController {
     public CustMenuController() throws SQLException {
     }
 
+    /**
+     * Set label username as text
+     * @param text
+     */
+
     public void setUserText(String text) {
         username = text;
         userHolder.setText(text);
@@ -189,6 +199,11 @@ public class CustMenuController {
         orderSubL.setOpacity(1.0);
         e.shutdown();
     }
+
+    /**
+     * The actionEvent creates a takeaway order in the database using item, time, amount and is a takeaway
+     * @param actionEvent is entered when a user presses the Order Takeaway button
+     */
 
     @FXML
     public void onTakeawayButtonClick(ActionEvent actionEvent) throws InterruptedException {
@@ -273,6 +288,11 @@ public class CustMenuController {
 
     }
 
+    /**
+     * The actionEvent creates a delivery order in the database using item, time, amount and is a delivery
+     * @param actionEvent is entered when a user presses the Order Delivery button
+     */
+
     @FXML
     public void onDeliveryButtonClick(ActionEvent actionEvent) throws InterruptedException {
 
@@ -353,6 +373,11 @@ public class CustMenuController {
         }
     }
 
+    /**
+     * Grabs User ID Number from database and converts it to username
+     * @returns username
+     */
+
     public int getUserId(String username) {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
         ResultSet rs = null;
@@ -368,6 +393,11 @@ public class CustMenuController {
         }
         return a;
     }
+
+    /**
+     * Grabs all items from database and arranges in descending order
+     *
+     */
 
     public String getOrderList(int counter) {
         int i = counter;
