@@ -15,6 +15,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Objects;
 
+/**
+* This class shows options the chef can click which is the orders
+* the daily specials and to be able to logout
+* @author Chris Griffiths
+* @author Cameron Turner
+* @version 1.0
+*/
+
 public class ChefController {
 
     @FXML
@@ -24,17 +32,31 @@ public class ChefController {
     public String username;
     public Label userLabel;
     public Label Title;
-    //Database connection
+    
     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
 
+    /**
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public ChefController() throws SQLException {
     }
 
+    /**
+     * Returns void.
+     * Sets the name of the user using the application
+     * @param text The username
+     */
     public void setUserText(String text) {
         username = text;
         userLabel.setText(text);
     }
 
+    /**
+     * Returns void.
+     * Method is called when a button is pressed to set up 
+     * a new page
+     * @param event the view specials button
+     */
     @FXML
     public void onViewSpecialsClick(ActionEvent event) {
         try {
