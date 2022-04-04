@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="810.0" prefWidth="533.0" stylesheets="@styling/scrollBar.css"
+            xmlns="http://javafx.com/javafx/17" fx:controller="com.cafe.group5a2.ReportsController">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="812.0" prefWidth="515.0"
+                style="-fx-background-color: #1e202f;">
+        <Label layoutX="183.0" layoutY="38.0" text="Reports" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Bold" size="38.0"/>
+            </font>
+        </Label>
+        <Label layoutX="32.0" layoutY="150.0" text="Most popular items: " textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Bold" size="19.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="67.0" layoutY="190.0" prefHeight="162.0" prefWidth="413.0">
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="345.0">
+                <Label prefHeight="47.0" prefWidth="29.0" text="1st:" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="10.0"/>
+                <Label fx:id="item1" prefHeight="43.0" prefWidth="267.0" text="item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="20.0"/>
+                <Label fx:id="firstOrderedNum" prefHeight="43.0" prefWidth="24.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label prefHeight="43.0" prefWidth="55.0" text="Ordered " textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox prefHeight="16.0" prefWidth="345.0"/>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="345.0">
+                <Label prefHeight="47.0" prefWidth="29.0" text="2nd:" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="10.0"/>
+                <Label fx:id="item2" prefHeight="43.0" prefWidth="267.0" text="item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="20.0"/>
+                <Label fx:id="secondOrderedNum" prefHeight="43.0" prefWidth="24.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label prefHeight="43.0" prefWidth="55.0" text="Ordered " textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox prefHeight="16.0" prefWidth="345.0"/>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="345.0">
+                <Label prefHeight="47.0" prefWidth="29.0" text="3rd:" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="10.0"/>
+                <Label fx:id="item3" prefHeight="43.0" prefWidth="268.0" text="item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="20.0"/>
+                <Label fx:id="thirdOrderedNum" prefHeight="43.0" prefWidth="24.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label prefHeight="43.0" prefWidth="55.0" text="Ordered " textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+        <Label layoutX="34.0" layoutY="391.0" text="Busiest periods:" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-Bold" size="19.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="67.0" layoutY="433.0" prefHeight="162.0" prefWidth="413.0">
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="345.0">
+                <Label prefHeight="43.0" prefWidth="295.0" text="Day of the week with the highest average bookings: "
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="14.0"/>
+                <Label fx:id="Day" prefHeight="43.0" prefWidth="64.0" text="day" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="DayBookingVal" prefHeight="43.0" prefWidth="47.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox prefHeight="16.0" prefWidth="345.0"/>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="345.0">
+                <Label prefHeight="43.0" prefWidth="238.0" text="Hour with the highest average bookings:"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="66.0"/>
+                <Label fx:id="Hour" prefHeight="43.0" prefWidth="63.0" text="hour" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="HourBookingVal" prefHeight="43.0" prefWidth="46.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox prefHeight="16.0" prefWidth="345.0"/>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="345.0">
+                <Label prefHeight="43.0" prefWidth="222.0" text="Hour with the highest average orders:"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="43.0" prefWidth="84.0"/>
+                <Label fx:id="OrderHour" prefHeight="43.0" prefWidth="61.0" text="ohour" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="hourAvgOrders" prefHeight="43.0" prefWidth="47.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+        <HBox layoutX="362.0" layoutY="26.0" prefHeight="38.0" prefWidth="130.0">
+            <Button fx:id="Refresh" mnemonicParsing="false" onAction="#onClickRefresh" text="Refresh"/>
+            <Separator opacity="0.0" prefHeight="26.0" prefWidth="13.0"/>
+            <Button fx:id="GoBack" mnemonicParsing="false" onAction="#onClickGoBack" text="Go Back"/>
+        </HBox>
+        <HBox layoutX="32.0" layoutY="668.0" prefHeight="37.0" prefWidth="451.0">
+            <Label prefHeight="37.0" prefWidth="235.0" text="Customer with the most orders:" textFill="#fff0d1">
+                <font>
+                    <Font name="AdobeDevanagari-Bold" size="19.0"/>
+                </font>
+            </Label>
+        </HBox>
+        <HBox layoutX="66.0" layoutY="705.0" prefHeight="36.0" prefWidth="416.0">
+            <children>
+                <Label fx:id="Customer" prefHeight="36.0" prefWidth="288.0" text="customer" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="36.0" prefWidth="44.0"/>
+                <Label prefHeight="36.0" prefWidth="65.0" text="orders:" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="customerOrdersVal" prefHeight="36.0" prefWidth="60.0" text="#" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="15.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </AnchorPane>
+</ScrollPane>

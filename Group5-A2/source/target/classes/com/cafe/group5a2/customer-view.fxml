@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="544.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.cafe.group5a2.CustomerController">
+    <children>
+        <ImageView fitHeight="967.0" fitWidth="717.0" layoutX="-21.0" layoutY="-339.0">
+            <image>
+                <Image url="@styling/back2.jpg"/>
+            </image>
+        </ImageView>
+        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity"
+              prefHeight="520.0" prefWidth="528.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                    <children>
+                        <Label fx:id="Title" prefHeight="49.0" prefWidth="133.0" text="Cafe 94" textFill="#fff0d1">
+                            <font>
+                                <Font name="AdobeDevanagari-BoldItalic" size="41.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                    <children>
+                        <Label prefHeight="36.0" prefWidth="126.0" text="Username: " textFill="#fff0d1">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <VBox prefHeight="51.0" prefWidth="21.0"/>
+                        <Label fx:id="userLabel" prefHeight="37.0" prefWidth="76.0" textFill="#ffa8c8">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                    <children>
+                        <Button id="viewMenu" fx:id="viewMenu" onAction="#onViewMenuButtonClick" prefHeight="27.0"
+                                prefWidth="150.0" text="View Menu">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                    <children>
+                        <Button id="requestBooking" fx:id="bookButton" onAction="#onBookButtonClick" prefHeight="27.0"
+                                prefWidth="150.0" text="Request Booking">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                    <children>
+                        <Button id="viewOrders" fx:id="viewOrders" onAction="#onViewOrdersButtonClick" prefHeight="27.0"
+                                prefWidth="150.0" text="View Orders">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0">
+                    <children>
+                        <Button id="homeScreen" fx:id="homeButton" onAction="#onHomeButtonClick" prefHeight="27.0"
+                                prefWidth="150.0" text="Home Screen">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="640.0"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

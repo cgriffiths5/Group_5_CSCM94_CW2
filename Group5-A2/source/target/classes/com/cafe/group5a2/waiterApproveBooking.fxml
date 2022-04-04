@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="1934.0" prefWidth="783.0" style="-fx-background-color: #1e202f;"
+            stylesheets="@styling/scrollBar.css" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.cafe.group5a2.WaiterBookingManagement">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1933.0" prefWidth="770.0"
+                style="-fx-background-color: #1e202f;">
+        <Button fx:id="refreshButton" layoutX="493.0" layoutY="16.0" mnemonicParsing="false"
+                onAction="#onClickRefreshPage" prefHeight="40.0" prefWidth="90.0" text="Refresh">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+        <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="-4.0" layoutY="148.0" prefHeight="1782.0"
+                  prefWidth="770.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="658.0" minWidth="10.0" prefWidth="625.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="73.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="72.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <CheckBox fx:id="reject13" mnemonicParsing="false" onAction="#onClickReject13" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="12"/>
+            <CheckBox fx:id="reject14" mnemonicParsing="false" onAction="#onClickReject14" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="13"/>
+            <CheckBox fx:id="reject15" mnemonicParsing="false" onAction="#onClickReject15" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="14"/>
+            <CheckBox fx:id="reject16" mnemonicParsing="false" onAction="#onClickReject16" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="15"/>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="12">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name13" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data13" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables13" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <CheckBox fx:id="approve13" mnemonicParsing="false" onAction="#onClickApprove13" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="12" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve14" mnemonicParsing="false" onAction="#onClickApprove14" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve15" mnemonicParsing="false" onAction="#onClickApprove15" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="14" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve16" mnemonicParsing="false" onAction="#onClickApprove16" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="15" GridPane.valignment="CENTER"/>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="21">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name22" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data22" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables22" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="20">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name21" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data21" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables21" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="19">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name20" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data20" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables20" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="18">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name19" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data19" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables19" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="17">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name18" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data18" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables18" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="16">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name17" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data17" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables17" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="15">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name16" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data16" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables16" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="14">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name15" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data15" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables15" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="13">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name14" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data14" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables14" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="10">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name11" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data11" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables11" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="8">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name9" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data9" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables9" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="7">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name8" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data8" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables8" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="6">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name7" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data7" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables7" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="5">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name6" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data6" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables6" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name5" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data5" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables5" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name4" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data4" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables4" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name3" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data3" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables3" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name2" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data2" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables2" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="11">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name12" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data12" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables12" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="9">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name10" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data10" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables10" prefHeight="26.0" prefWidth="271.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="29.0"/>
+                    <Label fx:id="name1" alignment="CENTER" prefHeight="30.0" prefWidth="568.0" text="Name"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font name="System Bold" size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator minHeight="-Infinity" opacity="0.0" prefHeight="15.0" prefWidth="200.0"/>
+                <HBox prefHeight="30.0" prefWidth="200.0">
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="58.0"/>
+                    <Label fx:id="data1" prefHeight="26.0" prefWidth="255.0" text="2022-01-01    12:00     Guests: 50"
+                           textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                    <Separator opacity="0.0" prefHeight="30.0" prefWidth="20.0"/>
+                    <Label fx:id="tables1" prefHeight="26.0" prefWidth="270.0" text="Table" textFill="#fff0d1">
+                        <font>
+                            <Font size="17.0"/>
+                        </font>
+                    </Label>
+                </HBox>
+            </VBox>
+            <CheckBox fx:id="approve17" mnemonicParsing="false" onAction="#onClickApprove17" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject17" mnemonicParsing="false" onAction="#onClickReject17" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="16" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject18" mnemonicParsing="false" onAction="#onClickReject18" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve18" mnemonicParsing="false" onAction="#onClickApprove18" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="17" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve19" mnemonicParsing="false" onAction="#onClickApprove19" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject19" mnemonicParsing="false" onAction="#onClickReject19" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="18" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject20" mnemonicParsing="false" onAction="#onClickReject20" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve20" mnemonicParsing="false" onAction="#onClickApprove20" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="19" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve21" mnemonicParsing="false" onAction="#onClickApprove21" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject21" mnemonicParsing="false" onAction="#onClickReject21" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="20" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve22" mnemonicParsing="false" onAction="#onClickApprove22" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject22" mnemonicParsing="false" onAction="#onClickReject22" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="21" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve12" mnemonicParsing="false" onAction="#onClickApprove12" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject12" mnemonicParsing="false" onAction="#onClickReject12" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve11" mnemonicParsing="false" onAction="#onClickApprove11" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject11" mnemonicParsing="false" onAction="#onClickReject11" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve8" mnemonicParsing="false" onAction="#onClickApprove8" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject8" mnemonicParsing="false" onAction="#onClickReject8" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve7" mnemonicParsing="false" onAction="#onClickApprove7" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject7" mnemonicParsing="false" onAction="#onClickReject7" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve6" mnemonicParsing="false" onAction="#onClickApprove6" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject6" mnemonicParsing="false" onAction="#onClickReject6" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve5" mnemonicParsing="false" onAction="#onClickApprove5" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject5" mnemonicParsing="false" onAction="#onClickReject5" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve4" mnemonicParsing="false" onAction="#onClickApprove4" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject4" mnemonicParsing="false" onAction="#onClickReject4" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve3" mnemonicParsing="false" onAction="#onClickApprove3" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject3" mnemonicParsing="false" onAction="#onClickReject3" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve2" mnemonicParsing="false" onAction="#onClickApprove2" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject2" mnemonicParsing="false" onAction="#onClickReject2" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve1" mnemonicParsing="false" onAction="#onClickApprove1" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject1" mnemonicParsing="false" onAction="#onClickReject1" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve10" mnemonicParsing="false" onAction="#onClickApprove10" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject10" mnemonicParsing="false" onAction="#onClickReject10" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="approve9" mnemonicParsing="false" onAction="#onClickApprove9" GridPane.columnIndex="2"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER"/>
+            <CheckBox fx:id="reject9" mnemonicParsing="false" onAction="#onClickReject9" GridPane.columnIndex="1"
+                      GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="CENTER"/>
+        </GridPane>
+        <Label layoutX="73.0" layoutY="28.0" prefHeight="78.0" prefWidth="392.0" text="Unapproved Bookings"
+               textFill="#fff0d1">
+            <font>
+                <Font name="System Bold" size="35.0"/>
+            </font>
+        </Label>
+        <Label layoutX="626.0" layoutY="91.0" prefHeight="30.0" prefWidth="140.0" text="reject   approve"
+               textFill="#fff0d1">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="649.0" layoutY="121.0" prefHeight="31.0" prefWidth="17.0" text="X" textFill="#fff0d1">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="719.0" layoutY="121.0" prefHeight="30.0" prefWidth="22.0" text="✓" textFill="#fff0d1">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="returnButton" layoutX="595.0" layoutY="16.0" mnemonicParsing="false"
+                onAction="#onClickReturnButton" prefHeight="40.0" prefWidth="160.0" text="Return to Waiter Page">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Button>
+    </AnchorPane>
+</ScrollPane>

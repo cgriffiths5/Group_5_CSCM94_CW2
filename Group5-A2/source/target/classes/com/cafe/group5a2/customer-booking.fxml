@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="1113.0"
+            prefWidth="658.0" style="-fx-background: #FFEFD5; -fx-border-color: #483c32;"
+            stylesheets="@styling/scrollBar.css" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.cafe.group5a2.CustBookingController">
+    <styleClass>
+        <String fx:value="track-background"/>
+        <String fx:value="decrement-arrow"/>
+        <String fx:value="decrement-button"/>
+        <String fx:value="increment-arrow"/>
+        <String fx:value="increment-button"/>
+        <String fx:value="scroll-bar"/>
+        <String fx:value="thumb"/>
+        <String fx:value="track"/>
+        <String fx:value="corner"/>
+        <String fx:value="background"/>
+        <String fx:value="scroll-pane"/>
+    </styleClass>
+    <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.98" prefHeight="1111.0" prefWidth="822.0"
+                style="-fx-background-image: url('styling/back2.jpg'); -fx-background-size: cover;">
+        <ImageView fitHeight="1140.0" fitWidth="809.4">
+            <Image url="@styling/back2.jpg"/>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="188.0" layoutY="47.0" prefHeight="68.0" prefWidth="278.0"
+               text="Make a Reservation" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-BoldItalic" size="36.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="34.0" layoutY="131.0" prefHeight="980.0" prefWidth="581.0">
+            <HBox prefHeight="52.0" prefWidth="640.0">
+                <Separator opacity="0.0" prefHeight="60.0" prefWidth="22.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="220.0" text="How Many Guests?"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="45.0" prefWidth="128.0"/>
+                <VBox prefHeight="45.0" prefWidth="28.0">
+                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="41.0"/>
+                    <TextField fx:id="Guests" onKeyReleased="#onGuestKeyRelease" onMouseClicked="#onGuestClick"
+                               prefHeight="25.0" prefWidth="25.0" promptText=" 0"/>
+                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="23.0" prefWidth="41.0"/>
+                </VBox>
+                <Separator opacity="0.0" prefHeight="45.0" prefWidth="186.0"/>
+            </HBox>
+            <HBox prefHeight="55.0" prefWidth="581.0">
+                <Label alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="111.0" text="Seating Capacity"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="185.0" text="Table Number"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="12.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="34.0" prefWidth="250.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="38.0"/>
+                <Label prefHeight="20.0" prefWidth="112.0" text="Seats two" textFill="#b59c82">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="39.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T1" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text=" 1" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T1Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT1Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T2" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="2" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T2Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT2Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T3" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="3" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T3Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT3Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T4" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="4" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T4Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT4Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="23.0"/>
+                <Label prefHeight="20.0" prefWidth="112.0" text="Seats four" textFill="#b59c82">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="16.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T5" alignment="CENTER" prefHeight="0.0" prefWidth="101.0" text="5" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="124.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T5Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT5Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="108.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T6" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="6" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T6Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT6Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T7" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="7" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T7Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT7Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T8" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="8" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T8Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT8Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="60.0"/>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="114.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T9" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="9" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T9Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT9Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="122.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="32.0"/>
+                <Label prefHeight="20.0" prefWidth="112.0" text="Seats eight" textFill="#b59c82">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="43.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T10" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="10" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T10Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT10Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="119.0"/>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="33.0"/>
+                <Label prefHeight="20.0" prefWidth="112.0" text="Seats ten" textFill="#b59c82">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="42.0" text="-" textFill="#575244">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="T11" alignment="CENTER" prefHeight="0.0" prefWidth="117.0" text="11" textFill="#860000">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="17.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="134.0"
+                       text="  -  -  -  -    " textFill="#575244">
+                    <font>
+                        <Font name="Castellar" size="15.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="T11Select" disable="true" minWidth="100.0" mnemonicParsing="false"
+                          onAction="#onT11Select" prefHeight="12.0" prefWidth="100.0" text="Select Table"
+                          textFill="#ffeaf2">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="15.0"/>
+                    </font>
+                </CheckBox>
+                <Separator opacity="0.0" prefHeight="15.0" prefWidth="119.0"/>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="700.0">
+                <Label fx:id="NotEnoughTables" alignment="CENTER" contentDisplay="CENTER" opacity="0.0"
+                       prefHeight="29.0" prefWidth="579.0"
+                       text="Not enough tables selected! You have # guests left to seat!" textFill="#ffee00">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox prefHeight="71.0" prefWidth="581.0">
+                <Separator opacity="0.0" prefHeight="74.0" prefWidth="14.0"/>
+                <Label alignment="CENTER" prefHeight="50.0" prefWidth="109.0" text="Check Hours:" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="50.0" prefWidth="155.0"/>
+                <VBox prefHeight="74.0" prefWidth="117.0">
+                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="13.0" prefWidth="100.0"/>
+                    <DatePicker fx:id="DatePicker" onAction="#onDateChosenUpdateHours" onMouseClicked="#onDateClick"
+                                prefHeight="25.0" prefWidth="116.0" promptText="YYYY-MM-DD"/>
+                    <Separator opacity="0.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="121.0"/>
+                </VBox>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="581.0">
+                <Label alignment="CENTER" prefHeight="19.0" prefWidth="403.0"
+                       text="Click an available hour to see the table availability above" textFill="#ffffff7c">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="0.0"/>
+                <Label fx:id="h12" alignment="CENTER" disable="true" onMouseClicked="#onh12Click" prefHeight="50.0"
+                       prefWidth="117.0" text="12:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="25.0" prefWidth="20.0"/>
+                <Label fx:id="h13" alignment="CENTER" disable="true" onMouseClicked="#onh13Click" prefHeight="50.0"
+                       prefWidth="117.0" text="13:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="25.0" prefWidth="20.0"/>
+                <Label fx:id="h14" alignment="CENTER" disable="true" onMouseClicked="#onh14Click" prefHeight="50.0"
+                       prefWidth="117.0" text="14:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="193.0"/>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="700.0"/>
+            <HBox prefHeight="25.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="0.0"/>
+                <Label fx:id="h15" alignment="CENTER" disable="true" onMouseClicked="#onh15Click" prefHeight="50.0"
+                       prefWidth="117.0" text="15:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="25.0" prefWidth="20.0"/>
+                <Label fx:id="h16" alignment="CENTER" disable="true" onMouseClicked="#onh16Click" prefHeight="50.0"
+                       prefWidth="117.0" text="16:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="25.0" prefWidth="20.0"/>
+                <Label fx:id="h17" alignment="CENTER" disable="true" onMouseClicked="#onh17Click" prefHeight="50.0"
+                       prefWidth="117.0" text="17:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="193.0"/>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="700.0"/>
+            <HBox prefHeight="25.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="0.0"/>
+                <Label fx:id="h18" alignment="CENTER" disable="true" onMouseClicked="#onh18Click" prefHeight="24.0"
+                       prefWidth="116.0" text="18:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="24.0" prefWidth="21.0"/>
+                <Label fx:id="h19" alignment="CENTER" disable="true" onMouseClicked="#onh19Click" prefHeight="24.0"
+                       prefWidth="104.0" text="19:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="24.0" prefWidth="24.0"/>
+                <Label fx:id="h20" alignment="CENTER" disable="true" onMouseClicked="#onh20Click" prefHeight="50.0"
+                       prefWidth="117.0" text="20:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="188.0"/>
+            </HBox>
+            <HBox prefHeight="25.0" prefWidth="700.0"/>
+            <HBox prefHeight="25.0" prefWidth="700.0">
+                <Separator opacity="0.0" prefHeight="24.0" prefWidth="75.0"/>
+                <Label fx:id="h21" alignment="CENTER" disable="true" onMouseClicked="#onh21Click" prefHeight="50.0"
+                       prefWidth="117.0" text="21:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="25.0" prefWidth="20.0"/>
+                <Label fx:id="h22" alignment="CENTER" disable="true" onMouseClicked="#onh22Click" prefHeight="50.0"
+                       prefWidth="117.0" text="22:00" textFill="RED">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="23.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="20.0" prefWidth="254.0"/>
+            </HBox>
+            <HBox prefHeight="34.0" prefWidth="581.0">
+                <Separator opacity="0.0" prefHeight="104.0" prefWidth="200.0"/>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="15.0" prefWidth="580.0">
+                <ProgressBar fx:id="progBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="16.0"
+                             minWidth="508.0" opacity="0.0" prefHeight="408.0" prefWidth="508.0"
+                             stylesheets="@styling/progressBar.css">
+                    <styleClass>
+                        <String fx:value="blue-progress-bar"/>
+                        <String fx:value="my-progress-bar"/>
+                    </styleClass>
+                </ProgressBar>
+            </HBox>
+            <Separator maxHeight="-Infinity" opacity="0.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="581.0"/>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="49.0" prefWidth="581.0">
+                <Button fx:id="submitReservationButton" disable="true" minWidth="-Infinity" mnemonicParsing="false"
+                        onAction="#onSubmitReservationButtonClick" prefHeight="40.0" prefWidth="178.0"
+                        text="Submit Request" textFill="#1e0800">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+            </HBox>
+            <HBox prefHeight="137.0" prefWidth="581.0">
+                <VBox alignment="TOP_CENTER" prefHeight="111.0" prefWidth="581.0">
+                    <Separator maxHeight="-Infinity" opacity="0.0" orientation="VERTICAL" prefHeight="10.0"
+                               prefWidth="581.0"/>
+                    <Label fx:id="SubmitMsg" alignment="CENTER" opacity="0.0" style="-fx-background-color: darkcyan;"
+                           text="ORDER SUBMITTED" textFill="#ffee00">
+                        <font>
+                            <Font size="32.0"/>
+                        </font>
+                    </Label>
+                </VBox>
+            </HBox>
+        </VBox>
+        <Label fx:id="userHolder" layoutX="270.0" layoutY="77.0" opacity="0.0" prefHeight="14.0" prefWidth="8.0"/>
+        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="62.0"
+                mnemonicParsing="false" onAction="#onClickGoBack" prefHeight="20.0" prefWidth="97.0" text="Go Back">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="Refresh" alignment="CENTER" contentDisplay="CENTER" layoutX="507.0" layoutY="62.0"
+                mnemonicParsing="false" onAction="#onClickRefresh" prefHeight="38.0" prefWidth="85.0" text="Refresh">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+    </AnchorPane>
+</ScrollPane>

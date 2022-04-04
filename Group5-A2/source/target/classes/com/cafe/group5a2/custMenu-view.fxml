@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" onScrollFinished="#onScrollFin" prefHeight="3840.0"
+            prefWidth="810.0" style="-fx-background: #faebd7; -fx-border-color: #faebd7"
+            stylesheets="@../group5a2/styling/scrollBar.css" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.cafe.group5a2.CustMenuController">
+    <AnchorPane fx:id="aPane" minHeight="0.0" minWidth="0.0" prefHeight="3840.0" prefWidth="806.0"
+                style="-fx-background-image:url('/styling/back2.jpg'); -fx-background-size: cover; ">
+        <ImageView fitHeight="3877.0" fitWidth="2427.0" layoutX="-487.0" layoutY="-5.0" opacity="0.96">
+            <Image url="@styling/back2.jpg"/>
+        </ImageView>
+
+        <Label alignment="CENTER" layoutX="351.0" layoutY="48.0" prefHeight="68.0" prefWidth="109.0" text="Menu"
+               textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-BoldItalic" size="47.0"/>
+            </font>
+        </Label>
+        <VBox fx:id="vBox" alignment="CENTER" layoutX="43.0" layoutY="136.0" prefHeight="3673.0" prefWidth="724.0">
+            <HBox minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il1" prefHeight="25.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl1" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="32.0"/>
+                <TextField fx:id="q1" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="1984.0" minHeight="12.0" opacity="0.0"
+                       orientation="VERTICAL" prefHeight="8.0" prefWidth="757.0"/>
+            <HBox minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d1" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h2i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il2" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl2" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q2" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h2d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d2" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h3i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il3" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl3" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q3" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h3d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d3" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h4i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il4" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl4" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q4" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h4d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d4" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h5i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il5" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl5" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q5" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h5d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d5" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h6i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il6" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl6" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q6" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h6d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d6" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h7i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il7" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl7" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q7" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h7d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d7" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h8i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il8" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl8" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q8" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h8d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d8" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h9i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il9" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl9" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q9" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h9d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d9" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h10i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il10" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl10" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q10" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h10d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d10" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h11i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il11" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl11" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q11" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h11d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d11" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h12d" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il12" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl12" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q12" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h12i" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d12" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h13i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il13" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl13" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q13" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h13d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d13" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h14i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il14" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl14" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q14" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h14d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d14" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h15i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il15" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl15" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q15" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h15d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d15" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h16i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il16" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl16" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q16" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2631.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h16d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d16" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h17i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il17" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl17" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q17" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="1260.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h17d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d17" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h18i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il18" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl18" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q18" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2244.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h18d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d18" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h19i" minHeight="40.0" prefHeight="40.0" prefWidth="724.0">
+                <Label id="ItemLabel1" fx:id="il19" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl19" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q19" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2198.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h19d" minHeight="80.0" prefHeight="80.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d19" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="35.0" prefWidth="757.0"/>
+            <HBox fx:id="h20i" minHeight="40.0" prefHeight="40.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il20" prefHeight="24.0" prefWidth="540.0" text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="26.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="49.0"/>
+                <Label fx:id="pl20" prefHeight="24.0" prefWidth="69.0" text="Price" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="24.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="33.0"/>
+                <TextField fx:id="q20" onKeyReleased="#onKeyReleased" onMouseClicked="#onQClick" prefHeight="25.0"
+                           prefWidth="29.0" promptText="0"/>
+                <Separator maxHeight="1.0" opacity="0.0" orientation="VERTICAL" prefHeight="1.0" prefWidth="22.0"/>
+            </HBox>
+            <Separator id="vSeparator" layoutX="10.0" layoutY="2122.0" opacity="0.0" orientation="VERTICAL"
+                       prefHeight="8.0" prefWidth="757.0"/>
+            <HBox fx:id="h20d" minHeight="80.0" prefHeight="121.0" prefWidth="724.0">
+                <Separator maxHeight="3.0" opacity="0.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="45.0"/>
+                <Label id="DescLabel1" fx:id="d20" alignment="TOP_LEFT" contentDisplay="CENTER" maxWidth="520.0"
+                       minHeight="85.0" prefHeight="85.0" prefWidth="520.0" text="Description" textFill="#e8c5a8"
+                       wrapText="true">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="17.0"/>
+                    </font>
+                </Label>
+                <Separator maxHeight="3.0" opacity="0.0" prefHeight="3.0" prefWidth="150.0"/>
+            </HBox>
+            <HBox fx:id="hTbox" onMouseEntered="#onTboxEntered" prefHeight="67.0" prefWidth="724.0">
+                <Separator opacity="0.0" prefHeight="53.0" prefWidth="108.0"/>
+                <Label prefHeight="60.0" prefWidth="109.0" text="Total:" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="57.0" prefWidth="0.0"/>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="239.0"
+                       text="  -  -  -  -  -  -  " textFill="#b24f4f">
+                    <font>
+                        <Font name="Castellar" size="27.0"/>
+                    </font>
+                </Label>
+                <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="57.0" prefWidth="67.0" text="£"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-Italic" size="45.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="totalPLabel" alignment="BOTTOM_LEFT" contentDisplay="BOTTOM"
+                       onKeyReleased="#onKeyReleased" prefHeight="50.0" prefWidth="189.0" text="00.00"
+                       textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="37.0"/>
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="15.0" prefWidth="724.0">
+                <ProgressBar fx:id="progBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="16.0"
+                             minWidth="508.0" prefHeight="408.0" prefWidth="508.0"
+                             stylesheets="@styling/progressBar.css">
+                    <styleClass>
+                        <String fx:value="blue-progress-bar"/>
+                        <String fx:value="my-progress-bar"/>
+                    </styleClass>
+                </ProgressBar>
+            </HBox>
+            <Separator id="vSeparator" opacity="0.0" orientation="VERTICAL" prefHeight="21.0" prefWidth="656.0"/>
+            <HBox prefHeight="73.0" prefWidth="724.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="146.0"/>
+                <Button fx:id="takeawayButton" minWidth="-Infinity" mnemonicParsing="false"
+                        onAction="#onTakeawayButtonClick" prefHeight="40.0" prefWidth="178.0"
+                        style="-fx-border-width: 1.5; -fx-border-color: #9c9797;" text="Order Takeaway"
+                        textFill="#261200">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="60.0"/>
+                <Button fx:id="deliveryButton" minWidth="-Infinity" mnemonicParsing="false"
+                        onAction="#onDeliveryButtonClick" prefHeight="40.0" prefWidth="178.0"
+                        style="-fx-border-width: 1.5; -fx-border-color: #9c9797;" text="Order Delivery"
+                        textFill="#261200">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Button>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="161.0"/>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                  minWidth="-Infinity" prefHeight="20.0" prefWidth="724.0"/>
+            <HBox prefHeight="148.0" prefWidth="724.0">
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="66.0" prefWidth="97.0"/>
+                <VBox prefHeight="126.0" prefWidth="508.0">
+                    <Label fx:id="orderSubL" alignment="TOP_CENTER" opacity="0.36" prefHeight="49.0" prefWidth="508.0"
+                           style="-fx-background-color: darkcyan;" text="ORDER SUBMITTED" textFill="#fffd00">
+                        <font>
+                            <Font size="36.0"/>
+                        </font>
+                    </Label>
+                </VBox>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="89.0"/>
+            </HBox>
+        </VBox>
+        <Label fx:id="userHolder" layoutX="403.0" layoutY="74.0" opacity="0.0" prefHeight="20.0" prefWidth="22.0"/>
+        <Button fx:id="backButt" layoutX="51.0" layoutY="35.0" minWidth="-Infinity" mnemonicParsing="false"
+                onAction="#onBackButtClick" prefHeight="38.0" prefWidth="86.0"
+                style="-fx-border-width: 1.5; -fx-border-color: #9c9797;" text="Go Back" textFill="#261200">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+    </AnchorPane>
+    <styleClass>
+        <String fx:value="track-background"/>
+        <String fx:value="decrement-arrow"/>
+        <String fx:value="decrement-button"/>
+        <String fx:value="increment-arrow"/>
+        <String fx:value="increment-button"/>
+        <String fx:value="scroll-bar"/>
+        <String fx:value="thumb"/>
+        <String fx:value="track"/>
+        <String fx:value="corner"/>
+        <String fx:value="background"/>
+        <String fx:value="scroll-pane"/>
+    </styleClass>
+</ScrollPane>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1" fx:id="mainPane" hbarPolicy="NEVER" maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="896.0"
+            prefWidth="482.0" style="-fx-background: #1e202f; -fx-border-color: #483c32"
+            stylesheets="@../group5a2/styling/scrollBar.css" xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.cafe.group5a2.ChefCustOrderController">
+    <AnchorPane fx:id="aPane" minHeight="0.0" minWidth="0.0" prefHeight="890.0" prefWidth="484.0">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="145.0" layoutY="20.0" prefHeight="54.0"
+               prefWidth="246.0" text="Customers Order" textFill="#fff0d1">
+            <font>
+                <Font name="AdobeDevanagari-BoldItalic" size="37.0"/>
+            </font>
+        </Label>
+        <VBox layoutX="30.0" layoutY="130.0" prefHeight="765.0" prefWidth="459.0">
+            <HBox minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il1" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql1" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="722.0"/>
+            <HBox fx:id="h2i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il2" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql2" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h3i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il3" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql3" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h4i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il4" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql4" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h5i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il5" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql5" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h6i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il6" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql6" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h7i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il7" contentDisplay="CENTER" prefHeight="24.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql7" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h8i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il8" contentDisplay="CENTER" prefHeight="24.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql8" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h9i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il9" contentDisplay="CENTER" prefHeight="24.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql9" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h10i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il10" contentDisplay="CENTER" prefHeight="24.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql10" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h11i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il11" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql11" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h12d" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il12" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql12" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h13i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il13" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql13" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h14i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il14" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql14" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h15i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il15" contentDisplay="CENTER" prefHeight="31.0" prefWidth="325.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql15" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h16i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il16" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql16" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h17i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il17" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql17" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h18i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il18" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql18" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h19i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il19" contentDisplay="CENTER" prefHeight="31.0" prefWidth="327.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql19" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox maxHeight="-Infinity" minHeight="1.0" prefHeight="28.0" prefWidth="586.0"/>
+            <HBox fx:id="h20i" minHeight="1.0" prefHeight="31.0" prefWidth="589.0">
+                <Label id="ItemLabel1" fx:id="il20" contentDisplay="CENTER" prefHeight="31.0" prefWidth="325.0"
+                       text="Item" textFill="#fff0d1">
+                    <font>
+                        <Font name="AdobeDevanagari-BoldItalic" size="21.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" orientation="VERTICAL" prefHeight="31.0" prefWidth="33.0"/>
+                <Label fx:id="ql20" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="32.0"
+                       text="Label"/>
+            </HBox>
+            <HBox minHeight="1.0" prefHeight="85.0" prefWidth="561.0"/>
+        </VBox>
+        <Button fx:id="goBack" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="27.0"
+                mnemonicParsing="false" onAction="#onClickGoBack" prefHeight="20.0" prefWidth="97.0" text="Go Back"
+                AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Button>
+        <HBox layoutX="-3.0" layoutY="85.0" prefHeight="42.0" prefWidth="584.0">
+            <GridPane prefHeight="42.0" prefWidth="560.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="427.0" minWidth="10.0" prefWidth="343.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="399.0" minWidth="10.0" prefWidth="217.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label contentDisplay="CENTER" prefHeight="42.0" prefWidth="296.0" text="Menu Items" textFill="#fff0d1"
+                       GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="140.0" text="Quantity"
+                       textFill="#fff0d1" GridPane.columnIndex="1" GridPane.halignment="LEFT"
+                       GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+                <Separator opacity="0.0" prefHeight="29.0" prefWidth="283.0" GridPane.columnIndex="1"/>
+            </GridPane>
+        </HBox>
+    </AnchorPane>
+    <styleClass>
+        <String fx:value="track-background"/>
+        <String fx:value="decrement-arrow"/>
+        <String fx:value="decrement-button"/>
+        <String fx:value="increment-arrow"/>
+        <String fx:value="increment-button"/>
+        <String fx:value="scroll-bar"/>
+        <String fx:value="thumb"/>
+        <String fx:value="track"/>
+        <String fx:value="corner"/>
+        <String fx:value="background"/>
+    </styleClass>
+</ScrollPane>

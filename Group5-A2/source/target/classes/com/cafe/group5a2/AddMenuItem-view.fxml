@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="624.0" prefWidth="680.0" style="-fx-background-color: #1e202f;"
+            xmlns="http://javafx.com/javafx/17" fx:controller="com.cafe.group5a2.AddMenuItemController">
+    <Label alignment="CENTER" layoutX="205.0" layoutY="31.0" prefHeight="68.0" prefWidth="269.0" text="Add Menu Item"
+           textFill="#fff0d1">
+        <font>
+            <Font name="AdobeDevanagari-BoldItalic" size="42.0"/>
+        </font>
+    </Label>
+    <Button fx:id="GoBackButt" layoutX="595.0" layoutY="18.0" mnemonicParsing="false" onAction="#onGoBackClick"
+            text="Go Back"/>
+    <VBox layoutX="45.0" layoutY="111.0" prefHeight="334.0" prefWidth="598.0">
+        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="598.0"/>
+        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="598.0">
+            <TextField fx:id="ItemName" prefHeight="25.0" prefWidth="534.0" promptText="Item name"/>
+        </HBox>
+        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="598.0"/>
+        <HBox alignment="CENTER" prefHeight="99.0" prefWidth="598.0">
+            <TextArea fx:id="ItemDesc" prefHeight="99.0" prefWidth="535.0" promptText="Item description"/>
+        </HBox>
+        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="598.0"/>
+        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="598.0">
+            <TextField fx:id="ItemPrice" prefHeight="25.0" prefWidth="535.0" promptText="Price 0.00"/>
+        </HBox>
+        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="598.0"/>
+        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="598.0">
+            <TextField fx:id="ItemType" prefHeight="25.0" prefWidth="534.0" promptText="special, food, or drink"/>
+        </HBox>
+        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="20.0" prefWidth="598.0"/>
+    </VBox>
+    <Button fx:id="SubmitBut" layoutX="229.0" layoutY="445.0" mnemonicParsing="false" onAction="#onSubmitButClick"
+            text="Submit new menu item">
+        <font>
+            <Font name="System Bold" size="18.0"/>
+        </font>
+    </Button>
+    <Label fx:id="hackingMessage" layoutX="220.0" layoutY="491.0" opacity="0.0" text="stop hacking please"
+           textFill="YELLOW">
+        <font>
+            <Font size="28.0"/>
+        </font>
+    </Label>
+</AnchorPane>

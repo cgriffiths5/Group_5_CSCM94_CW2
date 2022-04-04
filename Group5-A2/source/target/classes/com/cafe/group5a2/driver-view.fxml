@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="574.0" prefWidth="659.0"
+      style="-fx-background-color: #FAEEE3; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/17"
+      fx:controller="com.cafe.group5a2.DriverController">
+    <ImageView fitHeight="915.0" fitWidth="671.0" layoutX="-13.0" layoutY="-129.0">
+        <image>
+            <Image url="@styling/jez.jpg"/>
+        </image>
+    </ImageView>
+    <HBox prefHeight="41.0" prefWidth="483.0">
+        <GridPane prefHeight="41.0" prefWidth="482.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="142.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="143.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="103.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Label text="Driver Page" textFill="#fff4df" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="23.0"/>
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="4.0" radius="1.5" spread="1.0" width="4.0"/>
+                </effect>
+            </Label>
+            <Label contentDisplay="RIGHT" prefHeight="61.0" prefWidth="115.0" text="Username:" textFill="#fff4df"
+                   GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <GridPane.margin>
+                    <Insets left="30.0"/>
+                </GridPane.margin>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="4.0" radius="1.5" spread="1.0" width="4.0"/>
+                </effect>
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+            <Label fx:id="waiterName" prefHeight="57.0" prefWidth="166.0" text="Name" textFill="#fff4df"
+                   GridPane.columnIndex="2">
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="4.0" radius="1.5" spread="1.0" width="4.0"/>
+                </effect>
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Label>
+
+
+        </GridPane>
+    </HBox>
+    <HBox layoutY="72.0" prefHeight="64.0" prefWidth="658.0">
+        <HBox maxHeight="-Infinity" prefHeight="69.0" prefWidth="659.0">
+            <Separator opacity="0.0" prefHeight="38.0" prefWidth="105.0"/>
+            <Label alignment="CENTER" prefHeight="55.0" prefWidth="268.0" text="Orders" textAlignment="CENTER"
+                   textFill="#fff4df">
+                <font>
+                    <Font name="System Bold" size="38.0"/>
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="8.55" radius="3.225" spread="1.0" width="6.35"/>
+                </effect>
+            </Label>
+            <Separator opacity="0.0" prefHeight="38.0" prefWidth="101.0"/>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="94.0" text="Problem" textFill="#fff4df">
+                <font>
+                    <Font name="System Bold" size="21.0"/>
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="4.0" radius="1.5" spread="1.0" width="4.0"/>
+                </effect>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="38.0" prefWidth="93.0" text="Finished"
+                   textFill="#fff4df" HBox.hgrow="ALWAYS">
+                <font>
+                    <Font name="System Bold" size="21.0"/>
+                </font>
+                <effect>
+                    <DropShadow blurType="GAUSSIAN" height="4.0" radius="1.5" spread="1.0" width="4.0"/>
+                </effect>
+            </Label>
+        </HBox>
+    </HBox>
+    <GridPane layoutX="-2.0" layoutY="121.0" prefHeight="350.0" prefWidth="658.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="10.0" prefWidth="482.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="84.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="85.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="85.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="89.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="103.0" minHeight="0.0" prefHeight="81.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label fx:id="DevOrdTab1" alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="470.0"
+               text="No Order" textFill="#fff4df" GridPane.halignment="CENTER">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="8.55" radius="3.225" spread="1.0" width="6.35"/>
+            </effect>
+        </Label>
+        <Label fx:id="DevOrdTab2" alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="470.0"
+               text="No Order" textFill="#fff4df" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="8.55" radius="3.225" spread="1.0" width="6.35"/>
+            </effect>
+        </Label>
+        <Label fx:id="DevOrdTab3" alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="470.0"
+               text="No Order" textFill="#fff4df" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="8.55" radius="3.225" spread="1.0" width="6.35"/>
+            </effect>
+        </Label>
+        <CheckBox fx:id="DevOrdProBox1" mnemonicParsing="false" onAction="#OnClickDevOrdProBox1" prefHeight="19.0"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <CheckBox fx:id="DevOrdFinBox1" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox1"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <CheckBox fx:id="DevOrdProBox2" mnemonicParsing="false" onAction="#OnClickDevOrdProBox2"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <CheckBox fx:id="DevOrdFinBox2" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox2"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <CheckBox fx:id="DevOrdProBox3" mnemonicParsing="false" onAction="#OnClickDevOrdProBox3"
+                  GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <CheckBox fx:id="DevOrdFinBox3" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox3"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <Label fx:id="DevOrdTab4" alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="470.0"
+               text="No Order" textFill="#fff4df" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" height="8.55" radius="3.225" spread="1.0" width="6.35"/>
+            </effect>
+        </Label>
+        <CheckBox fx:id="DevOrdProBox4" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                  onAction="#OnClickDevOrdProBox4" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                  GridPane.rowIndex="3">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+        <CheckBox fx:id="DevOrdFinBox4" mnemonicParsing="false" onAction="#OnClickDevOrdFinBox4"
+                  GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </CheckBox>
+    </GridPane>
+
+
+    <Button fx:id="logoutBut" layoutX="584.0" layoutY="4.0" mnemonicParsing="false" onAction="#logout" prefHeight="21.0"
+            prefWidth="68.0" text="Logout">
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Button>
+    <Button fx:id="refreshButton" layoutX="483.0" layoutY="4.0" mnemonicParsing="false" onAction="#refreshClick"
+            prefHeight="28.0" prefWidth="80.0" text="Refresh">
+        <font>
+            <Font size="15.0"/>
+        </font>
+    </Button>
+</Pane>

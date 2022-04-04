@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="690.0" prefWidth="463.0" style="-fx-background-color: #1e202f;"
+            xmlns="http://javafx.com/javafx/17" fx:controller="com.cafe.group5a2.RegistrationController">
+    <ImageView fitHeight="922.0" fitWidth="667.0" layoutX="-46.0" layoutY="-189.0">
+        <Image url="@styling/back2.jpg"/>
+    </ImageView>
+    <VBox alignment="CENTER" prefHeight="690.0" prefWidth="461.0" spacing="12">
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0"/>
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="20.0"/>
+            <Text fill="#fff0d1" text="Enter your details below to register" wrappingWidth="316.65625">
+                <font>
+                    <Font name="System Bold" size="18.0"/>
+                </font>
+            </Text>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="8.0"/>
+            <Button fx:id="HomeButton1" onAction="#onHomeButtonClick" prefHeight="25.0" prefWidth="50.0"
+                    style="-fx-background-color: f0fff0;" text="Go Back" textFill="#1e1c03">
+                <font>
+                    <Font size="9.0"/>
+                </font>
+            </Button>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="47.0" prefWidth="500.0">
+            <Text fill="#fff0d1" text="Enter your name">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <TextField fx:id="FirstName1" maxWidth="120" prefWidth="132.0" promptText="first name"
+                       style="-fx-background-color: #f0f8ff;"/>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="37.0"/>
+            <TextField fx:id="LastName1" maxWidth="120" prefWidth="132.0" promptText="last name"
+                       style="-fx-background-color: #f0f8ff;"/>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
+            <Text fill="#fff0d1" text="Choose username and password">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="44.0"/>
+            <TextField fx:id="Username1" maxWidth="130.0" prefHeight="25.0" prefWidth="132.0" promptText="username"
+                       style="-fx-background-color: #f0f8ff;"/>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0"/>
+            <Text fx:id="ErrorUsername" fill="#d2ff00" text="Username is already taken!">
+                <font>
+                    <Font name="System Bold" size="15.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <PasswordField fx:id="Password1" maxWidth="132.0" prefHeight="25.0" prefWidth="132.0" promptText="password"
+                           style="-fx-background-color: #f0f8ff;"/>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="143.0"/>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="44.0"/>
+            <PasswordField fx:id="ConfirmPassword1" maxWidth="133.0" prefHeight="25.0" prefWidth="132.0"
+                           promptText="confirm password"/>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0"/>
+            <Text fx:id="ErrorPassword" fill="#d2ff00" text="Password does not match!">
+                <font>
+                    <Font name="System Bold" size="15.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
+            <Text fill="#fff0d1" text="Enter your address">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="500.0">
+            <TextField fx:id="HouseNO1" maxWidth="120" promptText="house number"
+                       style="-fx-background-color: #f0f8ff;"/>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="37.0"/>
+            <TextField fx:id="Postcode1" maxWidth="120" promptText="post code" style="-fx-background-color: #f0f8ff;"/>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="500.0">
+            <Text fill="#fff0d1" text="Click below to submit">
+                <font>
+                    <Font size="17.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="500.0">
+            <Button fx:id="SubmitButton1" alignment="CENTER" onAction="#OnSubmit" prefHeight="25.0" prefWidth="78.0"
+                    style="-fx-background-color: f0fff0;" text="Register" textFill="#1e1c03"/>
+            <Separator opacity="0.0" prefHeight="20.0" prefWidth="5.0"/>
+            <Text fx:id="ErrorLabel1" fill="#d2ff00" text="All details must be entered!">
+                <font>
+                    <Font name="System Bold" size="15.0"/>
+                </font>
+            </Text>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="465.0"/>
+    </VBox>
+</AnchorPane>
