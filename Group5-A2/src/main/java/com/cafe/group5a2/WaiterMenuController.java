@@ -19,6 +19,16 @@ import java.util.Objects;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * This class shows the menu items, and check boxes allow the waiter
+ * to enter the quantity of a certain item to create an
+ * order for a customer then submit this order to the
+ * database
+ * @author Cameron Turner
+ * @author Adam Tucker
+ * @version 1.0
+ */
+
 public class WaiterMenuController {
 
     public Label il1;
@@ -170,13 +180,32 @@ public class WaiterMenuController {
     Connection connect = DriverManager.getConnection("jdbc:mariadb://localhost:3306/cafedb?user=root&password=");
     private String username;
 
+    /**
+     * @throws SQLException throw a type of Exception that
+     * the IDE doesn't support
+     */
     public WaiterMenuController() throws SQLException {
     }
 
+    /**
+     * Returns void.
+     * Sets the name of the user using the application
+     * @param text The users name
+     */
     public void setUserText(String text) {
         userHolder.setText(username = text);
     }
 
+    /**
+     * Returns void.
+     * This method checks what the waiter has entered for the order
+     * and then submits the order to the correct parts of the
+     * database
+     * It checks to see whether the check boxes are empty to throw an error
+     * message
+     * @param actionEvent Submit order button
+     * @throws IOException throw a type of Exception that the IDE doesn't support
+     */
     @FXML
     public void onRestButtonClick(ActionEvent actionEvent) throws IOException {
         int counter = 0;
@@ -306,6 +335,13 @@ public class WaiterMenuController {
 
     }
 
+    /**
+     * Returns an int value.
+     * Method gets the usersID which is an int value but using an
+     * SQL query
+     * @param username the users name
+     * @return userID
+     */
     public int getUserId(String username) {
         String query = "SELECT user_ID FROM users WHERE username = '" + username + "'";
         ResultSet rs = null;
@@ -322,6 +358,14 @@ public class WaiterMenuController {
         return a;
     }
 
+    /**
+     * Returns a String value.
+     * From the values entered in the check boxes a string value is
+     * made to list all teh items that have been chosen.
+     * This data is sent to the database
+     * @param counter number which represents how many items need to be shown
+     * @return String
+     */
     public String getOrderList(int counter) {
         int i = counter;
         int value1 = 0, value2 = 0, value3 = 0, value4 = 0, value5 = 0, value6 = 0, value7 = 0, value8 = 0, value9 = 0, value10 = 0, value11 = 0, value12 = 0, value13 = 0, value14 = 0, value15 = 0, value16 = 0, value17 = 0, value18 = 0, value19 = 0, value20 = 0;
@@ -482,6 +526,14 @@ public class WaiterMenuController {
         return itemList.toString();
     }
 
+    /**
+     * Returns a String.
+     * This method gets the item related to the number value
+     * in the menu table from the database
+     * @param num Number of the item from database
+     * @return val
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     @FXML
     public String getItem(int num) throws SQLException {
         String val = "";
@@ -508,6 +560,12 @@ public class WaiterMenuController {
         return val;
     }
 
+    /**
+     * Returns void.
+     * This method sets the item labels for the menu on the
+     * database to show which foods are available on the menu.
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public void setItemLabels() throws SQLException {
         il1.setText(getItem(1));
         il2.setText(getItem(2));
@@ -531,6 +589,15 @@ public class WaiterMenuController {
         il20.setText(getItem(20));
     }
 
+    /**
+     * Returns a String value.
+     * This method gets the prices of the food to
+     * display on the menu page.
+     * Input value is the item num to related to the correct price
+     * @param num Item number to get price for it
+     * @return val
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public String getPrice(int num) throws SQLException {
         String val = "";
         String query = "SELECT * FROM menu ORDER BY category DESC";
@@ -556,6 +623,12 @@ public class WaiterMenuController {
         return val;
     }
 
+    /**
+     * Returns void.
+     * Sets the price son teh correlated label boxes
+     * on screen
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public void setPriceLabels() throws SQLException {
         pl1.setText(getPrice(1));
         pl2.setText(getPrice(2));
@@ -579,6 +652,14 @@ public class WaiterMenuController {
         pl20.setText(getPrice(20));
     }
 
+    /**
+     * Returns a String value.
+     * Gets the description of the relevant item from the
+     * database using an SQL query
+     * @param num item number to get description
+     * @return val
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public String getDesc(int num) throws SQLException {
         String val = "";
         String query = "SELECT * FROM menu ORDER BY category DESC";
@@ -604,6 +685,14 @@ public class WaiterMenuController {
         return val;
     }
 
+    /**
+     * Returns void.
+     * Sets the description label of the certain item to
+     * the label fx:id values on the fxml file.
+     * Also sorts the screen to match the sixe of how many
+     * items are on show
+     * @throws SQLException throw a type of Exception that the IDE doesn't support
+     */
     public void setDescLabels() throws SQLException {
         d1.setText(getDesc(1));
         d2.setText(getDesc(2));
@@ -744,7 +833,13 @@ public class WaiterMenuController {
         }
     }
 
-    //goBack
+    /**
+     * Returns void.
+     * When the "Go Back" button is clicked on the page,
+     * this method is called to change the stage to the
+     * one before which is the waiters view
+     * @param actionEvent Go Back button
+     */
     public void onClickGoBack(ActionEvent actionEvent) {
         try {
             Stage stage = (Stage) goBack.getScene().getWindow();
@@ -768,5 +863,33 @@ public class WaiterMenuController {
         } catch (IOException e) {
             System.out.println("Error loading page");
         }
+    }
+    
+    /**
+     * Returns void.
+     * When this method is called all check boxes are set to
+     * null
+     */
+    public void resetCheckBoxes(){
+        q1.setText("");
+        q2.setText("");
+        q3.setText("");
+        q4.setText("");
+        q5.setText("");
+        q6.setText("");
+        q7.setText("");
+        q8.setText("");
+        q9.setText("");
+        q10.setText("");
+        q11.setText("");
+        q12.setText("");
+        q13.setText("");
+        q14.setText("");
+        q15.setText("");
+        q16.setText("");
+        q17.setText("");
+        q18.setText("");
+        q19.setText("");
+        q20.setText("");
     }
 }
