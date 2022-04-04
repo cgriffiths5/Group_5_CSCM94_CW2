@@ -69,6 +69,12 @@ public class ChefController {
         }
     }
 
+    /**
+     * Returns void
+     * When view order button has been clicked this method is called
+     * to open a new page
+     * @param event view order button
+     */
     @FXML
     public void onViewOutstandingOrdersClick(ActionEvent event) {
         try {
@@ -94,6 +100,9 @@ public class ChefController {
     }
 
     /**
+     * Returns void
+     * takes the user back to the login page when a button is
+     * clicked
      * @param event is entered when a user presses the home button
      */
     @FXML
