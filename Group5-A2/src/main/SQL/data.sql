@@ -127,7 +127,6 @@ VALUES (5, 4045, 4),  # we will need to actually show the user a list of every h
 
 
 
-
 DROP PROCEDURE IF EXISTS remove_old_bookings;
 
 DELIMITER //
