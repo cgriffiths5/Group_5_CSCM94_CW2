@@ -17,6 +17,12 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.Objects;
 
+/**
+        * This class is a controller for dealing with outstanding orders
+        * @author Chris Griffiths
+        * @version 1
+        */
+
 public class SpecialsController {
 
     @FXML
