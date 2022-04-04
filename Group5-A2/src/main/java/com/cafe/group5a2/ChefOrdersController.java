@@ -17,6 +17,10 @@ import java.sql.*;
 import static java.lang.Integer.parseInt;
 
 /**
+ * Displays key information the chef needs about the 
+ * customer and is able to click buttons to view order
+ * and update the database that an order has been 
+ * completed
  * @author Cameron Turner
  * @author Adam Tucker
  * @version 1.0
